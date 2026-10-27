@@ -1,0 +1,178 @@
+import 'package:flutter/material.dart';
+import '../models/hanzi_model.dart';
+import '../services/hanzi_repository.dart';
+import '../services/progress_service.dart';
+import '../services/storage_service.dart';
+import '../services/tts_service.dart';
+import '../widgets/character_card.dart';
+import 'favorites_screen.dart';
+import 'grade_select_screen.dart';
+
+class HomeScreen extends StatefulWidget {
+  /// gradeId = 0 表示"已解锁年级连续学"，1~6 表示具体年级
+  final int gradeId;
+
+  const HomeScreen({super.key, required this.gradeId});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  PageController? _pageController;
+  int _currentIndex = 0;
+  Set<String> _favoriteIds = {};
+  bool _isLoading = true;
+
+  List<HanziModel> _hanziList = [];
+  String _titleText = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _restoreState();
+  }
+
+  Future<void> _restoreState() async {
+    await HanziRepository.instance.ensureLoaded();
+
+    if (widget.gradeId == 0) {
+      final unlockedIds = await ProgressService.getUnlockedGradeIds();
+      _hanziList = HanziRepository.instance
+          .forAllGrades()
+          .where((h) => unlockedIds.contains(h.gradeId))
+          .toList();
+      _titleText = '入学必备720字 · 已解锁';
+    } else {
+      _hanziList = HanziRepository.instance.forGrade(widget.gradeId);
+      final grade = gradeInfoList.firstWhere((g) => g.id == widget.gradeId);
+      _titleText = grade.name;
+    }
+
+    final lastIndex =
+        await StorageService.instance.getLastIndexForGrade(widget.gradeId);
+    final favorites = await StorageService.instance.getFavoriteIds();
+    final safeIndex =
+        _hanziList.isEmpty ? 0 : lastIndex.clamp(0, _hanziList.length - 1);
+
+    setState(() {
+      _currentIndex = safeIndex;
+      _favoriteIds = favorites;
+      _pageController = PageController(initialPage: safeIndex);
+      _isLoading = false;
+    });
+
+    if (_hanziList.isNotEmpty) {
+      _markViewedAndSpeak(safeIndex);
+    }
+  }
+
+  void _markViewedAndSpeak(int index) {
+    final hanzi = _hanziList[index];
+    StorageService.instance.markViewed(hanzi.id);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      TtsService.instance.speak(hanzi.char);
+    });
+  }
+
+  void _onPageChanged(int index) {
+    setState(() => _currentIndex = index);
+    StorageService.instance.saveLastIndexForGrade(widget.gradeId, index);
+    _markViewedAndSpeak(index);
+  }
+
+  void _toggleFavorite(String id) {
+    setState(() {
+      if (_favoriteIds.contains(id)) {
+        _favoriteIds.remove(id);
+      } else {
+        _favoriteIds.add(id);
+      }
+    });
+    StorageService.instance.saveFavoriteIds(_favoriteIds);
+  }
+
+  void _goToGradeSelect() {
+    Navigator.of(context).pop();
+  }
+
+  @override
+  void dispose() {
+    _pageController?.dispose();
+    TtsService.instance.stop();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (_isLoading || _pageController == null) {
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
+    }
+
+    if (_hanziList.isEmpty) {
+      return Scaffold(
+        appBar: AppBar(title: Text(_titleText)),
+        body: const Center(child: Text('该年级暂无数据')),
+      );
+    }
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(_titleText),
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        foregroundColor: Colors.black87,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_rounded),
+          tooltip: '返回年级选择',
+          onPressed: _goToGradeSelect,
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.star_rounded),
+            tooltip: '收藏复习',
+            onPressed: () async {
+              await Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => FavoritesScreen(
+                    allHanzi: HanziRepository.instance.all,
+                    favoriteIds: _favoriteIds,
+                    onToggleFavorite: _toggleFavorite,
+                  ),
+                ),
+              );
+              setState(() {});
+            },
+          ),
+        ],
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 4),
+            child: Text(
+              '${_currentIndex + 1} / ${_hanziList.length}',
+              style: const TextStyle(color: Colors.black45, fontSize: 13),
+            ),
+          ),
+          Expanded(
+            child: PageView.builder(
+              controller: _pageController,
+              itemCount: _hanziList.length,
+              onPageChanged: _onPageChanged,
+              itemBuilder: (context, index) {
+                final hanzi = _hanziList[index];
+                return CharacterCard(
+                  hanzi: hanzi,
+                  isFavorite: _favoriteIds.contains(hanzi.id),
+                  onToggleFavorite: () => _toggleFavorite(hanzi.id),
+                );
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
