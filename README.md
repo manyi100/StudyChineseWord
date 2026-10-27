@@ -58,10 +58,15 @@
   "小狗伸出了舌头"生成，而不是单纯画一个"舌头"，更接近教材插画的叙事感
 - **风格统一**：固定的风格描述前后缀（手绘水彩、无文字、简洁背景），
   并支持传入一张参考图做风格锁定（`REFERENCE_IMAGE_PATH`配置项）
-- **断点续跑**：已经生成过的字会自动跳过，网络中断重新运行不会重复花钱
-- **自动接上WebP压缩流程**：生成的图自动裁切成正方形、压缩成WebP，
-  按之前验证过的参数（400×400px, q80），并自动写回
+- **断点续跑**：已经生成过的字会自动跳过，网络中断重新运行不会重复花钱，
+  已有图片文件也绝不覆盖（前 50 个字已经生成好，脚本会直接跳过它们）
+- **一次生成四张再切分**：每次 API 请求让模型画一张 2×2 四宫格，脚本按象限
+  切成 4 张单图，调用次数降到四分之一
+- **自动接上WebP压缩流程**：切出来的单图自动裁成 1.81:1（和现有 263×145
+  插图同比例）、缩放到 526×290，压缩成 WebP（q85），并自动写回
   `hanzi_data.json` 里对应字的 `imageAsset` 字段
+- **分批运行**：默认每轮只生成 20 张（5 次请求）就停，方便先看一批质量，
+  也想一次跑完可以加 `--all`
 
 模型选择（脚本里改`MODEL_NAME`变量）：
 | 模型 | 价格参考(2026年3月) | 适合 |
@@ -73,8 +78,11 @@
 ```bash
 pip install requests pillow
 export GEMINI_API_KEY="你的key"
-cd entrance_720_words
-python3 scripts/generate_images_nanobanana.py
+cd StudyChineseWord
+python3 scripts/generate_images_nanobanana.py            # 本轮 20 张
+python3 scripts/generate_images_nanobanana.py --all      # 跑完全部剩余
+python3 scripts/generate_images_nanobanana.py --limit 40 # 本轮 40 张
+python3 scripts/generate_images_nanobanana.py --dry-run  # 只看提示词，不调用 API
 ```
 
 ---
