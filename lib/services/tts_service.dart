@@ -1,33 +1,147 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
 /// 朗读服务：封装 flutter_tts，统一管理朗读单字/词语/句子的逻辑。
 /// 使用系统自带TTS引擎，完全离线，无需联网、无需额外申请API Key。
+///
+/// 小米/红米（MIUI、HyperOS）适配要点：
+/// 1. Android 11+ 的包可见性限制会拦截"绑定其它应用的语音引擎服务"，必须在
+///    AndroidManifest 的 queries 里声明 TTS_SERVICE。缺少声明时，小米国行机型上
+///    TextToSpeech 初始化直接失败，表现为"没有报错、就是没声音"，而其它品牌
+///    机型恰好不严格校验，所以问题只在小米上复现。声明已加在 AndroidManifest。
+/// 2. 国行ROM不一定装有系统默认的那一个语音引擎，这里会枚举已安装引擎并逐个
+///    尝试中文发音，避免死在某一个引擎上。
 class TtsService {
-  TtsService._internal() {
-    _init();
-  }
+  TtsService._internal();
 
   static final TtsService instance = TtsService._internal();
 
-  final FlutterTts _flutterTts = FlutterTts();
-  bool _isReady = false;
+  /// 朗读不可用时（没有语音引擎、缺中文语音包、引擎被系统回收）回调，
+  /// UI层据此提示用户去系统设置里启用语音引擎。每次运行最多提示一次。
+  static void Function(String message)? onUnavailable;
 
-  Future<void> _init() async {
-    await _flutterTts.setLanguage('zh-CN');
-    await _flutterTts.setSpeechRate(0.45); // 适当放慢语速，更适合识字阶段
-    await _flutterTts.setVolume(1.0);
-    await _flutterTts.setPitch(1.0);
-    _isReady = true;
+  static const _candidateLanguages = ['zh-CN', 'zh-Hans-CN', 'zh-Hans', 'zh'];
+  static const _unavailableMessage =
+      '没有可用的中文语音。请到 设置 - 更多设置 - 无障碍 - 文字转语音(TTS)输出 '
+      '里选择或安装一个支持中文的语音引擎。';
+
+  final FlutterTts _flutterTts = FlutterTts();
+  Future<bool>? _readyFuture;
+  bool _notified = false;
+
+  /// 初始化并挑选可用的引擎/中文语音，只做一次；失败后下次调用会重新尝试。
+  Future<bool> _ensureReady() async {
+    final future = _readyFuture ??= _initialize();
+    final ready = await future;
+    if (!ready) {
+      // 允许用户去系统里装好语音包后，再点一次就能恢复，不必重启App
+      _readyFuture = null;
+    }
+    return ready;
   }
 
-  /// 朗读一段文字（字/词/句子通用）
-  Future<void> speak(String text) async {
-    if (text.trim().isEmpty) return;
-    if (!_isReady) {
-      await _init();
+  Future<bool> _initialize() async {
+    try {
+      await _flutterTts.awaitSpeakCompletion(false);
+    } catch (e) {
+      debugPrint('[TTS] 关闭 awaitSpeakCompletion 失败：$e');
     }
-    await _flutterTts.stop(); // 防止上一句未读完就被新的朗读请求打断叠加
-    await _flutterTts.speak(text);
+
+    // 先试系统当前引擎（null 表示不切换），再试其它已安装引擎。
+    // 国行小米常常只有厂商自带引擎，没有 Google TTS，所以需要这个兜底。
+    final engines = <String?>[null, ...await _installedEngines()];
+
+    for (final engine in engines) {
+      if (engine != null) {
+        try {
+          await _flutterTts.setEngine(engine);
+        } catch (e) {
+          debugPrint('[TTS] 引擎不可用，跳过 $engine：$e');
+          continue;
+        }
+      }
+
+      final language = await _pickChineseLanguage();
+      if (language == null) continue;
+
+      try {
+        await _flutterTts.setSpeechRate(0.45); // 适当放慢语速，更适合识字阶段
+        await _flutterTts.setPitch(1.0);
+        await _flutterTts.setVolume(1.0);
+        debugPrint('[TTS] 就绪：engine=${engine ?? '系统默认'}, language=$language');
+        _notified = false;
+        return true;
+      } catch (e) {
+        debugPrint('[TTS] 引擎 $engine 参数设置失败：$e');
+      }
+    }
+
+    debugPrint('[TTS] 没有找到支持中文的语音引擎');
+    return false;
+  }
+
+  Future<List<String>> _installedEngines() async {
+    try {
+      final engines = await _flutterTts.getEngines;
+      if (engines is List) {
+        return engines.whereType<String>().toList();
+      }
+    } catch (e) {
+      debugPrint('[TTS] 读取引擎列表失败：$e');
+    }
+    return const [];
+  }
+
+  /// 依次尝试几个常见的中文 locale，返回第一个真正设置成功的。
+  Future<String?> _pickChineseLanguage() async {
+    for (final language in _candidateLanguages) {
+      try {
+        final available = await _flutterTts.isLanguageAvailable(language);
+        if (available != true) continue;
+        final result = await _flutterTts.setLanguage(language);
+        if (result == 1) return language;
+      } catch (e) {
+        debugPrint('[TTS] 检查语言 $language 失败：$e');
+      }
+    }
+    return null;
+  }
+
+  /// 朗读一段文字（字/词/句子通用），返回是否成功开始朗读。
+  Future<bool> speak(String text) async {
+    if (text.trim().isEmpty) return false;
+
+    if (!await _ensureReady()) {
+      _notifyUnavailable();
+      return false;
+    }
+
+    if (await _speakOnce(text)) return true;
+
+    // 引擎可能被 MIUI 的省电策略回收了，重新初始化后再试一次
+    _readyFuture = null;
+    if (await _ensureReady() && await _speakOnce(text)) return true;
+
+    _notifyUnavailable();
+    return false;
+  }
+
+  Future<bool> _speakOnce(String text) async {
+    try {
+      await _flutterTts.stop(); // 防止上一句未读完就被新的朗读请求打断叠加
+      final result = await _flutterTts.speak(text);
+      if (result == 1) return true;
+      debugPrint('[TTS] speak 返回 $result');
+    } catch (e) {
+      debugPrint('[TTS] 朗读失败：$e');
+    }
+    return false;
+  }
+
+  void _notifyUnavailable() {
+    if (_notified) return;
+    _notified = true;
+    onUnavailable?.call(_unavailableMessage);
   }
 
   Future<void> stop() async {

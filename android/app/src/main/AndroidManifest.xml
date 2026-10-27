@@ -41,5 +41,12 @@
             <action android:name="android.intent.action.PROCESS_TEXT"/>
             <data android:mimeType="text/plain"/>
         </intent>
+        <!-- Android 11+ 的包可见性限制：应用必须声明这条，才能绑定其它应用提供的
+             语音引擎服务。缺少它时，小米/红米（MIUI、HyperOS 国行）上
+             TextToSpeech 初始化会直接失败，表现为"有日志、没声音"，而其它
+             品牌机型恰好不严格校验，所以问题只在小米上出现。 -->
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE"/>
+        </intent>
     </queries>
 </manifest>
