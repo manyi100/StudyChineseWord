@@ -11,7 +11,8 @@
    想一次跑完可以加 --all。
 4. 已经有 imageAsset 的字（前 50 个）自动跳过，已有图片文件绝不覆盖。
 5. 修掉了旧版成功分支里的 sleep(30000)（那是 8 个多小时）和 900 秒的
-   固定间隔，改成请求之间默认间隔 20 秒，失败按 20/40/60 秒退避重试。
+   固定间隔。请求之间默认间隔 60 秒，遇到 429 优先按接口返回的 retryDelay
+   等待，每日额度用完时直接停止本轮，不会无意义地反复重试。
 6. 旧版把文件写到 scripts/assets/ 下面，App 实际读取的是项目根目录的
    assets/，这一版已经改为直接写根目录。
 
@@ -44,6 +45,7 @@ import io
 import json
 import math
 import os
+import random
 import re
 import time
 from pathlib import Path
@@ -84,11 +86,11 @@ BLANK_STDDEV_THRESHOLD = 5.0
 # 每轮默认生成多少张。20 张 = 5 次请求，方便先看质量再决定要不要继续
 MAX_IMAGES_PER_RUN = 20
 
-# 请求间隔（秒）。免费额度通常有每分钟请求数限制，20 秒比较稳
-SLEEP_BETWEEN_REQUESTS = 20.0
+# 请求间隔（秒）。免费额度对图像模型通常限制得很紧，60 秒一次比 20 秒稳
+SLEEP_BETWEEN_REQUESTS = 60.0
 
-# 单组最多重试几次
-MAX_RETRIES = 3
+# 单组最多重试几次。触发 429 时会优先按接口返回的 retryDelay 等待
+MAX_RETRIES = 5
 
 WEBP_QUALITY = 85
 
@@ -111,6 +113,55 @@ GEMINI_API_KEY_FALLBACK = "AQ.Ab8RN6LTH1p-5SBugbAnaAvYQNV1v2yh7jSnqEyULEcVZkXHgQ
 
 def get_api_key() -> str:
     return os.environ.get("GEMINI_API_KEY", "").strip() or GEMINI_API_KEY_FALLBACK
+
+
+class GeminiApiError(RuntimeError):
+    """带上接口返回的重试建议，429 时能按服务端要求等待。"""
+
+    def __init__(
+        self,
+        status_code: int,
+        message: str,
+        retry_delay: float | None = None,
+        daily_quota: bool = False,
+    ) -> None:
+        super().__init__(f"HTTP {status_code}: {message}")
+        self.status_code = status_code
+        self.message = message
+        self.retry_delay = retry_delay
+        self.daily_quota = daily_quota
+
+
+def parse_api_error(resp: requests.Response) -> GeminiApiError:
+    """从错误响应里提取 retryDelay 和是否属于每日额度耗尽。"""
+    try:
+        payload = resp.json()
+    except ValueError:
+        payload = {}
+
+    error = payload.get("error", {}) if isinstance(payload, dict) else {}
+    message = error.get("message") or resp.text[:500] or "未知错误"
+    retry_delay = None
+    daily_quota = False
+
+    for detail in error.get("details", []) or []:
+        detail_type = str(detail.get("@type", ""))
+        if detail_type.endswith("RetryInfo"):
+            match = re.match(r"([\d.]+)s", str(detail.get("retryDelay", "")))
+            if match:
+                retry_delay = float(match.group(1))
+        if detail_type.endswith("QuotaFailure"):
+            for violation in detail.get("violations", []) or []:
+                quota_id = str(violation.get("quotaId", "")).lower()
+                quota_metric = str(violation.get("quotaMetric", "")).lower()
+                if "perday" in quota_id or "per_day" in quota_id or "perday" in quota_metric:
+                    daily_quota = True
+
+    lower = message.lower()
+    if "per day" in lower or "perday" in lower or "daily" in lower:
+        daily_quota = True
+
+    return GeminiApiError(resp.status_code, message, retry_delay, daily_quota)
 
 
 def build_visual_brief(entry: dict) -> str:
@@ -180,7 +231,8 @@ def call_gemini_image_api(prompt: str, reference_image_bytes: bytes | None) -> b
     body = {"contents": [{"parts": parts}]}
 
     resp = requests.post(url, headers=headers, json=body, timeout=120)
-    resp.raise_for_status()
+    if resp.status_code >= 400:
+        raise parse_api_error(resp)
     data = resp.json()
 
     candidates = data.get("candidates", [])
@@ -360,6 +412,7 @@ def main() -> None:
         prompt = build_grid_prompt(group)
 
         success = False
+        stop_run = False
         for attempt in range(1, MAX_RETRIES + 1):
             try:
                 raw_bytes = call_gemini_image_api(prompt, reference_bytes)
@@ -369,12 +422,43 @@ def main() -> None:
                 success = True
                 print(f"  已切分保存 {saved} 张，本轮累计 {generated} 张")
                 break
+            except GeminiApiError as exc:
+                if exc.daily_quota:
+                    print("  每日额度已用完，本轮到此为止。")
+                    print("  明天再跑，或者换一个 key / 升级配额后继续。")
+                    print(f"  接口信息：{exc.message}")
+                    stop_run = True
+                    break
+
+                if exc.status_code == 429:
+                    wait = exc.retry_delay or min(
+                        600.0, SLEEP_BETWEEN_REQUESTS * (2 ** (attempt - 1))
+                    )
+                    wait += random.uniform(0, 5)
+                    reason = "触发限流"
+                else:
+                    wait = min(300.0, 10 * (2 ** (attempt - 1))) + random.uniform(0, 3)
+                    reason = f"第{attempt}次尝试失败"
+
+                print(f"  {reason}: {exc.message}")
+                if attempt < MAX_RETRIES:
+                    print(
+                        f"  {wait:.0f} 秒后重试"
+                        f"（{attempt + 1}/{MAX_RETRIES}）"
+                    )
+                    time.sleep(wait)
+                else:
+                    print("  已达到最大重试次数，这一组先跳过")
+
             except Exception as exc:  # noqa: BLE001 - 生成流程要尽量跑完
                 print(f"  第{attempt}次尝试失败: {exc}")
                 if attempt < MAX_RETRIES:
-                    wait = SLEEP_BETWEEN_REQUESTS * attempt
+                    wait = min(300.0, 10 * (2 ** (attempt - 1))) + random.uniform(0, 3)
                     print(f"  {wait:.0f} 秒后重试")
                     time.sleep(wait)
+
+        if stop_run:
+            break
 
         if not success:
             print("  这一组跳过，下次运行会重新尝试")
