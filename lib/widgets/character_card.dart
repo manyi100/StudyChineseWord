@@ -68,37 +68,24 @@ class CharacterCard extends StatelessWidget {
                 ),
               ),
 
-            // 配图区：有配图就铺满整个圆角框，没有(imageAsset为空)才显示占位图标。
-            // 注意不要在外层 Container 上加 alignment：一旦给了对齐方式，子组件会按
-            // 图片自身的尺寸居中，左右两侧就会露出底色，看起来像一条白边。
+            // 配图区：按每张图自己的真实宽高比显示，铺满圆角框，不裁切也不留白。
+            // 实测这批插图比例在 1.81~2.0 之间浮动，写死 1.81 会让大部分图上下被
+            // 裁掉一点，所以这里先按 1.81 占位，取到真实尺寸后自动校正。
+            // 注意不要在外层加 alignment：一旦给了对齐方式，子组件会按图片自身
+            // 尺寸居中，左右两侧就会露出底色，看起来像一条白边。
             ClipRRect(
               borderRadius: BorderRadius.circular(18),
-              child: SizedBox(
-                height: 140,
-                width: double.infinity,
-                child: hanzi.imageAsset != null
-                    ? Image.asset(
-                        hanzi.imageAsset!,
-                        fit: BoxFit.cover,
-                        width: double.infinity,
-                        height: double.infinity,
-                        errorBuilder: (context, error, stack) => Container(
-                          color: Colors.white.withOpacity(0.6),
-                          alignment: Alignment.center,
-                          child: const Icon(
-                            Icons.image_outlined,
-                            size: 52,
-                            color: Colors.black26,
-                          ),
-                        ),
-                      )
-                    : Container(
-                        color: Colors.white.withOpacity(0.6),
-                        alignment: Alignment.center,
+              child: hanzi.imageAsset != null
+                  ? _HanziImage(asset: hanzi.imageAsset!)
+                  : Container(
+                      color: Colors.white.withOpacity(0.6),
+                      alignment: Alignment.center,
+                      child: AspectRatio(
+                        aspectRatio: 1.81,
                         child: const Icon(Icons.image_outlined,
                             size: 52, color: Colors.black26),
                       ),
-              ),
+                    ),
             ),
             const SizedBox(height: 16),
 
@@ -233,6 +220,87 @@ class _WordChip extends StatelessWidget {
                 style: const TextStyle(fontSize: 11, color: Colors.black45)),
             Text(word.text, style: const TextStyle(fontSize: 17)),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+/// 按图片真实宽高比撑满父容器的配图组件。
+///
+/// 这批插图的比例并不统一（1.81~2.0），如果统一写死一个比例，用 BoxFit.cover
+/// 会把偏宽或偏高的图裁掉一点，用 BoxFit.contain 又会留出底色边。这里在加载时
+/// 读取图片真实尺寸，再设置 AspectRatio，保证既不裁切也不留白。
+class _HanziImage extends StatefulWidget {
+  final String asset;
+
+  const _HanziImage({required this.asset});
+
+  @override
+  State<_HanziImage> createState() => _HanziImageState();
+}
+
+class _HanziImageState extends State<_HanziImage> {
+  // 取到真实尺寸前先按常见比例占位，避免首帧高度为 0
+  double _aspectRatio = 1.81;
+  bool _resolved = false;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    _resolveAspectRatio();
+  }
+
+  @override
+  void didUpdateWidget(covariant _HanziImage oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.asset != widget.asset) {
+      _resolved = false;
+      _aspectRatio = 1.81;
+      _resolveAspectRatio();
+    }
+  }
+
+  void _resolveAspectRatio() {
+    if (_resolved) return;
+
+    final stream = AssetImage(widget.asset)
+        .resolve(createLocalImageConfiguration(context));
+    late final ImageStreamListener listener;
+    listener = ImageStreamListener(
+      (info, _) {
+        final ratio = info.image.width / info.image.height;
+        _resolved = true;
+        stream.removeListener(listener);
+        if (!mounted) return;
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          if (mounted && (_aspectRatio - ratio).abs() > 0.001) {
+            setState(() => _aspectRatio = ratio);
+          }
+        });
+      },
+      onError: (error, stack) {
+        _resolved = true;
+        stream.removeListener(listener);
+      },
+    );
+    stream.addListener(listener);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AspectRatio(
+      aspectRatio: _aspectRatio,
+      child: Image.asset(
+        widget.asset,
+        fit: BoxFit.cover,
+        width: double.infinity,
+        height: double.infinity,
+        errorBuilder: (context, error, stack) => Container(
+          color: Colors.white.withOpacity(0.6),
+          alignment: Alignment.center,
+          child: const Icon(Icons.image_outlined,
+              size: 52, color: Colors.black26),
         ),
       ),
     );
