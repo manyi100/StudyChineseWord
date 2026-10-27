@@ -68,27 +68,36 @@ class CharacterCard extends StatelessWidget {
                 ),
               ),
 
-            // 配图区：有配图就显示，没有(imageAsset为空)就显示占位图标
+            // 配图区：有配图就铺满整个圆角框，没有(imageAsset为空)才显示占位图标。
+            // 注意不要在外层 Container 上加 alignment：一旦给了对齐方式，子组件会按
+            // 图片自身的尺寸居中，左右两侧就会露出底色，看起来像一条白边。
             ClipRRect(
               borderRadius: BorderRadius.circular(18),
-              child: Container(
+              child: SizedBox(
                 height: 140,
                 width: double.infinity,
-                color: Colors.white.withOpacity(0.6),
-                alignment: Alignment.center,
                 child: hanzi.imageAsset != null
                     ? Image.asset(
                         hanzi.imageAsset!,
                         fit: BoxFit.cover,
-                        cacheWidth: 280,
-                        errorBuilder: (context, error, stack) => const Icon(
-                          Icons.image_outlined,
-                          size: 52,
-                          color: Colors.black26,
+                        width: double.infinity,
+                        height: double.infinity,
+                        errorBuilder: (context, error, stack) => Container(
+                          color: Colors.white.withOpacity(0.6),
+                          alignment: Alignment.center,
+                          child: const Icon(
+                            Icons.image_outlined,
+                            size: 52,
+                            color: Colors.black26,
+                          ),
                         ),
                       )
-                    : const Icon(Icons.image_outlined,
-                        size: 52, color: Colors.black26),
+                    : Container(
+                        color: Colors.white.withOpacity(0.6),
+                        alignment: Alignment.center,
+                        child: const Icon(Icons.image_outlined,
+                            size: 52, color: Colors.black26),
+                      ),
               ),
             ),
             const SizedBox(height: 16),
