@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../l10n/app_strings.dart';
 import '../models/hanzi_model.dart';
+import '../widgets/content_frame.dart';
 import 'home_screen.dart';
 
 /// 汉字网格：用于“按部首 / 按笔画”浏览时展示一组字，
@@ -41,29 +42,30 @@ class HanziGridScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.black87,
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                s.gridIntro(chars.length),
-                style: const TextStyle(color: Colors.black45, fontSize: 13),
+      body: ContentFrame(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  s.gridIntro(chars.length),
+                  style: const TextStyle(color: Colors.black45, fontSize: 13),
+                ),
               ),
             ),
-          ),
-          Expanded(
-            child: GridView.builder(
-              padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 4,
-                mainAxisSpacing: 10,
-                crossAxisSpacing: 10,
-                childAspectRatio: 0.82,
-              ),
-              itemCount: chars.length,
-              itemBuilder: (context, index) {
+            Expanded(
+              child: GridView.builder(
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 24),
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 4,
+                  mainAxisSpacing: 10,
+                  crossAxisSpacing: 10,
+                  childAspectRatio: 0.82,
+                ),
+                itemCount: chars.length,
+                itemBuilder: (context, index) {
                 final h = chars[index];
                 return Material(
                   color: Colors.white,
@@ -109,6 +111,7 @@ class HanziGridScreen extends StatelessWidget {
             ),
           ),
         ],
+        ),
       ),
     );
   }

@@ -9,6 +9,7 @@ import '../services/storage_service.dart';
 import '../services/tts_service.dart';
 import '../widgets/audio_feedback.dart';
 import '../widgets/character_card.dart';
+import '../widgets/content_frame.dart';
 
 class HomeScreen extends StatefulWidget {
   /// gradeId = 0 表示"已解锁阶段连续学"，1~6 表示具体阶段。
@@ -252,7 +253,8 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(
         children: [
           const SizedBox(height: 4),
-          if (_showAudioHint) AudioHintBanner(onClose: _dismissAudioHint),
+          if (_showAudioHint)
+            ContentFrame(child: AudioHintBanner(onClose: _dismissAudioHint)),
           Expanded(
             child: NotificationListener<ScrollNotification>(
               onNotification: (notification) {
@@ -265,10 +267,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 onPageChanged: _onPageChanged,
                 itemBuilder: (context, index) {
                   final hanzi = _hanziList[index];
-                  return CharacterCard(
-                    hanzi: hanzi,
-                    isFavorite: _favoriteIds.contains(hanzi.id),
-                    onToggleFavorite: () => _toggleFavorite(hanzi.id),
+                  // 平板 / 横屏时卡片居中，翻页手势仍覆盖整屏
+                  return ContentFrame(
+                    child: CharacterCard(
+                      hanzi: hanzi,
+                      isFavorite: _favoriteIds.contains(hanzi.id),
+                      onToggleFavorite: () => _toggleFavorite(hanzi.id),
+                    ),
                   );
                 },
               ),

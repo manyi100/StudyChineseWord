@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:entrance_720_words/l10n/app_strings.dart';
 import 'package:entrance_720_words/main.dart';
 import 'package:entrance_720_words/services/hanzi_repository.dart';
+import 'package:entrance_720_words/widgets/character_card.dart';
 
 void main() {
   testWidgets('home shows stage/radical/stroke navigation and course list',
@@ -166,6 +167,41 @@ void main() {
     await tester.pump(const Duration(seconds: 16));
 
     // 避免影响其它用例
+    AppLocale.notifier.value = AppLang.zh;
+  });
+
+  testWidgets('iPad sized screen keeps content within max width',
+      (WidgetTester tester) async {
+    SharedPreferences.setMockInitialValues({});
+    AppLocale.notifier.value = AppLang.zh;
+
+    // iPad Pro 12.9" 竖屏逻辑尺寸
+    await tester.binding.setSurfaceSize(const Size(1024, 1366));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+
+    await tester.runAsync(() async {
+      await HanziRepository.instance.ensureLoaded();
+    });
+
+    await tester.pumpWidget(const MyApp());
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 200));
+
+    // 列表内容被收窄并居中，不会横向铺满 1024
+    expect(find.text('选择学习阶段'), findsOneWidget);
+    final listWidth = tester.getSize(find.byType(ListView).first).width;
+    expect(listWidth, lessThanOrEqualTo(720));
+    expect(listWidth, greaterThan(600));
+
+    // 学习卡片同样被限制在 720 以内
+    await tester.tap(find.text('第 1 阶段'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('第 1 课'));
+    await tester.pumpAndSettle();
+    final cardWidth = tester.getSize(find.byType(CharacterCard).first).width;
+    expect(cardWidth, lessThanOrEqualTo(720));
+
+    await tester.pump(const Duration(seconds: 16));
     AppLocale.notifier.value = AppLang.zh;
   });
 }

@@ -1,7 +1,7 @@
 name: entrance_720_words
 description: "入学必备720字 - 识字学习App（MVP测试版）"
 publish_to: 'none'
-version: 0.1.0
+version: 1.0.0+1
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -17,6 +17,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+  # 图标 / 启动图生成（一次性工具，不参与运行时）
+  flutter_launcher_icons: ^0.14.4
+  flutter_native_splash: ^2.4.6
 
 flutter:
   uses-material-design: true
@@ -27,3 +30,26 @@ flutter:
     - family: KaiTiCustom
       fonts:
         - asset: assets/fonts/LXGWWenKai-Subset.ttf
+
+# 桌面图标：dart run flutter_launcher_icons
+# 源图 assets/branding/app_icon.png 需为 1024×1024、无圆角遮罩的整张方形图
+flutter_launcher_icons:
+  android: "ic_launcher"
+  ios: true
+  image_path: "assets/branding/app_icon.png"
+  adaptive_icon_background: "#F6F1E3"
+  adaptive_icon_foreground: "assets/branding/app_icon_foreground.png"
+  remove_alpha_ios: true
+  min_sdk_android: 21
+
+# 启动图：dart run flutter_native_splash:create
+flutter_native_splash:
+  color: "#F6F1E3"
+  image: assets/branding/splash_logo.png
+  android: true
+  ios: true
+  web: false
+  fullscreen: true
+  android_12:
+    image: assets/branding/splash_logo.png
+    color: "#F6F1E3"

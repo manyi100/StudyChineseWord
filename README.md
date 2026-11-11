@@ -2,7 +2,7 @@
 
 一个面向学龄前 / 低年级儿童和中文学习者的离线识字 App（Flutter + Android）。内置 720 个常用汉字，每字配拼音、部首、笔顺、组词、例句和插画，并支持笔顺描红、点读发音、阶段化学习与中英文界面。
 
-当前版本：`0.1.0`
+当前版本：`1.0.0`（构建号 1）
 
 ---
 
@@ -135,10 +135,12 @@ lib/
     ├── tian_zi_ge_box.dart       # 田字格 + 笔顺演示 + 手写描红
     ├── pinyin_grid_text.dart     # 拼音四线三格
     ├── language_button.dart      # 开屏右上角中英文切换按钮
+    ├── content_frame.dart        # 宽屏内容最大宽度（iPad / 横屏居中）
     └── audio_feedback.dart       # 喇叭图标、声波动效、气泡、首次提示
 
 scripts/
 ├── generate_images_nanobanana.py # 批量生成配图
+├── make_brand_assets.py          # 由 1024 源图生成图标 / 启动图素材
 ├── fetch_stroke_data.py          # 生成笔顺矢量数据
 ├── crop_hanzi_grid.py            # 四宫格切图（旧版）
 └── crop_hanzi_gridv2.py          # 四宫格切图（新版）
@@ -164,13 +166,13 @@ scripts/
 ```bash
 flutter pub get
 flutter test                          # 含 360dp 宽度布局检查
-flutter build apk --release           # 产物：build/app/outputs/flutter-apk/HanziRoots-v0.1.0.apk
+flutter build apk --release           # 产物：build/app/outputs/flutter-apk/HanziRoots-v1.0.0.apk
 ```
 
 安装到设备：
 
 ```bash
-adb install -r build/app/outputs/flutter-apk/HanziRoots-v0.1.0.apk
+adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.0.0.apk
 ```
 
 ### 应用标识与 APK 命名
@@ -180,7 +182,7 @@ adb install -r build/app/outputs/flutter-apk/HanziRoots-v0.1.0.apk
 | 应用包名（applicationId / namespace） | `com.ailexin.HanziRoots` |
 | 启动 Activity | `com.ailexin.HanziRoots.MainActivity` |
 | APK 文件名 | `HanziRoots-v<版本号>.apk`，版本号取自 `pubspec.yaml` 的 `version` |
-| 当前产物 | `build/app/outputs/flutter-apk/HanziRoots-v0.1.0.apk` |
+| 当前产物 | `build/app/outputs/flutter-apk/HanziRoots-v1.0.0.apk` |
 | iOS Bundle ID | `com.ailexin.HanziRoots`（RunnerTests 为 `.RunnerTests`） |
 | iOS 产物 | `build/ios/ipa/Runner.ipa`（`flutter build ipa`） |
 
@@ -240,7 +242,7 @@ flutter build ipa --release
 想和 APK 一样带版本号，导出后重命名即可：
 
 ```bash
-cp build/ios/ipa/Runner.ipa build/ios/ipa/HanziRoots-v0.1.0.ipa
+cp build/ios/ipa/Runner.ipa build/ios/ipa/HanziRoots-v1.0.0.ipa
 ```
 
 #### 三、iPhone / iPad 适配现状
@@ -253,10 +255,16 @@ cp build/ios/ipa/Runner.ipa build/ios/ipa/HanziRoots-v0.1.0.ipa
 | 依赖 | 仅 `flutter_tts`、`shared_preferences`，均支持 iOS，无需额外原生代码 |
 | 朗读 | iOS 用系统 `AVSpeechSynthesizer`，中文语音离线可用 |
 | 显示名 | `入学必备720字`（`CFBundleDisplayName`） |
+| 宽屏布局 | 内容最大宽度 720，iPad / 横屏自动居中（`lib/widgets/content_frame.dart`） |
+
+宽屏处理细节：
+
+- 首页、课程列表、部首 / 笔画网格、收藏页、学习卡片、点读提示条都套了 `ContentFrame`
+- 手机竖屏宽度小于 720，布局与之前完全一致；只有 iPad / 折叠屏展开 / 横屏才会居中
+- 翻页手势仍由整屏 `PageView` 接收，只是卡片本身被收窄，不会出现“只能滑中间一块”的问题
 
 建议在真机上再确认几点：
 
-- iPad 横屏时卡片被拉得很宽，可考虑给内容加最大宽度（如 720dp）居中
 - 英文界面下底部提示、按钮在 iPad 分屏窄宽度时是否溢出
 - 首次朗读若没声音，检查「设置 → 辅助功能 → 朗读内容 → 声音 → 中文」是否已下载
 
@@ -268,6 +276,24 @@ cp build/ios/ipa/Runner.ipa build/ios/ipa/HanziRoots-v0.1.0.ipa
 4. **隐私清单**：`ios/Runner/PrivacyInfo.xcprivacy` 已提供（声明 `UserDefaults` 用途 CA92.1）。**需在 Xcode 里把它拖进 Runner target 的 Copy Bundle Resources**，只放文件不生效
 5. **App Store 资料**：中英文名称、副标题、截图（6.7"/6.5"/12.9" iPad）、隐私政策 URL（本 App 不收集数据，填“不收集”）
 6. **体积**：图片 26.8 MB + 笔顺 1.6 MB，IPA 约 80–90 MB，仍在 200 MB 蜂窝下载限制内
+
+### 图标与启动图
+
+源图放在 `assets/branding/app_icon_source.png`（1024×1024，允许带透明圆角），然后：
+
+```bash
+python scripts/make_brand_assets.py      # 生成 app_icon / adaptive 前景 / 启动图 Logo
+dart run flutter_launcher_icons          # 生成 Android + iOS 全尺寸图标
+dart run flutter_native_splash:create    # 生成各平台启动图
+```
+
+| 产物 | 用途 |
+| --- | --- |
+| `assets/branding/app_icon.png` | 1024×1024 铺满无透明，iOS / 桌面图标 |
+| `assets/branding/app_icon_foreground.png` | Android 自适应图标前景（内容占 72%，留安全区） |
+| `assets/branding/splash_logo.png` | 启动图 Logo（内容占 62%） |
+
+脚本会打印从四角取到的背景色，把它同步到 `pubspec.yaml` 里 `flutter_native_splash` 的 `color` / `android_12.color`，启动图与图标就能无缝衔接。
 
 ### Gradle 全局仓库配置说明
 
@@ -362,10 +388,17 @@ python3 scripts/generate_images_nanobanana.py --dry-run  # 只打印提示词
   - 学习内容（汉字、拼音、组词、例句）保持中文，朗读仍为中文
 - **应用标识与产物命名**
   - 包名由 `com.example.untitled` 改为 `com.ailexin.HanziRoots`，MainActivity 同步迁移
-  - APK 产物自动命名为 `HanziRoots-v<版本号>.apk`，例如 `HanziRoots-v0.1.0.apk`
+  - APK 产物自动命名为 `HanziRoots-v<版本号>.apk`，例如 `HanziRoots-v1.0.0.apk`
   - iOS Bundle ID 同步为 `com.ailexin.HanziRoots`，显示名改为“入学必备720字”
   - 新增 `ios/Runner/PrivacyInfo.xcprivacy`（UserDefaults 用途声明）
   - README 新增 iOS / iPad 打包与上架说明
+- **版本与宽屏适配**
+  - 版本号提升到 `1.0.0+1`，Android `versionName` / iOS `CFBundleShortVersionString` 自动跟随
+  - 新增 `ContentFrame`：iPad / 横屏内容最大宽度 720 并居中，手机竖屏布局不变
+  - 新增 1024×1366（iPad Pro）宽度断言测试
+- **图标与启动图**
+  - 接入 `flutter_launcher_icons` 与 `flutter_native_splash`
+  - 新增 `scripts/make_brand_assets.py`，由一张 1024 源图生成图标、自适应前景和启动图 Logo
 - **测试**
   - 增加 360dp 窄屏导航与布局冒烟测试，替换原默认计数器测试
   - 增加中英文切换测试（首页 → 阶段 → 课程 → 切回中文）

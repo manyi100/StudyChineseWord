@@ -3,6 +3,7 @@ import '../l10n/app_strings.dart';
 import '../models/hanzi_course.dart';
 import '../services/hanzi_repository.dart';
 import '../services/storage_service.dart';
+import '../widgets/content_frame.dart';
 import 'home_screen.dart';
 
 /// 阶段课程列表：每个阶段 30 课，每课 4 个主题相近的汉字。
@@ -97,19 +98,21 @@ class _CourseListScreenState extends State<CourseListScreen> {
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.black87,
       ),
-      body: ListView.builder(
-        padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
-        itemCount: _courses.length + 2,
-        itemBuilder: (context, index) {
-          if (index == 0) return _buildHeader();
-          if (index == _courses.length + 1) return _buildContinuousCard();
-          final course = _courses[index - 1];
-          return _CourseCard(
-            course: course,
-            viewedIds: _viewedIds,
-            onTap: () => _openCourseAt(index - 1),
-          );
-        },
+      body: ContentFrame(
+        child: ListView.builder(
+          padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+          itemCount: _courses.length + 2,
+          itemBuilder: (context, index) {
+            if (index == 0) return _buildHeader();
+            if (index == _courses.length + 1) return _buildContinuousCard();
+            final course = _courses[index - 1];
+            return _CourseCard(
+              course: course,
+              viewedIds: _viewedIds,
+              onTap: () => _openCourseAt(index - 1),
+            );
+          },
+        ),
       ),
     );
   }

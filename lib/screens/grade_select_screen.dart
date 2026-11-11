@@ -5,6 +5,7 @@ import '../models/hanzi_course.dart';
 import '../services/hanzi_repository.dart';
 import '../services/progress_service.dart';
 import '../services/storage_service.dart';
+import '../widgets/content_frame.dart';
 import '../widgets/language_button.dart';
 import 'course_list_screen.dart';
 import 'favorites_screen.dart';
@@ -166,38 +167,41 @@ class _GradeSelectScreenState extends State<GradeSelectScreen> {
         foregroundColor: Colors.black87,
         actions: const [LanguageButton()],
       ),
-      body: ListView(
-        padding: const EdgeInsets.fromLTRB(20, 4, 20, 24),
-        children: [
-          Text(
-            s.homeIntro(_learnedAll, _totalAll),
-            style: const TextStyle(color: Colors.black45, fontSize: 13),
-          ),
-          const SizedBox(height: 14),
-          SegmentedButton<_BrowseMode>(
-            segments: [
-              ButtonSegment(
-                value: _BrowseMode.theme,
-                label: Text(s.byTheme),
-              ),
-              ButtonSegment(
-                value: _BrowseMode.radical,
-                label: Text(s.byRadical),
-              ),
-              ButtonSegment(
-                value: _BrowseMode.stroke,
-                label: Text(s.byStrokes),
-              ),
-            ],
-            selected: {_mode},
-            showSelectedIcon: false,
-            onSelectionChanged: (selection) {
-              setState(() => _mode = selection.first);
-            },
-          ),
-          const SizedBox(height: 16),
-          ..._buildContent(s),
-        ],
+      // 平板 / 横屏时内容居中，避免卡片被拉得过宽
+      body: ContentFrame(
+        child: ListView(
+          padding: const EdgeInsets.fromLTRB(20, 4, 20, 24),
+          children: [
+            Text(
+              s.homeIntro(_learnedAll, _totalAll),
+              style: const TextStyle(color: Colors.black45, fontSize: 13),
+            ),
+            const SizedBox(height: 14),
+            SegmentedButton<_BrowseMode>(
+              segments: [
+                ButtonSegment(
+                  value: _BrowseMode.theme,
+                  label: Text(s.byTheme),
+                ),
+                ButtonSegment(
+                  value: _BrowseMode.radical,
+                  label: Text(s.byRadical),
+                ),
+                ButtonSegment(
+                  value: _BrowseMode.stroke,
+                  label: Text(s.byStrokes),
+                ),
+              ],
+              selected: {_mode},
+              showSelectedIcon: false,
+              onSelectionChanged: (selection) {
+                setState(() => _mode = selection.first);
+              },
+            ),
+            const SizedBox(height: 16),
+            ..._buildContent(s),
+          ],
+        ),
       ),
     );
   }
