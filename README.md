@@ -270,16 +270,16 @@ cp build/ios/ipa/Runner.ipa build/ios/ipa/HanziRoots-v1.0.0.ipa
 
 #### 四、上架前清单
 
-1. **图标**：当前还是 Flutter 默认图标。准备 1024×1024 无透明 PNG，用 `flutter_launcher_icons` 一次生成 iOS / Android 全尺寸
-2. **启动图**：`ios/Runner/Base.lproj/LaunchScreen.storyboard` 仍是默认白色，可用 `flutter_native_splash` 生成
-3. **版本号**：建议把 `pubspec.yaml` 改成 `version: 1.0.0+1`，iOS 的 `CFBundleShortVersionString` / `CFBundleVersion` 会自动取这两个值；每次提审 build 号必须递增
+1. **图标**：已生成 iOS / Android 全尺寸（含自适应图标）。上架前确认 App Store Connect 的 1024 图标与 `assets/branding/app_icon.png` 一致
+2. **启动图**：已生成，iPhone / iPad / Android 12+ 均为米色底 + 居中 Logo
+3. **版本号**：已是 `1.0.0+1`，iOS 的 `CFBundleShortVersionString` / `CFBundleVersion` 自动取这两个值；每次提审 build 号必须递增
 4. **隐私清单**：`ios/Runner/PrivacyInfo.xcprivacy` 已提供（声明 `UserDefaults` 用途 CA92.1）。**需在 Xcode 里把它拖进 Runner target 的 Copy Bundle Resources**，只放文件不生效
 5. **App Store 资料**：中英文名称、副标题、截图（6.7"/6.5"/12.9" iPad）、隐私政策 URL（本 App 不收集数据，填“不收集”）
 6. **体积**：图片 26.8 MB + 笔顺 1.6 MB，IPA 约 80–90 MB，仍在 200 MB 蜂窝下载限制内
 
 ### 图标与启动图
 
-源图放在 `assets/branding/app_icon_source.png`（1024×1024，允许带透明圆角），然后：
+源图放在 `assets/branding/app_icon_source.png`（1024×1024，允许带透明圆角）。当前图标已按这套流程生成，换图后重跑三条命令即可：
 
 ```bash
 python scripts/make_brand_assets.py      # 生成 app_icon / adaptive 前景 / 启动图 Logo
@@ -293,7 +293,17 @@ dart run flutter_native_splash:create    # 生成各平台启动图
 | `assets/branding/app_icon_foreground.png` | Android 自适应图标前景（内容占 72%，留安全区） |
 | `assets/branding/splash_logo.png` | 启动图 Logo（内容占 62%） |
 
-脚本会打印从四角取到的背景色，把它同步到 `pubspec.yaml` 里 `flutter_native_splash` 的 `color` / `android_12.color`，启动图与图标就能无缝衔接。
+脚本会打印采样到的纸张底色（当前是 `#F4EAD8`），它已同步到 `pubspec.yaml` 的 `adaptive_icon_background`、`flutter_native_splash.color` 与 `android_12.color`，所以图标圆角、启动图背景是同一个颜色，切换时没有色块跳变。
+
+生成结果：
+
+| 平台 | 产物 |
+| --- | --- |
+| Android | `mipmap-*/ic_launcher.png`（5 档）+ `mipmap-anydpi-v26/ic_launcher.xml` 自适应图标 + `drawable*/splash.png`、`android12splash.png` |
+| iOS | `Assets.xcassets/AppIcon.appiconset` 全尺寸（无透明通道，符合审核要求） |
+| 启动图 | `drawable*/launch_background.xml`、`values*/styles.xml`、`LaunchImage/LaunchBackground` |
+
+> 自适应图标前景按 66% 安全区生成，圆形 / 方形遮罩都不会裁到“HanziRoots”字样；未开 `fullscreen`，启动图期间保留系统状态栏。
 
 ### Gradle 全局仓库配置说明
 
@@ -399,6 +409,8 @@ python3 scripts/generate_images_nanobanana.py --dry-run  # 只打印提示词
 - **图标与启动图**
   - 接入 `flutter_launcher_icons` 与 `flutter_native_splash`
   - 新增 `scripts/make_brand_assets.py`，由一张 1024 源图生成图标、自适应前景和启动图 Logo
+  - 已生成正式图标（Android 自适应 + iOS 全尺寸，无透明通道）与 `#F4EAD8` 米色启动图
+  - 自适应图标前景控制在 66% 安全区，避免文字被系统遮罩裁掉
 - **测试**
   - 增加 360dp 窄屏导航与布局冒烟测试，替换原默认计数器测试
   - 增加中英文切换测试（首页 → 阶段 → 课程 → 切回中文）

@@ -23,8 +23,44 @@ BRAND_DIR = os.path.join(ROOT, "assets", "branding")
 SOURCE = os.path.join(BRAND_DIR, "app_icon_source.png")
 
 CANVAS = 1024
-ADAPTIVE_SCALE = 0.72
-SPLASH_SCALE = 0.62
+# Android 自适应图标的安全区是中间 66%，前景不要超出，否则文字会被圆形遮罩裁掉
+ADAPTIVE_SCALE = 0.66
+SPLASH_SCALE = 0.55
+
+
+def sample_background(image: Image.Image, band: int = 28) -> tuple:
+    """取边缘一圈“不透明”像素的中位数作为纸张底色。
+
+    源图是带透明圆角的方形，四角本身没有有效颜色，不能直接取角点，
+    所以沿着四条边往里一圈采样，跳过透明像素。
+    """
+    w, h = image.size
+    pixels = image.load()
+    xs = list(range(band)) + list(range(w - band, w))
+    ys = list(range(h))
+    samples = []
+
+    for y in ys:
+        for x in xs:
+            r, g, b, a = pixels[x, y]
+            if a > 240:
+                samples.append((r, g, b))
+
+    ys2 = list(range(band)) + list(range(h - band, h))
+    for y in ys2:
+        for x in range(w):
+            r, g, b, a = pixels[x, y]
+            if a > 240:
+                samples.append((r, g, b))
+
+    if not samples:
+        return (246, 241, 227)
+
+    channels = []
+    for i in range(3):
+        values = sorted(s[i] for s in samples)
+        channels.append(values[len(values) // 2])
+    return tuple(channels)
 
 
 def main() -> None:
@@ -35,15 +71,7 @@ def main() -> None:
     if master.size != (CANVAS, CANVAS):
         master = master.resize((CANVAS, CANVAS), Image.LANCZOS)
 
-    # 用四角像素的均值作为背景色，透明区域（圆角外部）会被这个颜色填满
-    w, h = master.size
-    corners = [
-        master.getpixel((2, 2)),
-        master.getpixel((w - 3, 2)),
-        master.getpixel((2, h - 3)),
-        master.getpixel((w - 3, h - 3)),
-    ]
-    bg = tuple(sum(c[i] for c in corners) // 4 for i in range(3))
+    bg = sample_background(master)
 
     flat = Image.new("RGB", (CANVAS, CANVAS), bg)
     flat.paste(master, (0, 0), master)

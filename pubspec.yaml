@@ -37,19 +37,19 @@ flutter_launcher_icons:
   android: "ic_launcher"
   ios: true
   image_path: "assets/branding/app_icon.png"
-  adaptive_icon_background: "#F6F1E3"
+  adaptive_icon_background: "#F4EAD8"
   adaptive_icon_foreground: "assets/branding/app_icon_foreground.png"
   remove_alpha_ios: true
   min_sdk_android: 21
 
 # 启动图：dart run flutter_native_splash:create
 flutter_native_splash:
-  color: "#F6F1E3"
+  color: "#F4EAD8"
   image: assets/branding/splash_logo.png
   android: true
   ios: true
   web: false
-  fullscreen: true
+  fullscreen: false
   android_12:
     image: assets/branding/splash_logo.png
-    color: "#F6F1E3"
+    color: "#F4EAD8"
