@@ -111,10 +111,10 @@ class GradeInfo {
 }
 
 const List<GradeInfo> gradeInfoList = [
-  GradeInfo(id: 1, name: '一年级'),
-  GradeInfo(id: 2, name: '二年级'),
-  GradeInfo(id: 3, name: '三年级'),
-  GradeInfo(id: 4, name: '四年级'),
-  GradeInfo(id: 5, name: '五年级'),
-  GradeInfo(id: 6, name: '六年级'),
+  GradeInfo(id: 1, name: '第 1 阶段'),
+  GradeInfo(id: 2, name: '第 2 阶段'),
+  GradeInfo(id: 3, name: '第 3 阶段'),
+  GradeInfo(id: 4, name: '第 4 阶段'),
+  GradeInfo(id: 5, name: '第 5 阶段'),
+  GradeInfo(id: 6, name: '第 6 阶段'),
 ];

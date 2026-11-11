@@ -46,16 +46,24 @@ class StorageService {
     await prefs.setInt(_kLastGradeKey, gradeId);
   }
 
-  /// 某个年级（或"全部"，约定用 gradeId = 0 表示全部）上次学习到的下标
-  Future<int> getLastIndexForGrade(int gradeId) async {
+  /// 某个分组（年级/课程/部首列表等）上次学习到的下标。
+  /// key 例如 "grade_1"、"course_g1_line1"，不同分组互不影响。
+  Future<int> getLastIndexForKey(String key) async {
     final prefs = await SharedPreferences.getInstance();
-    return prefs.getInt('$_kLastIndexPrefix$gradeId') ?? 0;
+    return prefs.getInt('$_kLastIndexPrefix$key') ?? 0;
   }
 
-  Future<void> saveLastIndexForGrade(int gradeId, int index) async {
+  Future<void> saveLastIndexForKey(String key, int index) async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setInt('$_kLastIndexPrefix$gradeId', index);
+    await prefs.setInt('$_kLastIndexPrefix$key', index);
   }
+
+  /// 某个年级（或"全部"，约定用 gradeId = 0 表示全部）上次学习到的下标
+  Future<int> getLastIndexForGrade(int gradeId) =>
+      getLastIndexForKey('grade_$gradeId');
+
+  Future<void> saveLastIndexForGrade(int gradeId, int index) =>
+      saveLastIndexForKey('grade_$gradeId', index);
 
   Future<Set<String>> getFavoriteIds() async {
     final prefs = await SharedPreferences.getInstance();

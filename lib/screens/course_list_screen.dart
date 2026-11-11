@@ -1,0 +1,271 @@
+import 'package:flutter/material.dart';
+import '../models/hanzi_course.dart';
+import '../services/hanzi_repository.dart';
+import '../services/storage_service.dart';
+import 'home_screen.dart';
+
+/// 阶段课程列表：每个阶段 30 课，每课 4 个主题相近的汉字。
+/// 课程卡片显示 4 个字和完成进度，点击进入该课的左右翻页学习。
+class CourseListScreen extends StatefulWidget {
+  final int stageId;
+
+  const CourseListScreen({super.key, required this.stageId});
+
+  @override
+  State<CourseListScreen> createState() => _CourseListScreenState();
+}
+
+class _CourseListScreenState extends State<CourseListScreen> {
+  bool _isLoading = true;
+  List<HanziCourse> _courses = [];
+  Set<String> _viewedIds = {};
+  String _stageName = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _load();
+  }
+
+  Future<void> _load() async {
+    await HanziRepository.instance.ensureLoaded();
+    final viewed = await StorageService.instance.getViewedIds();
+    if (!mounted) return;
+    setState(() {
+      _courses = HanziRepository.instance.coursesForGrade(widget.stageId);
+      _viewedIds = viewed;
+      _stageName = '第 ${widget.stageId} 阶段';
+      _isLoading = false;
+    });
+  }
+
+  Future<void> _openCourse(HanziCourse course) async {
+    await Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => HomeScreen(
+          chars: course.chars,
+          title: '${course.label} · ${course.title}',
+          progressKey: 'course_${course.groupId}',
+        ),
+      ),
+    );
+    _load();
+  }
+
+  Future<void> _openContinuous() async {
+    await Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => HomeScreen(gradeId: widget.stageId),
+      ),
+    );
+    _load();
+  }
+
+  int get _learnedTotal =>
+      _courses.fold(0, (sum, c) => sum + c.learnedCount(_viewedIds));
+
+  int get _totalChars => _courses.fold(0, (sum, c) => sum + c.chars.length);
+
+  int get _completedCourses =>
+      _courses.where((c) => c.isCompleted(_viewedIds)).length;
+
+  @override
+  Widget build(BuildContext context) {
+    if (_isLoading) {
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
+    }
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('$_stageName · 课程'),
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        foregroundColor: Colors.black87,
+      ),
+      body: ListView.builder(
+        padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+        itemCount: _courses.length + 2,
+        itemBuilder: (context, index) {
+          if (index == 0) return _buildHeader();
+          if (index == _courses.length + 1) return _buildContinuousCard();
+          final course = _courses[index - 1];
+          return _CourseCard(
+            course: course,
+            viewedIds: _viewedIds,
+            onTap: () => _openCourse(course),
+          );
+        },
+      ),
+    );
+  }
+
+  Widget _buildHeader() {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            '每课 4 字，共 ${_courses.length} 课；已学 $_learnedTotal / $_totalChars 字，'
+            '完成 $_completedCourses / ${_courses.length} 课',
+            style: const TextStyle(color: Colors.black45, fontSize: 13),
+          ),
+          const SizedBox(height: 12),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(6),
+            child: LinearProgressIndicator(
+              value: _totalChars == 0 ? 0 : _learnedTotal / _totalChars,
+              minHeight: 8,
+              backgroundColor: Colors.grey.shade200,
+              color: const Color(0xFF4CAF50),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildContinuousCard() {
+    return Padding(
+      padding: const EdgeInsets.only(top: 8),
+      child: Material(
+        color: const Color(0xFF4CAF50),
+        borderRadius: BorderRadius.circular(18),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(18),
+          onTap: _openContinuous,
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Row(
+              children: [
+                const Icon(Icons.all_inclusive_rounded, color: Colors.white),
+                const SizedBox(width: 12),
+                const Expanded(
+                  child: Text(
+                    '连续学完本阶段',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+                const Icon(Icons.chevron_right_rounded, color: Colors.white70),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _CourseCard extends StatelessWidget {
+  final HanziCourse course;
+  final Set<String> viewedIds;
+  final VoidCallback onTap;
+
+  const _CourseCard({
+    required this.course,
+    required this.viewedIds,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final completed = course.isCompleted(viewedIds);
+    final learned = course.learnedCount(viewedIds);
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: Material(
+        color: completed ? const Color(0xFFFFF8E1) : Colors.white,
+        borderRadius: BorderRadius.circular(18),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(18),
+          onTap: onTap,
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(18),
+              border: Border.all(color: Colors.black.withValues(alpha: 0.06)),
+            ),
+            child: Row(
+              children: [
+                Container(
+                  width: 44,
+                  height: 44,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: completed
+                        ? const Color(0xFFFFE0B2)
+                        : const Color(0xFFE8F5E9),
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: completed
+                      ? const Icon(Icons.check_rounded,
+                          color: Color(0xFFFF9800))
+                      : Text(
+                          '${course.indexInStage}',
+                          style: const TextStyle(
+                            fontSize: 17,
+                            fontWeight: FontWeight.bold,
+                            color: Color(0xFF4CAF50),
+                          ),
+                        ),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            course.label,
+                            style: const TextStyle(
+                              fontSize: 13,
+                              color: Colors.black54,
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Text(
+                            completed ? '已完成' : '$learned / ${course.chars.length} 字',
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: completed
+                                  ? const Color(0xFFFF9800)
+                                  : Colors.black38,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 4),
+                      Row(
+                        children: course.chars
+                            .map((h) => Padding(
+                                  padding: const EdgeInsets.only(right: 10),
+                                  child: Text(
+                                    h.char,
+                                    style: const TextStyle(
+                                      fontFamily: 'KaiTiCustom',
+                                      fontSize: 26,
+                                      height: 1.0,
+                                    ),
+                                  ),
+                                ))
+                            .toList(),
+                      ),
+                    ],
+                  ),
+                ),
+                const Icon(Icons.chevron_right_rounded, color: Colors.black26),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

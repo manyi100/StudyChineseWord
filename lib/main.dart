@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         colorSchemeSeed: const Color(0xFF4CAF50),
         scaffoldBackgroundColor: const Color(0xFFF7F7F5),
       ),
-      // 默认启动直接进入"选择学习年级"主界面（不再自动跳回上次学习的年级）
+      // 默认启动直接进入学习入口（阶段/主题、部首、笔画三种分类）
       home: const GradeSelectScreen(),
     );
   }

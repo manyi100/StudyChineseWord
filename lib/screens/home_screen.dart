@@ -9,10 +9,22 @@ import 'favorites_screen.dart';
 import 'grade_select_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-  /// gradeId = 0 表示"已解锁年级连续学"，1~6 表示具体年级
+  /// gradeId = 0 表示"已解锁阶段连续学"，1~6 表示具体阶段。
+  /// 传入 [chars] 时则直接学习给定的字列表（课程/部首/笔画分组共用）。
   final int gradeId;
+  final List<HanziModel>? chars;
+  final String? title;
+  final String? progressKey;
+  final int? initialIndex;
 
-  const HomeScreen({super.key, required this.gradeId});
+  const HomeScreen({
+    super.key,
+    this.gradeId = 0,
+    this.chars,
+    this.title,
+    this.progressKey,
+    this.initialIndex,
+  });
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -33,10 +45,16 @@ class _HomeScreenState extends State<HomeScreen> {
     _restoreState();
   }
 
+  String get _progressKey => widget.progressKey ?? 'grade_${widget.gradeId}';
+
   Future<void> _restoreState() async {
     await HanziRepository.instance.ensureLoaded();
 
-    if (widget.gradeId == 0) {
+    final explicitChars = widget.chars;
+    if (explicitChars != null) {
+      _hanziList = explicitChars;
+      _titleText = widget.title ?? '';
+    } else if (widget.gradeId == 0) {
       final unlockedIds = await ProgressService.getUnlockedGradeIds();
       _hanziList = HanziRepository.instance
           .forAllGrades()
@@ -50,10 +68,12 @@ class _HomeScreenState extends State<HomeScreen> {
     }
 
     final lastIndex =
-        await StorageService.instance.getLastIndexForGrade(widget.gradeId);
+        await StorageService.instance.getLastIndexForKey(_progressKey);
     final favorites = await StorageService.instance.getFavoriteIds();
-    final safeIndex =
-        _hanziList.isEmpty ? 0 : lastIndex.clamp(0, _hanziList.length - 1);
+    final safeIndex = _hanziList.isEmpty
+        ? 0
+        : (widget.initialIndex ?? lastIndex)
+            .clamp(0, _hanziList.length - 1);
 
     setState(() {
       _currentIndex = safeIndex;
@@ -77,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _onPageChanged(int index) {
     setState(() => _currentIndex = index);
-    StorageService.instance.saveLastIndexForGrade(widget.gradeId, index);
+    StorageService.instance.saveLastIndexForKey(_progressKey, index);
     _markViewedAndSpeak(index);
   }
 
@@ -112,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
     if (_hanziList.isEmpty) {
       return Scaffold(
         appBar: AppBar(title: Text(_titleText)),
-        body: const Center(child: Text('该年级暂无数据')),
+        body: const Center(child: Text('该阶段暂无数据')),
       );
     }
 
@@ -125,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
         foregroundColor: Colors.black87,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_rounded),
-          tooltip: '返回年级选择',
+          tooltip: '返回阶段选择',
           onPressed: _goToGradeSelect,
         ),
         actions: [
