@@ -8,6 +8,7 @@ import '../services/storage_service.dart';
 import '../services/tts_service.dart';
 import '../widgets/audio_feedback.dart';
 import '../widgets/character_card.dart';
+import '../widgets/char_nav_strip.dart';
 import 'grade_select_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -34,8 +35,10 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   PageController? _pageController;
+  final ScrollController _navScrollController = ScrollController();
   int _currentIndex = 0;
   Set<String> _favoriteIds = {};
+  Set<String> _viewedIds = {};
   bool _isLoading = true;
 
   List<HanziModel> _hanziList = [];
@@ -74,6 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final lastIndex =
         await StorageService.instance.getLastIndexForKey(_progressKey);
     final favorites = await StorageService.instance.getFavoriteIds();
+    final viewedIds = await StorageService.instance.getViewedIds();
     final safeIndex = _hanziList.isEmpty
         ? 0
         : (widget.initialIndex ?? lastIndex)
@@ -82,6 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       _currentIndex = safeIndex;
       _favoriteIds = favorites;
+      _viewedIds = viewedIds;
       _pageController = PageController(initialPage: safeIndex);
       _isLoading = false;
     });
@@ -89,6 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
     if (_hanziList.isNotEmpty) {
       _markViewedAndSpeak(safeIndex);
     }
+    WidgetsBinding.instance.addPostFrameCallback((_) => _centerCurrentChip());
 
     // 第一次进入学习页时，提示“点哪里都能发音”，自动消失
     final hintShown = await StorageService.instance.getAudioHintShown();
@@ -111,8 +117,11 @@ class _HomeScreenState extends State<HomeScreen> {
   void _markViewedAndSpeak(int index) {
     final hanzi = _hanziList[index];
     StorageService.instance.markViewed(hanzi.id);
+    if (!_viewedIds.contains(hanzi.id)) {
+      setState(() => _viewedIds.add(hanzi.id));
+    }
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      TtsService.instance.speak(hanzi.char);
+      TtsService.instance.speak(hanzi.char, tag: 'char_${hanzi.id}');
     });
   }
 
@@ -120,6 +129,30 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() => _currentIndex = index);
     StorageService.instance.saveLastIndexForKey(_progressKey, index);
     _markViewedAndSpeak(index);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _centerCurrentChip());
+  }
+
+  void _jumpTo(int index) {
+    _pageController?.animateToPage(
+      index,
+      duration: const Duration(milliseconds: 260),
+      curve: Curves.easeInOut,
+    );
+  }
+
+  /// 让顶部汉字导航条自动把当前字滚到中间
+  void _centerCurrentChip() {
+    if (!mounted || !_navScrollController.hasClients) return;
+    const extent = CharNavStrip.itemExtent;
+    final position = _navScrollController.position;
+    final target =
+        _currentIndex * extent + extent / 2 - position.viewportDimension / 2;
+    final clamped = target.clamp(0.0, position.maxScrollExtent);
+    _navScrollController.animateTo(
+      clamped,
+      duration: const Duration(milliseconds: 260),
+      curve: Curves.easeOut,
+    );
   }
 
   void _toggleFavorite(String id) {
@@ -140,6 +173,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void dispose() {
     _audioHintTimer?.cancel();
+    _navScrollController.dispose();
     _pageController?.dispose();
     TtsService.instance.stop();
     super.dispose();
@@ -173,13 +207,15 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 4),
-            child: Text(
-              '${_currentIndex + 1} / ${_hanziList.length}',
-              style: const TextStyle(color: Colors.black45, fontSize: 13),
-            ),
+          const SizedBox(height: 2),
+          CharNavStrip(
+            chars: _hanziList,
+            currentIndex: _currentIndex,
+            viewedIds: _viewedIds,
+            controller: _navScrollController,
+            onTap: _jumpTo,
           ),
+          const SizedBox(height: 4),
           if (_showAudioHint) AudioHintBanner(onClose: _dismissAudioHint),
           Expanded(
             child: PageView.builder(

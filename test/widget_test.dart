@@ -40,6 +40,8 @@ void main() {
     await tester.tap(find.text('第 1 课'));
     await tester.pumpAndSettle();
     expect(find.text('第 1 课 · 一二三四'), findsOneWidget);
+    // 旧的 1/4 序号已移除，改为顶部四字导航条
+    expect(find.text('1 / 4'), findsNothing);
     // 首次进入会显示“点哪里都能发音”的提示，且各朗读入口都有喇叭图标
     expect(find.text('点汉字、词语、句子或图片，都能听发音'), findsOneWidget);
     expect(find.byIcon(Icons.volume_up_rounded), findsWidgets);
