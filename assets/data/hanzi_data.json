@@ -31,7 +31,7 @@
       "text": "我有一个红气球。",
       "pinyin": "wǒ yǒu yī gè hóng qì qiú 。"
     },
-    "imageAsset":"assets/images/0001.gif",
+    "imageAsset": "assets/images/0001.webp",
     "needsReview": false,
     "sourceLine": "一二三四",
     "sourceLineIndex": 1
@@ -69,7 +69,7 @@
       "text": "今天是二月二号。",
       "pinyin": "jīn tiān shì èr yuè èr hào 。"
     },
-    "imageAsset": "assets/images/0002.gif",
+    "imageAsset": "assets/images/0002.webp",
     "needsReview": false,
     "sourceLine": "一二三四",
     "sourceLineIndex": 1
@@ -108,7 +108,7 @@
       "text": "我们三个人一起去公园。",
       "pinyin": "wǒ men sān gè rén yī qǐ qù gōng yuán 。"
     },
-    "imageAsset": "assets/images/0003.gif",
+    "imageAsset": "assets/images/0003.webp",
     "needsReview": false,
     "sourceLine": "一二三四",
     "sourceLineIndex": 1
@@ -149,7 +149,7 @@
       "text": "一年有四个季节。",
       "pinyin": "yī nián yǒu sì gè jì jié 。"
     },
-    "imageAsset": "assets/images/0004.gif",
+    "imageAsset": "assets/images/0004.webp",
     "needsReview": false,
     "sourceLine": "一二三四",
     "sourceLineIndex": 1
@@ -189,7 +189,7 @@
       "text": "五月的花开得很美。",
       "pinyin": "wǔ yuè de huā kāi de hěn měi 。"
     },
-    "imageAsset": "assets/images/0005.gif",
+    "imageAsset": "assets/images/0005.webp",
     "needsReview": false,
     "sourceLine": "五六七八",
     "sourceLineIndex": 2
@@ -229,7 +229,7 @@
       "text": "弟弟今年六岁了。",
       "pinyin": "dì dì jīn nián liù suì le 。"
     },
-    "imageAsset": "assets/images/0006.gif",
+    "imageAsset": "assets/images/0006.webp",
     "needsReview": false,
     "sourceLine": "五六七八",
     "sourceLineIndex": 2
@@ -267,7 +267,7 @@
       "text": "一个星期有七天。",
       "pinyin": "yī gè xīng qī yǒu qī tiān 。"
     },
-    "imageAsset": "assets/images/0007.gif",
+    "imageAsset": "assets/images/0007.webp",
     "needsReview": false,
     "sourceLine": "五六七八",
     "sourceLineIndex": 2
@@ -305,7 +305,7 @@
       "text": "八月的天气很热。",
       "pinyin": "bā yuè de tiān qì hěn rè 。"
     },
-    "imageAsset": "assets/images/0008.gif",
+    "imageAsset": "assets/images/0008.webp",
     "needsReview": false,
     "sourceLine": "五六七八",
     "sourceLineIndex": 2
@@ -343,7 +343,7 @@
       "text": "九月就要开学了。",
       "pinyin": "jiǔ yuè jiù yào kāi xué le 。"
     },
-    "imageAsset": "assets/images/0009.gif",
+    "imageAsset": "assets/images/0009.webp",
     "needsReview": false,
     "sourceLine": "九十百千",
     "sourceLineIndex": 3
@@ -381,7 +381,7 @@
       "text": "我今年十岁了。",
       "pinyin": "wǒ jīn nián shí suì le 。"
     },
-    "imageAsset": "assets/images/0010.gif",
+    "imageAsset": "assets/images/0010.webp",
     "needsReview": false,
     "sourceLine": "九十百千",
     "sourceLineIndex": 3
@@ -423,7 +423,7 @@
       "text": "公园里百花盛开。",
       "pinyin": "gōng yuán lǐ bǎi huā shèng kāi 。"
     },
-    "imageAsset": "assets/images/0011.gif",
+    "imageAsset": "assets/images/0011.webp",
     "needsReview": false,
     "sourceLine": "九十百千",
     "sourceLineIndex": 3
@@ -462,7 +462,7 @@
       "text": "这条河有一千米长。",
       "pinyin": "zhè tiáo hé yǒu yī qiān mǐ cháng 。"
     },
-    "imageAsset": "assets/images/0012.gif",
+    "imageAsset": "assets/images/0012.webp",
     "needsReview": false,
     "sourceLine": "九十百千",
     "sourceLineIndex": 3
@@ -501,7 +501,7 @@
       "text": "大家高兴地喊万岁。",
       "pinyin": "dà jiā gāo xìng dì hǎn wàn suì 。"
     },
-    "imageAsset": "assets/images/0013.gif",
+    "imageAsset": "assets/images/0013.webp",
     "needsReview": false,
     "sourceLine": "万亿几中",
     "sourceLineIndex": 4
@@ -540,7 +540,7 @@
       "text": "中国有十几亿人口。",
       "pinyin": "zhōng guó yǒu shí jǐ yì rén kǒu 。"
     },
-    "imageAsset": "assets/images/0014.gif",
+    "imageAsset": "assets/images/0014.webp",
     "needsReview": false,
     "sourceLine": "万亿几中",
     "sourceLineIndex": 4
@@ -578,7 +578,7 @@
       "text": "桌子上有几个苹果。",
       "pinyin": "zhuō zǐ shàng yǒu jǐ gè píng guǒ 。"
     },
-    "imageAsset": "assets/images/0015.gif",
+    "imageAsset": "assets/images/0015.webp",
     "needsReview": false,
     "sourceLine": "万亿几中",
     "sourceLineIndex": 4
@@ -618,7 +618,7 @@
       "text": "我们中午一起吃饭。",
       "pinyin": "wǒ men zhōng wǔ yī qǐ chī fàn 。"
     },
-    "imageAsset": "assets/images/0016.gif",
+    "imageAsset": "assets/images/0016.webp",
     "needsReview": false,
     "sourceLine": "万亿几中",
     "sourceLineIndex": 4
@@ -657,7 +657,7 @@
       "text": "我每天走路上学。",
       "pinyin": "wǒ měi tiān zǒu lù shàng xué 。"
     },
-    "imageAsset": "assets/images/0017.gif",
+    "imageAsset": "assets/images/0017.webp",
     "needsReview": false,
     "sourceLine": "上下左右",
     "sourceLineIndex": 5
@@ -696,7 +696,7 @@
       "text": "今天下雨了。",
       "pinyin": "jīn tiān xià yù le 。"
     },
-    "imageAsset": "assets/images/0018.gif",
+    "imageAsset": "assets/images/0018.webp",
     "needsReview": false,
     "sourceLine": "上下左右",
     "sourceLineIndex": 5
@@ -737,7 +737,7 @@
       "text": "我用左手写字。",
       "pinyin": "wǒ yòng zuǒ shǒu xiě zì 。"
     },
-    "imageAsset": "assets/images/0019.gif",
+    "imageAsset": "assets/images/0019.webp",
     "needsReview": false,
     "sourceLine": "上下左右",
     "sourceLineIndex": 5
@@ -778,7 +778,7 @@
       "text": "请往右边走。",
       "pinyin": "qǐng wǎng yòu biān zǒu 。"
     },
-    "imageAsset": "assets/images/0020.gif",
+    "imageAsset": "assets/images/0020.webp",
     "needsReview": false,
     "sourceLine": "上下左右",
     "sourceLineIndex": 5
@@ -817,7 +817,7 @@
       "text": "这个西瓜很大。",
       "pinyin": "zhè gè xī guā hěn dà 。"
     },
-    "imageAsset": "assets/images/0021.gif",
+    "imageAsset": "assets/images/0021.webp",
     "needsReview": false,
     "sourceLine": "大小多少",
     "sourceLineIndex": 6
@@ -856,7 +856,7 @@
       "text": "小狗在院子里跑。",
       "pinyin": "xiǎo gǒu zài yuàn zǐ lǐ páo 。"
     },
-    "imageAsset": "assets/images/0022.gif",
+    "imageAsset": "assets/images/0022.webp",
     "needsReview": false,
     "sourceLine": "大小多少",
     "sourceLineIndex": 6
@@ -898,7 +898,7 @@
       "text": "公园里有很多花。",
       "pinyin": "gōng yuán lǐ yǒu hěn duō huā 。"
     },
-    "imageAsset": "assets/images/0023.gif",
+    "imageAsset": "assets/images/0023.webp",
     "needsReview": false,
     "sourceLine": "大小多少",
     "sourceLineIndex": 6
@@ -938,7 +938,7 @@
       "text": "班里的男生比女生少。",
       "pinyin": "bān lǐ de nán shēng bǐ nǚ shēng shǎo 。"
     },
-    "imageAsset": "assets/images/0024.gif",
+    "imageAsset": "assets/images/0024.webp",
     "needsReview": false,
     "sourceLine": "大小多少",
     "sourceLineIndex": 6
@@ -978,7 +978,7 @@
       "text": "妈妈给了我一个硬币。",
       "pinyin": "mā mā gěi le wǒ yī gè yìng bì 。"
     },
-    "imageAsset": "assets/images/0025.gif",
+    "imageAsset": "assets/images/0025.webp",
     "needsReview": false,
     "sourceLine": "币元角分",
     "sourceLineIndex": 7
@@ -1018,7 +1018,7 @@
       "text": "这本书十元钱。",
       "pinyin": "zhè běn shū shí yuán qián 。"
     },
-    "imageAsset": "assets/images/0026.gif",
+    "imageAsset": "assets/images/0026.webp",
     "needsReview": false,
     "sourceLine": "币元角分",
     "sourceLineIndex": 7
@@ -1061,7 +1061,7 @@
       "text": "桌子的角落有一只猫。",
       "pinyin": "zhuō zǐ de jiǎo luò yǒu yī zhǐ māo 。"
     },
-    "imageAsset": "assets/images/0027.gif",
+    "imageAsset": "assets/images/0027.webp",
     "needsReview": false,
     "sourceLine": "币元角分",
     "sourceLineIndex": 7
@@ -1101,7 +1101,7 @@
       "text": "我们休息十分钟。",
       "pinyin": "wǒ men xiū xī shí fēn zhōng 。"
     },
-    "imageAsset": "assets/images/0028.gif",
+    "imageAsset": "assets/images/0028.webp",
     "needsReview": false,
     "sourceLine": "币元角分",
     "sourceLineIndex": 7
@@ -1146,7 +1146,7 @@
       "text": "老师站在我们前面。",
       "pinyin": "lǎo shī zhàn zài wǒ men qián miàn 。"
     },
-    "imageAsset": "assets/images/0029.gif",
+    "imageAsset": "assets/images/0029.webp",
     "needsReview": false,
     "sourceLine": "前后里外",
     "sourceLineIndex": 8
@@ -1188,7 +1188,7 @@
       "text": "他站在队伍后面。",
       "pinyin": "tā zhàn zài duì wǔ hòu miàn 。"
     },
-    "imageAsset": "assets/images/0030.gif",
+    "imageAsset": "assets/images/0030.webp",
     "needsReview": false,
     "sourceLine": "前后里外",
     "sourceLineIndex": 8
@@ -1231,7 +1231,7 @@
       "text": "书包里有很多书。",
       "pinyin": "shū bāo lǐ yǒu hěn duō shū 。"
     },
-    "imageAsset": "assets/images/0031.gif",
+    "imageAsset": "assets/images/0031.webp",
     "needsReview": false,
     "sourceLine": "前后里外",
     "sourceLineIndex": 8
@@ -1272,7 +1272,7 @@
       "text": "外面下雪了。",
       "pinyin": "wài miàn xià xuě le 。"
     },
-    "imageAsset": "assets/images/0032.gif",
+    "imageAsset": "assets/images/0032.webp",
     "needsReview": false,
     "sourceLine": "前后里外",
     "sourceLineIndex": 8
@@ -1313,7 +1313,7 @@
       "text": "太阳从东边升起。",
       "pinyin": "tài yáng cóng dōng biān shēng qǐ 。"
     },
-    "imageAsset": "assets/images/0033.gif",
+    "imageAsset": "assets/images/0033.webp",
     "needsReview": false,
     "sourceLine": "东南西北",
     "sourceLineIndex": 9
@@ -1358,7 +1358,7 @@
       "text": "南方的冬天不太冷。",
       "pinyin": "nán fāng de dōng tiān bù tài lěng 。"
     },
-    "imageAsset": "assets/images/0034.gif",
+    "imageAsset": "assets/images/0034.webp",
     "needsReview": false,
     "sourceLine": "东南西北",
     "sourceLineIndex": 9
@@ -1400,7 +1400,7 @@
       "text": "太阳从西边落下。",
       "pinyin": "tài yáng cóng xī biān luò xià 。"
     },
-    "imageAsset": "assets/images/0035.gif",
+    "imageAsset": "assets/images/0035.webp",
     "needsReview": false,
     "sourceLine": "东南西北",
     "sourceLineIndex": 9
@@ -1441,7 +1441,7 @@
       "text": "北方的冬天很冷。",
       "pinyin": "běi fāng de dōng tiān hěn lěng 。"
     },
-    "imageAsset": "assets/images/0036.gif",
+    "imageAsset": "assets/images/0036.webp",
     "needsReview": false,
     "sourceLine": "东南西北",
     "sourceLineIndex": 9
@@ -1481,7 +1481,7 @@
       "text": "今天的天气真好。",
       "pinyin": "jīn tiān de tiān qì zhēn hǎo 。"
     },
-    "imageAsset": "assets/images/0037.gif",
+    "imageAsset": "assets/images/0037.webp",
     "needsReview": false,
     "sourceLine": "天地山川",
     "sourceLineIndex": 10
@@ -1523,7 +1523,7 @@
       "text": "春天大地都变绿了。",
       "pinyin": "chūn tiān dà dì dōu biàn lǜ le 。"
     },
-    "imageAsset": "assets/images/0038.gif",
+    "imageAsset": "assets/images/0038.webp",
     "needsReview": false,
     "sourceLine": "天地山川",
     "sourceLineIndex": 10
@@ -1562,7 +1562,7 @@
       "text": "我们一起去爬山。",
       "pinyin": "wǒ men yī qǐ qù pá shān 。"
     },
-    "imageAsset": "assets/images/0039.gif",
+    "imageAsset": "assets/images/0039.webp",
     "needsReview": false,
     "sourceLine": "天地山川",
     "sourceLineIndex": 10
@@ -1601,7 +1601,7 @@
       "text": "这里的山川非常美丽。",
       "pinyin": "zhè lǐ de shān chuān fēi cháng měi lí 。"
     },
-    "imageAsset": "assets/images/0040.gif",
+    "imageAsset": "assets/images/0040.webp",
     "needsReview": false,
     "sourceLine": "天地山川",
     "sourceLineIndex": 10
@@ -1642,7 +1642,7 @@
       "text": "田里的禾苗长得很好。",
       "pinyin": "tián lǐ de hé miáo cháng de hěn hǎo 。"
     },
-    "imageAsset": "assets/images/0041.gif",
+    "imageAsset": "assets/images/0041.webp",
     "needsReview": false,
     "sourceLine": "禾田井苗",
     "sourceLineIndex": 11
@@ -1683,7 +1683,7 @@
       "text": "农民在田地里干活。",
       "pinyin": "nóng mín zài tián dì lǐ gàn huó 。"
     },
-    "imageAsset": "assets/images/0042.gif",
+    "imageAsset": "assets/images/0042.webp",
     "needsReview": false,
     "sourceLine": "禾田井苗",
     "sourceLineIndex": 11
@@ -1723,7 +1723,7 @@
       "text": "村子里有一口老井。",
       "pinyin": "cūn zǐ lǐ yǒu yī kǒu lǎo jǐng 。"
     },
-    "imageAsset": "assets/images/0043.gif",
+    "imageAsset": "assets/images/0043.webp",
     "needsReview": false,
     "sourceLine": "禾田井苗",
     "sourceLineIndex": 11
@@ -1767,7 +1767,7 @@
       "text": "园丁种下了一棵幼苗。",
       "pinyin": "yuán dīng zhòng xià le yī kē yòu miáo 。"
     },
-    "imageAsset": "assets/images/0044.gif",
+    "imageAsset": "assets/images/0044.webp",
     "needsReview": false,
     "sourceLine": "禾田井苗",
     "sourceLineIndex": 11
@@ -1808,7 +1808,7 @@
       "text": "奶奶煮了一锅玉米。",
       "pinyin": "nǎi nǎi zhǔ le yī guō yù mǐ 。"
     },
-    "imageAsset": "assets/images/0045.gif",
+    "imageAsset": "assets/images/0045.webp",
     "needsReview": false,
     "sourceLine": "玉石尘灰",
     "sourceLineIndex": 12
@@ -1849,7 +1849,7 @@
       "text": "河边有很多小石头。",
       "pinyin": "hé biān yǒu hěn duō xiǎo shí tou 。"
     },
-    "imageAsset": "assets/images/0046.gif",
+    "imageAsset": "assets/images/0046.webp",
     "needsReview": false,
     "sourceLine": "玉石尘灰",
     "sourceLineIndex": 12
@@ -1891,7 +1891,7 @@
       "text": "桌子上落了很多灰尘。",
       "pinyin": "zhuō zǐ shàng luò le hěn duō huī chén 。"
     },
-    "imageAsset": "assets/images/0047.gif",
+    "imageAsset": "assets/images/0047.webp",
     "needsReview": false,
     "sourceLine": "玉石尘灰",
     "sourceLineIndex": 12
@@ -1933,7 +1933,7 @@
       "text": "他的衣服是灰色的。",
       "pinyin": "tā de yī fú shì huī sè de 。"
     },
-    "imageAsset": "assets/images/0048.gif",
+    "imageAsset": "assets/images/0048.webp",
     "needsReview": false,
     "sourceLine": "玉石尘灰",
     "sourceLineIndex": 12
@@ -1973,7 +1973,7 @@
       "text": "今天是我的生日。",
       "pinyin": "jīn tiān shì wǒ de shēng rì 。"
     },
-    "imageAsset": "assets/images/0049.gif",
+    "imageAsset": "assets/images/0049.webp",
     "needsReview": false,
     "sourceLine": "日月星云",
     "sourceLineIndex": 13
@@ -2013,7 +2013,7 @@
       "text": "今晚的月亮又圆又亮。",
       "pinyin": "jīn wǎn de yuè liàng yòu yuán yòu liàng 。"
     },
-    "imageAsset": "assets/images/0050.gif",
+    "imageAsset": "assets/images/0050.webp",
     "needsReview": false,
     "sourceLine": "日月星云",
     "sourceLineIndex": 13
@@ -2058,7 +2058,7 @@
       "text": "夜空中有很多星星。",
       "pinyin": "yè kōng zhōng yǒu hěn duō xīng xīng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0051.webp",
     "needsReview": false,
     "sourceLine": "日月星云",
     "sourceLineIndex": 13
@@ -2098,7 +2098,7 @@
       "text": "天上飘着一朵白云。",
       "pinyin": "tiān shàng piāo zhe yī duǒ bái yún 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0052.webp",
     "needsReview": false,
     "sourceLine": "日月星云",
     "sourceLineIndex": 13
@@ -2138,7 +2138,7 @@
       "text": "我每天都要多喝水。",
       "pinyin": "wǒ měi tiān dōu yào duō hē shuǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0053.webp",
     "needsReview": false,
     "sourceLine": "水火木土",
     "sourceLineIndex": 14
@@ -2178,7 +2178,7 @@
       "text": "我们坐火车去旅行。",
       "pinyin": "wǒ men zuò huǒ chē qù lǚ xíng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0054.webp",
     "needsReview": false,
     "sourceLine": "水火木土",
     "sourceLineIndex": 14
@@ -2218,7 +2218,7 @@
       "text": "公园里有很多树木。",
       "pinyin": "gōng yuán lǐ yǒu hěn duō shù mù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0055.webp",
     "needsReview": false,
     "sourceLine": "水火木土",
     "sourceLineIndex": 14
@@ -2257,7 +2257,7 @@
       "text": "农民在土地里种土豆。",
       "pinyin": "nóng mín zài tǔ dì lǐ zhòng tǔ dòu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0056.webp",
     "needsReview": false,
     "sourceLine": "水火木土",
     "sourceLineIndex": 14
@@ -2296,7 +2296,7 @@
       "text": "广场上有很多人在跳舞。",
       "pinyin": "guǎng cháng shàng yǒu hěn duō rén zài tiào wǔ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0057.webp",
     "needsReview": false,
     "sourceLine": "广安礼让",
     "sourceLineIndex": 15
@@ -2338,7 +2338,7 @@
       "text": "过马路要注意安全。",
       "pinyin": "guò mǎ lù yào zhù yì ān quán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0058.webp",
     "needsReview": false,
     "sourceLine": "广安礼让",
     "sourceLineIndex": 15
@@ -2379,7 +2379,7 @@
       "text": "妈妈送给我一个礼物。",
       "pinyin": "mā mā sòng gěi wǒ yī gè lǐ wù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0059.webp",
     "needsReview": false,
     "sourceLine": "广安礼让",
     "sourceLineIndex": 15
@@ -2420,7 +2420,7 @@
       "text": "我们应该给老人让座。",
       "pinyin": "wǒ men yìng gāi gěi lǎo rén ràng zuò 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0060.webp",
     "needsReview": false,
     "sourceLine": "广安礼让",
     "sourceLineIndex": 15
@@ -2459,7 +2459,7 @@
       "text": "小鸟在天空中飞翔。",
       "pinyin": "xiǎo niǎo zài tiān kōng zhōng fēi xiáng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0061.webp",
     "needsReview": false,
     "sourceLine": "飞气太非",
     "sourceLineIndex": 16
@@ -2499,7 +2499,7 @@
       "text": "公园里的空气很新鲜。",
       "pinyin": "gōng yuán lǐ de kōng qì hěn xīn xiǎn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0062.webp",
     "needsReview": false,
     "sourceLine": "飞气太非",
     "sourceLineIndex": 16
@@ -2539,7 +2539,7 @@
       "text": "今天的太阳真大。",
       "pinyin": "jīn tiān de tài yáng zhēn dà 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0063.webp",
     "needsReview": false,
     "sourceLine": "飞气太非",
     "sourceLineIndex": 16
@@ -2583,7 +2583,7 @@
       "text": "这道题非常简单。",
       "pinyin": "zhè dào tí fēi cháng jiǎn dān 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0064.webp",
     "needsReview": false,
     "sourceLine": "飞气太非",
     "sourceLineIndex": 16
@@ -2626,7 +2626,7 @@
       "text": "花园里开满了鲜花。",
       "pinyin": "huā yuán lǐ kāi mǎn le xiǎn huā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0065.webp",
     "needsReview": false,
     "sourceLine": "花草树灯",
     "sourceLineIndex": 17
@@ -2671,7 +2671,7 @@
       "text": "我们坐在绿色的草地上。",
       "pinyin": "wǒ men zuò zài lǜ sè de cǎo dì shàng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0066.webp",
     "needsReview": false,
     "sourceLine": "花草树灯",
     "sourceLineIndex": 17
@@ -2716,7 +2716,7 @@
       "text": "大树下有很多落叶。",
       "pinyin": "dà shù xià yǒu hěn duō luò yè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0067.webp",
     "needsReview": false,
     "sourceLine": "花草树灯",
     "sourceLineIndex": 17
@@ -2758,7 +2758,7 @@
       "text": "晚上路灯都亮了起来。",
       "pinyin": "wǎn shàng lù dēng dōu liàng le qǐ lái 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0068.webp",
     "needsReview": false,
     "sourceLine": "花草树灯",
     "sourceLineIndex": 17
@@ -2799,7 +2799,7 @@
       "text": "夏天我喜欢吃西瓜。",
       "pinyin": "xià tiān wǒ xǐ huān chī xī guā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0069.webp",
     "needsReview": false,
     "sourceLine": "瓜果虫鸟",
     "sourceLineIndex": 18
@@ -2843,7 +2843,7 @@
       "text": "妈妈买了很多水果。",
       "pinyin": "mā mā mǎi le hěn duō shuǐ guǒ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0070.webp",
     "needsReview": false,
     "sourceLine": "瓜果虫鸟",
     "sourceLineIndex": 18
@@ -2885,7 +2885,7 @@
       "text": "树叶上有一只小虫子。",
       "pinyin": "shù yè shàng yǒu yī zhǐ xiǎo chóng zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0071.webp",
     "needsReview": false,
     "sourceLine": "瓜果虫鸟",
     "sourceLineIndex": 18
@@ -2926,7 +2926,7 @@
       "text": "树上有一个小鸟的窝。",
       "pinyin": "shù shàng yǒu yī gè xiǎo niǎo de wō 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0072.webp",
     "needsReview": false,
     "sourceLine": "瓜果虫鸟",
     "sourceLineIndex": 18
@@ -2969,7 +2969,7 @@
       "text": "班里的男生比女生多。",
       "pinyin": "bān lǐ de nán shēng bǐ nǚ shēng duō 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0073.webp",
     "needsReview": false,
     "sourceLine": "男女老幼",
     "sourceLineIndex": 19
@@ -3008,7 +3008,7 @@
       "text": "那个女孩在公园里玩。",
       "pinyin": "nà gè nǚ hái zài gōng yuán lǐ wán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0074.webp",
     "needsReview": false,
     "sourceLine": "男女老幼",
     "sourceLineIndex": 19
@@ -3050,7 +3050,7 @@
       "text": "老师教我们写字。",
       "pinyin": "lǎo shī jiāo wǒ men xiě zì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0075.webp",
     "needsReview": false,
     "sourceLine": "男女老幼",
     "sourceLineIndex": 19
@@ -3091,7 +3091,7 @@
       "text": "弟弟还在上幼儿园。",
       "pinyin": "dì dì hái zài shàng yòu ér yuán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0076.webp",
     "needsReview": false,
     "sourceLine": "男女老幼",
     "sourceLineIndex": 19
@@ -3133,7 +3133,7 @@
       "text": "爷爷喜欢在公园里散步。",
       "pinyin": "yé yé xǐ huān zài gōng yuán lǐ sàn bù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0077.webp",
     "needsReview": false,
     "sourceLine": "爷奶爸妈",
     "sourceLineIndex": 20
@@ -3174,7 +3174,7 @@
       "text": "奶奶每天给我热牛奶。",
       "pinyin": "nǎi nǎi měi tiān gěi wǒ rè niú nǎi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0078.webp",
     "needsReview": false,
     "sourceLine": "爷奶爸妈",
     "sourceLineIndex": 20
@@ -3218,7 +3218,7 @@
       "text": "爸爸每天开车上班。",
       "pinyin": "bà bà měi tiān kāi chē shàng bān 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0079.webp",
     "needsReview": false,
     "sourceLine": "爷奶爸妈",
     "sourceLineIndex": 20
@@ -3260,7 +3260,7 @@
       "text": "妈妈每天给我做饭。",
       "pinyin": "mā mā měi tiān gěi wǒ zuò fàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0080.webp",
     "needsReview": false,
     "sourceLine": "爷奶爸妈",
     "sourceLineIndex": 20
@@ -3301,7 +3301,7 @@
       "text": "他们两个是好兄弟。",
       "pinyin": "tā men liǎng gè shì hǎo xiōng dì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0081.webp",
     "needsReview": false,
     "sourceLine": "兄弟姐妹",
     "sourceLineIndex": 21
@@ -3344,7 +3344,7 @@
       "text": "我的弟弟今年五岁。",
       "pinyin": "wǒ de dì dì jīn nián wǔ suì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0082.webp",
     "needsReview": false,
     "sourceLine": "兄弟姐妹",
     "sourceLineIndex": 21
@@ -3388,7 +3388,7 @@
       "text": "姐姐每天送我去上学。",
       "pinyin": "jiě jiě měi tiān sòng wǒ qù shàng xué 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0083.webp",
     "needsReview": false,
     "sourceLine": "兄弟姐妹",
     "sourceLineIndex": 21
@@ -3432,7 +3432,7 @@
       "text": "我的妹妹很可爱。",
       "pinyin": "wǒ de mèi mèi hěn kě ài 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0084.webp",
     "needsReview": false,
     "sourceLine": "兄弟姐妹",
     "sourceLineIndex": 21
@@ -3472,7 +3472,7 @@
       "text": "父母都很爱我。",
       "pinyin": "fù mǔ dōu hěn ài wǒ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0085.webp",
     "needsReview": false,
     "sourceLine": "父母子孙",
     "sourceLineIndex": 22
@@ -3513,7 +3513,7 @@
       "text": "母亲节我要送花给妈妈。",
       "pinyin": "mǔ qīn jié wǒ yào sòng huā gěi mā mā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0086.webp",
     "needsReview": false,
     "sourceLine": "父母子孙",
     "sourceLineIndex": 22
@@ -3552,7 +3552,7 @@
       "text": "这个孩子很爱笑。",
       "pinyin": "zhè gè hái zǐ hěn ài xiào 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0087.webp",
     "needsReview": false,
     "sourceLine": "父母子孙",
     "sourceLineIndex": 22
@@ -3594,7 +3594,7 @@
       "text": "爷爷很疼爱小孙子。",
       "pinyin": "yé yé hěn téng ài xiǎo sūn zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0088.webp",
     "needsReview": false,
     "sourceLine": "父母子孙",
     "sourceLineIndex": 22
@@ -3638,7 +3638,7 @@
       "text": "妈妈叫我小宝贝。",
       "pinyin": "mā mā jiào wǒ xiǎo bǎo bèi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0089.webp",
     "needsReview": false,
     "sourceLine": "宝娃儿婆",
     "sourceLineIndex": 23
@@ -3683,7 +3683,7 @@
       "text": "妹妹有一个布娃娃。",
       "pinyin": "mèi mèi yǒu yī gè bù wá wá 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0090.webp",
     "needsReview": false,
     "sourceLine": "宝娃儿婆",
     "sourceLineIndex": 23
@@ -3721,7 +3721,7 @@
       "text": "公园里有很多儿童。",
       "pinyin": "gōng yuán lǐ yǒu hěn duō ér tóng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0091.webp",
     "needsReview": false,
     "sourceLine": "宝娃儿婆",
     "sourceLineIndex": 23
@@ -3768,7 +3768,7 @@
       "text": "外婆做的饭很好吃。",
       "pinyin": "wài pó zuò de fàn hěn hǎo chī 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0092.webp",
     "needsReview": false,
     "sourceLine": "宝娃儿婆",
     "sourceLineIndex": 23
@@ -3811,7 +3811,7 @@
       "text": "见到老师要说你好。",
       "pinyin": "jiàn dào lǎo shī yào shuō nǐ hǎo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0093.webp",
     "needsReview": false,
     "sourceLine": "你我他她",
     "sourceLineIndex": 24
@@ -3854,7 +3854,7 @@
       "text": "我家有三个人。",
       "pinyin": "wǒ jiā yǒu sān gè rén 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0094.webp",
     "needsReview": false,
     "sourceLine": "你我他她",
     "sourceLineIndex": 24
@@ -3895,7 +3895,7 @@
       "text": "他每天都来上学。",
       "pinyin": "tā měi tiān dōu lái shàng xué 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0095.webp",
     "needsReview": false,
     "sourceLine": "你我他她",
     "sourceLineIndex": 24
@@ -3937,7 +3937,7 @@
       "text": "她家住在学校附近。",
       "pinyin": "tā jiā zhù zài xué xiào fù jìn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0096.webp",
     "needsReview": false,
     "sourceLine": "你我他她",
     "sourceLineIndex": 24
@@ -3982,7 +3982,7 @@
       "text": "小孩们在操场上玩耍。",
       "pinyin": "xiǎo hái men zài cāo cháng shàng wán shuǎ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0097.webp",
     "needsReview": false,
     "sourceLine": "孩自伴哥",
     "sourceLineIndex": 25
@@ -4024,7 +4024,7 @@
       "text": "我可以自己穿衣服。",
       "pinyin": "wǒ kě yǐ zì jǐ chuān yī fú 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0098.webp",
     "needsReview": false,
     "sourceLine": "孩自伴哥",
     "sourceLineIndex": 25
@@ -4067,7 +4067,7 @@
       "text": "他是我最好的伙伴。",
       "pinyin": "tā shì wǒ zuì hǎo de huǒ bàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0099.webp",
     "needsReview": false,
     "sourceLine": "孩自伴哥",
     "sourceLineIndex": 25
@@ -4113,7 +4113,7 @@
       "text": "哥哥带我去公园玩。",
       "pinyin": "gē gē dài wǒ qù gōng yuán wán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0100.webp",
     "needsReview": false,
     "sourceLine": "孩自伴哥",
     "sourceLineIndex": 25
@@ -4153,7 +4153,7 @@
       "text": "我们班赢了拔河比赛。",
       "pinyin": "wǒ men bān yíng le bá hé bǐ sài 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0101.webp",
     "needsReview": false,
     "sourceLine": "比之于乎",
     "sourceLineIndex": 26
@@ -4192,7 +4192,7 @@
       "text": "上课之前要准备好课本。",
       "pinyin": "shàng kè zhī qián yào zhǔn bèi hǎo kè běn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0102.webp",
     "needsReview": false,
     "sourceLine": "比之于乎",
     "sourceLineIndex": 26
@@ -4231,7 +4231,7 @@
       "text": "天黑了，于是我们回家了。",
       "pinyin": "tiān hēi le ， yú shì wǒ men huí jiā le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0103.webp",
     "needsReview": false,
     "sourceLine": "比之于乎",
     "sourceLineIndex": 26
@@ -4272,7 +4272,7 @@
       "text": "他似乎不在乎这件事。",
       "pinyin": "tā shì hū bù zài hū zhè jiàn shì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0104.webp",
     "needsReview": false,
     "sourceLine": "比之于乎",
     "sourceLineIndex": 26
@@ -4311,7 +4311,7 @@
       "text": "我也是一年级的学生。",
       "pinyin": "wǒ yě shì yī nián jí de xué shēng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0105.webp",
     "needsReview": false,
     "sourceLine": "也士古及",
     "sourceLineIndex": 27
@@ -4350,7 +4350,7 @@
       "text": "士兵们正在认真训练。",
       "pinyin": "shì bīng men zhèng zài rèn zhēn xùn liàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0106.webp",
     "needsReview": false,
     "sourceLine": "也士古及",
     "sourceLineIndex": 27
@@ -4391,7 +4391,7 @@
       "text": "我们今天学了一首古诗。",
       "pinyin": "wǒ men jīn tiān xué le yī shǒu gǔ shī 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0107.webp",
     "needsReview": false,
     "sourceLine": "也士古及",
     "sourceLineIndex": 27
@@ -4430,7 +4430,7 @@
       "text": "我们及时到达了学校。",
       "pinyin": "wǒ men jí shí dào dá le xué xiào 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0108.webp",
     "needsReview": false,
     "sourceLine": "也士古及",
     "sourceLineIndex": 27
@@ -4470,7 +4470,7 @@
       "text": "我们周末去公园玩。",
       "pinyin": "wǒ men zhōu mò qù gōng yuán wán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0109.webp",
     "needsReview": false,
     "sourceLine": "公从认入",
     "sourceLineIndex": 28
@@ -4510,7 +4510,7 @@
       "text": "从前有一个美丽的村庄。",
       "pinyin": "cóng qián yǒu yī gè měi lí de cūn zhuāng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0110.webp",
     "needsReview": false,
     "sourceLine": "公从认入",
     "sourceLineIndex": 28
@@ -4550,7 +4550,7 @@
       "text": "我认识很多新朋友。",
       "pinyin": "wǒ rèn shí hěn duō xīn péng yǒu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0111.webp",
     "needsReview": false,
     "sourceLine": "公从认入",
     "sourceLineIndex": 28
@@ -4588,7 +4588,7 @@
       "text": "我们要准时入学。",
       "pinyin": "wǒ men yào zhǔn shí rù xué 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0112.webp",
     "needsReview": false,
     "sourceLine": "公从认入",
     "sourceLineIndex": 28
@@ -4628,7 +4628,7 @@
       "text": "他为了梦想努力学习。",
       "pinyin": "tā wéi le mèng xiǎng nǔ lì xué xí 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0113.webp",
     "needsReview": false,
     "sourceLine": "为什么何",
     "sourceLineIndex": 29
@@ -4668,7 +4668,7 @@
       "text": "你在做什么呢？",
       "pinyin": "nǐ zài zuò shén me ne ？"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0114.webp",
     "needsReview": false,
     "sourceLine": "为什么何",
     "sourceLineIndex": 29
@@ -4707,7 +4707,7 @@
       "text": "你怎么知道这件事？",
       "pinyin": "nǐ zěn me zhī dào zhè jiàn shì ？"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0115.webp",
     "needsReview": false,
     "sourceLine": "为什么何",
     "sourceLineIndex": 29
@@ -4750,7 +4750,7 @@
       "text": "我不知道如何解答这道题。",
       "pinyin": "wǒ bù zhī dào rú hé jiè dá zhè dào tí 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0116.webp",
     "needsReview": false,
     "sourceLine": "为什么何",
     "sourceLineIndex": 29
@@ -4796,7 +4796,7 @@
       "text": "今天我们都很高兴。",
       "pinyin": "jīn tiān wǒ men dōu hěn gāo xìng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0117.webp",
     "needsReview": false,
     "sourceLine": "高低长短",
     "sourceLineIndex": 30
@@ -4839,7 +4839,7 @@
       "text": "他低头看了看书包。",
       "pinyin": "tā dī tou kàn le kàn shū bāo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0118.webp",
     "needsReview": false,
     "sourceLine": "高低长短",
     "sourceLineIndex": 30
@@ -4879,7 +4879,7 @@
       "text": "我长大想做一名医生。",
       "pinyin": "wǒ cháng dà xiǎng zuò yī míng yī shēng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0119.webp",
     "needsReview": false,
     "sourceLine": "高低长短",
     "sourceLineIndex": 30
@@ -4927,7 +4927,7 @@
       "text": "夏天我喜欢穿短裤。",
       "pinyin": "xià tiān wǒ xǐ huān chuān duǎn kù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0120.webp",
     "needsReview": false,
     "sourceLine": "高低长短",
     "sourceLineIndex": 30
@@ -4965,7 +4965,7 @@
       "text": "工人叔叔在盖房子。",
       "pinyin": "gōng rén shū shū zài gě fáng zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0121.webp",
     "needsReview": false,
     "sourceLine": "人口手足",
     "sourceLineIndex": 31
@@ -5004,7 +5004,7 @@
       "text": "他的口袋里有一颗糖。",
       "pinyin": "tā de kǒu dài lǐ yǒu yī kē táng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0122.webp",
     "needsReview": false,
     "sourceLine": "人口手足",
     "sourceLineIndex": 31
@@ -5044,7 +5044,7 @@
       "text": "妈妈用双手抱起了我。",
       "pinyin": "mā mā yòng shuāng shǒu bào qǐ le wǒ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0123.webp",
     "needsReview": false,
     "sourceLine": "人口手足",
     "sourceLineIndex": 31
@@ -5087,7 +5087,7 @@
       "text": "弟弟最喜欢踢足球。",
       "pinyin": "dì dì zuì xǐ huān tī zú qiú 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0124.webp",
     "needsReview": false,
     "sourceLine": "人口手足",
     "sourceLineIndex": 31
@@ -5132,7 +5132,7 @@
       "text": "他皱着眉头想问题。",
       "pinyin": "tā zhòu zhe méi tou xiǎng wèn tí 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0125.webp",
     "needsReview": false,
     "sourceLine": "眉发耳目",
     "sourceLineIndex": 32
@@ -5173,7 +5173,7 @@
       "text": "春天小树发芽了。",
       "pinyin": "chūn tiān xiǎo shù fā yá le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0126.webp",
     "needsReview": false,
     "sourceLine": "眉发耳目",
     "sourceLineIndex": 32
@@ -5215,7 +5215,7 @@
       "text": "小兔子的耳朵很长。",
       "pinyin": "xiǎo tù zǐ de ěr duǒ hěn cháng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0127.webp",
     "needsReview": false,
     "sourceLine": "眉发耳目",
     "sourceLineIndex": 32
@@ -5256,7 +5256,7 @@
       "text": "今晚有一个好看的节目。",
       "pinyin": "jīn wǎn yǒu yī gè hǎo kàn de jié mù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0128.webp",
     "needsReview": false,
     "sourceLine": "眉发耳目",
     "sourceLineIndex": 32
@@ -5298,7 +5298,7 @@
       "text": "小狗伸出了舌头。",
       "pinyin": "xiǎo gǒu shēn chū le shé tou 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0129.webp",
     "needsReview": false,
     "sourceLine": "舌牙唇齿",
     "sourceLineIndex": 33
@@ -5338,7 +5338,7 @@
       "text": "每天刷牙是一个好习惯。",
       "pinyin": "měi tiān shuà yá shì yī gè hǎo xí guàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0130.webp",
     "needsReview": false,
     "sourceLine": "舌牙唇齿",
     "sourceLineIndex": 33
@@ -5384,7 +5384,7 @@
       "text": "她有一只红色唇膏。",
       "pinyin": "tā yǒu yī zhǐ hóng sè chún gào 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0131.webp",
     "needsReview": false,
     "sourceLine": "舌牙唇齿",
     "sourceLineIndex": 33
@@ -5428,7 +5428,7 @@
       "text": "丁丁的牙齿很白。",
       "pinyin": "dīng dīng de yá chǐ hěn bái 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0132.webp",
     "needsReview": false,
     "sourceLine": "舌牙唇齿",
     "sourceLineIndex": 33
@@ -5470,7 +5470,7 @@
       "text": "我摘了一朵小花。",
       "pinyin": "wǒ zhāi le yī duǒ xiǎo huā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0133.webp",
     "needsReview": false,
     "sourceLine": "朵条把张",
     "sourceLineIndex": 34
@@ -5513,7 +5513,7 @@
       "text": "我喜欢吃面条。",
       "pinyin": "wǒ xǐ huān chī miàn tiáo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0134.webp",
     "needsReview": false,
     "sourceLine": "朵条把张",
     "sourceLineIndex": 34
@@ -5556,7 +5556,7 @@
       "text": "他握住了门的把手。",
       "pinyin": "tā wò zhù le mén de bǎ shǒu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0135.webp",
     "needsReview": false,
     "sourceLine": "朵条把张",
     "sourceLineIndex": 34
@@ -5599,7 +5599,7 @@
       "text": "他张开嘴笑了。",
       "pinyin": "tā zhāng kāi zuǐ xiào le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0136.webp",
     "needsReview": false,
     "sourceLine": "朵条把张",
     "sourceLineIndex": 34
@@ -5641,7 +5641,7 @@
       "text": "妈妈给我买了一件新衣服。",
       "pinyin": "mā mā gěi wǒ mǎi le yī jiàn xīn yī fú 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0137.webp",
     "needsReview": false,
     "sourceLine": "件片棵排",
     "sourceLineIndex": 35
@@ -5681,7 +5681,7 @@
       "text": "墙上贴着一张照片。",
       "pinyin": "qiáng shàng tiē zhe yī zhāng zhào piàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0138.webp",
     "needsReview": false,
     "sourceLine": "件片棵排",
     "sourceLineIndex": 35
@@ -5729,7 +5729,7 @@
       "text": "院子里有一棵大树。",
       "pinyin": "yuàn zǐ lǐ yǒu yī kē dà shù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0139.webp",
     "needsReview": false,
     "sourceLine": "件片棵排",
     "sourceLineIndex": 35
@@ -5776,7 +5776,7 @@
       "text": "我们排队进教室。",
       "pinyin": "wǒ men pái duì jìn jiāo shì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0140.webp",
     "needsReview": false,
     "sourceLine": "件片棵排",
     "sourceLineIndex": 35
@@ -5821,7 +5821,7 @@
       "text": "桌上放着一些点心。",
       "pinyin": "zhuō shàng fàng zhe yī xiē diǎn xīn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0141.webp",
     "needsReview": false,
     "sourceLine": "点只个支",
     "sourceLineIndex": 36
@@ -5862,7 +5862,7 @@
       "text": "天上飞着一只小鸟。",
       "pinyin": "tiān shàng fēi zhe yī zhǐ xiǎo niǎo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0142.webp",
     "needsReview": false,
     "sourceLine": "点只个支",
     "sourceLineIndex": 36
@@ -5901,7 +5901,7 @@
       "text": "他的个子长得很高。",
       "pinyin": "tā de gè zǐ cháng de hěn gāo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0143.webp",
     "needsReview": false,
     "sourceLine": "点只个支",
     "sourceLineIndex": 36
@@ -5941,7 +5941,7 @@
       "text": "我买了一支铅笔。",
       "pinyin": "wǒ mǎi le yī zhī qiān bǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0144.webp",
     "needsReview": false,
     "sourceLine": "点只个支",
     "sourceLineIndex": 36
@@ -5984,7 +5984,7 @@
       "text": "他终于来到了学校。",
       "pinyin": "tā zhōng yú lái dào le xué xiào 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0145.webp",
     "needsReview": false,
     "sourceLine": "来去进出",
     "sourceLineIndex": 37
@@ -6025,7 +6025,7 @@
       "text": "我们去年去过北京。",
       "pinyin": "wǒ men qù nián qù guò běi jīng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0146.webp",
     "needsReview": false,
     "sourceLine": "来去进出",
     "sourceLineIndex": 37
@@ -6068,7 +6068,7 @@
       "text": "他的成绩进步了。",
       "pinyin": "tā de chéng jì jìn bù le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0147.webp",
     "needsReview": false,
     "sourceLine": "来去进出",
     "sourceLineIndex": 37
@@ -6109,7 +6109,7 @@
       "text": "请大家排队走出来。",
       "pinyin": "qǐng dà jiā pái duì zǒu chū lái 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0148.webp",
     "needsReview": false,
     "sourceLine": "来去进出",
     "sourceLineIndex": 37
@@ -6153,7 +6153,7 @@
       "text": "我们一起往前走。",
       "pinyin": "wǒ men yī qǐ wǎng qián zǒu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0149.webp",
     "needsReview": false,
     "sourceLine": "往回忙闲",
     "sourceLineIndex": 38
@@ -6195,7 +6195,7 @@
       "text": "放学后我马上回家。",
       "pinyin": "fàng xué hòu wǒ mǎ shàng huí jiā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0150.webp",
     "needsReview": false,
     "sourceLine": "往回忙闲",
     "sourceLineIndex": 38
@@ -6237,7 +6237,7 @@
       "text": "妈妈每天都很忙碌。",
       "pinyin": "mā mā měi tiān dōu hěn máng lù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0151.webp",
     "needsReview": false,
     "sourceLine": "往回忙闲",
     "sourceLineIndex": 38
@@ -6280,7 +6280,7 @@
       "text": "周末我有很多空闲时间。",
       "pinyin": "zhōu mò wǒ yǒu hěn duō kōng xián shí jiān 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0152.webp",
     "needsReview": false,
     "sourceLine": "往回忙闲",
     "sourceLineIndex": 38
@@ -6321,7 +6321,7 @@
       "text": "他正在认真写作业。",
       "pinyin": "tā zhèng zài rèn zhēn xiě zuò yè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0153.webp",
     "needsReview": false,
     "sourceLine": "正反开关",
     "sourceLineIndex": 39
@@ -6361,7 +6361,7 @@
       "text": "大家都反对这个想法。",
       "pinyin": "dà jiā dōu fǎn duì zhè gè xiǎng fǎ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0154.webp",
     "needsReview": false,
     "sourceLine": "正反开关",
     "sourceLineIndex": 39
@@ -6401,7 +6401,7 @@
       "text": "我们开心地打开了礼物。",
       "pinyin": "wǒ men kāi xīn dì dá kāi le lǐ wù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0155.webp",
     "needsReview": false,
     "sourceLine": "正反开关",
     "sourceLineIndex": 39
@@ -6443,7 +6443,7 @@
       "text": "老师很关心我们。",
       "pinyin": "lǎo shī hěn guān xīn wǒ men 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0156.webp",
     "needsReview": false,
     "sourceLine": "正反开关",
     "sourceLineIndex": 39
@@ -6485,7 +6485,7 @@
       "text": "这本书很有趣。",
       "pinyin": "zhè běn shū hěn yǒu qù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0157.webp",
     "needsReview": false,
     "sourceLine": "有无在不",
     "sourceLineIndex": 40
@@ -6525,7 +6525,7 @@
       "text": "天上有无数颗星星。",
       "pinyin": "tiān shàng yǒu wú shù kē xīng xīng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0158.webp",
     "needsReview": false,
     "sourceLine": "有无在不",
     "sourceLineIndex": 40
@@ -6567,7 +6567,7 @@
       "text": "周末我在家看书。",
       "pinyin": "zhōu mò wǒ zài jiā kàn shū 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0159.webp",
     "needsReview": false,
     "sourceLine": "有无在不",
     "sourceLineIndex": 40
@@ -6607,7 +6607,7 @@
       "text": "这样做不好。",
       "pinyin": "zhè yàng zuò bù hǎo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0160.webp",
     "needsReview": false,
     "sourceLine": "有无在不",
     "sourceLineIndex": 40
@@ -6649,7 +6649,7 @@
       "text": "我们先做作业再玩。",
       "pinyin": "wǒ men xiān zuò zuò yè zài wán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0161.webp",
     "needsReview": false,
     "sourceLine": "先再单双",
     "sourceLineIndex": 41
@@ -6691,7 +6691,7 @@
       "text": "明天再见！",
       "pinyin": "míng tiān zài jiàn ！"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0162.webp",
     "needsReview": false,
     "sourceLine": "先再单双",
     "sourceLineIndex": 41
@@ -6735,7 +6735,7 @@
       "text": "这道题很简单。",
       "pinyin": "zhè dào tí hěn jiǎn dān 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0163.webp",
     "needsReview": false,
     "sourceLine": "先再单双",
     "sourceLineIndex": 41
@@ -6775,7 +6775,7 @@
       "text": "我有一双新鞋子。",
       "pinyin": "wǒ yǒu yī shuāng xīn xié zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0164.webp",
     "needsReview": false,
     "sourceLine": "先再单双",
     "sourceLineIndex": 41
@@ -6816,7 +6816,7 @@
       "text": "春节是中国的传统节日。",
       "pinyin": "chūn jié shì zhōng guó de chuán tǒng jié rì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0165.webp",
     "needsReview": false,
     "sourceLine": "节庆欢歌",
     "sourceLineIndex": 42
@@ -6858,7 +6858,7 @@
       "text": "大家一起庆祝国庆节。",
       "pinyin": "dà jiā yī qǐ qìng zhù guó qìng jié 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0166.webp",
     "needsReview": false,
     "sourceLine": "节庆欢歌",
     "sourceLineIndex": 42
@@ -6900,7 +6900,7 @@
       "text": "我们欢迎新同学。",
       "pinyin": "wǒ men huān yíng xīn tóng xué 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0167.webp",
     "needsReview": false,
     "sourceLine": "节庆欢歌",
     "sourceLineIndex": 42
@@ -6950,7 +6950,7 @@
       "text": "妹妹喜欢唱儿歌。",
       "pinyin": "mèi mèi xǐ huān chàng ér gē 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0168.webp",
     "needsReview": false,
     "sourceLine": "节庆欢歌",
     "sourceLineIndex": 42
@@ -6993,7 +6993,7 @@
       "text": "这首歌真好听。",
       "pinyin": "zhè shǒu gē zhēn hǎo tīng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0169.webp",
     "needsReview": false,
     "sourceLine": "听说读写",
     "sourceLineIndex": 43
@@ -7038,7 +7038,7 @@
       "text": "上课时不要说话。",
       "pinyin": "shàng kè shí bù yào shuō huà 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0170.webp",
     "needsReview": false,
     "sourceLine": "听说读写",
     "sourceLineIndex": 43
@@ -7084,7 +7084,7 @@
       "text": "我每天坚持读书。",
       "pinyin": "wǒ měi tiān jiān chí dú shū 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0171.webp",
     "needsReview": false,
     "sourceLine": "听说读写",
     "sourceLineIndex": 43
@@ -7125,7 +7125,7 @@
       "text": "老师教我们写字。",
       "pinyin": "lǎo shī jiāo wǒ men xiě zì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0172.webp",
     "needsReview": false,
     "sourceLine": "听说读写",
     "sourceLineIndex": 43
@@ -7167,7 +7167,7 @@
       "text": "这道菜真好吃。",
       "pinyin": "zhè dào cài zhēn hǎo chī 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0173.webp",
     "needsReview": false,
     "sourceLine": "吃喝玩乐",
     "sourceLineIndex": 44
@@ -7215,7 +7215,7 @@
       "text": "夏天要多喝水。",
       "pinyin": "xià tiān yào duō hē shuǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0174.webp",
     "needsReview": false,
     "sourceLine": "吃喝玩乐",
     "sourceLineIndex": 44
@@ -7259,7 +7259,7 @@
       "text": "弟弟在玩玩具。",
       "pinyin": "dì dì zài wán wán jù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0175.webp",
     "needsReview": false,
     "sourceLine": "吃喝玩乐",
     "sourceLineIndex": 44
@@ -7300,7 +7300,7 @@
       "text": "祝你生日快乐。",
       "pinyin": "zhù nǐ shēng rì kuài lè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0176.webp",
     "needsReview": false,
     "sourceLine": "吃喝玩乐",
     "sourceLineIndex": 44
@@ -7347,7 +7347,7 @@
       "text": "小猫在沙发上睡觉。",
       "pinyin": "xiǎo māo zài shà fā shàng shuì jiào 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0177.webp",
     "needsReview": false,
     "sourceLine": "猫狗兔蛇",
     "sourceLineIndex": 45
@@ -7391,7 +7391,7 @@
       "text": "小狗在院子里跑来跑去。",
       "pinyin": "xiǎo gǒu zài yuàn zǐ lǐ páo lái páo qù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0178.webp",
     "needsReview": false,
     "sourceLine": "猫狗兔蛇",
     "sourceLineIndex": 45
@@ -7435,7 +7435,7 @@
       "text": "兔子的耳朵又长又软。",
       "pinyin": "tù zǐ de ěr duǒ yòu cháng yòu ruǎn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0179.webp",
     "needsReview": false,
     "sourceLine": "猫狗兔蛇",
     "sourceLineIndex": 45
@@ -7482,7 +7482,7 @@
       "text": "森林里有一条毒蛇。",
       "pinyin": "sēn lín lǐ yǒu yī tiáo dú shé 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0180.webp",
     "needsReview": false,
     "sourceLine": "猫狗兔蛇",
     "sourceLineIndex": 45
@@ -7523,7 +7523,7 @@
       "text": "今天是我的生日。",
       "pinyin": "jīn tiān shì wǒ de shēng rì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0181.webp",
     "needsReview": false,
     "sourceLine": "生死活灭",
     "sourceLineIndex": 46
@@ -7565,7 +7565,7 @@
       "text": "干枯的树枝已经死了。",
       "pinyin": "gàn kū de shù zhī yǐ jìng sǐ le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0182.webp",
     "needsReview": false,
     "sourceLine": "生死活灭",
     "sourceLineIndex": 46
@@ -7610,7 +7610,7 @@
       "text": "这个小朋友很活泼。",
       "pinyin": "zhè gè xiǎo péng yǒu hěn huó pō 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0183.webp",
     "needsReview": false,
     "sourceLine": "生死活灭",
     "sourceLineIndex": 46
@@ -7651,7 +7651,7 @@
       "text": "消防员叔叔正在灭火。",
       "pinyin": "xiāo fáng yún shū shū zhèng zài miè huǒ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0184.webp",
     "needsReview": false,
     "sourceLine": "生死活灭",
     "sourceLineIndex": 46
@@ -7693,7 +7693,7 @@
       "text": "见到老师要说你好。",
       "pinyin": "jiàn dào lǎo shī yào shuō nǐ hǎo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0185.webp",
     "needsReview": false,
     "sourceLine": "好坏美丑",
     "sourceLineIndex": 47
@@ -7736,7 +7736,7 @@
       "text": "不要破坏花园里的花。",
       "pinyin": "bù yào pò huài huā yuán lǐ de huā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0186.webp",
     "needsReview": false,
     "sourceLine": "好坏美丑",
     "sourceLineIndex": 47
@@ -7781,7 +7781,7 @@
       "text": "公园里的风景很美丽。",
       "pinyin": "gōng yuán lǐ de fēng jǐng hěn měi lí 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0187.webp",
     "needsReview": false,
     "sourceLine": "好坏美丑",
     "sourceLineIndex": 47
@@ -7821,7 +7821,7 @@
       "text": "丑小鸭最后变成了白天鹅。",
       "pinyin": "chǒu xiǎo yā zuì hòu biàn chéng le bái tiān é 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0188.webp",
     "needsReview": false,
     "sourceLine": "好坏美丑",
     "sourceLineIndex": 47
@@ -7868,7 +7868,7 @@
       "text": "妈妈买了一些黄瓜。",
       "pinyin": "mā mā mǎi le yī xiē huáng guā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0189.webp",
     "needsReview": false,
     "sourceLine": "黄绿青紫",
     "sourceLineIndex": 48
@@ -7915,7 +7915,7 @@
       "text": "春天的树叶绿绿的。",
       "pinyin": "chūn tiān de shù yè lǜ lǜ de 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0190.webp",
     "needsReview": false,
     "sourceLine": "黄绿青紫",
     "sourceLineIndex": 48
@@ -7959,7 +7959,7 @@
       "text": "池塘里有一只青蛙。",
       "pinyin": "chí táng lǐ yǒu yī zhǐ qīng wā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0191.webp",
     "needsReview": false,
     "sourceLine": "黄绿青紫",
     "sourceLineIndex": 48
@@ -8007,7 +8007,7 @@
       "text": "妈妈穿了一件紫色的裙子。",
       "pinyin": "mā mā chuān le yī jiàn zǐ sè de qún zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0192.webp",
     "needsReview": false,
     "sourceLine": "黄绿青紫",
     "sourceLineIndex": 48
@@ -8054,7 +8054,7 @@
       "text": "做题不能太粗心。",
       "pinyin": "zuò tí bù néng tài cū xīn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0193.webp",
     "needsReview": false,
     "sourceLine": "粗细宽窄",
     "sourceLineIndex": 49
@@ -8098,7 +8098,7 @@
       "text": "老师做事很细心。",
       "pinyin": "lǎo shī zuò shì hěn xì xīn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0194.webp",
     "needsReview": false,
     "sourceLine": "粗细宽窄",
     "sourceLineIndex": 49
@@ -8144,7 +8144,7 @@
       "text": "这条马路很宽阔。",
       "pinyin": "zhè tiáo mǎ lù hěn kuān kuò 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0195.webp",
     "needsReview": false,
     "sourceLine": "粗细宽窄",
     "sourceLineIndex": 49
@@ -8190,7 +8190,7 @@
       "text": "这条小路很狭窄。",
       "pinyin": "zhè tiáo xiǎo lù hěn xiá zhǎi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0196.webp",
     "needsReview": false,
     "sourceLine": "粗细宽窄",
     "sourceLineIndex": 49
@@ -8235,7 +8235,7 @@
       "text": "前面的路有点弯曲。",
       "pinyin": "qián miàn de lù yǒu diǎn wān qǔ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0197.webp",
     "needsReview": false,
     "sourceLine": "弯曲平直",
     "sourceLineIndex": 50
@@ -8277,7 +8277,7 @@
       "text": "这条河弯弯曲曲的。",
       "pinyin": "zhè tiáo hé wān wān qǔ qǔ de 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0198.webp",
     "needsReview": false,
     "sourceLine": "弯曲平直",
     "sourceLineIndex": 50
@@ -8318,7 +8318,7 @@
       "text": "祝大家平安健康。",
       "pinyin": "zhù dà jiā píng ān jiàn kāng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0199.webp",
     "needsReview": false,
     "sourceLine": "弯曲平直",
     "sourceLineIndex": 50
@@ -8362,7 +8362,7 @@
       "text": "这条路又长又笔直。",
       "pinyin": "zhè tiáo lù yòu cháng yòu bǐ zhí 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0200.webp",
     "needsReview": false,
     "sourceLine": "弯曲平直",
     "sourceLineIndex": 50
@@ -8401,7 +8401,7 @@
       "text": "请把大门关好。",
       "pinyin": "qǐng bǎ dà mén guān hǎo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0201.webp",
     "needsReview": false,
     "sourceLine": "门窗桌椅",
     "sourceLineIndex": 51
@@ -8449,7 +8449,7 @@
       "text": "请把窗户打开通风。",
       "pinyin": "qǐng bǎ chuāng hù dá kāi tòng fēng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0202.webp",
     "needsReview": false,
     "sourceLine": "门窗桌椅",
     "sourceLineIndex": 51
@@ -8495,7 +8495,7 @@
       "text": "我的书桌很整洁。",
       "pinyin": "wǒ de shū zhuō hěn zhěng jié 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0203.webp",
     "needsReview": false,
     "sourceLine": "门窗桌椅",
     "sourceLineIndex": 51
@@ -8543,7 +8543,7 @@
       "text": "爷爷喜欢坐在摇椅上。",
       "pinyin": "yé yé xǐ huān zuò zài yáo yǐ shàng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0204.webp",
     "needsReview": false,
     "sourceLine": "门窗桌椅",
     "sourceLineIndex": 51
@@ -8586,7 +8586,7 @@
       "text": "我们去车站迎接客人。",
       "pinyin": "wǒ men qù chē zhàn yíng jié kè rén 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0205.webp",
     "needsReview": false,
     "sourceLine": "迎送存取",
     "sourceLineIndex": 52
@@ -8631,7 +8631,7 @@
       "text": "我送给妈妈一张贺卡。",
       "pinyin": "wǒ sòng gěi mā mā yī zhāng hè kǎ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0206.webp",
     "needsReview": false,
     "sourceLine": "迎送存取",
     "sourceLineIndex": 52
@@ -8673,7 +8673,7 @@
       "text": "他把零花钱存了起来。",
       "pinyin": "tā bǎ líng huā qián cún le qǐ lái 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0207.webp",
     "needsReview": false,
     "sourceLine": "迎送存取",
     "sourceLineIndex": 52
@@ -8717,7 +8717,7 @@
       "text": "他从书包里取出课本。",
       "pinyin": "tā cóng shū bāo lǐ qǔ chū kè běn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0208.webp",
     "needsReview": false,
     "sourceLine": "迎送存取",
     "sourceLineIndex": 52
@@ -8759,7 +8759,7 @@
       "text": "老师提出了一个问题。",
       "pinyin": "lǎo shī tí chū le yī gè wèn tí 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0209.webp",
     "needsReview": false,
     "sourceLine": "问答对错",
     "sourceLineIndex": 53
@@ -8807,7 +8807,7 @@
       "text": "他认真地回答问题。",
       "pinyin": "tā rèn zhēn dì huí dá wèn tí 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0210.webp",
     "needsReview": false,
     "sourceLine": "问答对错",
     "sourceLineIndex": 53
@@ -8848,7 +8848,7 @@
       "text": "他说了一声对不起。",
       "pinyin": "tā shuō le yī shēng duì bù qǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0211.webp",
     "needsReview": false,
     "sourceLine": "问答对错",
     "sourceLineIndex": 53
@@ -8897,7 +8897,7 @@
       "text": "做完题要检查有没有出错。",
       "pinyin": "zuò wán tí yào jiǎn chá yǒu méi yǒu chū cuò 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0212.webp",
     "needsReview": false,
     "sourceLine": "问答对错",
     "sourceLineIndex": 53
@@ -8943,7 +8943,7 @@
       "text": "我们的学校很漂亮。",
       "pinyin": "wǒ men de xué xiào hěn piào liàng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0213.webp",
     "needsReview": false,
     "sourceLine": "校班处室",
     "sourceLineIndex": 54
@@ -8989,7 +8989,7 @@
       "text": "我们班级很团结。",
       "pinyin": "wǒ men bān jí hěn tuán jié 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0214.webp",
     "needsReview": false,
     "sourceLine": "校班处室",
     "sourceLineIndex": 54
@@ -9030,7 +9030,7 @@
       "text": "多读书有很多好处。",
       "pinyin": "duō dú shū yǒu hěn duō hǎo chù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0215.webp",
     "needsReview": false,
     "sourceLine": "校班处室",
     "sourceLineIndex": 54
@@ -9075,7 +9075,7 @@
       "text": "我们的教室很明亮。",
       "pinyin": "wǒ men de jiāo shì hěn míng liàng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0216.webp",
     "needsReview": false,
     "sourceLine": "校班处室",
     "sourceLineIndex": 54
@@ -9116,7 +9116,7 @@
       "text": "他吃了一半的苹果。",
       "pinyin": "tā chī le yī bàn de píng guǒ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0217.webp",
     "needsReview": false,
     "sourceLine": "半全空满",
     "sourceLineIndex": 55
@@ -9158,7 +9158,7 @@
       "text": "全家人一起吃晚饭。",
       "pinyin": "quán jiā rén yī qǐ chī wǎn fàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0218.webp",
     "needsReview": false,
     "sourceLine": "半全空满",
     "sourceLineIndex": 55
@@ -9202,7 +9202,7 @@
       "text": "公园里的空气很新鲜。",
       "pinyin": "gōng yuán lǐ de kōng qì hěn xīn xiǎn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0219.webp",
     "needsReview": false,
     "sourceLine": "半全空满",
     "sourceLineIndex": 55
@@ -9251,7 +9251,7 @@
       "text": "妈妈对我的成绩很满意。",
       "pinyin": "mā mā duì wǒ de chéng jì hěn mǎn yì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0220.webp",
     "needsReview": false,
     "sourceLine": "半全空满",
     "sourceLineIndex": 55
@@ -9297,7 +9297,7 @@
       "text": "我家有四个人。",
       "pinyin": "wǒ jiā yǒu sì gè rén 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0221.webp",
     "needsReview": false,
     "sourceLine": "家园国院",
     "sourceLineIndex": 56
@@ -9340,7 +9340,7 @@
       "text": "我们周末去公园玩。",
       "pinyin": "wǒ men zhōu mò qù gōng yuán wán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0222.webp",
     "needsReview": false,
     "sourceLine": "家园国院",
     "sourceLineIndex": 56
@@ -9384,7 +9384,7 @@
       "text": "我爱我的祖国。",
       "pinyin": "wǒ ài wǒ de zǔ guó 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0223.webp",
     "needsReview": false,
     "sourceLine": "家园国院",
     "sourceLineIndex": 56
@@ -9429,7 +9429,7 @@
       "text": "奶奶在院子里种花。",
       "pinyin": "nǎi nǎi zài yuàn zǐ lǐ zhòng huā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0224.webp",
     "needsReview": false,
     "sourceLine": "家园国院",
     "sourceLineIndex": 56
@@ -9471,7 +9471,7 @@
       "text": "我每天练习写字。",
       "pinyin": "wǒ měi tiān liàn xí xiě zì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0225.webp",
     "needsReview": false,
     "sourceLine": "字词诗句",
     "sourceLineIndex": 57
@@ -9514,7 +9514,7 @@
       "text": "老师教我们新的词语。",
       "pinyin": "lǎo shī jiāo wǒ men xīn de cí yù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0226.webp",
     "needsReview": false,
     "sourceLine": "字词诗句",
     "sourceLineIndex": 57
@@ -9558,7 +9558,7 @@
       "text": "我们今天学了一首古诗。",
       "pinyin": "wǒ men jīn tiān xué le yī shǒu gǔ shī 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0227.webp",
     "needsReview": false,
     "sourceLine": "字词诗句",
     "sourceLineIndex": 57
@@ -9599,7 +9599,7 @@
       "text": "请用这个词造一个句子。",
       "pinyin": "qǐng yòng zhè gè cí zào yī gè jù zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0228.webp",
     "needsReview": false,
     "sourceLine": "字词诗句",
     "sourceLineIndex": 57
@@ -9640,7 +9640,7 @@
       "text": "他点了点头表示同意。",
       "pinyin": "tā diǎn le diǎn tou biǎo shì tóng yì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0229.webp",
     "needsReview": false,
     "sourceLine": "头脑身肚",
     "sourceLineIndex": 58
@@ -9686,7 +9686,7 @@
       "text": "我用电脑查资料。",
       "pinyin": "wǒ yòng diàn nǎo chá zī liào 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0230.webp",
     "needsReview": false,
     "sourceLine": "头脑身肚",
     "sourceLineIndex": 58
@@ -9729,7 +9729,7 @@
       "text": "锻炼身体很重要。",
       "pinyin": "duàn liàn shēn tǐ hěn zhòng yào 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0231.webp",
     "needsReview": false,
     "sourceLine": "头脑身肚",
     "sourceLineIndex": 58
@@ -9772,7 +9772,7 @@
       "text": "我吃饱了，肚子圆圆的。",
       "pinyin": "wǒ chī bǎo le ， dù zǐ yuán yuán de 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0232.webp",
     "needsReview": false,
     "sourceLine": "头脑身肚",
     "sourceLineIndex": 58
@@ -9816,7 +9816,7 @@
       "text": "爸爸的肩膀很宽。",
       "pinyin": "bà bà de jiān bǎng hěn kuān 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0233.webp",
     "needsReview": false,
     "sourceLine": "肩背腿腰",
     "sourceLineIndex": 59
@@ -9861,7 +9861,7 @@
       "text": "我每天背着书包上学。",
       "pinyin": "wǒ měi tiān bèi zhe shū bāo shàng xué 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0234.webp",
     "needsReview": false,
     "sourceLine": "肩背腿腰",
     "sourceLineIndex": 59
@@ -9910,7 +9910,7 @@
       "text": "运动员的腿脚很有力。",
       "pinyin": "yùn dòng yún de tuǐ jué hěn yǒu lì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0235.webp",
     "needsReview": false,
     "sourceLine": "肩背腿腰",
     "sourceLineIndex": 59
@@ -9959,7 +9959,7 @@
       "text": "爷爷弯腰捡起了地上的纸。",
       "pinyin": "yé yé wān yāo jiǎn qǐ le dì shàng de zhǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0236.webp",
     "needsReview": false,
     "sourceLine": "肩背腿腰",
     "sourceLineIndex": 59
@@ -9999,7 +9999,7 @@
       "text": "请用尺子画一条直线。",
       "pinyin": "qǐng yòng chǐ zǐ huà yī tiáo zhí xiàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0237.webp",
     "needsReview": false,
     "sourceLine": "尺夹笔包",
     "sourceLineIndex": 60
@@ -10041,7 +10041,7 @@
       "text": "妈妈用夹子把纸夹好。",
       "pinyin": "mā mā yòng jiá zǐ bǎ zhǐ jiá hǎo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0238.webp",
     "needsReview": false,
     "sourceLine": "尺夹笔包",
     "sourceLineIndex": 60
@@ -10087,7 +10087,7 @@
       "text": "我用铅笔写作业。",
       "pinyin": "wǒ yòng qiān bǐ xiě zuò yè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0239.webp",
     "needsReview": false,
     "sourceLine": "尺夹笔包",
     "sourceLineIndex": 60
@@ -10128,7 +10128,7 @@
       "text": "我的书包里有很多书。",
       "pinyin": "wǒ de shū bāo lǐ yǒu hěn duō shū 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0240.webp",
     "needsReview": false,
     "sourceLine": "尺夹笔包",
     "sourceLineIndex": 60
@@ -10171,7 +10171,7 @@
       "text": "她长大想当一名医生。",
       "pinyin": "tā cháng dà xiǎng dāng yī míng yī shēng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0241.webp",
     "needsReview": false,
     "sourceLine": "医师商军",
     "sourceLineIndex": 61
@@ -10213,7 +10213,7 @@
       "text": "老师认真地给我们上课。",
       "pinyin": "lǎo shī rèn zhēn dì gěi wǒ men shàng kè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0242.webp",
     "needsReview": false,
     "sourceLine": "医师商军",
     "sourceLineIndex": 61
@@ -10260,7 +10260,7 @@
       "text": "我们一起商量这件事。",
       "pinyin": "wǒ men yī qǐ shāng liáng zhè jiàn shì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0243.webp",
     "needsReview": false,
     "sourceLine": "医师商军",
     "sourceLineIndex": 61
@@ -10302,7 +10302,7 @@
       "text": "军人叔叔保卫着祖国。",
       "pinyin": "jūn rén shū shū bǎo wèi zhe zǔ guó 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0244.webp",
     "needsReview": false,
     "sourceLine": "医师商军",
     "sourceLineIndex": 61
@@ -10342,7 +10342,7 @@
       "text": "故事里的王子很勇敢。",
       "pinyin": "gù shì lǐ de wáng zǐ hěn yǒng gǎn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0245.webp",
     "needsReview": false,
     "sourceLine": "王朋友邻",
     "sourceLineIndex": 62
@@ -10386,7 +10386,7 @@
       "text": "他是我最好的朋友。",
       "pinyin": "tā shì wǒ zuì hǎo de péng yǒu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0246.webp",
     "needsReview": false,
     "sourceLine": "王朋友邻",
     "sourceLineIndex": 62
@@ -10426,7 +10426,7 @@
       "text": "我们的友谊很珍贵。",
       "pinyin": "wǒ men de yǒu yì hěn zhēn guì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0247.webp",
     "needsReview": false,
     "sourceLine": "王朋友邻",
     "sourceLineIndex": 62
@@ -10469,7 +10469,7 @@
       "text": "我们和邻居关系很好。",
       "pinyin": "wǒ men hé lín jū guān xì hěn hǎo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0248.webp",
     "needsReview": false,
     "sourceLine": "王朋友邻",
     "sourceLineIndex": 62
@@ -10511,7 +10511,7 @@
       "text": "我每天早上六点起床。",
       "pinyin": "wǒ měi tiān zǎo shàng liù diǎn qǐ chuáng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0249.webp",
     "needsReview": false,
     "sourceLine": "早晚晨夕",
     "sourceLineIndex": 63
@@ -10558,7 +10558,7 @@
       "text": "晚上我们一起看电视。",
       "pinyin": "wǎn shàng wǒ men yī qǐ kàn diàn shì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0250.webp",
     "needsReview": false,
     "sourceLine": "早晚晨夕",
     "sourceLineIndex": 63
@@ -10605,7 +10605,7 @@
       "text": "清晨的空气特别清新。",
       "pinyin": "qīng chén de kōng qì tè bié qīng xīn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0251.webp",
     "needsReview": false,
     "sourceLine": "早晚晨夕",
     "sourceLineIndex": 63
@@ -10644,7 +10644,7 @@
       "text": "夕阳把天空染成了红色。",
       "pinyin": "xī yáng bǎ tiān kōng rǎn chéng le hóng sè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0252.webp",
     "needsReview": false,
     "sourceLine": "早晚晨夕",
     "sourceLineIndex": 63
@@ -10689,7 +10689,7 @@
       "text": "春天来了，花都开了。",
       "pinyin": "chūn tiān lái le ， huā dōu kāi le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0253.webp",
     "needsReview": false,
     "sourceLine": "春夏秋冬",
     "sourceLineIndex": 64
@@ -10735,7 +10735,7 @@
       "text": "夏天的天气非常热。",
       "pinyin": "xià tiān de tiān qì fēi cháng rè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0254.webp",
     "needsReview": false,
     "sourceLine": "春夏秋冬",
     "sourceLineIndex": 64
@@ -10780,7 +10780,7 @@
       "text": "秋天的树叶变黄了。",
       "pinyin": "qiū tiān de shù yè biàn huáng le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0255.webp",
     "needsReview": false,
     "sourceLine": "春夏秋冬",
     "sourceLineIndex": 64
@@ -10821,7 +10821,7 @@
       "text": "冬天经常会下雪。",
       "pinyin": "dōng tiān jìng cháng huì xià xuě 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0256.webp",
     "needsReview": false,
     "sourceLine": "春夏秋冬",
     "sourceLineIndex": 64
@@ -10860,7 +10860,7 @@
       "text": "妈妈把房间打扫得很干净。",
       "pinyin": "mā mā bǎ fáng jiān dá sào de hěn gàn jìng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0257.webp",
     "needsReview": false,
     "sourceLine": "干湿晴阴",
     "sourceLineIndex": 65
@@ -10908,7 +10908,7 @@
       "text": "雨后的空气很湿润。",
       "pinyin": "yù hòu de kōng qì hěn shī rùn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0258.webp",
     "needsReview": false,
     "sourceLine": "干湿晴阴",
     "sourceLineIndex": 65
@@ -10956,7 +10956,7 @@
       "text": "今天是个晴朗的好天气。",
       "pinyin": "jīn tiān shì gè qíng lǎng de hǎo tiān qì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0259.webp",
     "needsReview": false,
     "sourceLine": "干湿晴阴",
     "sourceLineIndex": 65
@@ -10998,7 +10998,7 @@
       "text": "今天是阴天，没有太阳。",
       "pinyin": "jīn tiān shì yīn tiān ， méi yǒu tài yáng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0260.webp",
     "needsReview": false,
     "sourceLine": "干湿晴阴",
     "sourceLineIndex": 65
@@ -11039,7 +11039,7 @@
       "text": "我每天按时完成作业。",
       "pinyin": "wǒ měi tiān àn shí wán chéng zuò yè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0261.webp",
     "needsReview": false,
     "sourceLine": "业又才夸",
     "sourceLineIndex": 66
@@ -11077,7 +11077,7 @@
       "text": "今天又是一个好天气。",
       "pinyin": "jīn tiān yòu shì yī gè hǎo tiān qì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0262.webp",
     "needsReview": false,
     "sourceLine": "业又才夸",
     "sourceLineIndex": 66
@@ -11116,7 +11116,7 @@
       "text": "刚才他还在这里玩。",
       "pinyin": "gāng cái tā hái zài zhè lǐ wán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0263.webp",
     "needsReview": false,
     "sourceLine": "业又才夸",
     "sourceLineIndex": 66
@@ -11158,7 +11158,7 @@
       "text": "老师夸奖了我的作文。",
       "pinyin": "lǎo shī kuā jiǎng le wǒ de zuò wén 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0264.webp",
     "needsReview": false,
     "sourceLine": "业又才夸",
     "sourceLineIndex": 66
@@ -11200,7 +11200,7 @@
       "text": "这双鞋子大小很合适。",
       "pinyin": "zhè shuāng xié zǐ dà xiǎo hěn hé shì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0265.webp",
     "needsReview": false,
     "sourceLine": "合方团圆",
     "sourceLineIndex": 67
@@ -11240,7 +11240,7 @@
       "text": "这个方法很方便。",
       "pinyin": "zhè gè fāng fǎ hěn fāng biàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0266.webp",
     "needsReview": false,
     "sourceLine": "合方团圆",
     "sourceLineIndex": 67
@@ -11282,7 +11282,7 @@
       "text": "我们班的同学很团结。",
       "pinyin": "wǒ men bān de tóng xué hěn tuán jié 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0267.webp",
     "needsReview": false,
     "sourceLine": "合方团圆",
     "sourceLineIndex": 67
@@ -11328,7 +11328,7 @@
       "text": "中秋节是家人团圆的日子。",
       "pinyin": "zhōng qiū jié shì jiā rén tuán yuán de rì zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0268.webp",
     "needsReview": false,
     "sourceLine": "合方团圆",
     "sourceLineIndex": 67
@@ -11368,7 +11368,7 @@
       "text": "今天我们学了一篇课文。",
       "pinyin": "jīn tiān wǒ men xué le yī piān kè wén 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0269.webp",
     "needsReview": false,
     "sourceLine": "文武书画",
     "sourceLineIndex": 68
@@ -11412,7 +11412,7 @@
       "text": "他从小就喜欢练习武术。",
       "pinyin": "tā cóng xiǎo jiù xǐ huān liàn xí wǔ shù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0270.webp",
     "needsReview": false,
     "sourceLine": "文武书画",
     "sourceLineIndex": 68
@@ -11452,7 +11452,7 @@
       "text": "我喜欢读书。",
       "pinyin": "wǒ xǐ huān dú shū 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0271.webp",
     "needsReview": false,
     "sourceLine": "文武书画",
     "sourceLineIndex": 68
@@ -11496,7 +11496,7 @@
       "text": "妹妹喜欢在纸上画画。",
       "pinyin": "mèi mèi xǐ huān zài zhǐ shàng huà huà 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0272.webp",
     "needsReview": false,
     "sourceLine": "文武书画",
     "sourceLineIndex": 68
@@ -11543,7 +11543,7 @@
       "text": "农场里有几只小猪。",
       "pinyin": "nóng cháng lǐ yǒu jǐ zhǐ xiǎo zhū 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0273.webp",
     "needsReview": false,
     "sourceLine": "猪马牛羊",
     "sourceLineIndex": 69
@@ -11582,7 +11582,7 @@
       "text": "过马路要注意安全。",
       "pinyin": "guò mǎ lù yào zhù yì ān quán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0274.webp",
     "needsReview": false,
     "sourceLine": "猪马牛羊",
     "sourceLineIndex": 69
@@ -11622,7 +11622,7 @@
       "text": "我每天早上喝一杯牛奶。",
       "pinyin": "wǒ měi tiān zǎo shàng hē yī bēi niú nǎi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0275.webp",
     "needsReview": false,
     "sourceLine": "猪马牛羊",
     "sourceLineIndex": 69
@@ -11664,7 +11664,7 @@
       "text": "山坡上有一群小羊。",
       "pinyin": "shān pō shàng yǒu yī qún xiǎo yáng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0276.webp",
     "needsReview": false,
     "sourceLine": "猪马牛羊",
     "sourceLineIndex": 69
@@ -11705,7 +11705,7 @@
       "text": "弟弟很调皮，喜欢拍皮球。",
       "pinyin": "dì dì hěn diào pí ， xǐ huān pāi pí qiú 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0277.webp",
     "needsReview": false,
     "sourceLine": "皮毛羽爪",
     "sourceLineIndex": 70
@@ -11745,7 +11745,7 @@
       "text": "我用毛巾擦干了手。",
       "pinyin": "wǒ yòng máo jīn cā gàn le shǒu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0278.webp",
     "needsReview": false,
     "sourceLine": "皮毛羽爪",
     "sourceLineIndex": 70
@@ -11787,7 +11787,7 @@
       "text": "小鸟的羽毛五颜六色。",
       "pinyin": "xiǎo niǎo de yǔ máo wǔ yán liù sè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0279.webp",
     "needsReview": false,
     "sourceLine": "皮毛羽爪",
     "sourceLineIndex": 70
@@ -11827,7 +11827,7 @@
       "text": "小猫用爪子抓住了玩具。",
       "pinyin": "xiǎo māo yòng zhuǎ zǐ zhuā zhù le wán jù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0280.webp",
     "needsReview": false,
     "sourceLine": "皮毛羽爪",
     "sourceLineIndex": 70
@@ -11873,7 +11873,7 @@
       "text": "他做事情非常认真。",
       "pinyin": "tā zuò shì qíng fēi cháng rèn zhēn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0281.webp",
     "needsReview": false,
     "sourceLine": "真假善恶",
     "sourceLineIndex": 71
@@ -11920,7 +11920,7 @@
       "text": "暑假是我最快乐的假期。",
       "pinyin": "shǔ jiǎ shì wǒ zuì kuài lè de jiǎ qī 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0282.webp",
     "needsReview": false,
     "sourceLine": "真假善恶",
     "sourceLineIndex": 71
@@ -11968,7 +11968,7 @@
       "text": "她是一个善良的小姑娘。",
       "pinyin": "tā shì yī gè shàn liáng de xiǎo gū niáng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0283.webp",
     "needsReview": false,
     "sourceLine": "真假善恶",
     "sourceLineIndex": 71
@@ -12014,7 +12014,7 @@
       "text": "故事里的恶人最后被打败了。",
       "pinyin": "gù shì lǐ de wù rén zuì hòu bèi dá bài le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0284.webp",
     "needsReview": false,
     "sourceLine": "真假善恶",
     "sourceLineIndex": 71
@@ -12055,7 +12055,7 @@
       "text": "天空中飘着白色的云朵。",
       "pinyin": "tiān kōng zhōng piāo zhe bái sè de yún duǒ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0285.webp",
     "needsReview": false,
     "sourceLine": "白黑红蓝",
     "sourceLineIndex": 72
@@ -12103,7 +12103,7 @@
       "text": "老师在黑板上写字。",
       "pinyin": "lǎo shī zài hēi bǎn shàng xiě zì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0286.webp",
     "needsReview": false,
     "sourceLine": "白黑红蓝",
     "sourceLineIndex": 72
@@ -12145,7 +12145,7 @@
       "text": "教室前面挂着一面红旗。",
       "pinyin": "jiāo shì qián miàn guà zhe yī miàn hóng qí 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0287.webp",
     "needsReview": false,
     "sourceLine": "白黑红蓝",
     "sourceLineIndex": 72
@@ -12194,7 +12194,7 @@
       "text": "今天的天空又蓝又干净。",
       "pinyin": "jīn tiān de tiān kōng yòu lán yòu gàn jìng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0288.webp",
     "needsReview": false,
     "sourceLine": "白黑红蓝",
     "sourceLineIndex": 72
@@ -12237,7 +12237,7 @@
       "text": "祝你每天都快乐。",
       "pinyin": "zhù nǐ měi tiān dōu kuài lè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0289.webp",
     "needsReview": false,
     "sourceLine": "快慢远近",
     "sourceLineIndex": 73
@@ -12287,7 +12287,7 @@
       "text": "他慢慢地走进了教室。",
       "pinyin": "tā màn màn dì zǒu jìn le jiāo shì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0290.webp",
     "needsReview": false,
     "sourceLine": "快慢远近",
     "sourceLineIndex": 73
@@ -12330,7 +12330,7 @@
       "text": "我们永远是好朋友。",
       "pinyin": "wǒ men yǒng yuǎn shì hǎo péng yǒu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0291.webp",
     "needsReview": false,
     "sourceLine": "快慢远近",
     "sourceLineIndex": 73
@@ -12373,7 +12373,7 @@
       "text": "学校附近有一家书店。",
       "pinyin": "xué xiào fù jìn yǒu yī jiā shū diàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0292.webp",
     "needsReview": false,
     "sourceLine": "快慢远近",
     "sourceLineIndex": 73
@@ -12420,7 +12420,7 @@
       "text": "河水很深，要小心。",
       "pinyin": "hé shuǐ hěn shēn ， yào xiǎo xīn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0293.webp",
     "needsReview": false,
     "sourceLine": "深浅厚薄",
     "sourceLineIndex": 74
@@ -12464,7 +12464,7 @@
       "text": "小朋友先在浅水区学游泳。",
       "pinyin": "xiǎo péng yǒu xiān zài qiǎn shuǐ qū xué yóu yǒng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0294.webp",
     "needsReview": false,
     "sourceLine": "深浅厚薄",
     "sourceLineIndex": 74
@@ -12509,7 +12509,7 @@
       "text": "冬天要穿厚厚的衣服。",
       "pinyin": "dōng tiān yào chuān hòu hòu de yī fú 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0295.webp",
     "needsReview": false,
     "sourceLine": "深浅厚薄",
     "sourceLineIndex": 74
@@ -12561,7 +12561,7 @@
       "text": "这片纸非常薄。",
       "pinyin": "zhè piàn zhǐ fēi cháng bó 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0296.webp",
     "needsReview": false,
     "sourceLine": "深浅厚薄",
     "sourceLineIndex": 74
@@ -12606,7 +12606,7 @@
       "text": "小猪长得又圆又胖。",
       "pinyin": "xiǎo zhū cháng de yòu yuán yòu pàng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0297.webp",
     "needsReview": false,
     "sourceLine": "胖瘦轻重",
     "sourceLineIndex": 75
@@ -12656,7 +12656,7 @@
       "text": "他生病后变瘦了。",
       "pinyin": "tā shēng bìng hòu biàn shòu le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0298.webp",
     "needsReview": false,
     "sourceLine": "胖瘦轻重",
     "sourceLineIndex": 75
@@ -12701,7 +12701,7 @@
       "text": "他轻轻地推开了门。",
       "pinyin": "tā qīng qīng dì tuī kāi le mén 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0299.webp",
     "needsReview": false,
     "sourceLine": "胖瘦轻重",
     "sourceLineIndex": 75
@@ -12746,7 +12746,7 @@
       "text": "这个箱子很重。",
       "pinyin": "zhè gè xiāng zǐ hěn zhòng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0300.webp",
     "needsReview": false,
     "sourceLine": "胖瘦轻重",
     "sourceLineIndex": 75
@@ -12786,7 +12786,7 @@
       "text": "我们每周一举行升旗仪式。",
       "pinyin": "wǒ men měi zhōu yī jǔ xíng shēng qí yí shì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0301.webp",
     "needsReview": false,
     "sourceLine": "升降起落",
     "sourceLineIndex": 76
@@ -12830,7 +12830,7 @@
       "text": "飞机平稳地降落了。",
       "pinyin": "fēi jī píng wěn dì jiàng luò le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0302.webp",
     "needsReview": false,
     "sourceLine": "升降起落",
     "sourceLineIndex": 76
@@ -12876,7 +12876,7 @@
       "text": "我们一起去公园玩吧。",
       "pinyin": "wǒ men yī qǐ qù gōng yuán wán bā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0303.webp",
     "needsReview": false,
     "sourceLine": "升降起落",
     "sourceLineIndex": 76
@@ -12924,7 +12924,7 @@
       "text": "秋天树叶纷纷落下。",
       "pinyin": "qiū tiān shù yè fēn fēn luò xià 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0304.webp",
     "needsReview": false,
     "sourceLine": "升降起落",
     "sourceLineIndex": 76
@@ -12965,7 +12965,7 @@
       "text": "我们正在学习加法。",
       "pinyin": "wǒ men zhèng zài xué xí jiā fǎ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0305.webp",
     "needsReview": false,
     "sourceLine": "加减乘除",
     "sourceLineIndex": 77
@@ -13012,7 +13012,7 @@
       "text": "减法比加法难一点。",
       "pinyin": "jiǎn fǎ bǐ jiā fǎ nán yī diǎn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0306.webp",
     "needsReview": false,
     "sourceLine": "加减乘除",
     "sourceLineIndex": 77
@@ -13058,7 +13058,7 @@
       "text": "我们正在学习乘法口诀。",
       "pinyin": "wǒ men zhèng zài xué xí chéng fǎ kǒu jué 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0307.webp",
     "needsReview": false,
     "sourceLine": "加减乘除",
     "sourceLineIndex": 77
@@ -13103,7 +13103,7 @@
       "text": "爷爷在田里除草。",
       "pinyin": "yé yé zài tián lǐ chú cǎo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0308.webp",
     "needsReview": false,
     "sourceLine": "加减乘除",
     "sourceLineIndex": 77
@@ -13145,7 +13145,7 @@
       "text": "老师正在给我们讲故事。",
       "pinyin": "lǎo shī zhèng zài gěi wǒ men jiǎng gù shì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0309.webp",
     "needsReview": false,
     "sourceLine": "讲教做习",
     "sourceLineIndex": 78
@@ -13192,7 +13192,7 @@
       "text": "妈妈是一名小学教师。",
       "pinyin": "mā mā shì yī míng xiǎo xué jiāo shī 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0310.webp",
     "needsReview": false,
     "sourceLine": "讲教做习",
     "sourceLineIndex": 78
@@ -13239,7 +13239,7 @@
       "text": "妈妈每天给我们做饭。",
       "pinyin": "mā mā měi tiān gěi wǒ men zuò fàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0311.webp",
     "needsReview": false,
     "sourceLine": "讲教做习",
     "sourceLineIndex": 78
@@ -13278,7 +13278,7 @@
       "text": "我每天都坚持练习写字。",
       "pinyin": "wǒ měi tiān dōu jiān chí liàn xí xiě zì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0312.webp",
     "needsReview": false,
     "sourceLine": "讲教做习",
     "sourceLineIndex": 78
@@ -13322,7 +13322,7 @@
       "text": "小鸟落在树枝上唱歌。",
       "pinyin": "xiǎo niǎo luò zài shù zhī shàng chàng gē 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0313.webp",
     "needsReview": false,
     "sourceLine": "枝叶根芽",
     "sourceLineIndex": 79
@@ -13363,7 +13363,7 @@
       "text": "秋天的树叶变红了。",
       "pinyin": "qiū tiān de shù yè biàn hóng le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0314.webp",
     "needsReview": false,
     "sourceLine": "枝叶根芽",
     "sourceLineIndex": 79
@@ -13409,7 +13409,7 @@
       "text": "大树的根深深扎在土里。",
       "pinyin": "dà shù de gēn shēn shēn zhā zài tǔ lǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0315.webp",
     "needsReview": false,
     "sourceLine": "枝叶根芽",
     "sourceLineIndex": 79
@@ -13452,7 +13452,7 @@
       "text": "春天小草发芽了。",
       "pinyin": "chūn tiān xiǎo cǎo fā yá le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0316.webp",
     "needsReview": false,
     "sourceLine": "枝叶根芽",
     "sourceLineIndex": 79
@@ -13495,7 +13495,7 @@
       "text": "他狼吞虎咽地吃完了饭。",
       "pinyin": "tā láng tūn hǔ yè dì chī wán le fàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0317.webp",
     "needsReview": false,
     "sourceLine": "吞吐收放",
     "sourceLineIndex": 80
@@ -13537,7 +13537,7 @@
       "text": "他把骨头吐了出来。",
       "pinyin": "tā bǎ gǔ tou tù le chū lái 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0318.webp",
     "needsReview": false,
     "sourceLine": "吞吐收放",
     "sourceLineIndex": 80
@@ -13579,7 +13579,7 @@
       "text": "我收到了一封生日贺卡。",
       "pinyin": "wǒ shōu dào le yī fēng shēng rì hè kǎ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0319.webp",
     "needsReview": false,
     "sourceLine": "吞吐收放",
     "sourceLineIndex": 80
@@ -13623,7 +13623,7 @@
       "text": "放学后我先做作业。",
       "pinyin": "fàng xué hòu wǒ xiān zuò zuò yè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0320.webp",
     "needsReview": false,
     "sourceLine": "吞吐收放",
     "sourceLineIndex": 80
@@ -13665,7 +13665,7 @@
       "text": "长江是中国最长的河流。",
       "pinyin": "cháng jiāng shì zhōng guó zuì cháng de hé liú 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0321.webp",
     "needsReview": false,
     "sourceLine": "江河湖海",
     "sourceLineIndex": 81
@@ -13709,7 +13709,7 @@
       "text": "小河边长着很多柳树。",
       "pinyin": "xiǎo hé biān cháng zhe hěn duō liǔ shù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0322.webp",
     "needsReview": false,
     "sourceLine": "江河湖海",
     "sourceLineIndex": 81
@@ -13757,7 +13757,7 @@
       "text": "湖水清澈又平静。",
       "pinyin": "hú shuǐ qīng chè yòu píng jìng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0323.webp",
     "needsReview": false,
     "sourceLine": "江河湖海",
     "sourceLineIndex": 81
@@ -13803,7 +13803,7 @@
       "text": "我们暑假去了海边玩。",
       "pinyin": "wǒ men shǔ jiǎ qù le hǎi biān wán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0324.webp",
     "needsReview": false,
     "sourceLine": "江河湖海",
     "sourceLineIndex": 81
@@ -13845,7 +13845,7 @@
       "text": "运动后我流了很多汗。",
       "pinyin": "yùn dòng hòu wǒ liú le hěn duō hán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0325.webp",
     "needsReview": false,
     "sourceLine": "汗泪心血",
     "sourceLineIndex": 82
@@ -13889,7 +13889,7 @@
       "text": "她感动得流下了眼泪。",
       "pinyin": "tā gǎn dòng de liú xià le yǎn lèi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0326.webp",
     "needsReview": false,
     "sourceLine": "汗泪心血",
     "sourceLineIndex": 82
@@ -13929,7 +13929,7 @@
       "text": "今天我心情非常开心。",
       "pinyin": "jīn tiān wǒ xīn qíng fēi cháng kāi xīn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0327.webp",
     "needsReview": false,
     "sourceLine": "汗泪心血",
     "sourceLineIndex": 82
@@ -13971,7 +13971,7 @@
       "text": "他不小心摔破了手，流了一点血。",
       "pinyin": "tā bù xiǎo xīn shuāi pò le shǒu ， liú le yī diǎn xiě 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0328.webp",
     "needsReview": false,
     "sourceLine": "汗泪心血",
     "sourceLineIndex": 82
@@ -14009,7 +14009,7 @@
       "text": "妈妈用菜刀切水果。",
       "pinyin": "mā mā yòng cài dāo qiè shuǐ guǒ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0329.webp",
     "needsReview": false,
     "sourceLine": "刀叉勺钩",
     "sourceLineIndex": 83
@@ -14048,7 +14048,7 @@
       "text": "我用叉子吃水果。",
       "pinyin": "wǒ yòng chā zǐ chī shuǐ guǒ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0330.webp",
     "needsReview": false,
     "sourceLine": "刀叉勺钩",
     "sourceLineIndex": 83
@@ -14087,7 +14087,7 @@
       "text": "我用勺子喝汤。",
       "pinyin": "wǒ yòng sháo zǐ hē tāng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0331.webp",
     "needsReview": false,
     "sourceLine": "刀叉勺钩",
     "sourceLineIndex": 83
@@ -14132,7 +14132,7 @@
       "text": "墙上有一个挂衣服的钩子。",
       "pinyin": "qiáng shàng yǒu yī gè guà yī fú de gōu zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0332.webp",
     "needsReview": false,
     "sourceLine": "刀叉勺钩",
     "sourceLineIndex": 83
@@ -14172,7 +14172,7 @@
       "text": "我们在公园放风筝。",
       "pinyin": "wǒ men zài gōng yuán fàng fēng zhēng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0333.webp",
     "needsReview": false,
     "sourceLine": "风雨冰雪",
     "sourceLineIndex": 84
@@ -14216,7 +14216,7 @@
       "text": "出门前我带上了雨伞。",
       "pinyin": "chū mén qián wǒ dài shàng le yù sǎn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0334.webp",
     "needsReview": false,
     "sourceLine": "风雨冰雪",
     "sourceLineIndex": 84
@@ -14258,7 +14258,7 @@
       "text": "夏天吃冰淇淋真凉快。",
       "pinyin": "xià tiān chī bīng qí lín zhēn liáng kuài 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0335.webp",
     "needsReview": false,
     "sourceLine": "风雨冰雪",
     "sourceLineIndex": 84
@@ -14305,7 +14305,7 @@
       "text": "冬天下雪了，地上一片白。",
       "pinyin": "dōng tiān xià xuě le ， dì shàng yī piàn bái 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0336.webp",
     "needsReview": false,
     "sourceLine": "风雨冰雪",
     "sourceLineIndex": 84
@@ -14344,7 +14344,7 @@
       "text": "爸爸每天努力工作。",
       "pinyin": "bà bà měi tiān nǔ lì gōng zuò 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0337.webp",
     "needsReview": false,
     "sourceLine": "工农兵学",
     "sourceLineIndex": 85
@@ -14386,7 +14386,7 @@
       "text": "农民在田里辛勤劳作。",
       "pinyin": "nóng mín zài tián lǐ xīn qín láo zuò 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0338.webp",
     "needsReview": false,
     "sourceLine": "工农兵学",
     "sourceLineIndex": 85
@@ -14429,7 +14429,7 @@
       "text": "他长大想当一名士兵。",
       "pinyin": "tā cháng dà xiǎng dāng yī míng shì bīng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0339.webp",
     "needsReview": false,
     "sourceLine": "工农兵学",
     "sourceLineIndex": 85
@@ -14473,7 +14473,7 @@
       "text": "我和同学一起上学。",
       "pinyin": "wǒ hé tóng xué yī qǐ shàng xué 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0340.webp",
     "needsReview": false,
     "sourceLine": "工农兵学",
     "sourceLineIndex": 85
@@ -14515,7 +14515,7 @@
       "text": "观众们为运动员加油。",
       "pinyin": "guàn zhòng men wéi yùn dòng yún jiā yóu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0341.webp",
     "needsReview": false,
     "sourceLine": "众亲客主",
     "sourceLineIndex": 86
@@ -14560,7 +14560,7 @@
       "text": "她对每个人都很亲切。",
       "pinyin": "tā duì měi gè rén dōu hěn qīn qiè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0342.webp",
     "needsReview": false,
     "sourceLine": "众亲客主",
     "sourceLineIndex": 86
@@ -14605,7 +14605,7 @@
       "text": "家里来了客人，妈妈很高兴。",
       "pinyin": "jiā lǐ lái le kè rén ， mā mā hěn gāo xìng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0343.webp",
     "needsReview": false,
     "sourceLine": "众亲客主",
     "sourceLineIndex": 86
@@ -14646,7 +14646,7 @@
       "text": "小狗认出了它的主人。",
       "pinyin": "xiǎo gǒu rèn chū le tā de zhù rén 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0344.webp",
     "needsReview": false,
     "sourceLine": "众亲客主",
     "sourceLineIndex": 86
@@ -14688,7 +14688,7 @@
       "text": "我今年上二年级了。",
       "pinyin": "wǒ jīn nián shàng èr nián jí le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0345.webp",
     "needsReview": false,
     "sourceLine": "年季岁末",
     "sourceLineIndex": 87
@@ -14732,7 +14732,7 @@
       "text": "一年有四个季节。",
       "pinyin": "yī nián yǒu sì gè jì jié 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0346.webp",
     "needsReview": false,
     "sourceLine": "年季岁末",
     "sourceLineIndex": 87
@@ -14774,7 +14774,7 @@
       "text": "弟弟今年三岁了。",
       "pinyin": "dì dì jīn nián sān suì le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0347.webp",
     "needsReview": false,
     "sourceLine": "年季岁末",
     "sourceLineIndex": 87
@@ -14815,7 +14815,7 @@
       "text": "周末我们去公园玩。",
       "pinyin": "zhōu mò wǒ men qù gōng yuán wán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0348.webp",
     "needsReview": false,
     "sourceLine": "年季岁末",
     "sourceLineIndex": 87
@@ -14860,7 +14860,7 @@
       "text": "昨天我们去了图书馆。",
       "pinyin": "zuó tiān wǒ men qù le tú shū guǎn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0349.webp",
     "needsReview": false,
     "sourceLine": "昨今明时",
     "sourceLineIndex": 88
@@ -14900,7 +14900,7 @@
       "text": "今天的天气真好。",
       "pinyin": "jīn tiān de tiān qì zhēn hǎo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0350.webp",
     "needsReview": false,
     "sourceLine": "昨今明时",
     "sourceLineIndex": 88
@@ -14944,7 +14944,7 @@
       "text": "明天我们要去郊游。",
       "pinyin": "míng tiān wǒ men yào qù jiāo yóu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0351.webp",
     "needsReview": false,
     "sourceLine": "昨今明时",
     "sourceLineIndex": 88
@@ -14987,7 +14987,7 @@
       "text": "我们要准时到校。",
       "pinyin": "wǒ men yào zhǔn shí dào xiào 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0352.webp",
     "needsReview": false,
     "sourceLine": "昨今明时",
     "sourceLineIndex": 88
@@ -15032,7 +15032,7 @@
       "text": "教室里很明亮。",
       "pinyin": "jiāo shì lǐ hěn míng liàng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0353.webp",
     "needsReview": false,
     "sourceLine": "亮暗光照",
     "sourceLineIndex": 89
@@ -15081,7 +15081,7 @@
       "text": "房间里突然变得很黑暗。",
       "pinyin": "fáng jiān lǐ tū rán biàn de hěn hēi àn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0354.webp",
     "needsReview": false,
     "sourceLine": "亮暗光照",
     "sourceLineIndex": 89
@@ -15123,7 +15123,7 @@
       "text": "阳光照进了教室。",
       "pinyin": "yáng guāng zhào jìn le jiāo shì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0355.webp",
     "needsReview": false,
     "sourceLine": "亮暗光照",
     "sourceLineIndex": 89
@@ -15172,7 +15172,7 @@
       "text": "我们在公园里拍照。",
       "pinyin": "wǒ men zài gōng yuán lǐ pāi zhào 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0356.webp",
     "needsReview": false,
     "sourceLine": "亮暗光照",
     "sourceLineIndex": 89
@@ -15214,7 +15214,7 @@
       "text": "妈妈给我买了新衣服。",
       "pinyin": "mā mā gěi wǒ mǎi le xīn yī fú 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0357.webp",
     "needsReview": false,
     "sourceLine": "衣食住行",
     "sourceLineIndex": 90
@@ -15259,7 +15259,7 @@
       "text": "餐桌上摆满了美食。",
       "pinyin": "cān zhuō shàng bǎi mǎn le měi shí 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0358.webp",
     "needsReview": false,
     "sourceLine": "衣食住行",
     "sourceLineIndex": 90
@@ -15302,7 +15302,7 @@
       "text": "我们一家住在城市里。",
       "pinyin": "wǒ men yī jiā zhù zài chéng shì lǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0359.webp",
     "needsReview": false,
     "sourceLine": "衣食住行",
     "sourceLineIndex": 90
@@ -15344,7 +15344,7 @@
       "text": "我们暑假去外地旅行。",
       "pinyin": "wǒ men shǔ jiǎ qù wài dì lǚ xíng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0360.webp",
     "needsReview": false,
     "sourceLine": "衣食住行",
     "sourceLineIndex": 90
@@ -15387,7 +15387,7 @@
       "text": "请大家安静地坐下。",
       "pinyin": "qǐng dà jiā ān jìng dì zuò xià 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0361.webp",
     "needsReview": false,
     "sourceLine": "坐立动止",
     "sourceLineIndex": 91
@@ -15428,7 +15428,7 @@
       "text": "听到铃声他立刻站了起来。",
       "pinyin": "tīng dào líng shēng tā lì kè zhàn le qǐ lái 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0362.webp",
     "needsReview": false,
     "sourceLine": "坐立动止",
     "sourceLineIndex": 91
@@ -15470,7 +15470,7 @@
       "text": "动物园里有很多可爱的动物。",
       "pinyin": "dòng wù yuán lǐ yǒu hěn duō kě ài de dòng wù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0363.webp",
     "needsReview": false,
     "sourceLine": "坐立动止",
     "sourceLineIndex": 91
@@ -15510,7 +15510,7 @@
       "text": "雨终于停止了。",
       "pinyin": "yù zhōng yú tíng zhǐ le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0364.webp",
     "needsReview": false,
     "sourceLine": "坐立动止",
     "sourceLineIndex": 91
@@ -15560,7 +15560,7 @@
       "text": "图书馆里要保持安静。",
       "pinyin": "tú shū guǎn lǐ yào bǎo chí ān jìng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0365.webp",
     "needsReview": false,
     "sourceLine": "静走跑跳",
     "sourceLineIndex": 92
@@ -15603,7 +15603,7 @@
       "text": "我每天走路上学。",
       "pinyin": "wǒ měi tiān zǒu lù shàng xué 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0366.webp",
     "needsReview": false,
     "sourceLine": "静走跑跳",
     "sourceLineIndex": 92
@@ -15651,7 +15651,7 @@
       "text": "他在操场上跑步。",
       "pinyin": "tā zài cāo cháng shàng páo bù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0367.webp",
     "needsReview": false,
     "sourceLine": "静走跑跳",
     "sourceLineIndex": 92
@@ -15700,7 +15700,7 @@
       "text": "妹妹喜欢跳绳。",
       "pinyin": "mèi mèi xǐ huān tiào shéng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0368.webp",
     "needsReview": false,
     "sourceLine": "静走跑跳",
     "sourceLineIndex": 92
@@ -15745,7 +15745,7 @@
       "text": "小狗在草地上追赶蝴蝶。",
       "pinyin": "xiǎo gǒu zài cǎo dì shàng zhuī gǎn hú dié 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0369.webp",
     "needsReview": false,
     "sourceLine": "追赶爬骑",
     "sourceLineIndex": 93
@@ -15791,7 +15791,7 @@
       "text": "我们要赶快出发了。",
       "pinyin": "wǒ men yào gǎn kuài chū fā le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0370.webp",
     "needsReview": false,
     "sourceLine": "追赶爬骑",
     "sourceLineIndex": 93
@@ -15835,7 +15835,7 @@
       "text": "周末我们一起去爬山。",
       "pinyin": "zhōu mò wǒ men yī qǐ qù pá shān 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0371.webp",
     "needsReview": false,
     "sourceLine": "追赶爬骑",
     "sourceLineIndex": 93
@@ -15882,7 +15882,7 @@
       "text": "爸爸每天骑车上班。",
       "pinyin": "bà bà měi tiān qí chē shàng bān 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0372.webp",
     "needsReview": false,
     "sourceLine": "追赶爬骑",
     "sourceLineIndex": 93
@@ -15932,7 +15932,7 @@
       "text": "妹妹今天穿得很漂亮。",
       "pinyin": "mèi mèi jīn tiān chuān de hěn piào liàng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0373.webp",
     "needsReview": false,
     "sourceLine": "漂流游滑",
     "sourceLineIndex": 94
@@ -15978,7 +15978,7 @@
       "text": "小河里的流水叮叮咚咚。",
       "pinyin": "xiǎo hé lǐ de liú shuǐ dīng dīng dōng dōng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0374.webp",
     "needsReview": false,
     "sourceLine": "漂流游滑",
     "sourceLineIndex": 94
@@ -16026,7 +16026,7 @@
       "text": "夏天我喜欢去游泳。",
       "pinyin": "xià tiān wǒ xǐ huān qù yóu yǒng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0375.webp",
     "needsReview": false,
     "sourceLine": "漂流游滑",
     "sourceLineIndex": 94
@@ -16074,7 +16074,7 @@
       "text": "冬天我们一起去滑冰。",
       "pinyin": "dōng tiān wǒ men yī qǐ qù huá bīng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0376.webp",
     "needsReview": false,
     "sourceLine": "漂流游滑",
     "sourceLineIndex": 94
@@ -16122,7 +16122,7 @@
       "text": "我喜欢看课外书。",
       "pinyin": "wǒ xǐ huān kàn kè wài shū 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0377.webp",
     "needsReview": false,
     "sourceLine": "喜怒哀愁",
     "sourceLineIndex": 95
@@ -16167,7 +16167,7 @@
       "text": "他生气地发怒了。",
       "pinyin": "tā shēng qì dì fā nù le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0378.webp",
     "needsReview": false,
     "sourceLine": "喜怒哀愁",
     "sourceLineIndex": 95
@@ -16212,7 +16212,7 @@
       "text": "听到这个消息，她感到很哀伤。",
       "pinyin": "tīng dào zhè gè xiāo xī ， tā gǎn dào hěn āi shāng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0379.webp",
     "needsReview": false,
     "sourceLine": "喜怒哀愁",
     "sourceLineIndex": 95
@@ -16261,7 +16261,7 @@
       "text": "他正在为这道题发愁。",
       "pinyin": "tā zhèng zài wéi zhè dào tí fā chóu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0380.webp",
     "needsReview": false,
     "sourceLine": "喜怒哀愁",
     "sourceLineIndex": 95
@@ -16307,7 +16307,7 @@
       "text": "小弟弟摔倒了，大哭起来。",
       "pinyin": "xiǎo dì dì shuāi dǎo le ， dà kū qǐ lái 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0381.webp",
     "needsReview": false,
     "sourceLine": "哭笑惊怕",
     "sourceLineIndex": 96
@@ -16353,7 +16353,7 @@
       "text": "她脸上总是带着微笑。",
       "pinyin": "tā liǎn shàng zǒng shì dài zhe wēi xiào 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0382.webp",
     "needsReview": false,
     "sourceLine": "哭笑惊怕",
     "sourceLineIndex": 96
@@ -16400,7 +16400,7 @@
       "text": "这个消息让大家很惊讶。",
       "pinyin": "zhè gè xiāo xī ràng dà jiā hěn jīng yà 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0383.webp",
     "needsReview": false,
     "sourceLine": "哭笑惊怕",
     "sourceLineIndex": 96
@@ -16444,7 +16444,7 @@
       "text": "弟弟一个人睡觉会害怕。",
       "pinyin": "dì dì yī gè rén shuì jiào huì hài pà 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0384.webp",
     "needsReview": false,
     "sourceLine": "哭笑惊怕",
     "sourceLineIndex": 96
@@ -16487,7 +16487,7 @@
       "text": "他用力吹气把气球吹大。",
       "pinyin": "tā yòng lì chuī qì bǎ qì qiú chuī dà 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0385.webp",
     "needsReview": false,
     "sourceLine": "吹拉弹奏",
     "sourceLineIndex": 97
@@ -16531,7 +16531,7 @@
       "text": "我们手拉手一起走。",
       "pinyin": "wǒ men shǒu lá shǒu yī qǐ zǒu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0386.webp",
     "needsReview": false,
     "sourceLine": "吹拉弹奏",
     "sourceLineIndex": 97
@@ -16578,7 +16578,7 @@
       "text": "姐姐每天练习弹琴。",
       "pinyin": "jiě jiě měi tiān liàn xí dàn qín 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0387.webp",
     "needsReview": false,
     "sourceLine": "吹拉弹奏",
     "sourceLineIndex": 97
@@ -16623,7 +16623,7 @@
       "text": "乐队正在台上演奏。",
       "pinyin": "lè duì zhèng zài tái shàng yǎn zòu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0388.webp",
     "needsReview": false,
     "sourceLine": "吹拉弹奏",
     "sourceLineIndex": 97
@@ -16664,7 +16664,7 @@
       "text": "远处传来了一声叫声。",
       "pinyin": "yuǎn chù chuán lái le yī shēng jiào shēng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0389.webp",
     "needsReview": false,
     "sourceLine": "叫唱喊吵",
     "sourceLineIndex": 98
@@ -16711,7 +16711,7 @@
       "text": "我们班一起合唱了一首歌。",
       "pinyin": "wǒ men bān yī qǐ hé chàng le yī shǒu gē 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0390.webp",
     "needsReview": false,
     "sourceLine": "叫唱喊吵",
     "sourceLineIndex": 98
@@ -16759,7 +16759,7 @@
       "text": "他大声呼喊朋友的名字。",
       "pinyin": "tā dà shēng hū hǎn péng yǒu de míng zì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0391.webp",
     "needsReview": false,
     "sourceLine": "叫唱喊吵",
     "sourceLineIndex": 98
@@ -16802,7 +16802,7 @@
       "text": "他们俩因为小事吵架了。",
       "pinyin": "tā men liǎng yīn wéi xiǎo shì chǎo jià le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0392.webp",
     "needsReview": false,
     "sourceLine": "叫唱喊吵",
     "sourceLineIndex": 98
@@ -16847,7 +16847,7 @@
       "text": "我最喜欢上语文课。",
       "pinyin": "wǒ zuì xǐ huān shàng yù wén kè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0393.webp",
     "needsReview": false,
     "sourceLine": "语数英课",
     "sourceLineIndex": 99
@@ -16896,7 +16896,7 @@
       "text": "我们正在上数学课。",
       "pinyin": "wǒ men zhèng zài shàng shù xué kè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0394.webp",
     "needsReview": false,
     "sourceLine": "语数英课",
     "sourceLineIndex": 99
@@ -16940,7 +16940,7 @@
       "text": "我每天都练习英语。",
       "pinyin": "wǒ měi tiān dōu liàn xí yīng yù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0395.webp",
     "needsReview": false,
     "sourceLine": "语数英课",
     "sourceLineIndex": 99
@@ -16986,7 +16986,7 @@
       "text": "上课铃响了，大家快进教室。",
       "pinyin": "shàng kè líng xiǎng le ， dà jiā kuài jìn jiāo shì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0396.webp",
     "needsReview": false,
     "sourceLine": "语数英课",
     "sourceLineIndex": 99
@@ -17030,7 +17030,7 @@
       "text": "图书馆里有很多有趣的图书。",
       "pinyin": "tú shū guǎn lǐ yǒu hěn duō yǒu qù de tú shū 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0397.webp",
     "needsReview": false,
     "sourceLine": "图表格体",
     "sourceLineIndex": 100
@@ -17074,7 +17074,7 @@
       "text": "老师表扬了认真的同学。",
       "pinyin": "lǎo shī biǎo yáng le rèn zhēn de tóng xué 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0398.webp",
     "needsReview": false,
     "sourceLine": "图表格体",
     "sourceLineIndex": 100
@@ -17120,7 +17120,7 @@
       "text": "我的本子上印着小格子。",
       "pinyin": "wǒ de běn zǐ shàng yìn zhe xiǎo gé zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0399.webp",
     "needsReview": false,
     "sourceLine": "图表格体",
     "sourceLineIndex": 100
@@ -17163,7 +17163,7 @@
       "text": "锻炼身体对我们很重要。",
       "pinyin": "duàn liàn shēn tǐ duì wǒ men hěn zhòng yào 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0400.webp",
     "needsReview": false,
     "sourceLine": "图表格体",
     "sourceLineIndex": 100
@@ -17208,7 +17208,7 @@
       "text": "山上有一处清澈的泉水。",
       "pinyin": "shān shàng yǒu yī chù qīng chè de quán shuǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0401.webp",
     "needsReview": false,
     "sourceLine": "泉溪池塘",
     "sourceLineIndex": 101
@@ -17257,7 +17257,7 @@
       "text": "小溪在山间静静流淌。",
       "pinyin": "xiǎo xī zài shān jiān jìng jìng liú tǎng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0402.webp",
     "needsReview": false,
     "sourceLine": "泉溪池塘",
     "sourceLineIndex": 101
@@ -17299,7 +17299,7 @@
       "text": "池塘里有很多荷花。",
       "pinyin": "chí táng lǐ yǒu hěn duō hé huā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0403.webp",
     "needsReview": false,
     "sourceLine": "泉溪池塘",
     "sourceLineIndex": 101
@@ -17348,7 +17348,7 @@
       "text": "荷塘里开满了荷花。",
       "pinyin": "hé táng lǐ kāi mǎn le hé huā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0404.webp",
     "needsReview": false,
     "sourceLine": "泉溪池塘",
     "sourceLineIndex": 101
@@ -17393,7 +17393,7 @@
       "text": "我给远方的朋友写了一封信。",
       "pinyin": "wǒ gěi yuǎn fāng de péng yǒu xiě le yī fēng xìn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0405.webp",
     "needsReview": false,
     "sourceLine": "信报纸本",
     "sourceLineIndex": 102
@@ -17436,7 +17436,7 @@
       "text": "爸爸每天早上看报纸。",
       "pinyin": "bà bà měi tiān zǎo shàng kàn bào zhǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0406.webp",
     "needsReview": false,
     "sourceLine": "信报纸本",
     "sourceLineIndex": 102
@@ -17479,7 +17479,7 @@
       "text": "请用纸巾擦擦手。",
       "pinyin": "qǐng yòng zhǐ jīn cā cā shǒu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0407.webp",
     "needsReview": false,
     "sourceLine": "信报纸本",
     "sourceLineIndex": 102
@@ -17520,7 +17520,7 @@
       "text": "我的本子上写满了字。",
       "pinyin": "wǒ de běn zǐ shàng xiě mǎn le zì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0408.webp",
     "needsReview": false,
     "sourceLine": "信报纸本",
     "sourceLineIndex": 102
@@ -17564,7 +17564,7 @@
       "text": "叔叔今天来我家做客。",
       "pinyin": "shū shū jīn tiān lái wǒ jiā zuò kè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0409.webp",
     "needsReview": false,
     "sourceLine": "叔伯舅姨",
     "sourceLineIndex": 103
@@ -17607,7 +17607,7 @@
       "text": "伯伯送了我一本新书。",
       "pinyin": "bó bó sòng le wǒ yī běn xīn shū 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0410.webp",
     "needsReview": false,
     "sourceLine": "叔伯舅姨",
     "sourceLineIndex": 103
@@ -17656,7 +17656,7 @@
       "text": "舅舅周末带我去公园。",
       "pinyin": "jiù jiù zhōu mò dài wǒ qù gōng yuán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0411.webp",
     "needsReview": false,
     "sourceLine": "叔伯舅姨",
     "sourceLineIndex": 103
@@ -17701,7 +17701,7 @@
       "text": "阿姨送给我一个生日礼物。",
       "pinyin": "ā yí sòng gěi wǒ yī gè shēng rì lǐ wù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0412.webp",
     "needsReview": false,
     "sourceLine": "叔伯舅姨",
     "sourceLineIndex": 103
@@ -17747,7 +17747,7 @@
       "text": "请帮我把书拿来。",
       "pinyin": "qǐng bāng wǒ bǎ shū ná lái 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0413.webp",
     "needsReview": false,
     "sourceLine": "拿给用借",
     "sourceLineIndex": 104
@@ -17792,7 +17792,7 @@
       "text": "妈妈给了我一个苹果。",
       "pinyin": "mā mā gěi le wǒ yī gè píng guǒ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0414.webp",
     "needsReview": false,
     "sourceLine": "拿给用借",
     "sourceLineIndex": 104
@@ -17833,7 +17833,7 @@
       "text": "他用心地完成了作业。",
       "pinyin": "tā yòng xīn dì wán chéng le zuò yè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0415.webp",
     "needsReview": false,
     "sourceLine": "拿给用借",
     "sourceLineIndex": 104
@@ -17879,7 +17879,7 @@
       "text": "我去图书馆借书。",
       "pinyin": "wǒ qù tú shū guǎn jiè shū 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0416.webp",
     "needsReview": false,
     "sourceLine": "拿给用借",
     "sourceLineIndex": 104
@@ -17919,7 +17919,7 @@
       "text": "我们好久没见面了。",
       "pinyin": "wǒ men hǎo jiǔ méi jiàn miàn le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0417.webp",
     "needsReview": false,
     "sourceLine": "见谈言话",
     "sourceLineIndex": 105
@@ -17965,7 +17965,7 @@
       "text": "老师和我们谈话。",
       "pinyin": "lǎo shī hé wǒ men tán huà 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0418.webp",
     "needsReview": false,
     "sourceLine": "见谈言话",
     "sourceLineIndex": 105
@@ -18008,7 +18008,7 @@
       "text": "他说话很有礼貌。",
       "pinyin": "tā shuō huà hěn yǒu lǐ mào 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0419.webp",
     "needsReview": false,
     "sourceLine": "见谈言话",
     "sourceLineIndex": 105
@@ -18052,7 +18052,7 @@
       "text": "妈妈打电话给奶奶。",
       "pinyin": "mā mā dá diàn huà gěi nǎi nǎi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0420.webp",
     "needsReview": false,
     "sourceLine": "见谈言话",
     "sourceLineIndex": 105
@@ -18104,7 +18104,7 @@
       "text": "我们在操场上做体操。",
       "pinyin": "wǒ men zài cāo cháng shàng zuò tǐ cāo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0421.webp",
     "needsReview": false,
     "sourceLine": "操场厂房",
     "sourceLineIndex": 106
@@ -18146,7 +18146,7 @@
       "text": "操场上有很多同学在跑步。",
       "pinyin": "cāo cháng shàng yǒu hěn duō tóng xué zài páo bù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0422.webp",
     "needsReview": false,
     "sourceLine": "操场厂房",
     "sourceLineIndex": 106
@@ -18184,7 +18184,7 @@
       "text": "爸爸在一家工厂工作。",
       "pinyin": "bà bà zài yī jiā gōng chǎng gōng zuò 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0423.webp",
     "needsReview": false,
     "sourceLine": "操场厂房",
     "sourceLineIndex": 106
@@ -18228,7 +18228,7 @@
       "text": "我们住的房子很温馨。",
       "pinyin": "wǒ men zhù de fáng zǐ hěn wēn xīn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0424.webp",
     "needsReview": false,
     "sourceLine": "操场厂房",
     "sourceLineIndex": 106
@@ -18270,7 +18270,7 @@
       "text": "妈妈去超市买东西。",
       "pinyin": "mā mā qù chāo shì mǎi dōng xī 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0425.webp",
     "needsReview": false,
     "sourceLine": "买卖钱票",
     "sourceLineIndex": 107
@@ -18314,7 +18314,7 @@
       "text": "他卖力地搬着箱子。",
       "pinyin": "tā mài lì dì bān zhe xiāng zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0426.webp",
     "needsReview": false,
     "sourceLine": "买卖钱票",
     "sourceLineIndex": 107
@@ -18360,7 +18360,7 @@
       "text": "他把钱包放进了书包。",
       "pinyin": "tā bǎ qián bāo fàng jìn le shū bāo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0427.webp",
     "needsReview": false,
     "sourceLine": "买卖钱票",
     "sourceLineIndex": 107
@@ -18407,7 +18407,7 @@
       "text": "爸爸买好了车票。",
       "pinyin": "bà bà mǎi hǎo le chē piào 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0428.webp",
     "needsReview": false,
     "sourceLine": "买卖钱票",
     "sourceLineIndex": 107
@@ -18454,7 +18454,7 @@
       "text": "妈妈给我做了一个蛋糕。",
       "pinyin": "mā mā gěi wǒ zuò le yī gè dàn gāo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0429.webp",
     "needsReview": false,
     "sourceLine": "蛋蜜鱼肉",
     "sourceLineIndex": 108
@@ -18504,7 +18504,7 @@
       "text": "蜜蜂正在采花蜜。",
       "pinyin": "mì fēng zhèng zài cài huā mì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0430.webp",
     "needsReview": false,
     "sourceLine": "蛋蜜鱼肉",
     "sourceLineIndex": 108
@@ -18548,7 +18548,7 @@
       "text": "鱼缸里有几条小鱼。",
       "pinyin": "yú gāng lǐ yǒu jǐ tiáo xiǎo yú 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0431.webp",
     "needsReview": false,
     "sourceLine": "蛋蜜鱼肉",
     "sourceLineIndex": 108
@@ -18590,7 +18590,7 @@
       "text": "今天晚饭有牛肉和鱼肉。",
       "pinyin": "jīn tiān wǎn fàn yǒu niú ròu hé yú ròu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0432.webp",
     "needsReview": false,
     "sourceLine": "蛋蜜鱼肉",
     "sourceLineIndex": 108
@@ -18633,7 +18633,7 @@
       "text": "秋天麦田一片金黄。",
       "pinyin": "qiū tiān mài tián yī piàn jīn huáng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0433.webp",
     "needsReview": false,
     "sourceLine": "麦豆稻谷",
     "sourceLineIndex": 109
@@ -18676,7 +18676,7 @@
       "text": "妈妈用黄豆做了豆浆。",
       "pinyin": "mā mā yòng huáng dòu zuò le dòu jiāng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0434.webp",
     "needsReview": false,
     "sourceLine": "麦豆稻谷",
     "sourceLineIndex": 109
@@ -18727,7 +18727,7 @@
       "text": "农民在稻田里插秧。",
       "pinyin": "nóng mín zài dào tián lǐ chā yāng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0435.webp",
     "needsReview": false,
     "sourceLine": "麦豆稻谷",
     "sourceLineIndex": 109
@@ -18770,7 +18770,7 @@
       "text": "秋天是五谷丰收的季节。",
       "pinyin": "qiū tiān shì wǔ gǔ fēng shōu de jì jié 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0436.webp",
     "needsReview": false,
     "sourceLine": "麦豆稻谷",
     "sourceLineIndex": 109
@@ -18812,7 +18812,7 @@
       "text": "晚饭我们吃了大米饭。",
       "pinyin": "wǎn fàn wǒ men chī le dà mǐ fàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0437.webp",
     "needsReview": false,
     "sourceLine": "米面粉粒",
     "sourceLineIndex": 110
@@ -18857,7 +18857,7 @@
       "text": "妈妈用面粉做了面包。",
       "pinyin": "mā mā yòng miàn fěn zuò le miàn bāo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0438.webp",
     "needsReview": false,
     "sourceLine": "米面粉粒",
     "sourceLineIndex": 110
@@ -18903,7 +18903,7 @@
       "text": "妹妹喜欢粉色的裙子。",
       "pinyin": "mèi mèi xǐ huān fěn sè de qún zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0439.webp",
     "needsReview": false,
     "sourceLine": "米面粉粒",
     "sourceLineIndex": 110
@@ -18950,7 +18950,7 @@
       "text": "碗里掉了一粒米。",
       "pinyin": "wǎn lǐ diào le yī lì mǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0440.webp",
     "needsReview": false,
     "sourceLine": "米面粉粒",
     "sourceLineIndex": 110
@@ -18997,7 +18997,7 @@
       "text": "爷爷戴着一副眼镜。",
       "pinyin": "yé yé dài zhe yī fù yǎn jìng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0441.webp",
     "needsReview": false,
     "sourceLine": "眼鼻嘴脸",
     "sourceLineIndex": 111
@@ -19047,7 +19047,7 @@
       "text": "大象的鼻子又长又粗。",
       "pinyin": "dà xiàng de bí zǐ yòu cháng yòu cū 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0442.webp",
     "needsReview": false,
     "sourceLine": "眼鼻嘴脸",
     "sourceLineIndex": 111
@@ -19099,7 +19099,7 @@
       "text": "他张开嘴巴大笑起来。",
       "pinyin": "tā zhāng kāi zuǐ bā dà xiào qǐ lái 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0443.webp",
     "needsReview": false,
     "sourceLine": "眼鼻嘴脸",
     "sourceLineIndex": 111
@@ -19146,7 +19146,7 @@
       "text": "弟弟的脸蛋红红的。",
       "pinyin": "dì dì de liǎn dàn hóng hóng de 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0444.webp",
     "needsReview": false,
     "sourceLine": "眼鼻嘴脸",
     "sourceLineIndex": 111
@@ -19186,7 +19186,7 @@
       "text": "中午我们一起吃饭。",
       "pinyin": "zhōng wǔ wǒ men yī qǐ chī fàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0445.webp",
     "needsReview": false,
     "sourceLine": "午夜阳暮",
     "sourceLineIndex": 112
@@ -19230,7 +19230,7 @@
       "text": "夜晚的星空真美。",
       "pinyin": "yè wǎn de xīng kōng zhēn měi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0446.webp",
     "needsReview": false,
     "sourceLine": "午夜阳暮",
     "sourceLineIndex": 112
@@ -19272,7 +19272,7 @@
       "text": "太阳照得大地暖暖的。",
       "pinyin": "tài yáng zhào de dà dì nuǎn nuǎn de 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0447.webp",
     "needsReview": false,
     "sourceLine": "午夜阳暮",
     "sourceLineIndex": 112
@@ -19322,7 +19322,7 @@
       "text": "暮色渐渐降临了村庄。",
       "pinyin": "mù sè jiàn jiàn jiàng lín le cūn zhuāng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0448.webp",
     "needsReview": false,
     "sourceLine": "午夜阳暮",
     "sourceLineIndex": 112
@@ -19367,7 +19367,7 @@
       "text": "我喜欢看书。",
       "pinyin": "wǒ xǐ huān kàn shū 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0449.webp",
     "needsReview": false,
     "sourceLine": "看想思转",
     "sourceLineIndex": 113
@@ -19416,7 +19416,7 @@
       "text": "我很想念远方的奶奶。",
       "pinyin": "wǒ hěn xiǎng niàn yuǎn fāng de nǎi nǎi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0450.webp",
     "needsReview": false,
     "sourceLine": "看想思转",
     "sourceLineIndex": 113
@@ -19461,7 +19461,7 @@
       "text": "他认真地思考这个问题。",
       "pinyin": "tā rèn zhēn dì sī kǎo zhè gè wèn tí 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0451.webp",
     "needsReview": false,
     "sourceLine": "看想思转",
     "sourceLineIndex": 113
@@ -19505,7 +19505,7 @@
       "text": "他转身向我们挥手。",
       "pinyin": "tā zhuàn shēn xiàng wǒ men huī shǒu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0452.webp",
     "needsReview": false,
     "sourceLine": "看想思转",
     "sourceLineIndex": 113
@@ -19551,7 +19551,7 @@
       "text": "他遇到困难也不放弃。",
       "pinyin": "tā yù dào kùn nán yě bù fàng qì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0453.webp",
     "needsReview": false,
     "sourceLine": "难易脏净",
     "sourceLineIndex": 114
@@ -19595,7 +19595,7 @@
       "text": "这道题对我来说很容易。",
       "pinyin": "zhè dào tí duì wǒ lái shuō hěn róng yì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0454.webp",
     "needsReview": false,
     "sourceLine": "难易脏净",
     "sourceLineIndex": 114
@@ -19641,7 +19641,7 @@
       "text": "他不小心弄脏了衣服。",
       "pinyin": "tā bù xiǎo xīn nòng zàng le yī fú 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0455.webp",
     "needsReview": false,
     "sourceLine": "难易脏净",
     "sourceLineIndex": 114
@@ -19685,7 +19685,7 @@
       "text": "妈妈把家里打扫得很干净。",
       "pinyin": "mā mā bǎ jiā lǐ dá sào de hěn gàn jìng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0456.webp",
     "needsReview": false,
     "sourceLine": "难易脏净",
     "sourceLineIndex": 114
@@ -19734,7 +19734,7 @@
       "text": "新年我穿上了新衣服。",
       "pinyin": "xīn nián wǒ chuān shàng le xīn yī fú 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0457.webp",
     "needsReview": false,
     "sourceLine": "新旧贫富",
     "sourceLineIndex": 115
@@ -19775,7 +19775,7 @@
       "text": "这件衣服已经很旧了。",
       "pinyin": "zhè jiàn yī fú yǐ jìng hěn jiù le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0458.webp",
     "needsReview": false,
     "sourceLine": "新旧贫富",
     "sourceLineIndex": 115
@@ -19819,7 +19819,7 @@
       "text": "我们要帮助贫困的人。",
       "pinyin": "wǒ men yào bāng zhù pín kùn de rén 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0459.webp",
     "needsReview": false,
     "sourceLine": "新旧贫富",
     "sourceLineIndex": 115
@@ -19867,7 +19867,7 @@
       "text": "知识是最宝贵的财富。",
       "pinyin": "zhī shí shì zuì bǎo guì de cái fù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0460.webp",
     "needsReview": false,
     "sourceLine": "新旧贫富",
     "sourceLineIndex": 115
@@ -19907,7 +19907,7 @@
       "text": "我们坐火车去旅行。",
       "pinyin": "wǒ men zuò huǒ chē qù lǚ xíng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0461.webp",
     "needsReview": false,
     "sourceLine": "车船帆舟",
     "sourceLineIndex": 116
@@ -19954,7 +19954,7 @@
       "text": "湖面上漂着一只小船。",
       "pinyin": "hú miàn shàng piào zhe yī zhǐ xiǎo chuán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0462.webp",
     "needsReview": false,
     "sourceLine": "车船帆舟",
     "sourceLineIndex": 116
@@ -19996,7 +19996,7 @@
       "text": "海面上有一只白色的帆船。",
       "pinyin": "hǎi miàn shàng yǒu yī zhǐ bái sè de fān chuán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0463.webp",
     "needsReview": false,
     "sourceLine": "车船帆舟",
     "sourceLineIndex": 116
@@ -20038,7 +20038,7 @@
       "text": "端午节我们一起看龙舟比赛。",
       "pinyin": "duān wǔ jié wǒ men yī qǐ kàn lóng zhōu bǐ sài 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0464.webp",
     "needsReview": false,
     "sourceLine": "车船帆舟",
     "sourceLineIndex": 116
@@ -20077,7 +20077,7 @@
       "text": "我的家乡风景优美。",
       "pinyin": "wǒ de jiā xiāng fēng jǐng yōu měi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0465.webp",
     "needsReview": false,
     "sourceLine": "乡村庄户",
     "sourceLineIndex": 117
@@ -20120,7 +20120,7 @@
       "text": "这个村子坐落在山脚下。",
       "pinyin": "zhè gè cūn zǐ zuò luò zài shān jué xià 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0466.webp",
     "needsReview": false,
     "sourceLine": "乡村庄户",
     "sourceLineIndex": 117
@@ -20162,7 +20162,7 @@
       "text": "农民在田里种庄稼。",
       "pinyin": "nóng mín zài tián lǐ zhòng zhuāng jià 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0467.webp",
     "needsReview": false,
     "sourceLine": "乡村庄户",
     "sourceLineIndex": 117
@@ -20202,7 +20202,7 @@
       "text": "请把窗户关好。",
       "pinyin": "qǐng bǎ chuāng hù guān hǎo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0468.webp",
     "needsReview": false,
     "sourceLine": "乡村庄户",
     "sourceLineIndex": 117
@@ -20250,7 +20250,7 @@
       "text": "阳光照在身上很温暖。",
       "pinyin": "yáng guāng zhào zài shēn shàng hěn wēn nuǎn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0469.webp",
     "needsReview": false,
     "sourceLine": "温凉寒热",
     "sourceLineIndex": 118
@@ -20296,7 +20296,7 @@
       "text": "夏天喝凉水真凉快。",
       "pinyin": "xià tiān hē liáng shuǐ zhēn liáng kuài 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0470.webp",
     "needsReview": false,
     "sourceLine": "温凉寒热",
     "sourceLineIndex": 118
@@ -20344,7 +20344,7 @@
       "text": "冬天的天气非常寒冷。",
       "pinyin": "dōng tiān de tiān qì fēi cháng hán lěng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0471.webp",
     "needsReview": false,
     "sourceLine": "温凉寒热",
     "sourceLineIndex": 118
@@ -20390,7 +20390,7 @@
       "text": "市场里非常热闹。",
       "pinyin": "shì cháng lǐ fēi cháng rè nào 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0472.webp",
     "needsReview": false,
     "sourceLine": "温凉寒热",
     "sourceLineIndex": 118
@@ -20440,7 +20440,7 @@
       "text": "这个柠檬又酸又甜。",
       "pinyin": "zhè gè níng méng yòu suān yòu tián 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0473.webp",
     "needsReview": false,
     "sourceLine": "酸甜苦辣",
     "sourceLineIndex": 119
@@ -20487,7 +20487,7 @@
       "text": "这个西瓜又香又甜。",
       "pinyin": "zhè gè xī guā yòu xiāng yòu tián 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0474.webp",
     "needsReview": false,
     "sourceLine": "酸甜苦辣",
     "sourceLineIndex": 119
@@ -20531,7 +20531,7 @@
       "text": "爸爸工作很辛苦。",
       "pinyin": "bà bà gōng zuò hěn xīn kǔ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0475.webp",
     "needsReview": false,
     "sourceLine": "酸甜苦辣",
     "sourceLineIndex": 119
@@ -20581,7 +20581,7 @@
       "text": "妈妈不喜欢吃辣椒。",
       "pinyin": "mā mā bù xǐ huān chī là jiāo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0476.webp",
     "needsReview": false,
     "sourceLine": "酸甜苦辣",
     "sourceLineIndex": 119
@@ -20622,7 +20622,7 @@
       "text": "这根甘蔗又甜又脆。",
       "pinyin": "zhè gēn gān zhè yòu tián yòu cuì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0477.webp",
     "needsReview": false,
     "sourceLine": "甘涩香臭",
     "sourceLineIndex": 120
@@ -20668,7 +20668,7 @@
       "text": "这个柿子吃起来有点涩。",
       "pinyin": "zhè gè shì zǐ chī qǐ lái yǒu diǎn sè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0478.webp",
     "needsReview": false,
     "sourceLine": "甘涩香臭",
     "sourceLineIndex": 120
@@ -20713,7 +20713,7 @@
       "text": "花园里飘来阵阵花香。",
       "pinyin": "huā yuán lǐ piāo lái zhèn zhèn huā xiāng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0479.webp",
     "needsReview": false,
     "sourceLine": "甘涩香臭",
     "sourceLineIndex": 120
@@ -20759,7 +20759,7 @@
       "text": "垃圾桶里发出难闻的臭味。",
       "pinyin": "lā jī tǒng lǐ fā chū nán wén de chòu wèi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0480.webp",
     "needsReview": false,
     "sourceLine": "甘涩香臭",
     "sourceLineIndex": 120
@@ -20807,7 +20807,7 @@
       "text": "姐姐每天练习弹钢琴。",
       "pinyin": "jiě jiě měi tiān liàn xí dàn gàng qín 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0481.webp",
     "needsReview": false,
     "sourceLine": "琴棋鼓筝",
     "sourceLineIndex": 121
@@ -20855,7 +20855,7 @@
       "text": "爷爷喜欢和我下象棋。",
       "pinyin": "yé yé xǐ huān hé wǒ xià xiàng qí 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0482.webp",
     "needsReview": false,
     "sourceLine": "琴棋鼓筝",
     "sourceLineIndex": 121
@@ -20904,7 +20904,7 @@
       "text": "大家为他的表演鼓掌。",
       "pinyin": "dà jiā wéi tā de biǎo yǎn gǔ zhǎng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0483.webp",
     "needsReview": false,
     "sourceLine": "琴棋鼓筝",
     "sourceLineIndex": 121
@@ -20952,7 +20952,7 @@
       "text": "我们在草地上放风筝。",
       "pinyin": "wǒ men zài cǎo dì shàng fàng fēng zhēng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0484.webp",
     "needsReview": false,
     "sourceLine": "琴棋鼓筝",
     "sourceLineIndex": 121
@@ -20993,7 +20993,7 @@
       "text": "请记住我的电话号码。",
       "pinyin": "qǐng jì zhù wǒ de diàn huà hào mǎ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0485.webp",
     "needsReview": false,
     "sourceLine": "号哨胡笛",
     "sourceLineIndex": 122
@@ -21039,7 +21039,7 @@
       "text": "裁判吹响了哨子。",
       "pinyin": "cái pàn chuī xiǎng le shào zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0486.webp",
     "needsReview": false,
     "sourceLine": "号哨胡笛",
     "sourceLineIndex": 122
@@ -21084,7 +21084,7 @@
       "text": "爷爷会拉二胡。",
       "pinyin": "yé yé huì lá èr hú 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0487.webp",
     "needsReview": false,
     "sourceLine": "号哨胡笛",
     "sourceLineIndex": 122
@@ -21131,7 +21131,7 @@
       "text": "他用笛子吹了一首曲子。",
       "pinyin": "tā yòng dí zǐ chuī le yī shǒu qǔ zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0488.webp",
     "needsReview": false,
     "sourceLine": "号哨胡笛",
     "sourceLineIndex": 122
@@ -21171,7 +21171,7 @@
       "text": "传说中凤凰是吉祥的象征。",
       "pinyin": "chuán shuō zhōng fèng huáng shì jí xiáng de xiàng zhēng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0489.webp",
     "needsReview": false,
     "sourceLine": "凤尾翅脚",
     "sourceLineIndex": 123
@@ -21214,7 +21214,7 @@
       "text": "小狗摇着尾巴跑过来。",
       "pinyin": "xiǎo gǒu yáo zhe wěi bā páo guò lái 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0490.webp",
     "needsReview": false,
     "sourceLine": "凤尾翅脚",
     "sourceLineIndex": 123
@@ -21260,7 +21260,7 @@
       "text": "小鸟展开翅膀飞向天空。",
       "pinyin": "xiǎo niǎo zhǎn kāi chì bǎng fēi xiàng tiān kōng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0491.webp",
     "needsReview": false,
     "sourceLine": "凤尾翅脚",
     "sourceLineIndex": 123
@@ -21307,7 +21307,7 @@
       "text": "雪地上留下了一串脚印。",
       "pinyin": "xuě dì shàng liú xià le yī chuàn jué yìn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0492.webp",
     "needsReview": false,
     "sourceLine": "凤尾翅脚",
     "sourceLineIndex": 123
@@ -21350,7 +21350,7 @@
       "text": "我每天都吃早饭。",
       "pinyin": "wǒ měi tiān dōu chī zǎo fàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0493.webp",
     "needsReview": false,
     "sourceLine": "饭菜汤粥",
     "sourceLineIndex": 124
@@ -21397,7 +21397,7 @@
       "text": "爷爷在菜地里种青菜。",
       "pinyin": "yé yé zài cài dì lǐ zhòng qīng cài 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0494.webp",
     "needsReview": false,
     "sourceLine": "饭菜汤粥",
     "sourceLineIndex": 124
@@ -21439,7 +21439,7 @@
       "text": "妈妈煮了一锅鸡汤。",
       "pinyin": "mā mā zhǔ le yī guō jī tāng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0495.webp",
     "needsReview": false,
     "sourceLine": "饭菜汤粥",
     "sourceLineIndex": 124
@@ -21487,7 +21487,7 @@
       "text": "早上我喝了一碗米粥。",
       "pinyin": "zǎo shàng wǒ hē le yī wǎn mǐ zhōu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0496.webp",
     "needsReview": false,
     "sourceLine": "饭菜汤粥",
     "sourceLineIndex": 124
@@ -21535,7 +21535,7 @@
       "text": "妈妈做菜时放了一些葱花。",
       "pinyin": "mā mā zuò cài shí fàng le yī xiē cōng huā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0497.webp",
     "needsReview": false,
     "sourceLine": "葱姜蒜椒",
     "sourceLineIndex": 125
@@ -21580,7 +21580,7 @@
       "text": "妈妈在汤里放了几片生姜。",
       "pinyin": "mā mā zài tāng lǐ fàng le jǐ piàn shēng jiāng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0498.webp",
     "needsReview": false,
     "sourceLine": "葱姜蒜椒",
     "sourceLineIndex": 125
@@ -21629,7 +21629,7 @@
       "text": "奶奶买了一些大蒜。",
       "pinyin": "nǎi nǎi mǎi le yī xiē dà suàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0499.webp",
     "needsReview": false,
     "sourceLine": "葱姜蒜椒",
     "sourceLineIndex": 125
@@ -21677,7 +21677,7 @@
       "text": "爸爸喜欢吃辣椒。",
       "pinyin": "bà bà xǐ huān chī là jiāo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0500.webp",
     "needsReview": false,
     "sourceLine": "葱姜蒜椒",
     "sourceLineIndex": 125
@@ -21721,7 +21721,7 @@
       "text": "妈妈炒菜时加了一点油。",
       "pinyin": "mā mā chǎo cài shí jiā le yī diǎn yóu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0501.webp",
     "needsReview": false,
     "sourceLine": "油盐酱醋",
     "sourceLineIndex": 126
@@ -21767,7 +21767,7 @@
       "text": "做菜时要放一点盐。",
       "pinyin": "zuò cài shí yào fàng yī diǎn yán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0502.webp",
     "needsReview": false,
     "sourceLine": "油盐酱醋",
     "sourceLineIndex": 126
@@ -21816,7 +21816,7 @@
       "text": "妈妈做菜时加了一些酱油。",
       "pinyin": "mā mā zuò cài shí jiā le yī xiē jiàng yóu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0503.webp",
     "needsReview": false,
     "sourceLine": "油盐酱醋",
     "sourceLineIndex": 126
@@ -21867,7 +21867,7 @@
       "text": "这道菜里放了一些米醋。",
       "pinyin": "zhè dào cài lǐ fàng le yī xiē mǐ cù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0504.webp",
     "needsReview": false,
     "sourceLine": "油盐酱醋",
     "sourceLineIndex": 126
@@ -21913,7 +21913,7 @@
       "text": "节日的夜空中开满了烟花。",
       "pinyin": "jié rì de yè kōng zhōng kāi mǎn le yān huā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0505.webp",
     "needsReview": false,
     "sourceLine": "烟酒糖茶",
     "sourceLineIndex": 127
@@ -21959,7 +21959,7 @@
       "text": "爸爸很少喝酒。",
       "pinyin": "bà bà hěn shǎo hē jiǔ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0506.webp",
     "needsReview": false,
     "sourceLine": "烟酒糖茶",
     "sourceLineIndex": 127
@@ -22011,7 +22011,7 @@
       "text": "妹妹喜欢吃糖果。",
       "pinyin": "mèi mèi xǐ huān chī táng guǒ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0507.webp",
     "needsReview": false,
     "sourceLine": "烟酒糖茶",
     "sourceLineIndex": 127
@@ -22056,7 +22056,7 @@
       "text": "爷爷喜欢喝茶。",
       "pinyin": "yé yé xǐ huān hē chá 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0508.webp",
     "needsReview": false,
     "sourceLine": "烟酒糖茶",
     "sourceLineIndex": 127
@@ -22100,7 +22100,7 @@
       "text": "他游到了河岸边。",
       "pinyin": "tā yóu dào le hé àn biān 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0509.webp",
     "needsReview": false,
     "sourceLine": "岸坡岩岭",
     "sourceLineIndex": 128
@@ -22144,7 +22144,7 @@
       "text": "我们在山坡上放风筝。",
       "pinyin": "wǒ men zài shān pō shàng fàng fēng zhēng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0510.webp",
     "needsReview": false,
     "sourceLine": "岸坡岩岭",
     "sourceLineIndex": 128
@@ -22188,7 +22188,7 @@
       "text": "山上有一块巨大的岩石。",
       "pinyin": "shān shàng yǒu yī kuài jù dà de yán shí 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0511.webp",
     "needsReview": false,
     "sourceLine": "岸坡岩岭",
     "sourceLineIndex": 128
@@ -22232,7 +22232,7 @@
       "text": "远处的山岭连绵不断。",
       "pinyin": "yuǎn chù de shān lǐng lián mián bù duàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0512.webp",
     "needsReview": false,
     "sourceLine": "岸坡岩岭",
     "sourceLineIndex": 128
@@ -22275,7 +22275,7 @@
       "text": "我们在沙滩上堆城堡。",
       "pinyin": "wǒ men zài shà tān shàng duī chéng bǎo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0513.webp",
     "needsReview": false,
     "sourceLine": "沙泥洼沟",
     "sourceLineIndex": 129
@@ -22319,7 +22319,7 @@
       "text": "雨后的路上有些泥泞。",
       "pinyin": "yù hòu de lù shàng yǒu xiē ní nìng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0514.webp",
     "needsReview": false,
     "sourceLine": "沙泥洼沟",
     "sourceLineIndex": 129
@@ -22364,7 +22364,7 @@
       "text": "路上有一个小水洼。",
       "pinyin": "lù shàng yǒu yī gè xiǎo shuǐ wā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0515.webp",
     "needsReview": false,
     "sourceLine": "沙泥洼沟",
     "sourceLineIndex": 129
@@ -22407,7 +22407,7 @@
       "text": "村子旁边有一条小水沟。",
       "pinyin": "cūn zǐ páng biān yǒu yī tiáo xiǎo shuǐ gōu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0516.webp",
     "needsReview": false,
     "sourceLine": "沙泥洼沟",
     "sourceLineIndex": 129
@@ -22460,7 +22460,7 @@
       "text": "傍晚的晚霞非常美丽。",
       "pinyin": "bàng wǎn de wǎn xiá fēi cháng měi lí 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0517.webp",
     "needsReview": false,
     "sourceLine": "霞虹雷电",
     "sourceLineIndex": 130
@@ -22505,7 +22505,7 @@
       "text": "雨后天空出现了一道彩虹。",
       "pinyin": "yù hòu tiān kōng chū xiàn le yī dào cǎi hóng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0518.webp",
     "needsReview": false,
     "sourceLine": "霞虹雷电",
     "sourceLineIndex": 130
@@ -22554,7 +22554,7 @@
       "text": "外面传来一阵雷声。",
       "pinyin": "wài miàn chuán lái yī zhèn léi shēng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0519.webp",
     "needsReview": false,
     "sourceLine": "霞虹雷电",
     "sourceLineIndex": 130
@@ -22595,7 +22595,7 @@
       "text": "天空中划过一道闪电。",
       "pinyin": "tiān kōng zhōng huá guò yī dào shǎn diàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0520.webp",
     "needsReview": false,
     "sourceLine": "霞虹雷电",
     "sourceLineIndex": 130
@@ -22640,7 +22640,7 @@
       "text": "海洋里生活着许多鱼类。",
       "pinyin": "hǎi yáng lǐ shēng huó zhe xǔ duō yú lèi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0521.webp",
     "needsReview": false,
     "sourceLine": "洋波浪涛",
     "sourceLineIndex": 131
@@ -22684,7 +22684,7 @@
       "text": "湖面上泛起一阵波纹。",
       "pinyin": "hú miàn shàng fàn qǐ yī zhèn bō wén 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0522.webp",
     "needsReview": false,
     "sourceLine": "洋波浪涛",
     "sourceLineIndex": 131
@@ -22730,7 +22730,7 @@
       "text": "海边的浪花一朵一朵的。",
       "pinyin": "hǎi biān de làng huā yī duǒ yī duǒ de 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0523.webp",
     "needsReview": false,
     "sourceLine": "洋波浪涛",
     "sourceLineIndex": 131
@@ -22776,7 +22776,7 @@
       "text": "海边传来一阵阵涛声。",
       "pinyin": "hǎi biān chuán lái yī zhèn zhèn tāo shēng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0524.webp",
     "needsReview": false,
     "sourceLine": "洋波浪涛",
     "sourceLineIndex": 131
@@ -22823,7 +22823,7 @@
       "text": "小猫隐藏在沙发后面。",
       "pinyin": "xiǎo māo yǐn cáng zài shà fā hòu miàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0525.webp",
     "needsReview": false,
     "sourceLine": "隐现缓急",
     "sourceLineIndex": 132
@@ -22867,7 +22867,7 @@
       "text": "现在我们要开始上课了。",
       "pinyin": "xiàn zài wǒ men yào kāi shǐ shàng kè le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0526.webp",
     "needsReview": false,
     "sourceLine": "隐现缓急",
     "sourceLineIndex": 132
@@ -22915,7 +22915,7 @@
       "text": "汽车缓慢地停了下来。",
       "pinyin": "qì chē huǎn màn dì tíng le xià lái 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0527.webp",
     "needsReview": false,
     "sourceLine": "隐现缓急",
     "sourceLineIndex": 132
@@ -22960,7 +22960,7 @@
       "text": "他急忙跑回家拿伞。",
       "pinyin": "tā jí máng páo huí jiā ná sǎn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0528.webp",
     "needsReview": false,
     "sourceLine": "隐现缓急",
     "sourceLineIndex": 132
@@ -23005,7 +23005,7 @@
       "text": "同学们都举手回答问题。",
       "pinyin": "tóng xué men dōu jǔ shǒu huí dá wèn tí 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0529.webp",
     "needsReview": false,
     "sourceLine": "举拍站握",
     "sourceLineIndex": 133
@@ -23049,7 +23049,7 @@
       "text": "大家拍手为他鼓掌。",
       "pinyin": "dà jiā pāi shǒu wéi tā gǔ zhǎng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0530.webp",
     "needsReview": false,
     "sourceLine": "举拍站握",
     "sourceLineIndex": 133
@@ -23095,7 +23095,7 @@
       "text": "我们在车站等公交车。",
       "pinyin": "wǒ men zài chē zhàn děng gōng jiāo chē 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0531.webp",
     "needsReview": false,
     "sourceLine": "举拍站握",
     "sourceLineIndex": 133
@@ -23143,7 +23143,7 @@
       "text": "他们友好地握了握手。",
       "pinyin": "tā men yǒu hǎo dì wò le wò shǒu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0532.webp",
     "needsReview": false,
     "sourceLine": "举拍站握",
     "sourceLineIndex": 133
@@ -23185,7 +23185,7 @@
       "text": "我每天帮妈妈扫地。",
       "pinyin": "wǒ měi tiān bāng mā mā sào dì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0533.webp",
     "needsReview": false,
     "sourceLine": "扫擦拖洗",
     "sourceLineIndex": 134
@@ -23238,7 +23238,7 @@
       "text": "他用毛巾擦了擦汗。",
       "pinyin": "tā yòng máo jīn cā le cā hán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0534.webp",
     "needsReview": false,
     "sourceLine": "扫擦拖洗",
     "sourceLineIndex": 134
@@ -23282,7 +23282,7 @@
       "text": "妈妈正在拖地。",
       "pinyin": "mā mā zhèng zài tuō dì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0535.webp",
     "needsReview": false,
     "sourceLine": "扫擦拖洗",
     "sourceLineIndex": 134
@@ -23327,7 +23327,7 @@
       "text": "吃饭前要洗手。",
       "pinyin": "chī fàn qián yào xǐ shǒu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0536.webp",
     "needsReview": false,
     "sourceLine": "扫擦拖洗",
     "sourceLineIndex": 134
@@ -23372,7 +23372,7 @@
       "text": "爷爷每天给花浇水。",
       "pinyin": "yé yé měi tiān gěi huā jiāo shuǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0537.webp",
     "needsReview": false,
     "sourceLine": "浇洒滴淋",
     "sourceLineIndex": 135
@@ -23417,7 +23417,7 @@
       "text": "阳光洒落在大地上。",
       "pinyin": "yáng guāng sǎ luò zài dà dì shàng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0538.webp",
     "needsReview": false,
     "sourceLine": "浇洒滴淋",
     "sourceLineIndex": 135
@@ -23467,7 +23467,7 @@
       "text": "屋檐上滴下一滴水。",
       "pinyin": "wū yán shàng dī xià yī dī shuǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0539.webp",
     "needsReview": false,
     "sourceLine": "浇洒滴淋",
     "sourceLineIndex": 135
@@ -23514,7 +23514,7 @@
       "text": "我们淋雨跑回了家。",
       "pinyin": "wǒ men lín yù páo huí le jiā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0540.webp",
     "needsReview": false,
     "sourceLine": "浇洒滴淋",
     "sourceLineIndex": 135
@@ -23559,7 +23559,7 @@
       "text": "妹妹自己学会了穿衣。",
       "pinyin": "mèi mèi zì jǐ xué huì le chuān yī 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0541.webp",
     "needsReview": false,
     "sourceLine": "穿脱缝补",
     "sourceLineIndex": 136
@@ -23606,7 +23606,7 @@
       "text": "回家后他先脱了鞋子。",
       "pinyin": "huí jiā hòu tā xiān tuō le xié zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0542.webp",
     "needsReview": false,
     "sourceLine": "穿脱缝补",
     "sourceLineIndex": 136
@@ -23655,7 +23655,7 @@
       "text": "妈妈正在缝补我的衣服。",
       "pinyin": "mā mā zhèng zài féng bǔ wǒ de yī fú 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0543.webp",
     "needsReview": false,
     "sourceLine": "穿脱缝补",
     "sourceLineIndex": 136
@@ -23698,7 +23698,7 @@
       "text": "周末我去上补习班。",
       "pinyin": "zhōu mò wǒ qù shàng bǔ xí bān 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0544.webp",
     "needsReview": false,
     "sourceLine": "穿脱缝补",
     "sourceLineIndex": 136
@@ -23742,7 +23742,7 @@
       "text": "奶奶在编织一条围巾。",
       "pinyin": "nǎi nǎi zài biān zhì yī tiáo wéi jīn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0545.webp",
     "needsReview": false,
     "sourceLine": "织网针线",
     "sourceLineIndex": 137
@@ -23784,7 +23784,7 @@
       "text": "墙角有一张蜘蛛网。",
       "pinyin": "qiáng jiǎo yǒu yī zhāng zhī zhū wǎng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0546.webp",
     "needsReview": false,
     "sourceLine": "织网针线",
     "sourceLineIndex": 137
@@ -23827,7 +23827,7 @@
       "text": "奶奶用针线缝衣服。",
       "pinyin": "nǎi nǎi yòng zhēn xiàn féng yī fú 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0547.webp",
     "needsReview": false,
     "sourceLine": "织网针线",
     "sourceLineIndex": 137
@@ -23871,7 +23871,7 @@
       "text": "奶奶给我织了一条毛线围巾。",
       "pinyin": "nǎi nǎi gěi wǒ zhì le yī tiáo máo xiàn wéi jīn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0548.webp",
     "needsReview": false,
     "sourceLine": "织网针线",
     "sourceLineIndex": 137
@@ -23915,7 +23915,7 @@
       "text": "我已经吃饱了。",
       "pinyin": "wǒ yǐ jìng chī bǎo le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0549.webp",
     "needsReview": false,
     "sourceLine": "饱饿冷暖",
     "sourceLineIndex": 138
@@ -23961,7 +23961,7 @@
       "text": "他放学回家饿了。",
       "pinyin": "tā fàng xué huí jiā è le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0550.webp",
     "needsReview": false,
     "sourceLine": "饱饿冷暖",
     "sourceLineIndex": 138
@@ -24004,7 +24004,7 @@
       "text": "遇到事情要保持冷静。",
       "pinyin": "yù dào shì qíng yào bǎo chí lěng jìng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0551.webp",
     "needsReview": false,
     "sourceLine": "饱饿冷暖",
     "sourceLineIndex": 138
@@ -24053,7 +24053,7 @@
       "text": "屋子里开了暖气，很暖和。",
       "pinyin": "wū zǐ lǐ kāi le nuǎn qì ， hěn nuǎn hé 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0552.webp",
     "needsReview": false,
     "sourceLine": "饱饿冷暖",
     "sourceLineIndex": 138
@@ -24101,7 +24101,7 @@
       "text": "山上的人非常稀少。",
       "pinyin": "shān shàng de rén fēi cháng xī shǎo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0553.webp",
     "needsReview": false,
     "sourceLine": "稀密浓淡",
     "sourceLineIndex": 139
@@ -24148,7 +24148,7 @@
       "text": "他有一个小秘密。",
       "pinyin": "tā yǒu yī gè xiǎo mì mì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0554.webp",
     "needsReview": false,
     "sourceLine": "稀密浓淡",
     "sourceLineIndex": 139
@@ -24193,7 +24193,7 @@
       "text": "爸爸喜欢喝浓茶。",
       "pinyin": "bà bà xǐ huān hē nóng chá 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0555.webp",
     "needsReview": false,
     "sourceLine": "稀密浓淡",
     "sourceLineIndex": 139
@@ -24240,7 +24240,7 @@
       "text": "奶奶喜欢吃清淡的食物。",
       "pinyin": "nǎi nǎi xǐ huān chī qīng dàn de shí wù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0556.webp",
     "needsReview": false,
     "sourceLine": "稀密浓淡",
     "sourceLineIndex": 139
@@ -24283,7 +24283,7 @@
       "text": "这台机器是用来纺织的。",
       "pinyin": "zhè tái jī qì shì yòng lái fǎng zhì de 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0557.webp",
     "needsReview": false,
     "sourceLine": "纺种采摘",
     "sourceLineIndex": 140
@@ -24328,7 +24328,7 @@
       "text": "爷爷在地里种田。",
       "pinyin": "yé yé zài dì lǐ zhòng tián 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0558.webp",
     "needsReview": false,
     "sourceLine": "纺种采摘",
     "sourceLineIndex": 140
@@ -24372,7 +24372,7 @@
       "text": "我们去果园采摘水果。",
       "pinyin": "wǒ men qù guǒ yuán cài zhāi shuǐ guǒ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0559.webp",
     "needsReview": false,
     "sourceLine": "纺种采摘",
     "sourceLineIndex": 140
@@ -24422,7 +24422,7 @@
       "text": "他摘下了一个红苹果。",
       "pinyin": "tā zhāi xià le yī gè hóng píng guǒ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0560.webp",
     "needsReview": false,
     "sourceLine": "纺种采摘",
     "sourceLineIndex": 140
@@ -24465,7 +24465,7 @@
       "text": "我终于找到了丢失的钥匙。",
       "pinyin": "wǒ zhōng yú zhǎo dào le diū shī de yào shi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0561.webp",
     "needsReview": false,
     "sourceLine": "找挖抢猎",
     "sourceLineIndex": 141
@@ -24510,7 +24510,7 @@
       "text": "工人正在挖土。",
       "pinyin": "gōng rén zhèng zài wā tǔ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0562.webp",
     "needsReview": false,
     "sourceLine": "找挖抢猎",
     "sourceLineIndex": 141
@@ -24553,7 +24553,7 @@
       "text": "医生及时抢救了病人。",
       "pinyin": "yī shēng jí shí qiǎng jiù le bìng rén 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0563.webp",
     "needsReview": false,
     "sourceLine": "找挖抢猎",
     "sourceLineIndex": 141
@@ -24600,7 +24600,7 @@
       "text": "猎人在森林里打猎。",
       "pinyin": "liè rén zài sēn lín lǐ dá liè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0564.webp",
     "needsReview": false,
     "sourceLine": "找挖抢猎",
     "sourceLineIndex": 141
@@ -24645,7 +24645,7 @@
       "text": "战士们勇敢地保卫祖国。",
       "pinyin": "zhàn shì men yǒng gǎn dì bǎo wèi zǔ guó 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0565.webp",
     "needsReview": false,
     "sourceLine": "战舞闹斗",
     "sourceLineIndex": 142
@@ -24695,7 +24695,7 @@
       "text": "姐姐在舞台上跳舞。",
       "pinyin": "jiě jiě zài wǔ tái shàng tiào wǔ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0566.webp",
     "needsReview": false,
     "sourceLine": "战舞闹斗",
     "sourceLineIndex": 142
@@ -24739,7 +24739,7 @@
       "text": "我每天用闹钟叫自己起床。",
       "pinyin": "wǒ měi tiān yòng nào zhōng jiào zì jǐ qǐ chuáng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0567.webp",
     "needsReview": false,
     "sourceLine": "战舞闹斗",
     "sourceLineIndex": 142
@@ -24779,7 +24779,7 @@
       "text": "战士们在战场上奋勇战斗。",
       "pinyin": "zhàn shì men zài zhàn cháng shàng fèn yǒng zhàn dòu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0568.webp",
     "needsReview": false,
     "sourceLine": "战舞闹斗",
     "sourceLineIndex": 142
@@ -24820,7 +24820,7 @@
       "text": "我们在操场上打球。",
       "pinyin": "wǒ men zài cāo cháng shàng dá qiú 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0569.webp",
     "needsReview": false,
     "sourceLine": "打指挨求",
     "sourceLineIndex": 143
@@ -24865,7 +24865,7 @@
       "text": "老师指出了我的错误。",
       "pinyin": "lǎo shī zhǐ chū le wǒ de cuò wù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0570.webp",
     "needsReview": false,
     "sourceLine": "打指挨求",
     "sourceLineIndex": 143
@@ -24911,7 +24911,7 @@
       "text": "我和好朋友挨着坐。",
       "pinyin": "wǒ hé hǎo péng yǒu ái zhe zuò 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0571.webp",
     "needsReview": false,
     "sourceLine": "打指挨求",
     "sourceLineIndex": 143
@@ -24954,7 +24954,7 @@
       "text": "他向老师求助。",
       "pinyin": "tā xiàng lǎo shī qiú zhù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0572.webp",
     "needsReview": false,
     "sourceLine": "打指挨求",
     "sourceLineIndex": 143
@@ -24999,7 +24999,7 @@
       "text": "小偷被警察发现后逃跑了。",
       "pinyin": "xiǎo tōu bèi jǐng chá fā xiàn hòu táo páo le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0573.webp",
     "needsReview": false,
     "sourceLine": "逃捉摸划",
     "sourceLineIndex": 144
@@ -25045,7 +25045,7 @@
       "text": "我们一起玩捉迷藏。",
       "pinyin": "wǒ men yī qǐ wán zhuō mí cáng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0574.webp",
     "needsReview": false,
     "sourceLine": "逃捉摸划",
     "sourceLineIndex": 144
@@ -25094,7 +25094,7 @@
       "text": "他摸了摸小狗的头。",
       "pinyin": "tā mō le mō xiǎo gǒu de tou 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0575.webp",
     "needsReview": false,
     "sourceLine": "逃捉摸划",
     "sourceLineIndex": 144
@@ -25136,7 +25136,7 @@
       "text": "我们在湖里划船。",
       "pinyin": "wǒ men zài hú lǐ huá chuán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0576.webp",
     "needsReview": false,
     "sourceLine": "逃捉摸划",
     "sourceLineIndex": 144
@@ -25184,7 +25184,7 @@
       "text": "冬天要盖厚厚的棉被。",
       "pinyin": "dōng tiān yào gě hòu hòu de mián bèi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0577.webp",
     "needsReview": false,
     "sourceLine": "棉麻林森",
     "sourceLineIndex": 145
@@ -25231,7 +25231,7 @@
       "text": "请不要给别人添麻烦。",
       "pinyin": "qǐng bù yào gěi bié rén tiān má fán 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0578.webp",
     "needsReview": false,
     "sourceLine": "棉麻林森",
     "sourceLineIndex": 145
@@ -25275,7 +25275,7 @@
       "text": "森林里住着很多动物。",
       "pinyin": "sēn lín lǐ zhù zhe hěn duō dòng wù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0579.webp",
     "needsReview": false,
     "sourceLine": "棉麻林森",
     "sourceLineIndex": 145
@@ -25323,7 +25323,7 @@
       "text": "茂密的森林里很安静。",
       "pinyin": "mào mì de sēn lín lǐ hěn ān jìng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0580.webp",
     "needsReview": false,
     "sourceLine": "棉麻林森",
     "sourceLineIndex": 145
@@ -25374,7 +25374,7 @@
       "text": "他穿着一双新球鞋。",
       "pinyin": "tā chuān zhe yī shuāng xīn qiú xié 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0581.webp",
     "needsReview": false,
     "sourceLine": "鞋帽裤袜",
     "sourceLineIndex": 146
@@ -25422,7 +25422,7 @@
       "text": "夏天我喜欢戴草帽。",
       "pinyin": "xià tiān wǒ xǐ huān dài cǎo mào 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0582.webp",
     "needsReview": false,
     "sourceLine": "鞋帽裤袜",
     "sourceLineIndex": 146
@@ -25470,7 +25470,7 @@
       "text": "夏天我喜欢穿短裤。",
       "pinyin": "xià tiān wǒ xǐ huān chuān duǎn kù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0583.webp",
     "needsReview": false,
     "sourceLine": "鞋帽裤袜",
     "sourceLineIndex": 146
@@ -25516,7 +25516,7 @@
       "text": "妈妈给我买了棉袜。",
       "pinyin": "mā mā gěi wǒ mǎi le mián mò 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0584.webp",
     "needsReview": false,
     "sourceLine": "鞋帽裤袜",
     "sourceLineIndex": 146
@@ -25559,7 +25559,7 @@
       "text": "我们一起做早操运动。",
       "pinyin": "wǒ men yī qǐ zuò zǎo cāo yùn dòng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0585.webp",
     "needsReview": false,
     "sourceLine": "运插牵拔",
     "sourceLineIndex": 147
@@ -25607,7 +25607,7 @@
       "text": "妈妈喜欢在花瓶里插花。",
       "pinyin": "mā mā xǐ huān zài huā píng lǐ chā huā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0586.webp",
     "needsReview": false,
     "sourceLine": "运插牵拔",
     "sourceLineIndex": 147
@@ -25652,7 +25652,7 @@
       "text": "妈妈牵着我的手过马路。",
       "pinyin": "mā mā qiān zhe wǒ de shǒu guò mǎ lù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0587.webp",
     "needsReview": false,
     "sourceLine": "运插牵拔",
     "sourceLineIndex": 147
@@ -25696,7 +25696,7 @@
       "text": "我们班赢得了拔河比赛。",
       "pinyin": "wǒ men bān yíng de le bá hé bǐ sài 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0588.webp",
     "needsReview": false,
     "sourceLine": "运插牵拔",
     "sourceLineIndex": 147
@@ -25742,7 +25742,7 @@
       "text": "池塘里的荷花开得很美。",
       "pinyin": "chí táng lǐ de hé huā kāi de hěn měi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0589.webp",
     "needsReview": false,
     "sourceLine": "荷莲枫槐",
     "sourceLineIndex": 148
@@ -25788,7 +25788,7 @@
       "text": "夏天池塘里开满了莲花。",
       "pinyin": "xià tiān chí táng lǐ kāi mǎn le lián huā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0590.webp",
     "needsReview": false,
     "sourceLine": "荷莲枫槐",
     "sourceLineIndex": 148
@@ -25832,7 +25832,7 @@
       "text": "秋天枫叶变得火红。",
       "pinyin": "qiū tiān fēng yè biàn de huǒ hóng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0591.webp",
     "needsReview": false,
     "sourceLine": "荷莲枫槐",
     "sourceLineIndex": 148
@@ -25881,7 +25881,7 @@
       "text": "院子里有一棵大槐树。",
       "pinyin": "yuàn zǐ lǐ yǒu yī kē dà huái shù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0592.webp",
     "needsReview": false,
     "sourceLine": "荷莲枫槐",
     "sourceLineIndex": 148
@@ -25927,7 +25927,7 @@
       "text": "妈妈买了一些新鲜草莓。",
       "pinyin": "mā mā mǎi le yī xiē xīn xiǎn cǎo méi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0593.webp",
     "needsReview": false,
     "sourceLine": "莓芒笋芹",
     "sourceLineIndex": 149
@@ -25969,7 +25969,7 @@
       "text": "我喜欢吃香甜的芒果。",
       "pinyin": "wǒ xǐ huān chī xiāng tián de máng guǒ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0594.webp",
     "needsReview": false,
     "sourceLine": "莓芒笋芹",
     "sourceLineIndex": 149
@@ -26015,7 +26015,7 @@
       "text": "春天的竹笋十分鲜嫩。",
       "pinyin": "chūn tiān de zhú sǔn shí fēn xiǎn nèn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0595.webp",
     "needsReview": false,
     "sourceLine": "莓芒笋芹",
     "sourceLineIndex": 149
@@ -26058,7 +26058,7 @@
       "text": "妈妈炒了一盘芹菜。",
       "pinyin": "mā mā chǎo le yī pán qín cài 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0596.webp",
     "needsReview": false,
     "sourceLine": "莓芒笋芹",
     "sourceLineIndex": 149
@@ -26101,7 +26101,7 @@
       "text": "路边种着一排白杨树。",
       "pinyin": "lù biān zhòng zhe yī pái bái yáng shù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0597.webp",
     "needsReview": false,
     "sourceLine": "杨柳松柏",
     "sourceLineIndex": 150
@@ -26146,7 +26146,7 @@
       "text": "河边的柳树随风摆动。",
       "pinyin": "hé biān de liǔ shù suí fēng bǎi dòng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0598.webp",
     "needsReview": false,
     "sourceLine": "杨柳松柏",
     "sourceLineIndex": 150
@@ -26190,7 +26190,7 @@
       "text": "山上长着许多松树。",
       "pinyin": "shān shàng cháng zhe xǔ duō sōng shù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0599.webp",
     "needsReview": false,
     "sourceLine": "杨柳松柏",
     "sourceLineIndex": 150
@@ -26235,7 +26235,7 @@
       "text": "公园里种着许多柏树。",
       "pinyin": "gōng yuán lǐ zhòng zhe xǔ duō bǎi shù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0600.webp",
     "needsReview": false,
     "sourceLine": "杨柳松柏",
     "sourceLineIndex": 150
@@ -26285,7 +26285,7 @@
       "text": "教室前面挂着一面国旗。",
       "pinyin": "jiāo shì qián miàn guà zhe yī miàn guó qí 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0601.webp",
     "needsReview": false,
     "sourceLine": "旗竿钟球",
     "sourceLineIndex": 151
@@ -26330,7 +26330,7 @@
       "text": "爷爷拿着一根钓竿去钓鱼。",
       "pinyin": "yé yé ná zhe yī gēn diào gān qù diào yú 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0602.webp",
     "needsReview": false,
     "sourceLine": "旗竿钟球",
     "sourceLineIndex": 151
@@ -26375,7 +26375,7 @@
       "text": "墙上挂着一个时钟。",
       "pinyin": "qiáng shàng guà zhe yī gè shí zhōng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0603.webp",
     "needsReview": false,
     "sourceLine": "旗竿钟球",
     "sourceLineIndex": 151
@@ -26422,7 +26422,7 @@
       "text": "我们一起在操场上打篮球。",
       "pinyin": "wǒ men yī qǐ zài cāo cháng shàng dá lán qiú 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0604.webp",
     "needsReview": false,
     "sourceLine": "旗竿钟球",
     "sourceLineIndex": 151
@@ -26470,7 +26470,7 @@
       "text": "妹妹穿了一条漂亮的裙子。",
       "pinyin": "mèi mèi chuān le yī tiáo piào liàng de qún zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0605.webp",
     "needsReview": false,
     "sourceLine": "裙带袖帕",
     "sourceLineIndex": 152
@@ -26515,7 +26515,7 @@
       "text": "他把书带走了。",
       "pinyin": "tā bǎ shū dài zǒu le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0606.webp",
     "needsReview": false,
     "sourceLine": "裙带袖帕",
     "sourceLineIndex": 152
@@ -26561,7 +26561,7 @@
       "text": "天冷了，我穿上了长袖。",
       "pinyin": "tiān lěng le ， wǒ chuān shàng le cháng xiù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0607.webp",
     "needsReview": false,
     "sourceLine": "裙带袖帕",
     "sourceLineIndex": 152
@@ -26605,7 +26605,7 @@
       "text": "她用手帕擦了擦眼泪。",
       "pinyin": "tā yòng shǒu pà cā le cā yǎn lèi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0608.webp",
     "needsReview": false,
     "sourceLine": "裙带袖帕",
     "sourceLineIndex": 152
@@ -26653,7 +26653,7 @@
       "text": "动物园里有一群猴子。",
       "pinyin": "dòng wù yuán lǐ yǒu yī qún hóu zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0609.webp",
     "needsReview": false,
     "sourceLine": "猴鹿象鼠",
     "sourceLineIndex": 153
@@ -26700,7 +26700,7 @@
       "text": "森林里有一只可爱的小鹿。",
       "pinyin": "sēn lín lǐ yǒu yī zhǐ kě ài de xiǎo lù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0610.webp",
     "needsReview": false,
     "sourceLine": "猴鹿象鼠",
     "sourceLineIndex": 153
@@ -26747,7 +26747,7 @@
       "text": "大象用长长的鼻子喝水。",
       "pinyin": "dà xiàng yòng cháng cháng de bí zǐ hē shuǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0611.webp",
     "needsReview": false,
     "sourceLine": "猴鹿象鼠",
     "sourceLineIndex": 153
@@ -26796,7 +26796,7 @@
       "text": "树上有一只活泼的小松鼠。",
       "pinyin": "shù shàng yǒu yī zhǐ huó pō de xiǎo sōng shǔ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0612.webp",
     "needsReview": false,
     "sourceLine": "猴鹿象鼠",
     "sourceLineIndex": 153
@@ -26845,7 +26845,7 @@
       "text": "蜜蜂在花丛中飞来飞去。",
       "pinyin": "mì fēng zài huā cóng zhōng fēi lái fēi qù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0613.webp",
     "needsReview": false,
     "sourceLine": "蜂蝶蚊蝇",
     "sourceLineIndex": 154
@@ -26896,7 +26896,7 @@
       "text": "花园里飞着五彩的蝴蝶。",
       "pinyin": "huā yuán lǐ fēi zhe wǔ cǎi de hú dié 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0614.webp",
     "needsReview": false,
     "sourceLine": "蜂蝶蚊蝇",
     "sourceLineIndex": 154
@@ -26942,7 +26942,7 @@
       "text": "夏天晚上蚊子特别多。",
       "pinyin": "xià tiān wǎn shàng wén zǐ tè bié duō 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0615.webp",
     "needsReview": false,
     "sourceLine": "蜂蝶蚊蝇",
     "sourceLineIndex": 154
@@ -26992,7 +26992,7 @@
       "text": "厨房里飞进了一只苍蝇。",
       "pinyin": "chú fáng lǐ fēi jìn le yī zhǐ cāng yíng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0616.webp",
     "needsReview": false,
     "sourceLine": "蜂蝶蚊蝇",
     "sourceLineIndex": 154
@@ -27042,7 +27042,7 @@
       "text": "池塘上有一只蜻蜓飞过。",
       "pinyin": "chí táng shàng yǒu yī zhǐ qīng tíng fēi guò 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0617.webp",
     "needsReview": false,
     "sourceLine": "蜻蝉蚁蛛",
     "sourceLineIndex": 155
@@ -27092,7 +27092,7 @@
       "text": "夏天的树上传来阵阵蝉鸣。",
       "pinyin": "xià tiān de shù shàng chuán lái zhèn zhèn chán míng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0618.webp",
     "needsReview": false,
     "sourceLine": "蜻蝉蚁蛛",
     "sourceLineIndex": 155
@@ -27137,7 +27137,7 @@
       "text": "一群蚂蚁正在搬运食物。",
       "pinyin": "yī qún mà yǐ zhèng zài bān yùn shí wù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0619.webp",
     "needsReview": false,
     "sourceLine": "蜻蝉蚁蛛",
     "sourceLineIndex": 155
@@ -27185,7 +27185,7 @@
       "text": "墙角有一张蜘蛛网。",
       "pinyin": "qiáng jiǎo yǒu yī zhāng zhī zhū wǎng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0620.webp",
     "needsReview": false,
     "sourceLine": "蜻蝉蚁蛛",
     "sourceLineIndex": 155
@@ -27231,7 +27231,7 @@
       "text": "果园里的桃子又大又甜。",
       "pinyin": "guǒ yuán lǐ de táo zǐ yòu dà yòu tián 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0621.webp",
     "needsReview": false,
     "sourceLine": "桃梨柿蕉",
     "sourceLineIndex": 156
@@ -27278,7 +27278,7 @@
       "text": "妈妈买了几个又大又甜的梨子。",
       "pinyin": "mā mā mǎi le jǐ gè yòu dà yòu tián de lí zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0622.webp",
     "needsReview": false,
     "sourceLine": "桃梨柿蕉",
     "sourceLineIndex": 156
@@ -27323,7 +27323,7 @@
       "text": "秋天树上挂满了红柿子。",
       "pinyin": "qiū tiān shù shàng guà mǎn le hóng shì zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0623.webp",
     "needsReview": false,
     "sourceLine": "桃梨柿蕉",
     "sourceLineIndex": 156
@@ -27374,7 +27374,7 @@
       "text": "我每天早上吃一根香蕉。",
       "pinyin": "wǒ měi tiān zǎo shàng chī yī gēn xiāng jiāo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0624.webp",
     "needsReview": false,
     "sourceLine": "桃梨柿蕉",
     "sourceLineIndex": 156
@@ -27417,7 +27417,7 @@
       "text": "校园里有一棵银杏树。",
       "pinyin": "xiào yuán lǐ yǒu yī kē yín xìng shù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0625.webp",
     "needsReview": false,
     "sourceLine": "杏李枣苹",
     "sourceLineIndex": 157
@@ -27460,7 +27460,7 @@
       "text": "妈妈在收拾行李准备出门。",
       "pinyin": "mā mā zài shōu shí xíng lǐ zhǔn bèi chū mén 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0626.webp",
     "needsReview": false,
     "sourceLine": "杏李枣苹",
     "sourceLineIndex": 157
@@ -27504,7 +27504,7 @@
       "text": "奶奶院子里种着一棵枣树。",
       "pinyin": "nǎi nǎi yuàn zǐ lǐ zhòng zhe yī kē zǎo shù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0627.webp",
     "needsReview": false,
     "sourceLine": "杏李枣苹",
     "sourceLineIndex": 157
@@ -27548,7 +27548,7 @@
       "text": "我每天都吃一个苹果。",
       "pinyin": "wǒ měi tiān dōu chī yī gè píng guǒ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0628.webp",
     "needsReview": false,
     "sourceLine": "杏李枣苹",
     "sourceLineIndex": 157
@@ -27592,7 +27592,7 @@
       "text": "夕阳把天空染成了金色。",
       "pinyin": "xī yáng bǎ tiān kōng rǎn chéng le jīn sè 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0629.webp",
     "needsReview": false,
     "sourceLine": "金银钢铁",
     "sourceLineIndex": 158
@@ -27639,7 +27639,7 @@
       "text": "爸爸去银行办理业务。",
       "pinyin": "bà bà qù yín xíng bàn lǐ yè wù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0630.webp",
     "needsReview": false,
     "sourceLine": "金银钢铁",
     "sourceLineIndex": 158
@@ -27684,7 +27684,7 @@
       "text": "姐姐每天练习弹钢琴。",
       "pinyin": "jiě jiě měi tiān liàn xí dàn gàng qín 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0631.webp",
     "needsReview": false,
     "sourceLine": "金银钢铁",
     "sourceLineIndex": 158
@@ -27730,7 +27730,7 @@
       "text": "火车在铁路上飞快行驶。",
       "pinyin": "huǒ chē zài tiě lù shàng fēi kuài xíng shǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0632.webp",
     "needsReview": false,
     "sourceLine": "金银钢铁",
     "sourceLineIndex": 158
@@ -27779,7 +27779,7 @@
       "text": "我用筷子吃饭。",
       "pinyin": "wǒ yòng kuài zǐ chī fàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0633.webp",
     "needsReview": false,
     "sourceLine": "筷碟盘壶",
     "sourceLineIndex": 159
@@ -27829,7 +27829,7 @@
       "text": "桌上放着一个小碟子。",
       "pinyin": "zhuō shàng fàng zhe yī gè xiǎo dié zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0634.webp",
     "needsReview": false,
     "sourceLine": "筷碟盘壶",
     "sourceLineIndex": 159
@@ -27876,7 +27876,7 @@
       "text": "妈妈端来一盘水果。",
       "pinyin": "mā mā duān lái yī pán shuǐ guǒ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0635.webp",
     "needsReview": false,
     "sourceLine": "筷碟盘壶",
     "sourceLineIndex": 159
@@ -27922,7 +27922,7 @@
       "text": "爷爷用茶壶泡了一壶茶。",
       "pinyin": "yé yé yòng chá hú pào le yī hú chá 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0636.webp",
     "needsReview": false,
     "sourceLine": "筷碟盘壶",
     "sourceLineIndex": 159
@@ -27966,7 +27966,7 @@
       "text": "我每天用自己的水杯喝水。",
       "pinyin": "wǒ měi tiān yòng zì jǐ de shuǐ bēi hē shuǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0637.webp",
     "needsReview": false,
     "sourceLine": "杯瓶袋缸",
     "sourceLineIndex": 160
@@ -28012,7 +28012,7 @@
       "text": "桌上的花瓶里插着鲜花。",
       "pinyin": "zhuō shàng de huā píng lǐ chā zhe xiǎn huā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0638.webp",
     "needsReview": false,
     "sourceLine": "杯瓶袋缸",
     "sourceLineIndex": 160
@@ -28059,7 +28059,7 @@
       "text": "他把零食放进了口袋。",
       "pinyin": "tā bǎ líng shí fàng jìn le kǒu dài 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0639.webp",
     "needsReview": false,
     "sourceLine": "杯瓶袋缸",
     "sourceLineIndex": 160
@@ -28104,7 +28104,7 @@
       "text": "客厅里放着一个鱼缸。",
       "pinyin": "kè tīng lǐ fàng zhe yī gè yú gāng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0640.webp",
     "needsReview": false,
     "sourceLine": "杯瓶袋缸",
     "sourceLineIndex": 160
@@ -28148,7 +28148,7 @@
       "text": "我们去书店买了几本书。",
       "pinyin": "wǒ men qù shū diàn mǎi le jǐ běn shū 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0641.webp",
     "needsReview": false,
     "sourceLine": "店亭庙塔",
     "sourceLineIndex": 161
@@ -28193,7 +28193,7 @@
       "text": "公园里有一座漂亮的凉亭。",
       "pinyin": "gōng yuán lǐ yǒu yī zuò piào liàng de liáng tíng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0642.webp",
     "needsReview": false,
     "sourceLine": "店亭庙塔",
     "sourceLineIndex": 161
@@ -28237,7 +28237,7 @@
       "text": "山上有一座古老的寺庙。",
       "pinyin": "shān shàng yǒu yī zuò gǔ lǎo de sì miào 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0643.webp",
     "needsReview": false,
     "sourceLine": "店亭庙塔",
     "sourceLineIndex": 161
@@ -28285,7 +28285,7 @@
       "text": "海边有一座高高的灯塔。",
       "pinyin": "hǎi biān yǒu yī zuò gāo gāo de dēng tǎ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0644.webp",
     "needsReview": false,
     "sourceLine": "店亭庙塔",
     "sourceLineIndex": 161
@@ -28326,7 +28326,7 @@
       "text": "这条围巾是用丝绸做的。",
       "pinyin": "zhè tiáo wéi jīn shì yòng sī chóu zuò de 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0645.webp",
     "needsReview": false,
     "sourceLine": "丝布袄巾",
     "sourceLineIndex": 162
@@ -28367,7 +28367,7 @@
       "text": "妈妈用棉布做了一条裙子。",
       "pinyin": "mā mā yòng mián bù zuò le yī tiáo qún zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0646.webp",
     "needsReview": false,
     "sourceLine": "丝布袄巾",
     "sourceLineIndex": 162
@@ -28412,7 +28412,7 @@
       "text": "冬天奶奶给我做了一件棉袄。",
       "pinyin": "dōng tiān nǎi nǎi gěi wǒ zuò le yī jiàn mián ǎo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0647.webp",
     "needsReview": false,
     "sourceLine": "丝布袄巾",
     "sourceLineIndex": 162
@@ -28451,7 +28451,7 @@
       "text": "妈妈给我织了一条围巾。",
       "pinyin": "mā mā gěi wǒ zhì le yī tiáo wéi jīn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0648.webp",
     "needsReview": false,
     "sourceLine": "丝布袄巾",
     "sourceLineIndex": 162
@@ -28499,7 +28499,7 @@
       "text": "老师向我们提问。",
       "pinyin": "lǎo shī xiàng wǒ men tí wèn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0649.webp",
     "needsReview": false,
     "sourceLine": "提摇捡拎",
     "sourceLineIndex": 163
@@ -28548,7 +28548,7 @@
       "text": "小树在风中摇摆。",
       "pinyin": "xiǎo shù zài fēng zhōng yáo bǎi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0650.webp",
     "needsReview": false,
     "sourceLine": "提摇捡拎",
     "sourceLineIndex": 163
@@ -28594,7 +28594,7 @@
       "text": "他在路上捡到了一把钥匙。",
       "pinyin": "tā zài lù shàng jiǎn dào le yī bǎ yào shi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0651.webp",
     "needsReview": false,
     "sourceLine": "提摇捡拎",
     "sourceLineIndex": 163
@@ -28638,7 +28638,7 @@
       "text": "妈妈拎着一袋水果回家。",
       "pinyin": "mā mā līn zhe yī dài shuǐ guǒ huí jiā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0652.webp",
     "needsReview": false,
     "sourceLine": "提摇捡拎",
     "sourceLineIndex": 163
@@ -28682,7 +28682,7 @@
       "text": "我的枕头软软的，很舒服。",
       "pinyin": "wǒ de zhěn tou ruǎn ruǎn de ， hěn shū fú 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0653.webp",
     "needsReview": false,
     "sourceLine": "枕被帘伞",
     "sourceLineIndex": 164
@@ -28728,7 +28728,7 @@
       "text": "冬天我喜欢盖厚厚的棉被。",
       "pinyin": "dōng tiān wǒ xǐ huān gě hòu hòu de mián bèi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0654.webp",
     "needsReview": false,
     "sourceLine": "枕被帘伞",
     "sourceLineIndex": 164
@@ -28772,7 +28772,7 @@
       "text": "妈妈拉开了窗帘。",
       "pinyin": "mā mā lá kāi le chuāng lián 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0655.webp",
     "needsReview": false,
     "sourceLine": "枕被帘伞",
     "sourceLineIndex": 164
@@ -28814,7 +28814,7 @@
       "text": "下雨了，我打开了雨伞。",
       "pinyin": "xià yù le ， wǒ dá kāi le yù sǎn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0656.webp",
     "needsReview": false,
     "sourceLine": "枕被帘伞",
     "sourceLineIndex": 164
@@ -28857,7 +28857,7 @@
       "text": "我每天早上准时起床。",
       "pinyin": "wǒ měi tiān zǎo shàng zhǔn shí qǐ chuáng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0657.webp",
     "needsReview": false,
     "sourceLine": "床凳箱柜",
     "sourceLineIndex": 165
@@ -28907,7 +28907,7 @@
       "text": "他坐在小凳子上看书。",
       "pinyin": "tā zuò zài xiǎo dèng zǐ shàng kàn shū 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0658.webp",
     "needsReview": false,
     "sourceLine": "床凳箱柜",
     "sourceLineIndex": 165
@@ -28958,7 +28958,7 @@
       "text": "妈妈把水果放进冰箱。",
       "pinyin": "mā mā bǎ shuǐ guǒ fàng jìn bīng xiāng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0659.webp",
     "needsReview": false,
     "sourceLine": "床凳箱柜",
     "sourceLineIndex": 165
@@ -29002,7 +29002,7 @@
       "text": "我的衣服都放在衣柜里。",
       "pinyin": "wǒ de yī fú dōu fàng zài yī guì lǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0660.webp",
     "needsReview": false,
     "sourceLine": "床凳箱柜",
     "sourceLineIndex": 165
@@ -29053,7 +29053,7 @@
       "text": "周末我们一起去看电影。",
       "pinyin": "zhōu mò wǒ men yī qǐ qù kàn diàn yǐng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0661.webp",
     "needsReview": false,
     "sourceLine": "影像音相",
     "sourceLineIndex": 166
@@ -29102,7 +29102,7 @@
       "text": "天空好像要下雨了。",
       "pinyin": "tiān kōng hǎo xiàng yào xià yù le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0662.webp",
     "needsReview": false,
     "sourceLine": "影像音相",
     "sourceLineIndex": 166
@@ -29147,7 +29147,7 @@
       "text": "远处传来美妙的音乐声。",
       "pinyin": "yuǎn chù chuán lái měi miào de yīn lè shēng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0663.webp",
     "needsReview": false,
     "sourceLine": "影像音相",
     "sourceLineIndex": 166
@@ -29192,7 +29192,7 @@
       "text": "我们要互相帮助。",
       "pinyin": "wǒ men yào hù xiàng bāng zhù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0664.webp",
     "needsReview": false,
     "sourceLine": "影像音相",
     "sourceLineIndex": 166
@@ -29237,7 +29237,7 @@
       "text": "今天晚饭有一盘虾仁。",
       "pinyin": "jīn tiān wǎn fàn yǒu yī pán xiā rén 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0665.webp",
     "needsReview": false,
     "sourceLine": "虾贝龟豚",
     "sourceLineIndex": 167
@@ -29277,7 +29277,7 @@
       "text": "我们在海边捡了很多贝壳。",
       "pinyin": "wǒ men zài hǎi biān jiǎn le hěn duō bèi ké 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0666.webp",
     "needsReview": false,
     "sourceLine": "虾贝龟豚",
     "sourceLineIndex": 167
@@ -29320,7 +29320,7 @@
       "text": "我家养了一只小乌龟。",
       "pinyin": "wǒ jiā yǎng le yī zhǐ xiǎo wù guī 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0667.webp",
     "needsReview": false,
     "sourceLine": "虾贝龟豚",
     "sourceLineIndex": 167
@@ -29367,7 +29367,7 @@
       "text": "海洋馆里有几只可爱的海豚。",
       "pinyin": "hǎi yáng guǎn lǐ yǒu jǐ zhǐ kě ài de hǎi tún 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0668.webp",
     "needsReview": false,
     "sourceLine": "虾贝龟豚",
     "sourceLineIndex": 167
@@ -29412,7 +29412,7 @@
       "text": "爷爷用木炭烤红薯。",
       "pinyin": "yé yé yòng mù tàn kǎo hóng shǔ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0669.webp",
     "needsReview": false,
     "sourceLine": "炭柴灶炉",
     "sourceLineIndex": 168
@@ -29458,7 +29458,7 @@
       "text": "村里的人用柴火做饭。",
       "pinyin": "cūn lǐ de rén yòng chái huǒ zuò fàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0670.webp",
     "needsReview": false,
     "sourceLine": "炭柴灶炉",
     "sourceLineIndex": 168
@@ -29501,7 +29501,7 @@
       "text": "奶奶在灶台前忙着做饭。",
       "pinyin": "nǎi nǎi zài zào tái qián máng zhe zuò fàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0671.webp",
     "needsReview": false,
     "sourceLine": "炭柴灶炉",
     "sourceLineIndex": 168
@@ -29545,7 +29545,7 @@
       "text": "冬天屋里点上了火炉。",
       "pinyin": "dōng tiān wū lǐ diǎn shàng le huǒ lú 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0672.webp",
     "needsReview": false,
     "sourceLine": "炭柴灶炉",
     "sourceLineIndex": 168
@@ -29587,7 +29587,7 @@
       "text": "宇航员乘坐飞船进入了宇宙。",
       "pinyin": "yǔ háng yún chéng zuò fēi chuán jìn rù le yǔ zhòu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0673.webp",
     "needsReview": false,
     "sourceLine": "宇世航舰",
     "sourceLineIndex": 169
@@ -29628,7 +29628,7 @@
       "text": "世界上有很多美丽的地方。",
       "pinyin": "shì jiè shàng yǒu hěn duō měi lí de dì fāng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0674.webp",
     "needsReview": false,
     "sourceLine": "宇世航舰",
     "sourceLineIndex": 169
@@ -29674,7 +29674,7 @@
       "text": "轮船在大海上航行。",
       "pinyin": "lún chuán zài dà hǎi shàng háng xíng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0675.webp",
     "needsReview": false,
     "sourceLine": "宇世航舰",
     "sourceLineIndex": 169
@@ -29720,7 +29720,7 @@
       "text": "海面上有一艘巨大的军舰。",
       "pinyin": "hǎi miàn shàng yǒu yī sōu jù dà de jūn jiàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0676.webp",
     "needsReview": false,
     "sourceLine": "宇世航舰",
     "sourceLineIndex": 169
@@ -29762,7 +29762,7 @@
       "text": "我们坐飞机去旅行。",
       "pinyin": "wǒ men zuò fēi jī qù lǚ xíng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0677.webp",
     "needsReview": false,
     "sourceLine": "机轮汽泊",
     "sourceLineIndex": 170
@@ -29806,7 +29806,7 @@
       "text": "汽车的轮子转得很快。",
       "pinyin": "qì chē de lún zǐ zhuàn de hěn kuài 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0678.webp",
     "needsReview": false,
     "sourceLine": "机轮汽泊",
     "sourceLineIndex": 170
@@ -29849,7 +29849,7 @@
       "text": "爸爸开着汽车送我上学。",
       "pinyin": "bà bà kāi zhe qì chē sòng wǒ shàng xué 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0679.webp",
     "needsReview": false,
     "sourceLine": "机轮汽泊",
     "sourceLineIndex": 170
@@ -29893,7 +29893,7 @@
       "text": "船只停泊在港口。",
       "pinyin": "chuán zhǐ tíng pō zài gǎng kǒu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0680.webp",
     "needsReview": false,
     "sourceLine": "机轮汽泊",
     "sourceLineIndex": 170
@@ -29938,7 +29938,7 @@
       "text": "长城是中国著名的古迹。",
       "pinyin": "cháng chéng shì zhōng guó zhù míng de gǔ jì 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0681.webp",
     "needsReview": false,
     "sourceLine": "城楼街市",
     "sourceLineIndex": 171
@@ -29987,7 +29987,7 @@
       "text": "我家住在高楼的五层。",
       "pinyin": "wǒ jiā zhù zài gāo lóu de wǔ céng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0682.webp",
     "needsReview": false,
     "sourceLine": "城楼街市",
     "sourceLineIndex": 171
@@ -30035,7 +30035,7 @@
       "text": "节日的大街上很热闹。",
       "pinyin": "jié rì de dà jiē shàng hěn rè nào 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0683.webp",
     "needsReview": false,
     "sourceLine": "城楼街市",
     "sourceLineIndex": 171
@@ -30076,7 +30076,7 @@
       "text": "这座城市非常美丽。",
       "pinyin": "zhè zuò chéng shì fēi cháng měi lí 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0684.webp",
     "needsReview": false,
     "sourceLine": "城楼街市",
     "sourceLineIndex": 171
@@ -30124,7 +30124,7 @@
       "text": "我知道这条道路怎么走。",
       "pinyin": "wǒ zhī dào zhè tiáo dào lù zěn me zǒu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0685.webp",
     "needsReview": false,
     "sourceLine": "道路桥台",
     "sourceLineIndex": 172
@@ -30173,7 +30173,7 @@
       "text": "过马路时要看红绿灯。",
       "pinyin": "guò mǎ lù shí yào kàn hóng lǜ dēng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0686.webp",
     "needsReview": false,
     "sourceLine": "道路桥台",
     "sourceLineIndex": 172
@@ -30219,7 +30219,7 @@
       "text": "我们走过一座大桥。",
       "pinyin": "wǒ men zǒu guò yī zuò dà qiáo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0687.webp",
     "needsReview": false,
     "sourceLine": "道路桥台",
     "sourceLineIndex": 172
@@ -30260,7 +30260,7 @@
       "text": "妈妈在阳台上种了很多花。",
       "pinyin": "mā mā zài yáng tái shàng zhòng le hěn duō huā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0688.webp",
     "needsReview": false,
     "sourceLine": "道路桥台",
     "sourceLineIndex": 172
@@ -30307,7 +30307,7 @@
       "text": "冬天梅花在雪中开放。",
       "pinyin": "dōng tiān méi huā zài xuě zhōng kāi fàng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0689.webp",
     "needsReview": false,
     "sourceLine": "梅兰竹菊",
     "sourceLineIndex": 173
@@ -30348,7 +30348,7 @@
       "text": "奶奶在窗边养了一盆兰花。",
       "pinyin": "nǎi nǎi zài chuāng biān yǎng le yī pén lán huā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0690.webp",
     "needsReview": false,
     "sourceLine": "梅兰竹菊",
     "sourceLineIndex": 173
@@ -30390,7 +30390,7 @@
       "text": "熊猫最爱吃竹子。",
       "pinyin": "xióng māo zuì ài chī zhú zǐ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0691.webp",
     "needsReview": false,
     "sourceLine": "梅兰竹菊",
     "sourceLineIndex": 173
@@ -30437,7 +30437,7 @@
       "text": "秋天公园里的菊花开得正盛。",
       "pinyin": "qiū tiān gōng yuán lǐ de jú huā kāi de zhèng shèng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0692.webp",
     "needsReview": false,
     "sourceLine": "梅兰竹菊",
     "sourceLineIndex": 173
@@ -30490,7 +30490,7 @@
       "text": "清晨地上结了一层白霜。",
       "pinyin": "qīng chén dì shàng jié le yī céng bái shuāng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0693.webp",
     "needsReview": false,
     "sourceLine": "霜露雹雾",
     "sourceLineIndex": 174
@@ -30547,7 +30547,7 @@
       "text": "草叶上挂着晶亮的露珠。",
       "pinyin": "cǎo yè shàng guà zhe jīng liàng de lù zhū 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0694.webp",
     "needsReview": false,
     "sourceLine": "霜露雹雾",
     "sourceLineIndex": 174
@@ -30596,7 +30596,7 @@
       "text": "昨天下了一场冰雹。",
       "pinyin": "zuó tiān xià le yī cháng bīng báo 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0695.webp",
     "needsReview": false,
     "sourceLine": "霜露雹雾",
     "sourceLineIndex": 174
@@ -30645,7 +30645,7 @@
       "text": "今天早上起了大雾。",
       "pinyin": "jīn tiān zǎo shàng qǐ le dà wù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0696.webp",
     "needsReview": false,
     "sourceLine": "霜露雹雾",
     "sourceLineIndex": 174
@@ -30692,7 +30692,7 @@
       "text": "我每天都练习跳绳。",
       "pinyin": "wǒ měi tiān dōu liàn xí tiào shéng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0697.webp",
     "needsReview": false,
     "sourceLine": "绳锁珠铃",
     "sourceLineIndex": 175
@@ -30740,7 +30740,7 @@
       "text": "出门前要记得锁门。",
       "pinyin": "chū mén qián yào jì de suǒ mén 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0698.webp",
     "needsReview": false,
     "sourceLine": "绳锁珠铃",
     "sourceLineIndex": 175
@@ -30786,7 +30786,7 @@
       "text": "她戴着一条珍珠项链。",
       "pinyin": "tā dài zhe yī tiáo zhēn zhū xiàng liàn 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0699.webp",
     "needsReview": false,
     "sourceLine": "绳锁珠铃",
     "sourceLineIndex": 175
@@ -30832,7 +30832,7 @@
       "text": "门铃响了，有人来了。",
       "pinyin": "mén líng xiǎng le ， yǒu rén lái le 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0700.webp",
     "needsReview": false,
     "sourceLine": "绳锁珠铃",
     "sourceLineIndex": 175
@@ -30880,7 +30880,7 @@
       "text": "冬天我们一家人吃火锅。",
       "pinyin": "dōng tiān wǒ men yī jiā rén chī huǒ guō 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0701.webp",
     "needsReview": false,
     "sourceLine": "锅碗瓢盆",
     "sourceLineIndex": 176
@@ -30929,7 +30929,7 @@
       "text": "妈妈洗完了碗筷。",
       "pinyin": "mā mā xǐ wán le wǎn kuài 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0702.webp",
     "needsReview": false,
     "sourceLine": "锅碗瓢盆",
     "sourceLineIndex": 176
@@ -30981,7 +30981,7 @@
       "text": "花丛中有一只可爱的瓢虫。",
       "pinyin": "huā cóng zhōng yǒu yī zhǐ kě ài de piáo chóng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0703.webp",
     "needsReview": false,
     "sourceLine": "锅碗瓢盆",
     "sourceLineIndex": 176
@@ -31026,7 +31026,7 @@
       "text": "窗台上摆着几个花盆。",
       "pinyin": "chuāng tái shàng bǎi zhe jǐ gè huā pén 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0704.webp",
     "needsReview": false,
     "sourceLine": "锅碗瓢盆",
     "sourceLineIndex": 176
@@ -31070,7 +31070,7 @@
       "text": "动物园里的老虎很威武。",
       "pinyin": "dòng wù yuán lǐ de lǎo hǔ hěn wēi wǔ 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0705.webp",
     "needsReview": false,
     "sourceLine": "虎狼狐狮",
     "sourceLineIndex": 177
@@ -31116,7 +31116,7 @@
       "text": "森林里生活着一群狼。",
       "pinyin": "sēn lín lǐ shēng huó zhe yī qún láng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0706.webp",
     "needsReview": false,
     "sourceLine": "虎狼狐狮",
     "sourceLineIndex": 177
@@ -31160,7 +31160,7 @@
       "text": "故事里的狐狸非常聪明。",
       "pinyin": "gù shì lǐ de hú lí fēi cháng cōng míng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0707.webp",
     "needsReview": false,
     "sourceLine": "虎狼狐狮",
     "sourceLineIndex": 177
@@ -31205,7 +31205,7 @@
       "text": "狮子是草原上的王者。",
       "pinyin": "shī zǐ shì cǎo yuán shàng de wáng zhě 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0708.webp",
     "needsReview": false,
     "sourceLine": "虎狼狐狮",
     "sourceLineIndex": 177
@@ -31250,7 +31250,7 @@
       "text": "海边飞着一群白色的海鸥。",
       "pinyin": "hǎi biān fēi zhe yī qún bái sè de hǎi ōu 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0709.webp",
     "needsReview": false,
     "sourceLine": "鸥雁雀鸦",
     "sourceLineIndex": 178
@@ -31298,7 +31298,7 @@
       "text": "秋天大雁排成一队向南飞。",
       "pinyin": "qiū tiān dà yàn pái chéng yī duì xiàng nán fēi 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0710.webp",
     "needsReview": false,
     "sourceLine": "鸥雁雀鸦",
     "sourceLineIndex": 178
@@ -31345,7 +31345,7 @@
       "text": "树枝上停着几只麻雀。",
       "pinyin": "shù zhī shàng tíng zhe jǐ zhǐ má què 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0711.webp",
     "needsReview": false,
     "sourceLine": "鸥雁雀鸦",
     "sourceLineIndex": 178
@@ -31390,7 +31390,7 @@
       "text": "树上落着几只乌鸦。",
       "pinyin": "shù shàng luò zhe jǐ zhǐ wù yā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0712.webp",
     "needsReview": false,
     "sourceLine": "鸥雁雀鸦",
     "sourceLineIndex": 178
@@ -31439,7 +31439,7 @@
       "text": "工人用锤子敲打铁块。",
       "pinyin": "gōng rén yòng chuí zǐ qiāo dá tiě kuài 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0713.webp",
     "needsReview": false,
     "sourceLine": "锤盒筐篮",
     "sourceLineIndex": 179
@@ -31486,7 +31486,7 @@
       "text": "我的铅笔盒里有很多文具。",
       "pinyin": "wǒ de qiān bǐ hé lǐ yǒu hěn duō wén jù 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0714.webp",
     "needsReview": false,
     "sourceLine": "锤盒筐篮",
     "sourceLineIndex": 179
@@ -31534,7 +31534,7 @@
       "text": "奶奶提着一个竹筐去买菜。",
       "pinyin": "nǎi nǎi tí zhe yī gè zhú kuāng qù mǎi cài 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0715.webp",
     "needsReview": false,
     "sourceLine": "锤盒筐篮",
     "sourceLineIndex": 179
@@ -31586,7 +31586,7 @@
       "text": "妈妈提着篮子去市场买菜。",
       "pinyin": "mā mā tí zhe lán zǐ qù shì cháng mǎi cài 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0716.webp",
     "needsReview": false,
     "sourceLine": "锤盒筐篮",
     "sourceLineIndex": 179
@@ -31629,7 +31629,7 @@
       "text": "公鸡每天早上准时叫醒大家。",
       "pinyin": "gōng jī měi tiān zǎo shàng zhǔn shí jiào xǐng dà jiā 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0717.webp",
     "needsReview": false,
     "sourceLine": "鸡鸭鹅燕",
     "sourceLineIndex": 180
@@ -31675,7 +31675,7 @@
       "text": "池塘里有几只小鸭子在游泳。",
       "pinyin": "chí táng lǐ yǒu jǐ zhǐ xiǎo yā zǐ zài yóu yǒng 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0718.webp",
     "needsReview": false,
     "sourceLine": "鸡鸭鹅燕",
     "sourceLineIndex": 180
@@ -31723,7 +31723,7 @@
       "text": "湖面上游着一群白天鹅。",
       "pinyin": "hú miàn shàng yóu zhe yī qún bái tiān é 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0719.webp",
     "needsReview": false,
     "sourceLine": "鸡鸭鹅燕",
     "sourceLineIndex": 180
@@ -31775,7 +31775,7 @@
       "text": "春天燕子飞回了屋檐下。",
       "pinyin": "chūn tiān yàn zǐ fēi huí le wū yán xià 。"
     },
-    "imageAsset": null,
+    "imageAsset": "assets/images/0720.webp",
     "needsReview": false,
     "sourceLine": "鸡鸭鹅燕",
     "sourceLineIndex": 180
