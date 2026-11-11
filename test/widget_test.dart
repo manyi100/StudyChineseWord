@@ -36,6 +36,9 @@ void main() {
     await tester.tap(find.text('第 1 课'));
     await tester.pumpAndSettle();
     expect(find.text('第 1 课 · 一二三四'), findsOneWidget);
+    // 首次进入会显示“点哪里都能发音”的提示，且各朗读入口都有喇叭图标
+    expect(find.text('点汉字、词语、句子或图片，都能听发音'), findsOneWidget);
+    expect(find.byIcon(Icons.volume_up_rounded), findsWidgets);
 
     // 返回后切换到按部首（学习页用的是自定义返回按钮）
     await tester.tap(find.byIcon(Icons.arrow_back_rounded));

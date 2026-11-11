@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
@@ -28,6 +30,13 @@ class TtsService {
   final FlutterTts _flutterTts = FlutterTts();
   Future<bool>? _readyFuture;
   bool _notified = false;
+
+  /// 当前正在朗读的目标标识（字/词/句/图片各自的 tag）。
+  /// UI 用它来显示“声波跳动 / 朗读中”动效，读完自动变回喇叭图标。
+  final ValueNotifier<String?> speakingTag = ValueNotifier<String?>(null);
+
+  int _generation = 0;
+  Timer? _fallbackTimer;
 
   /// 初始化并挑选可用的引擎/中文语音，只做一次；失败后下次调用会重新尝试。
   Future<bool> _ensureReady() async {
@@ -108,27 +117,64 @@ class TtsService {
   }
 
   /// 朗读一段文字（字/词/句子通用），返回是否成功开始朗读。
-  Future<bool> speak(String text) async {
+  /// [tag] 用于标注这次朗读的 UI 目标，点击后对应图标会显示朗读动效。
+  Future<bool> speak(String text, {String? tag}) async {
     if (text.trim().isEmpty) return false;
 
+    final generation = ++_generation;
+    _beginSpeaking(tag ?? text, text, generation);
+
     if (!await _ensureReady()) {
+      _finishSpeaking(generation);
       _notifyUnavailable();
       return false;
     }
 
-    if (await _speakOnce(text)) return true;
+    if (await _speakOnce(text, generation)) return true;
 
     // 引擎可能被 MIUI 的省电策略回收了，重新初始化后再试一次
     _readyFuture = null;
-    if (await _ensureReady() && await _speakOnce(text)) return true;
+    if (await _ensureReady() && await _speakOnce(text, generation)) return true;
 
+    _finishSpeaking(generation);
     _notifyUnavailable();
     return false;
   }
 
-  Future<bool> _speakOnce(String text) async {
+  void _beginSpeaking(String tag, String text, int generation) {
+    _fallbackTimer?.cancel();
+    speakingTag.value = tag;
+
+    // 部分国产 ROM 的 TTS 完成回调不稳定，用“按文本长度估算”的定时器兜底，
+    // 保证动效不会一直转下去。
+    final ms = (text.runes.length * 380 + 1400).clamp(1600, 15000);
+    _fallbackTimer = Timer(Duration(milliseconds: ms), () {
+      _finishSpeaking(generation);
+    });
+  }
+
+  void _finishSpeaking(int generation) {
+    if (generation != _generation) return; // 已经切换到新的朗读目标
+    _fallbackTimer?.cancel();
+    _fallbackTimer = null;
+    if (speakingTag.value != null) {
+      speakingTag.value = null;
+    }
+  }
+
+  Future<bool> _speakOnce(String text, int generation) async {
     try {
       await _flutterTts.stop(); // 防止上一句未读完就被新的朗读请求打断叠加
+
+      // 每次朗读都重新注册回调，闭包捕获当前的 generation，
+      // 旧朗读迟到的完成事件不会误清新朗读的状态。
+      _flutterTts.setCompletionHandler(() => _finishSpeaking(generation));
+      _flutterTts.setCancelHandler(() => _finishSpeaking(generation));
+      _flutterTts.setErrorHandler((message) {
+        debugPrint('[TTS] 朗读出错：$message');
+        _finishSpeaking(generation);
+      });
+
       final result = await _flutterTts.speak(text);
       if (result == 1) return true;
       debugPrint('[TTS] speak 返回 $result');
@@ -145,6 +191,12 @@ class TtsService {
   }
 
   Future<void> stop() async {
+    _generation++;
+    _fallbackTimer?.cancel();
+    _fallbackTimer = null;
+    if (speakingTag.value != null) {
+      speakingTag.value = null;
+    }
     await _flutterTts.stop();
   }
 }

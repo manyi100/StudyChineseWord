@@ -16,6 +16,18 @@ class StorageService {
   static const _kLastIndexPrefix = 'last_index_grade_';
   static const _kFavoritesKey = 'favorite_ids';
   static const _kViewedIdsKey = 'viewed_char_ids';
+  static const _kAudioHintShownKey = 'audio_hint_shown';
+
+  /// 首次进入学习页的“哪里可以点读”提示是否已经展示过
+  Future<bool> getAudioHintShown() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(_kAudioHintShownKey) ?? false;
+  }
+
+  Future<void> setAudioHintShown() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(_kAudioHintShownKey, true);
+  }
 
   /// 已经"学习过"(浏览到过)的字ID集合，用于计算年级学习进度和解锁状态。
   /// 不区分年级——每个字的id本身就是全局唯一的，按所属年级筛选即可。

@@ -1,9 +1,12 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import '../models/hanzi_model.dart';
 import '../services/hanzi_repository.dart';
 import '../services/progress_service.dart';
 import '../services/storage_service.dart';
 import '../services/tts_service.dart';
+import '../widgets/audio_feedback.dart';
 import '../widgets/character_card.dart';
 import 'favorites_screen.dart';
 import 'grade_select_screen.dart';
@@ -38,6 +41,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<HanziModel> _hanziList = [];
   String _titleText = '';
+  bool _showAudioHint = false;
+  Timer? _audioHintTimer;
 
   @override
   void initState() {
@@ -85,6 +90,23 @@ class _HomeScreenState extends State<HomeScreen> {
     if (_hanziList.isNotEmpty) {
       _markViewedAndSpeak(safeIndex);
     }
+
+    // 第一次进入学习页时，提示“点哪里都能发音”，自动消失
+    final hintShown = await StorageService.instance.getAudioHintShown();
+    if (!hintShown && mounted) {
+      await StorageService.instance.setAudioHintShown();
+      if (!mounted) return;
+      setState(() => _showAudioHint = true);
+      _audioHintTimer = Timer(const Duration(seconds: 9), _dismissAudioHint);
+    }
+  }
+
+  void _dismissAudioHint() {
+    _audioHintTimer?.cancel();
+    _audioHintTimer = null;
+    if (mounted && _showAudioHint) {
+      setState(() => _showAudioHint = false);
+    }
   }
 
   void _markViewedAndSpeak(int index) {
@@ -118,6 +140,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void dispose() {
+    _audioHintTimer?.cancel();
     _pageController?.dispose();
     TtsService.instance.stop();
     super.dispose();
@@ -176,6 +199,7 @@ class _HomeScreenState extends State<HomeScreen> {
               style: const TextStyle(color: Colors.black45, fontSize: 13),
             ),
           ),
+          if (_showAudioHint) AudioHintBanner(onClose: _dismissAudioHint),
           Expanded(
             child: PageView.builder(
               controller: _pageController,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/hanzi_model.dart';
 import '../services/tts_service.dart';
+import 'audio_feedback.dart';
 import 'pinyin_grid_text.dart';
 import 'tian_zi_ge_box.dart';
 
@@ -30,6 +31,18 @@ class CharacterCard extends StatelessWidget {
     ];
     final idx = hanzi.groupId.hashCode.abs() % colors.length;
     return colors[idx];
+  }
+
+  String get _charTag => 'char_${hanzi.id}';
+  String get _imageTag => 'image_${hanzi.id}';
+  String get _sentenceTag => 'sentence_${hanzi.id}';
+  String _wordTag(WordEntry word) => 'word_${hanzi.id}_${word.text}';
+
+  /// 点击图片时朗读的内容：优先整句，其次组词，最后单字
+  String get _imageAudioText {
+    if (hanzi.sentence != null) return hanzi.sentence!.text;
+    if (hanzi.words.isNotEmpty) return hanzi.words.first.text;
+    return hanzi.char;
   }
 
   @override
@@ -71,21 +84,51 @@ class CharacterCard extends StatelessWidget {
             // 配图区：按每张图自己的真实宽高比显示，铺满圆角框，不裁切也不留白。
             // 实测这批插图比例在 1.81~2.0 之间浮动，写死 1.81 会让大部分图上下被
             // 裁掉一点，所以这里先按 1.81 占位，取到真实尺寸后自动校正。
-            // 注意不要在外层加 alignment：一旦给了对齐方式，子组件会按图片自身
-            // 尺寸居中，左右两侧就会露出底色，看起来像一条白边。
-            ClipRRect(
-              borderRadius: BorderRadius.circular(18),
-              child: hanzi.imageAsset != null
-                  ? _HanziImage(asset: hanzi.imageAsset!)
-                  : Container(
-                      color: Colors.white.withOpacity(0.6),
-                      alignment: Alignment.center,
-                      child: AspectRatio(
-                        aspectRatio: 1.81,
-                        child: const Icon(Icons.image_outlined,
-                            size: 52, color: Colors.black26),
+            // 点击图片会朗读例句（插图本来就是按例句生成的），并浮出句子气泡。
+            GestureDetector(
+              onTap: () => TtsService.instance
+                  .speak(_imageAudioText, tag: _imageTag),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(18),
+                child: Stack(
+                  children: [
+                    if (hanzi.imageAsset != null)
+                      _HanziImage(asset: hanzi.imageAsset!)
+                    else
+                      Container(
+                        color: Colors.white.withOpacity(0.6),
+                        alignment: Alignment.center,
+                        child: AspectRatio(
+                          aspectRatio: 1.81,
+                          child: const Icon(Icons.image_outlined,
+                              size: 52, color: Colors.black26),
+                        ),
+                      ),
+                    Positioned(
+                      top: 8,
+                      right: 8,
+                      child: SpeakerIcon(
+                        tag: _imageTag,
+                        size: 18,
+                        color: Colors.black54,
+                        backgroundColor: Colors.white.withValues(alpha: 0.88),
                       ),
                     ),
+                    Positioned(
+                      left: 8,
+                      right: 8,
+                      bottom: 8,
+                      child: Align(
+                        alignment: Alignment.bottomLeft,
+                        child: SpeakingBubble(
+                          tag: _imageTag,
+                          text: _imageAudioText,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
             const SizedBox(height: 16),
 
@@ -93,7 +136,8 @@ class CharacterCard extends StatelessWidget {
             Column(
               children: [
                 GestureDetector(
-                  onTap: () => TtsService.instance.speak(hanzi.char),
+                  onTap: () => TtsService.instance
+                      .speak(hanzi.char, tag: _charTag),
                   child: PinyinGridText(
                     pinyin: hanzi.pinyin,
                     width: 140,
@@ -105,7 +149,9 @@ class CharacterCard extends StatelessWidget {
                   char: hanzi.char,
                   size: 152,
                   strokeOrderNames: hanzi.strokeOrderNames,
-                  onSpeak: () => TtsService.instance.speak(hanzi.char),
+                  audioTag: _charTag,
+                  onSpeak: () => TtsService.instance
+                      .speak(hanzi.char, tag: _charTag),
                 ),
               ],
             ),
@@ -121,7 +167,9 @@ class CharacterCard extends StatelessWidget {
                 children: hanzi.words.map((w) {
                   return _WordChip(
                     word: w,
-                    onTap: () => TtsService.instance.speak(w.text),
+                    tag: _wordTag(w),
+                    onTap: () => TtsService.instance
+                        .speak(w.text, tag: _wordTag(w)),
                   );
                 }).toList(),
               ),
@@ -133,7 +181,8 @@ class CharacterCard extends StatelessWidget {
               const _SectionLabel(label: '造句'),
               const SizedBox(height: 8),
               GestureDetector(
-                onTap: () => TtsService.instance.speak(hanzi.sentence!.text),
+                onTap: () => TtsService.instance
+                    .speak(hanzi.sentence!.text, tag: _sentenceTag),
                 child: Container(
                   width: double.infinity,
                   padding: const EdgeInsets.all(14),
@@ -141,9 +190,23 @@ class CharacterCard extends StatelessWidget {
                     color: Colors.white.withOpacity(0.7),
                     borderRadius: BorderRadius.circular(14),
                   ),
-                  child: Text(
-                    hanzi.sentence!.text,
-                    style: const TextStyle(fontSize: 18, height: 1.4),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SpeakerIcon(
+                        tag: _sentenceTag,
+                        size: 18,
+                        color: const Color(0xFF455A64),
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: Text(
+                          hanzi.sentence!.text,
+                          style: const TextStyle(fontSize: 18, height: 1.4),
+                        ),
+                      ),
+                      SpeakingLabel(tag: _sentenceTag),
+                    ],
                   ),
                 ),
               ),
@@ -208,28 +271,59 @@ class _SectionLabel extends StatelessWidget {
 
 class _WordChip extends StatelessWidget {
   final WordEntry word;
+  final String tag;
   final VoidCallback onTap;
 
-  const _WordChip({required this.word, required this.onTap});
+  const _WordChip({
+    required this.word,
+    required this.tag,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: Colors.black12),
-        ),
-        child: Column(
-          children: [
-            Text(word.pinyin,
-                style: const TextStyle(fontSize: 11, color: Colors.black45)),
-            Text(word.text, style: const TextStyle(fontSize: 17)),
-          ],
-        ),
+      child: ValueListenableBuilder<String?>(
+        valueListenable: TtsService.instance.speakingTag,
+        builder: (context, activeTag, _) {
+          final active = activeTag == tag;
+          return AnimatedContainer(
+            duration: const Duration(milliseconds: 180),
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+            decoration: BoxDecoration(
+              color: active ? const Color(0xFFF1F8E9) : Colors.white,
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(
+                color: active ? const Color(0xFF7CB342) : Colors.black12,
+                width: active ? 1.6 : 1,
+              ),
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SpeakerIcon(
+                  tag: tag,
+                  size: 14,
+                  color: active
+                      ? const Color(0xFF558B2F)
+                      : Colors.black45,
+                ),
+                const SizedBox(width: 6),
+                Column(
+                  children: [
+                    Text(
+                      word.pinyin,
+                      style: const TextStyle(
+                          fontSize: 11, color: Colors.black45),
+                    ),
+                    Text(word.text, style: const TextStyle(fontSize: 17)),
+                  ],
+                ),
+              ],
+            ),
+          );
+        },
       ),
     );
   }
