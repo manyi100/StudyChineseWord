@@ -181,11 +181,93 @@ adb install -r build/app/outputs/flutter-apk/HanziRoots-v0.1.0.apk
 | 启动 Activity | `com.ailexin.HanziRoots.MainActivity` |
 | APK 文件名 | `HanziRoots-v<版本号>.apk`，版本号取自 `pubspec.yaml` 的 `version` |
 | 当前产物 | `build/app/outputs/flutter-apk/HanziRoots-v0.1.0.apk` |
+| iOS Bundle ID | `com.ailexin.HanziRoots`（RunnerTests 为 `.RunnerTests`） |
+| iOS 产物 | `build/ios/ipa/Runner.ipa`（`flutter build ipa`） |
 
 - 命名规则写在 `android/app/build.gradle.kts`：`assemble*` 结束后由 `copyNamedApk*` 任务把 `app-<mode>.apk` 另存为带版本号的副本
 - `app-release.apk` 仍保留，`flutter install`、`flutter run` 等工具依赖该固定文件名
 - 改版本号只需改 `pubspec.yaml` 的 `version`，重新构建后 APK 名会自动跟着变化
 - 包名变更后与旧包 `com.example.untitled` 属于两个独立应用，需要先卸载旧包或手动清理
+
+### iOS / iPad 打包
+
+Flutter 的 iOS 产物**只能在 macOS 上用 Xcode 编译**，Windows 上无论怎么配置都打不出 `.ipa`。可选的三种环境：
+
+| 方式 | 说明 | 适用 |
+| --- | --- | --- |
+| 本地 Mac | 安装 Xcode + CocoaPods，免费 Apple ID 可真机调试（签名 7 天有效） | 开发调试 |
+| 租用云 Mac | MacinCloud、MacStadium 等远程桌面，按小时计费 | 偶尔发版 |
+| CI 构建 | Codemagic、GitHub Actions `macos-latest` runner，无需自备 Mac | 持续集成 / 自动发版 |
+
+上架 App Store 需要 **Apple Developer Program（99 美元/年）**；免费账号只能装到自己的设备，且 7 天要重签。
+
+#### 一、首次配置（在 Mac 上，只需做一次）
+
+```bash
+flutter pub get
+cd ios && pod install && cd ..
+open ios/Runner.xcworkspace      # 必须打开 xcworkspace，不是 xcodeproj
+```
+
+Xcode 里：
+
+1. 左侧选中 `Runner` target → **Signing & Capabilities**
+2. `Team` 选择自己的 Apple ID / 开发者团队，勾选 **Automatically manage signing**
+3. `Bundle Identifier` 已是 `com.ailexin.HanziRoots`；若被占用，改成自己的（如 `com.ailexin.HanziRoots.cn`），同时同步 `android/app/build.gradle.kts`
+4. 真机首次运行需在 iPhone「设置 → 通用 → VPN 与设备管理」里信任开发者证书
+
+#### 二、日常打包
+
+```bash
+# 真机调试
+flutter run -d <device-id>
+
+# 打 IPA（自动 archive + 导出）
+flutter build ipa --release
+# 产物：build/ios/ipa/Runner.ipa        （App 名是 Runner，可自行重命名）
+#       build/ios/archive/Runner.xcarchive
+```
+
+导出方式按用途选择：
+
+| 命令 | 用途 |
+| --- | --- |
+| `flutter build ipa --export-method app-store` | 上传 App Store Connect / TestFlight |
+| `flutter build ipa --export-method ad-hoc` | 指定 UDID 的设备内测 |
+| `flutter build ipa --export-method development` | 开发团队内部分发 |
+| `flutter build ipa --export-method enterprise` | 企业账号内部分发 |
+
+想和 APK 一样带版本号，导出后重命名即可：
+
+```bash
+cp build/ios/ipa/Runner.ipa build/ios/ipa/HanziRoots-v0.1.0.ipa
+```
+
+#### 三、iPhone / iPad 适配现状
+
+| 项目 | 状态 |
+| --- | --- |
+| 设备族 | `TARGETED_DEVICE_FAMILY = "1,2"`，iPhone / iPad 共用一份产物 |
+| 屏幕方向 | iPhone 竖屏 + 左右横屏；iPad 四方向均允许（见 `ios/Runner/Info.plist`） |
+| 最低系统 | iOS 13.0 |
+| 依赖 | 仅 `flutter_tts`、`shared_preferences`，均支持 iOS，无需额外原生代码 |
+| 朗读 | iOS 用系统 `AVSpeechSynthesizer`，中文语音离线可用 |
+| 显示名 | `入学必备720字`（`CFBundleDisplayName`） |
+
+建议在真机上再确认几点：
+
+- iPad 横屏时卡片被拉得很宽，可考虑给内容加最大宽度（如 720dp）居中
+- 英文界面下底部提示、按钮在 iPad 分屏窄宽度时是否溢出
+- 首次朗读若没声音，检查「设置 → 辅助功能 → 朗读内容 → 声音 → 中文」是否已下载
+
+#### 四、上架前清单
+
+1. **图标**：当前还是 Flutter 默认图标。准备 1024×1024 无透明 PNG，用 `flutter_launcher_icons` 一次生成 iOS / Android 全尺寸
+2. **启动图**：`ios/Runner/Base.lproj/LaunchScreen.storyboard` 仍是默认白色，可用 `flutter_native_splash` 生成
+3. **版本号**：建议把 `pubspec.yaml` 改成 `version: 1.0.0+1`，iOS 的 `CFBundleShortVersionString` / `CFBundleVersion` 会自动取这两个值；每次提审 build 号必须递增
+4. **隐私清单**：`ios/Runner/PrivacyInfo.xcprivacy` 已提供（声明 `UserDefaults` 用途 CA92.1）。**需在 Xcode 里把它拖进 Runner target 的 Copy Bundle Resources**，只放文件不生效
+5. **App Store 资料**：中英文名称、副标题、截图（6.7"/6.5"/12.9" iPad）、隐私政策 URL（本 App 不收集数据，填“不收集”）
+6. **体积**：图片 26.8 MB + 笔顺 1.6 MB，IPA 约 80–90 MB，仍在 200 MB 蜂窝下载限制内
 
 ### Gradle 全局仓库配置说明
 
@@ -281,6 +363,9 @@ python3 scripts/generate_images_nanobanana.py --dry-run  # 只打印提示词
 - **应用标识与产物命名**
   - 包名由 `com.example.untitled` 改为 `com.ailexin.HanziRoots`，MainActivity 同步迁移
   - APK 产物自动命名为 `HanziRoots-v<版本号>.apk`，例如 `HanziRoots-v0.1.0.apk`
+  - iOS Bundle ID 同步为 `com.ailexin.HanziRoots`，显示名改为“入学必备720字”
+  - 新增 `ios/Runner/PrivacyInfo.xcprivacy`（UserDefaults 用途声明）
+  - README 新增 iOS / iPad 打包与上架说明
 - **测试**
   - 增加 360dp 窄屏导航与布局冒烟测试，替换原默认计数器测试
   - 增加中英文切换测试（首页 → 阶段 → 课程 → 切回中文）
