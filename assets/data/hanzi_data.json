@@ -227,7 +227,7 @@
     ],
     "sentence": {
       "text": "弟弟今年六岁了。",
-      "pinyin": "dì dì jīn nián liù suì le 。"
+      "pinyin": "dì di jīn nián liù suì le 。"
     },
     "imageAsset": "assets/images/0006.webp",
     "needsReview": false,
@@ -571,12 +571,12 @@
       },
       {
         "text": "茶几",
-        "pinyin": "chá jǐ"
+        "pinyin": "chá jī"
       }
     ],
     "sentence": {
       "text": "桌子上有几个苹果。",
-      "pinyin": "zhuō zǐ shàng yǒu jǐ gè píng guǒ 。"
+      "pinyin": "zhuō zi shàng yǒu jǐ gè píng guǒ 。"
     },
     "imageAsset": "assets/images/0015.webp",
     "needsReview": false,
@@ -681,7 +681,7 @@
     "words": [
       {
         "text": "下雨",
-        "pinyin": "xià yù"
+        "pinyin": "xià yǔ"
       },
       {
         "text": "下面",
@@ -694,7 +694,7 @@
     ],
     "sentence": {
       "text": "今天下雨了。",
-      "pinyin": "jīn tiān xià yù le 。"
+      "pinyin": "jīn tiān xià yǔ le 。"
     },
     "imageAsset": "assets/images/0018.webp",
     "needsReview": false,
@@ -771,7 +771,7 @@
       },
       {
         "text": "右转",
-        "pinyin": "yòu zhuàn"
+        "pinyin": "yòu zhuǎn"
       }
     ],
     "sentence": {
@@ -815,7 +815,7 @@
     ],
     "sentence": {
       "text": "这个西瓜很大。",
-      "pinyin": "zhè gè xī guā hěn dà 。"
+      "pinyin": "zhè ge xī guā hěn dà 。"
     },
     "imageAsset": "assets/images/0021.webp",
     "needsReview": false,
@@ -854,7 +854,7 @@
     ],
     "sentence": {
       "text": "小狗在院子里跑。",
-      "pinyin": "xiǎo gǒu zài yuàn zǐ lǐ páo 。"
+      "pinyin": "xiǎo gǒu zài yuàn zi lǐ pǎo 。"
     },
     "imageAsset": "assets/images/0022.webp",
     "needsReview": false,
@@ -923,7 +923,7 @@
     "words": [
       {
         "text": "少年",
-        "pinyin": "shǎo nián"
+        "pinyin": "shào nián"
       },
       {
         "text": "多少",
@@ -1059,7 +1059,7 @@
     ],
     "sentence": {
       "text": "桌子的角落有一只猫。",
-      "pinyin": "zhuō zǐ de jiǎo luò yǒu yī zhǐ māo 。"
+      "pinyin": "zhuō zi de jiǎo luò yǒu yī zhī māo 。"
     },
     "imageAsset": "assets/images/0027.webp",
     "needsReview": false,
@@ -1599,7 +1599,7 @@
     ],
     "sentence": {
       "text": "这里的山川非常美丽。",
-      "pinyin": "zhè lǐ de shān chuān fēi cháng měi lí 。"
+      "pinyin": "zhè lǐ de shān chuān fēi cháng měi lì 。"
     },
     "imageAsset": "assets/images/0040.webp",
     "needsReview": false,
@@ -1640,7 +1640,7 @@
     ],
     "sentence": {
       "text": "田里的禾苗长得很好。",
-      "pinyin": "tián lǐ de hé miáo cháng de hěn hǎo 。"
+      "pinyin": "tián lǐ de hé miáo zhǎng de hěn hǎo 。"
     },
     "imageAsset": "assets/images/0041.webp",
     "needsReview": false,
@@ -1721,7 +1721,7 @@
     ],
     "sentence": {
       "text": "村子里有一口老井。",
-      "pinyin": "cūn zǐ lǐ yǒu yī kǒu lǎo jǐng 。"
+      "pinyin": "cūn zi lǐ yǒu yī kǒu lǎo jǐng 。"
     },
     "imageAsset": "assets/images/0043.webp",
     "needsReview": false,
@@ -1889,7 +1889,7 @@
     ],
     "sentence": {
       "text": "桌子上落了很多灰尘。",
-      "pinyin": "zhuō zǐ shàng luò le hěn duō huī chén 。"
+      "pinyin": "zhuō zi shàng luò le hěn duō huī chén 。"
     },
     "imageAsset": "assets/images/0047.webp",
     "needsReview": false,
@@ -1958,7 +1958,7 @@
     "words": [
       {
         "text": "日子",
-        "pinyin": "rì zǐ"
+        "pinyin": "rì zi"
       },
       {
         "text": "生日",
@@ -2091,7 +2091,7 @@
       },
       {
         "text": "乌云",
-        "pinyin": "wù yún"
+        "pinyin": "wū yún"
       }
     ],
     "sentence": {
@@ -2281,7 +2281,7 @@
     "words": [
       {
         "text": "广场",
-        "pinyin": "guǎng cháng"
+        "pinyin": "guǎng chǎng"
       },
       {
         "text": "广大",
@@ -2294,7 +2294,7 @@
     ],
     "sentence": {
       "text": "广场上有很多人在跳舞。",
-      "pinyin": "guǎng cháng shàng yǒu hěn duō rén zài tiào wǔ 。"
+      "pinyin": "guǎng chǎng shàng yǒu hěn duō rén zài tiào wǔ 。"
     },
     "imageAsset": "assets/images/0057.webp",
     "needsReview": false,
@@ -2418,7 +2418,7 @@
     ],
     "sentence": {
       "text": "我们应该给老人让座。",
-      "pinyin": "wǒ men yìng gāi gěi lǎo rén ràng zuò 。"
+      "pinyin": "wǒ men yīng gāi gěi lǎo rén ràng zuò 。"
     },
     "imageAsset": "assets/images/0060.webp",
     "needsReview": false,
@@ -2497,7 +2497,7 @@
     ],
     "sentence": {
       "text": "公园里的空气很新鲜。",
-      "pinyin": "gōng yuán lǐ de kōng qì hěn xīn xiǎn 。"
+      "pinyin": "gōng yuán lǐ de kōng qì hěn xīn xiān 。"
     },
     "imageAsset": "assets/images/0062.webp",
     "needsReview": false,
@@ -2619,12 +2619,12 @@
       },
       {
         "text": "鲜花",
-        "pinyin": "xiǎn huā"
+        "pinyin": "xiān huā"
       }
     ],
     "sentence": {
       "text": "花园里开满了鲜花。",
-      "pinyin": "huā yuán lǐ kāi mǎn le xiǎn huā 。"
+      "pinyin": "huā yuán lǐ kāi mǎn le xiān huā 。"
     },
     "imageAsset": "assets/images/0065.webp",
     "needsReview": false,
@@ -2870,7 +2870,7 @@
     "words": [
       {
         "text": "虫子",
-        "pinyin": "chóng zǐ"
+        "pinyin": "chóng zi"
       },
       {
         "text": "害虫",
@@ -2883,7 +2883,7 @@
     ],
     "sentence": {
       "text": "树叶上有一只小虫子。",
-      "pinyin": "shù yè shàng yǒu yī zhǐ xiǎo chóng zǐ 。"
+      "pinyin": "shù yè shàng yǒu yī zhī xiǎo chóng zi 。"
     },
     "imageAsset": "assets/images/0071.webp",
     "needsReview": false,
@@ -3006,7 +3006,7 @@
     ],
     "sentence": {
       "text": "那个女孩在公园里玩。",
-      "pinyin": "nà gè nǚ hái zài gōng yuán lǐ wán 。"
+      "pinyin": "nà ge nǚ hái zài gōng yuán lǐ wán 。"
     },
     "imageAsset": "assets/images/0074.webp",
     "needsReview": false,
@@ -3048,7 +3048,7 @@
     ],
     "sentence": {
       "text": "老师教我们写字。",
-      "pinyin": "lǎo shī jiāo wǒ men xiě zì 。"
+      "pinyin": "lǎo shī jiào wǒ men xiě zì 。"
     },
     "imageAsset": "assets/images/0075.webp",
     "needsReview": false,
@@ -3089,7 +3089,7 @@
     ],
     "sentence": {
       "text": "弟弟还在上幼儿园。",
-      "pinyin": "dì dì hái zài shàng yòu ér yuán 。"
+      "pinyin": "dì di hái zài shàng yòu ér yuán 。"
     },
     "imageAsset": "assets/images/0076.webp",
     "needsReview": false,
@@ -3249,7 +3249,7 @@
       },
       {
         "text": "妈咪",
-        "pinyin": "mā mǐ"
+        "pinyin": "mā mī"
       },
       {
         "text": "姑妈",
@@ -3290,7 +3290,7 @@
       },
       {
         "text": "兄长",
-        "pinyin": "xiōng cháng"
+        "pinyin": "xiōng zhǎng"
       },
       {
         "text": "表兄",
@@ -3329,7 +3329,7 @@
     "words": [
       {
         "text": "弟弟",
-        "pinyin": "dì dì"
+        "pinyin": "dì di"
       },
       {
         "text": "兄弟",
@@ -3342,7 +3342,7 @@
     ],
     "sentence": {
       "text": "我的弟弟今年五岁。",
-      "pinyin": "wǒ de dì dì jīn nián wǔ suì 。"
+      "pinyin": "wǒ de dì di jīn nián wǔ suì 。"
     },
     "imageAsset": "assets/images/0082.webp",
     "needsReview": false,
@@ -3537,11 +3537,11 @@
     "words": [
       {
         "text": "孩子",
-        "pinyin": "hái zǐ"
+        "pinyin": "hái zi"
       },
       {
         "text": "儿子",
-        "pinyin": "ér zǐ"
+        "pinyin": "ér zi"
       },
       {
         "text": "子女",
@@ -3550,7 +3550,7 @@
     ],
     "sentence": {
       "text": "这个孩子很爱笑。",
-      "pinyin": "zhè gè hái zǐ hěn ài xiào 。"
+      "pinyin": "zhè ge hái zi hěn ài xiào 。"
     },
     "imageAsset": "assets/images/0087.webp",
     "needsReview": false,
@@ -3579,7 +3579,7 @@
     "words": [
       {
         "text": "孙子",
-        "pinyin": "sūn zǐ"
+        "pinyin": "sūn zi"
       },
       {
         "text": "子孙",
@@ -3592,7 +3592,7 @@
     ],
     "sentence": {
       "text": "爷爷很疼爱小孙子。",
-      "pinyin": "yé yé hěn téng ài xiǎo sūn zǐ 。"
+      "pinyin": "yé yé hěn téng ài xiǎo sūn zi 。"
     },
     "imageAsset": "assets/images/0088.webp",
     "needsReview": false,
@@ -3706,7 +3706,7 @@
     "words": [
       {
         "text": "儿子",
-        "pinyin": "ér zǐ"
+        "pinyin": "ér zi"
       },
       {
         "text": "儿童",
@@ -3753,7 +3753,7 @@
     "words": [
       {
         "text": "婆婆",
-        "pinyin": "pó pó"
+        "pinyin": "pó po"
       },
       {
         "text": "外婆",
@@ -3967,7 +3967,7 @@
     "words": [
       {
         "text": "孩子",
-        "pinyin": "hái zǐ"
+        "pinyin": "hái zi"
       },
       {
         "text": "小孩",
@@ -3980,7 +3980,7 @@
     ],
     "sentence": {
       "text": "小孩们在操场上玩耍。",
-      "pinyin": "xiǎo hái men zài cāo cháng shàng wán shuǎ 。"
+      "pinyin": "xiǎo hái men zài cāo chǎng shàng wán shuǎ 。"
     },
     "imageAsset": "assets/images/0097.webp",
     "needsReview": false,
@@ -4257,11 +4257,11 @@
     "words": [
       {
         "text": "似乎",
-        "pinyin": "shì hū"
+        "pinyin": "sì hū"
       },
       {
         "text": "几乎",
-        "pinyin": "jǐ hū"
+        "pinyin": "jī hū"
       },
       {
         "text": "在乎",
@@ -4270,7 +4270,7 @@
     ],
     "sentence": {
       "text": "他似乎不在乎这件事。",
-      "pinyin": "tā shì hū bù zài hū zhè jiàn shì 。"
+      "pinyin": "tā sì hū bù zài hū zhè jiàn shì 。"
     },
     "imageAsset": "assets/images/0104.webp",
     "needsReview": false,
@@ -4459,7 +4459,7 @@
       },
       {
         "text": "公主",
-        "pinyin": "gōng zhù"
+        "pinyin": "gōng zhǔ"
       },
       {
         "text": "公鸡",
@@ -4508,7 +4508,7 @@
     ],
     "sentence": {
       "text": "从前有一个美丽的村庄。",
-      "pinyin": "cóng qián yǒu yī gè měi lí de cūn zhuāng 。"
+      "pinyin": "cóng qián yǒu yī gè měi lì de cūn zhuāng 。"
     },
     "imageAsset": "assets/images/0110.webp",
     "needsReview": false,
@@ -4596,7 +4596,7 @@
   {
     "id": "0113",
     "char": "为",
-    "pinyin": "wéi",
+    "pinyin": "wèi",
     "gradeId": 1,
     "orderInGrade": 113,
     "groupId": "g1_line29",
@@ -4613,20 +4613,20 @@
     "words": [
       {
         "text": "为了",
-        "pinyin": "wéi le"
+        "pinyin": "wèi le"
       },
       {
         "text": "因为",
-        "pinyin": "yīn wéi"
+        "pinyin": "yīn wèi"
       },
       {
         "text": "为什么",
-        "pinyin": "wéi shén me"
+        "pinyin": "wèi shén me"
       }
     ],
     "sentence": {
       "text": "他为了梦想努力学习。",
-      "pinyin": "tā wéi le mèng xiǎng nǔ lì xué xí 。"
+      "pinyin": "tā wèi le mèng xiǎng nǔ lì xué xí 。"
     },
     "imageAsset": "assets/images/0113.webp",
     "needsReview": false,
@@ -4657,7 +4657,7 @@
       },
       {
         "text": "为什么",
-        "pinyin": "wéi shén me"
+        "pinyin": "wèi shén me"
       },
       {
         "text": "没什么",
@@ -4748,7 +4748,7 @@
     ],
     "sentence": {
       "text": "我不知道如何解答这道题。",
-      "pinyin": "wǒ bù zhī dào rú hé jiè dá zhè dào tí 。"
+      "pinyin": "wǒ bù zhī dào rú hé jiě dá zhè dào tí 。"
     },
     "imageAsset": "assets/images/0116.webp",
     "needsReview": false,
@@ -4824,7 +4824,7 @@
     "words": [
       {
         "text": "低头",
-        "pinyin": "dī tou"
+        "pinyin": "dī tóu"
       },
       {
         "text": "降低",
@@ -4837,7 +4837,7 @@
     ],
     "sentence": {
       "text": "他低头看了看书包。",
-      "pinyin": "tā dī tou kàn le kàn shū bāo 。"
+      "pinyin": "tā dī tóu kàn le kàn shū bāo 。"
     },
     "imageAsset": "assets/images/0118.webp",
     "needsReview": false,
@@ -4864,7 +4864,7 @@
     "words": [
       {
         "text": "长大",
-        "pinyin": "cháng dà"
+        "pinyin": "zhǎng dà"
       },
       {
         "text": "长短",
@@ -4877,7 +4877,7 @@
     ],
     "sentence": {
       "text": "我长大想做一名医生。",
-      "pinyin": "wǒ cháng dà xiǎng zuò yī míng yī shēng 。"
+      "pinyin": "wǒ zhǎng dà xiǎng zuò yī míng yī shēng 。"
     },
     "imageAsset": "assets/images/0119.webp",
     "needsReview": false,
@@ -4963,7 +4963,7 @@
     ],
     "sentence": {
       "text": "工人叔叔在盖房子。",
-      "pinyin": "gōng rén shū shū zài gě fáng zǐ 。"
+      "pinyin": "gōng rén shū shū zài gài fáng zi 。"
     },
     "imageAsset": "assets/images/0121.webp",
     "needsReview": false,
@@ -5085,7 +5085,7 @@
     ],
     "sentence": {
       "text": "弟弟最喜欢踢足球。",
-      "pinyin": "dì dì zuì xǐ huān tī zú qiú 。"
+      "pinyin": "dì di zuì xǐ huān tī zú qiú 。"
     },
     "imageAsset": "assets/images/0124.webp",
     "needsReview": false,
@@ -5121,7 +5121,7 @@
       },
       {
         "text": "眉头",
-        "pinyin": "méi tou"
+        "pinyin": "méi tóu"
       },
       {
         "text": "皱眉",
@@ -5130,7 +5130,7 @@
     ],
     "sentence": {
       "text": "他皱着眉头想问题。",
-      "pinyin": "tā zhòu zhe méi tou xiǎng wèn tí 。"
+      "pinyin": "tā zhòu zhe méi tóu xiǎng wèn tí 。"
     },
     "imageAsset": "assets/images/0125.webp",
     "needsReview": false,
@@ -5158,7 +5158,7 @@
     "words": [
       {
         "text": "头发",
-        "pinyin": "tou fā"
+        "pinyin": "tóu fà"
       },
       {
         "text": "发芽",
@@ -5213,7 +5213,7 @@
     ],
     "sentence": {
       "text": "小兔子的耳朵很长。",
-      "pinyin": "xiǎo tù zǐ de ěr duǒ hěn cháng 。"
+      "pinyin": "xiǎo tù zi de ěr duǒ hěn cháng 。"
     },
     "imageAsset": "assets/images/0127.webp",
     "needsReview": false,
@@ -5323,7 +5323,7 @@
     "words": [
       {
         "text": "刷牙",
-        "pinyin": "shuà yá"
+        "pinyin": "shuā yá"
       },
       {
         "text": "牙齿",
@@ -5331,12 +5331,12 @@
       },
       {
         "text": "牙膏",
-        "pinyin": "yá gào"
+        "pinyin": "yá gāo"
       }
     ],
     "sentence": {
       "text": "每天刷牙是一个好习惯。",
-      "pinyin": "měi tiān shuà yá shì yī gè hǎo xí guàn 。"
+      "pinyin": "měi tiān shuā yá shì yī gè hǎo xí guàn 。"
     },
     "imageAsset": "assets/images/0130.webp",
     "needsReview": false,
@@ -5369,7 +5369,7 @@
     "words": [
       {
         "text": "唇膏",
-        "pinyin": "chún gào"
+        "pinyin": "chún gāo"
       },
       {
         "text": "嘴唇",
@@ -5382,7 +5382,7 @@
     ],
     "sentence": {
       "text": "她有一只红色唇膏。",
-      "pinyin": "tā yǒu yī zhǐ hóng sè chún gào 。"
+      "pinyin": "tā yǒu yī zhī hóng sè chún gāo 。"
     },
     "imageAsset": "assets/images/0131.webp",
     "needsReview": false,
@@ -5666,7 +5666,7 @@
     "words": [
       {
         "text": "片子",
-        "pinyin": "piàn zǐ"
+        "pinyin": "piān zi"
       },
       {
         "text": "一片",
@@ -5727,7 +5727,7 @@
     ],
     "sentence": {
       "text": "院子里有一棵大树。",
-      "pinyin": "yuàn zǐ lǐ yǒu yī kē dà shù 。"
+      "pinyin": "yuàn zi lǐ yǒu yī kē dà shù 。"
     },
     "imageAsset": "assets/images/0139.webp",
     "needsReview": false,
@@ -5774,7 +5774,7 @@
     ],
     "sentence": {
       "text": "我们排队进教室。",
-      "pinyin": "wǒ men pái duì jìn jiāo shì 。"
+      "pinyin": "wǒ men pái duì jìn jiào shì 。"
     },
     "imageAsset": "assets/images/0140.webp",
     "needsReview": false,
@@ -5847,7 +5847,7 @@
     "words": [
       {
         "text": "一只",
-        "pinyin": "yī zhǐ"
+        "pinyin": "yī zhī"
       },
       {
         "text": "只有",
@@ -5860,7 +5860,7 @@
     ],
     "sentence": {
       "text": "天上飞着一只小鸟。",
-      "pinyin": "tiān shàng fēi zhe yī zhǐ xiǎo niǎo 。"
+      "pinyin": "tiān shàng fēi zhe yī zhī xiǎo niǎo 。"
     },
     "imageAsset": "assets/images/0142.webp",
     "needsReview": false,
@@ -5890,7 +5890,7 @@
       },
       {
         "text": "个子",
-        "pinyin": "gè zǐ"
+        "pinyin": "gè zi"
       },
       {
         "text": "个人",
@@ -5899,7 +5899,7 @@
     ],
     "sentence": {
       "text": "他的个子长得很高。",
-      "pinyin": "tā de gè zǐ cháng de hěn gāo 。"
+      "pinyin": "tā de gè zi zhǎng de hěn gāo 。"
     },
     "imageAsset": "assets/images/0143.webp",
     "needsReview": false,
@@ -6265,7 +6265,7 @@
     "words": [
       {
         "text": "空闲",
-        "pinyin": "kōng xián"
+        "pinyin": "kòng xián"
       },
       {
         "text": "闲事",
@@ -6278,7 +6278,7 @@
     ],
     "sentence": {
       "text": "周末我有很多空闲时间。",
-      "pinyin": "zhōu mò wǒ yǒu hěn duō kōng xián shí jiān 。"
+      "pinyin": "zhōu mò wǒ yǒu hěn duō kòng xián shí jiān 。"
     },
     "imageAsset": "assets/images/0152.webp",
     "needsReview": false,
@@ -6354,12 +6354,12 @@
       },
       {
         "text": "相反",
-        "pinyin": "xiàng fǎn"
+        "pinyin": "xiāng fǎn"
       }
     ],
     "sentence": {
       "text": "大家都反对这个想法。",
-      "pinyin": "dà jiā dōu fǎn duì zhè gè xiǎng fǎ 。"
+      "pinyin": "dà jiā dōu fǎn duì zhè ge xiǎng fǎ 。"
     },
     "imageAsset": "assets/images/0154.webp",
     "needsReview": false,
@@ -6386,7 +6386,7 @@
     "words": [
       {
         "text": "打开",
-        "pinyin": "dá kāi"
+        "pinyin": "dǎ kāi"
       },
       {
         "text": "开心",
@@ -6399,7 +6399,7 @@
     ],
     "sentence": {
       "text": "我们开心地打开了礼物。",
-      "pinyin": "wǒ men kāi xīn dì dá kāi le lǐ wù 。"
+      "pinyin": "wǒ men kāi xīn dì dǎ kāi le lǐ wù 。"
     },
     "imageAsset": "assets/images/0155.webp",
     "needsReview": false,
@@ -6470,7 +6470,7 @@
     "words": [
       {
         "text": "有空",
-        "pinyin": "yǒu kōng"
+        "pinyin": "yǒu kòng"
       },
       {
         "text": "有趣",
@@ -6773,7 +6773,7 @@
     ],
     "sentence": {
       "text": "我有一双新鞋子。",
-      "pinyin": "wǒ yǒu yī shuāng xīn xié zǐ 。"
+      "pinyin": "wǒ yǒu yī shuāng xīn xié zi 。"
     },
     "imageAsset": "assets/images/0164.webp",
     "needsReview": false,
@@ -7123,7 +7123,7 @@
     ],
     "sentence": {
       "text": "老师教我们写字。",
-      "pinyin": "lǎo shī jiāo wǒ men xiě zì 。"
+      "pinyin": "lǎo shī jiào wǒ men xiě zì 。"
     },
     "imageAsset": "assets/images/0172.webp",
     "needsReview": false,
@@ -7257,7 +7257,7 @@
     ],
     "sentence": {
       "text": "弟弟在玩玩具。",
-      "pinyin": "dì dì zài wán wán jù 。"
+      "pinyin": "dì di zài wán wán jù 。"
     },
     "imageAsset": "assets/images/0175.webp",
     "needsReview": false,
@@ -7289,7 +7289,7 @@
       },
       {
         "text": "音乐",
-        "pinyin": "yīn lè"
+        "pinyin": "yīn yuè"
       },
       {
         "text": "乐园",
@@ -7336,16 +7336,16 @@
       },
       {
         "text": "猫咪",
-        "pinyin": "māo mǐ"
+        "pinyin": "māo mī"
       },
       {
         "text": "猫头鹰",
-        "pinyin": "māo tou yīng"
+        "pinyin": "māo tóu yīng"
       }
     ],
     "sentence": {
       "text": "小猫在沙发上睡觉。",
-      "pinyin": "xiǎo māo zài shà fā shàng shuì jiào 。"
+      "pinyin": "xiǎo māo zài shā fā shàng shuì jiào 。"
     },
     "imageAsset": "assets/images/0177.webp",
     "needsReview": false,
@@ -7389,7 +7389,7 @@
     ],
     "sentence": {
       "text": "小狗在院子里跑来跑去。",
-      "pinyin": "xiǎo gǒu zài yuàn zǐ lǐ páo lái páo qù 。"
+      "pinyin": "xiǎo gǒu zài yuàn zi lǐ pǎo lái pǎo qù 。"
     },
     "imageAsset": "assets/images/0178.webp",
     "needsReview": false,
@@ -7420,7 +7420,7 @@
     "words": [
       {
         "text": "兔子",
-        "pinyin": "tù zǐ"
+        "pinyin": "tù zi"
       },
       {
         "text": "白兔",
@@ -7433,7 +7433,7 @@
     ],
     "sentence": {
       "text": "兔子的耳朵又长又软。",
-      "pinyin": "tù zǐ de ěr duǒ yòu cháng yòu ruǎn 。"
+      "pinyin": "tù zi de ěr duǒ yòu cháng yòu ruǎn 。"
     },
     "imageAsset": "assets/images/0179.webp",
     "needsReview": false,
@@ -7563,7 +7563,7 @@
     ],
     "sentence": {
       "text": "干枯的树枝已经死了。",
-      "pinyin": "gàn kū de shù zhī yǐ jìng sǐ le 。"
+      "pinyin": "gān kū de shù zhī yǐ jīng sǐ le 。"
     },
     "imageAsset": "assets/images/0182.webp",
     "needsReview": false,
@@ -7608,7 +7608,7 @@
     ],
     "sentence": {
       "text": "这个小朋友很活泼。",
-      "pinyin": "zhè gè xiǎo péng yǒu hěn huó pō 。"
+      "pinyin": "zhè ge xiǎo péng yǒu hěn huó pō 。"
     },
     "imageAsset": "assets/images/0183.webp",
     "needsReview": false,
@@ -7649,7 +7649,7 @@
     ],
     "sentence": {
       "text": "消防员叔叔正在灭火。",
-      "pinyin": "xiāo fáng yún shū shū zhèng zài miè huǒ 。"
+      "pinyin": "xiāo fáng yuán shū shū zhèng zài miè huǒ 。"
     },
     "imageAsset": "assets/images/0184.webp",
     "needsReview": false,
@@ -7766,7 +7766,7 @@
     "words": [
       {
         "text": "美丽",
-        "pinyin": "měi lí"
+        "pinyin": "měi lì"
       },
       {
         "text": "美好",
@@ -7779,7 +7779,7 @@
     ],
     "sentence": {
       "text": "公园里的风景很美丽。",
-      "pinyin": "gōng yuán lǐ de fēng jǐng hěn měi lí 。"
+      "pinyin": "gōng yuán lǐ de fēng jǐng hěn měi lì 。"
     },
     "imageAsset": "assets/images/0187.webp",
     "needsReview": false,
@@ -7957,7 +7957,7 @@
     ],
     "sentence": {
       "text": "池塘里有一只青蛙。",
-      "pinyin": "chí táng lǐ yǒu yī zhǐ qīng wā 。"
+      "pinyin": "chí táng lǐ yǒu yī zhī qīng wā 。"
     },
     "imageAsset": "assets/images/0191.webp",
     "needsReview": false,
@@ -8005,7 +8005,7 @@
     ],
     "sentence": {
       "text": "妈妈穿了一件紫色的裙子。",
-      "pinyin": "mā mā chuān le yī jiàn zǐ sè de qún zǐ 。"
+      "pinyin": "mā mā chuān le yī jiàn zǐ sè de qún zi 。"
     },
     "imageAsset": "assets/images/0192.webp",
     "needsReview": false,
@@ -8083,7 +8083,7 @@
     "words": [
       {
         "text": "仔细",
-        "pinyin": "zǎi xì"
+        "pinyin": "zǐ xì"
       },
       {
         "text": "细心",
@@ -8220,11 +8220,11 @@
     "words": [
       {
         "text": "弯曲",
-        "pinyin": "wān qǔ"
+        "pinyin": "wān qū"
       },
       {
         "text": "转弯",
-        "pinyin": "zhuàn wān"
+        "pinyin": "zhuǎn wān"
       },
       {
         "text": "弯腰",
@@ -8233,7 +8233,7 @@
     ],
     "sentence": {
       "text": "前面的路有点弯曲。",
-      "pinyin": "qián miàn de lù yǒu diǎn wān qǔ 。"
+      "pinyin": "qián miàn de lù yǒu diǎn wān qū 。"
     },
     "imageAsset": "assets/images/0197.webp",
     "needsReview": false,
@@ -8243,7 +8243,7 @@
   {
     "id": "0198",
     "char": "曲",
-    "pinyin": "qǔ",
+    "pinyin": "qū",
     "gradeId": 2,
     "orderInGrade": 78,
     "groupId": "g2_line20",
@@ -8262,11 +8262,11 @@
     "words": [
       {
         "text": "弯曲",
-        "pinyin": "wān qǔ"
+        "pinyin": "wān qū"
       },
       {
         "text": "曲线",
-        "pinyin": "qǔ xiàn"
+        "pinyin": "qū xiàn"
       },
       {
         "text": "歌曲",
@@ -8275,7 +8275,7 @@
     ],
     "sentence": {
       "text": "这条河弯弯曲曲的。",
-      "pinyin": "zhè tiáo hé wān wān qǔ qǔ de 。"
+      "pinyin": "zhè tiáo hé wān wān qū qū de 。"
     },
     "imageAsset": "assets/images/0198.webp",
     "needsReview": false,
@@ -8447,7 +8447,7 @@
     ],
     "sentence": {
       "text": "请把窗户打开通风。",
-      "pinyin": "qǐng bǎ chuāng hù dá kāi tòng fēng 。"
+      "pinyin": "qǐng bǎ chuāng hù dǎ kāi tōng fēng 。"
     },
     "imageAsset": "assets/images/0202.webp",
     "needsReview": false,
@@ -8480,7 +8480,7 @@
     "words": [
       {
         "text": "桌子",
-        "pinyin": "zhuō zǐ"
+        "pinyin": "zhuō zi"
       },
       {
         "text": "书桌",
@@ -8528,7 +8528,7 @@
     "words": [
       {
         "text": "椅子",
-        "pinyin": "yǐ zǐ"
+        "pinyin": "yǐ zi"
       },
       {
         "text": "摇椅",
@@ -8575,7 +8575,7 @@
       },
       {
         "text": "迎接",
-        "pinyin": "yíng jié"
+        "pinyin": "yíng jiē"
       },
       {
         "text": "迎面",
@@ -8584,7 +8584,7 @@
     ],
     "sentence": {
       "text": "我们去车站迎接客人。",
-      "pinyin": "wǒ men qù chē zhàn yíng jié kè rén 。"
+      "pinyin": "wǒ men qù chē zhàn yíng jiē kè rén 。"
     },
     "imageAsset": "assets/images/0205.webp",
     "needsReview": false,
@@ -8800,7 +8800,7 @@
       },
       {
         "text": "解答",
-        "pinyin": "jiè dá"
+        "pinyin": "jiě dá"
       }
     ],
     "sentence": {
@@ -9015,7 +9015,7 @@
     "words": [
       {
         "text": "处理",
-        "pinyin": "chù lǐ"
+        "pinyin": "chǔ lǐ"
       },
       {
         "text": "到处",
@@ -9060,7 +9060,7 @@
     "words": [
       {
         "text": "教室",
-        "pinyin": "jiāo shì"
+        "pinyin": "jiào shì"
       },
       {
         "text": "室内",
@@ -9073,7 +9073,7 @@
     ],
     "sentence": {
       "text": "我们的教室很明亮。",
-      "pinyin": "wǒ men de jiāo shì hěn míng liàng 。"
+      "pinyin": "wǒ men de jiào shì hěn míng liàng 。"
     },
     "imageAsset": "assets/images/0216.webp",
     "needsReview": false,
@@ -9195,12 +9195,12 @@
       },
       {
         "text": "空闲",
-        "pinyin": "kōng xián"
+        "pinyin": "kòng xián"
       }
     ],
     "sentence": {
       "text": "公园里的空气很新鲜。",
-      "pinyin": "gōng yuán lǐ de kōng qì hěn xīn xiǎn 。"
+      "pinyin": "gōng yuán lǐ de kōng qì hěn xīn xiān 。"
     },
     "imageAsset": "assets/images/0219.webp",
     "needsReview": false,
@@ -9414,7 +9414,7 @@
     "words": [
       {
         "text": "院子",
-        "pinyin": "yuàn zǐ"
+        "pinyin": "yuàn zi"
       },
       {
         "text": "医院",
@@ -9427,7 +9427,7 @@
     ],
     "sentence": {
       "text": "奶奶在院子里种花。",
-      "pinyin": "nǎi nǎi zài yuàn zǐ lǐ zhòng huā 。"
+      "pinyin": "nǎi nǎi zài yuàn zi lǐ zhòng huā 。"
     },
     "imageAsset": "assets/images/0224.webp",
     "needsReview": false,
@@ -9499,7 +9499,7 @@
     "words": [
       {
         "text": "词语",
-        "pinyin": "cí yù"
+        "pinyin": "cí yǔ"
       },
       {
         "text": "单词",
@@ -9512,7 +9512,7 @@
     ],
     "sentence": {
       "text": "老师教我们新的词语。",
-      "pinyin": "lǎo shī jiāo wǒ men xīn de cí yù 。"
+      "pinyin": "lǎo shī jiào wǒ men xīn de cí yǔ 。"
     },
     "imageAsset": "assets/images/0226.webp",
     "needsReview": false,
@@ -9584,7 +9584,7 @@
     "words": [
       {
         "text": "句子",
-        "pinyin": "jù zǐ"
+        "pinyin": "jù zi"
       },
       {
         "text": "词句",
@@ -9592,12 +9592,12 @@
       },
       {
         "text": "语句",
-        "pinyin": "yù jù"
+        "pinyin": "yǔ jù"
       }
     ],
     "sentence": {
       "text": "请用这个词造一个句子。",
-      "pinyin": "qǐng yòng zhè gè cí zào yī gè jù zǐ 。"
+      "pinyin": "qǐng yòng zhè ge cí zào yī gè jù zi 。"
     },
     "imageAsset": "assets/images/0228.webp",
     "needsReview": false,
@@ -9607,7 +9607,7 @@
   {
     "id": "0229",
     "char": "头",
-    "pinyin": "tou",
+    "pinyin": "tóu",
     "gradeId": 2,
     "orderInGrade": 109,
     "groupId": "g2_line28",
@@ -9625,20 +9625,20 @@
     "words": [
       {
         "text": "头发",
-        "pinyin": "tou fā"
+        "pinyin": "tóu fà"
       },
       {
         "text": "头脑",
-        "pinyin": "tou nǎo"
+        "pinyin": "tóu nǎo"
       },
       {
         "text": "点头",
-        "pinyin": "diǎn tou"
+        "pinyin": "diǎn tóu"
       }
     ],
     "sentence": {
       "text": "他点了点头表示同意。",
-      "pinyin": "tā diǎn le diǎn tou biǎo shì tóng yì 。"
+      "pinyin": "tā diǎn le diǎn tóu biǎo shì tóng yì 。"
     },
     "imageAsset": "assets/images/0229.webp",
     "needsReview": false,
@@ -9675,7 +9675,7 @@
       },
       {
         "text": "脑子",
-        "pinyin": "nǎo zǐ"
+        "pinyin": "nǎo zi"
       },
       {
         "text": "电脑",
@@ -9757,7 +9757,7 @@
     "words": [
       {
         "text": "肚子",
-        "pinyin": "dù zǐ"
+        "pinyin": "dù zi"
       },
       {
         "text": "肚皮",
@@ -9770,7 +9770,7 @@
     ],
     "sentence": {
       "text": "我吃饱了，肚子圆圆的。",
-      "pinyin": "wǒ chī bǎo le ， dù zǐ yuán yuán de 。"
+      "pinyin": "wǒ chī bǎo le ， dù zi yuán yuán de 。"
     },
     "imageAsset": "assets/images/0232.webp",
     "needsReview": false,
@@ -9809,7 +9809,7 @@
       },
       {
         "text": "肩头",
-        "pinyin": "jiān tou"
+        "pinyin": "jiān tóu"
       }
     ],
     "sentence": {
@@ -9846,7 +9846,7 @@
     "words": [
       {
         "text": "背包",
-        "pinyin": "bèi bāo"
+        "pinyin": "bēi bāo"
       },
       {
         "text": "后背",
@@ -9899,7 +9899,7 @@
       },
       {
         "text": "腿脚",
-        "pinyin": "tuǐ jué"
+        "pinyin": "tuǐ jiǎo"
       },
       {
         "text": "长腿",
@@ -9908,7 +9908,7 @@
     ],
     "sentence": {
       "text": "运动员的腿脚很有力。",
-      "pinyin": "yùn dòng yún de tuǐ jué hěn yǒu lì 。"
+      "pinyin": "yùn dòng yuán de tuǐ jiǎo hěn yǒu lì 。"
     },
     "imageAsset": "assets/images/0235.webp",
     "needsReview": false,
@@ -9984,7 +9984,7 @@
     "words": [
       {
         "text": "尺子",
-        "pinyin": "chǐ zǐ"
+        "pinyin": "chǐ zi"
       },
       {
         "text": "直尺",
@@ -9997,7 +9997,7 @@
     ],
     "sentence": {
       "text": "请用尺子画一条直线。",
-      "pinyin": "qǐng yòng chǐ zǐ huà yī tiáo zhí xiàn 。"
+      "pinyin": "qǐng yòng chǐ zi huà yī tiáo zhí xiàn 。"
     },
     "imageAsset": "assets/images/0237.webp",
     "needsReview": false,
@@ -10007,7 +10007,7 @@
   {
     "id": "0238",
     "char": "夹",
-    "pinyin": "jiá",
+    "pinyin": "jiā",
     "gradeId": 2,
     "orderInGrade": 118,
     "groupId": "g2_line30",
@@ -10026,11 +10026,11 @@
     "words": [
       {
         "text": "夹子",
-        "pinyin": "jiá zǐ"
+        "pinyin": "jiā zi"
       },
       {
         "text": "夹心",
-        "pinyin": "jiá xīn"
+        "pinyin": "jiā xīn"
       },
       {
         "text": "夹克",
@@ -10039,7 +10039,7 @@
     ],
     "sentence": {
       "text": "妈妈用夹子把纸夹好。",
-      "pinyin": "mā mā yòng jiá zǐ bǎ zhǐ jiá hǎo 。"
+      "pinyin": "mā mā yòng jiā zi bǎ zhǐ jiā hǎo 。"
     },
     "imageAsset": "assets/images/0238.webp",
     "needsReview": false,
@@ -10076,7 +10076,7 @@
       },
       {
         "text": "钢笔",
-        "pinyin": "gàng bǐ"
+        "pinyin": "gāng bǐ"
       },
       {
         "text": "铅笔",
@@ -10121,7 +10121,7 @@
       },
       {
         "text": "包子",
-        "pinyin": "bāo zǐ"
+        "pinyin": "bāo zi"
       }
     ],
     "sentence": {
@@ -10169,7 +10169,7 @@
     ],
     "sentence": {
       "text": "她长大想当一名医生。",
-      "pinyin": "tā cháng dà xiǎng dāng yī míng yī shēng 。"
+      "pinyin": "tā zhǎng dà xiǎng dāng yī míng yī shēng 。"
     },
     "imageAsset": "assets/images/0241.webp",
     "needsReview": false,
@@ -10637,7 +10637,7 @@
       },
       {
         "text": "朝夕",
-        "pinyin": "cháo xī"
+        "pinyin": "zhāo xī"
       }
     ],
     "sentence": {
@@ -10819,7 +10819,7 @@
     ],
     "sentence": {
       "text": "冬天经常会下雪。",
-      "pinyin": "dōng tiān jìng cháng huì xià xuě 。"
+      "pinyin": "dōng tiān jīng cháng huì xià xuě 。"
     },
     "imageAsset": "assets/images/0256.webp",
     "needsReview": false,
@@ -10829,7 +10829,7 @@
   {
     "id": "0257",
     "char": "干",
-    "pinyin": "gàn",
+    "pinyin": "gān",
     "gradeId": 3,
     "orderInGrade": 17,
     "groupId": "g3_line5",
@@ -10845,20 +10845,20 @@
     "words": [
       {
         "text": "干净",
-        "pinyin": "gàn jìng"
+        "pinyin": "gān jìng"
       },
       {
         "text": "饼干",
-        "pinyin": "bǐng gàn"
+        "pinyin": "bǐng gān"
       },
       {
         "text": "干燥",
-        "pinyin": "gàn sào"
+        "pinyin": "gān zào"
       }
     ],
     "sentence": {
       "text": "妈妈把房间打扫得很干净。",
-      "pinyin": "mā mā bǎ fáng jiān dá sào de hěn gàn jìng 。"
+      "pinyin": "mā mā bǎ fáng jiān dǎ sǎo de hěn gān jìng 。"
     },
     "imageAsset": "assets/images/0257.webp",
     "needsReview": false,
@@ -10906,7 +10906,7 @@
     ],
     "sentence": {
       "text": "雨后的空气很湿润。",
-      "pinyin": "yù hòu de kōng qì hěn shī rùn 。"
+      "pinyin": "yǔ hòu de kōng qì hěn shī rùn 。"
     },
     "imageAsset": "assets/images/0258.webp",
     "needsReview": false,
@@ -11198,7 +11198,7 @@
     ],
     "sentence": {
       "text": "这双鞋子大小很合适。",
-      "pinyin": "zhè shuāng xié zǐ dà xiǎo hěn hé shì 。"
+      "pinyin": "zhè shuāng xié zi dà xiǎo hěn hé shì 。"
     },
     "imageAsset": "assets/images/0265.webp",
     "needsReview": false,
@@ -11238,7 +11238,7 @@
     ],
     "sentence": {
       "text": "这个方法很方便。",
-      "pinyin": "zhè gè fāng fǎ hěn fāng biàn 。"
+      "pinyin": "zhè ge fāng fǎ hěn fāng biàn 。"
     },
     "imageAsset": "assets/images/0266.webp",
     "needsReview": false,
@@ -11326,7 +11326,7 @@
     ],
     "sentence": {
       "text": "中秋节是家人团圆的日子。",
-      "pinyin": "zhōng qiū jié shì jiā rén tuán yuán de rì zǐ 。"
+      "pinyin": "zhōng qiū jié shì jiā rén tuán yuán de rì zi 。"
     },
     "imageAsset": "assets/images/0268.webp",
     "needsReview": false,
@@ -11541,7 +11541,7 @@
     ],
     "sentence": {
       "text": "农场里有几只小猪。",
-      "pinyin": "nóng cháng lǐ yǒu jǐ zhǐ xiǎo zhū 。"
+      "pinyin": "nóng chǎng lǐ yǒu jǐ zhī xiǎo zhū 。"
     },
     "imageAsset": "assets/images/0273.webp",
     "needsReview": false,
@@ -11698,12 +11698,12 @@
       },
       {
         "text": "调皮",
-        "pinyin": "diào pí"
+        "pinyin": "tiáo pí"
       }
     ],
     "sentence": {
       "text": "弟弟很调皮，喜欢拍皮球。",
-      "pinyin": "dì dì hěn diào pí ， xǐ huān pāi pí qiú 。"
+      "pinyin": "dì di hěn tiáo pí ， xǐ huān pāi pí qiú 。"
     },
     "imageAsset": "assets/images/0277.webp",
     "needsReview": false,
@@ -11812,20 +11812,20 @@
     "words": [
       {
         "text": "爪子",
-        "pinyin": "zhuǎ zǐ"
+        "pinyin": "zhuǎ zi"
       },
       {
         "text": "鹰爪",
-        "pinyin": "yīng zhuǎ"
+        "pinyin": "yīng zhǎo"
       },
       {
         "text": "脚爪",
-        "pinyin": "jué zhuǎ"
+        "pinyin": "jiǎo zhǎo"
       }
     ],
     "sentence": {
       "text": "小猫用爪子抓住了玩具。",
-      "pinyin": "xiǎo māo yòng zhuǎ zǐ zhuā zhù le wán jù 。"
+      "pinyin": "xiǎo māo yòng zhuǎ zi zhuā zhù le wán jù 。"
     },
     "imageAsset": "assets/images/0280.webp",
     "needsReview": false,
@@ -11905,11 +11905,11 @@
     "words": [
       {
         "text": "假期",
-        "pinyin": "jiǎ qī"
+        "pinyin": "jià qī"
       },
       {
         "text": "放假",
-        "pinyin": "fàng jiǎ"
+        "pinyin": "fàng jià"
       },
       {
         "text": "假话",
@@ -11918,7 +11918,7 @@
     ],
     "sentence": {
       "text": "暑假是我最快乐的假期。",
-      "pinyin": "shǔ jiǎ shì wǒ zuì kuài lè de jiǎ qī 。"
+      "pinyin": "shǔ jià shì wǒ zuì kuài lè de jià qī 。"
     },
     "imageAsset": "assets/images/0282.webp",
     "needsReview": false,
@@ -11976,7 +11976,7 @@
   {
     "id": "0284",
     "char": "恶",
-    "pinyin": "wù",
+    "pinyin": "è",
     "gradeId": 3,
     "orderInGrade": 44,
     "groupId": "g3_line11",
@@ -11998,21 +11998,21 @@
     "structure": "上下结构",
     "words": [
       {
-        "text": "恶心",
-        "pinyin": "wù xīn"
-      },
-      {
         "text": "凶恶",
-        "pinyin": "xiōng wù"
+        "pinyin": "xiōng è"
       },
       {
         "text": "恶人",
-        "pinyin": "wù rén"
+        "pinyin": "è rén"
+      },
+      {
+        "text": "恶劣",
+        "pinyin": "è liè"
       }
     ],
     "sentence": {
       "text": "故事里的恶人最后被打败了。",
-      "pinyin": "gù shì lǐ de wù rén zuì hòu bèi dá bài le 。"
+      "pinyin": "gù shì lǐ de è rén zuì hòu bèi dǎ bài le 。"
     },
     "imageAsset": "assets/images/0284.webp",
     "needsReview": false,
@@ -12143,7 +12143,7 @@
     ],
     "sentence": {
       "text": "教室前面挂着一面红旗。",
-      "pinyin": "jiāo shì qián miàn guà zhe yī miàn hóng qí 。"
+      "pinyin": "jiào shì qián miàn guà zhe yī miàn hóng qí 。"
     },
     "imageAsset": "assets/images/0287.webp",
     "needsReview": false,
@@ -12192,7 +12192,7 @@
     ],
     "sentence": {
       "text": "今天的天空又蓝又干净。",
-      "pinyin": "jīn tiān de tiān kōng yòu lán yòu gàn jìng 。"
+      "pinyin": "jīn tiān de tiān kōng yòu lán yòu gān jìng 。"
     },
     "imageAsset": "assets/images/0288.webp",
     "needsReview": false,
@@ -12285,7 +12285,7 @@
     ],
     "sentence": {
       "text": "他慢慢地走进了教室。",
-      "pinyin": "tā màn màn dì zǒu jìn le jiāo shì 。"
+      "pinyin": "tā màn màn dì zǒu jìn le jiào shì 。"
     },
     "imageAsset": "assets/images/0290.webp",
     "needsReview": false,
@@ -12362,7 +12362,7 @@
       },
       {
         "text": "接近",
-        "pinyin": "jié jìn"
+        "pinyin": "jiē jìn"
       },
       {
         "text": "最近",
@@ -12554,12 +12554,12 @@
       },
       {
         "text": "薄片",
-        "pinyin": "bó piàn"
+        "pinyin": "báo piàn"
       }
     ],
     "sentence": {
       "text": "这片纸非常薄。",
-      "pinyin": "zhè piàn zhǐ fēi cháng bó 。"
+      "pinyin": "zhè piàn zhǐ fēi cháng báo 。"
     },
     "imageAsset": "assets/images/0296.webp",
     "needsReview": false,
@@ -12591,11 +12591,11 @@
     "words": [
       {
         "text": "胖子",
-        "pinyin": "pàng zǐ"
+        "pinyin": "pàng zi"
       },
       {
         "text": "长胖",
-        "pinyin": "cháng pàng"
+        "pinyin": "zhǎng pàng"
       },
       {
         "text": "肥胖",
@@ -12604,7 +12604,7 @@
     ],
     "sentence": {
       "text": "小猪长得又圆又胖。",
-      "pinyin": "xiǎo zhū cháng de yòu yuán yòu pàng 。"
+      "pinyin": "xiǎo zhū zhǎng de yòu yuán yòu pàng 。"
     },
     "imageAsset": "assets/images/0297.webp",
     "needsReview": false,
@@ -12735,7 +12735,7 @@
       },
       {
         "text": "重量",
-        "pinyin": "zhòng liáng"
+        "pinyin": "zhòng liàng"
       },
       {
         "text": "沉重",
@@ -12744,7 +12744,7 @@
     ],
     "sentence": {
       "text": "这个箱子很重。",
-      "pinyin": "zhè gè xiāng zǐ hěn zhòng 。"
+      "pinyin": "zhè ge xiāng zi hěn zhòng 。"
     },
     "imageAsset": "assets/images/0300.webp",
     "needsReview": false,
@@ -12823,7 +12823,7 @@
       },
       {
         "text": "投降",
-        "pinyin": "tóu jiàng"
+        "pinyin": "tóu xiáng"
       }
     ],
     "sentence": {
@@ -12874,7 +12874,7 @@
     ],
     "sentence": {
       "text": "我们一起去公园玩吧。",
-      "pinyin": "wǒ men yī qǐ qù gōng yuán wán bā 。"
+      "pinyin": "wǒ men yī qǐ qù gōng yuán wán ba 。"
     },
     "imageAsset": "assets/images/0303.webp",
     "needsReview": false,
@@ -13177,7 +13177,7 @@
     "words": [
       {
         "text": "教室",
-        "pinyin": "jiāo shì"
+        "pinyin": "jiào shì"
       },
       {
         "text": "教书",
@@ -13185,12 +13185,12 @@
       },
       {
         "text": "教师",
-        "pinyin": "jiāo shī"
+        "pinyin": "jiào shī"
       }
     ],
     "sentence": {
       "text": "妈妈是一名小学教师。",
-      "pinyin": "mā mā shì yī míng xiǎo xué jiāo shī 。"
+      "pinyin": "mā mā shì yī míng xiǎo xué jiào shī 。"
     },
     "imageAsset": "assets/images/0310.webp",
     "needsReview": false,
@@ -13348,7 +13348,7 @@
     "words": [
       {
         "text": "叶子",
-        "pinyin": "yè zǐ"
+        "pinyin": "yè zi"
       },
       {
         "text": "树叶",
@@ -13484,16 +13484,16 @@
       },
       {
         "text": "吞咽",
-        "pinyin": "tūn yè"
+        "pinyin": "tūn yàn"
       },
       {
         "text": "狼吞虎咽",
-        "pinyin": "láng tūn hǔ yè"
+        "pinyin": "láng tūn hǔ yàn"
       }
     ],
     "sentence": {
       "text": "他狼吞虎咽地吃完了饭。",
-      "pinyin": "tā láng tūn hǔ yè dì chī wán le fàn 。"
+      "pinyin": "tā láng tūn hǔ yàn dì chī wán le fàn 。"
     },
     "imageAsset": "assets/images/0317.webp",
     "needsReview": false,
@@ -13503,7 +13503,7 @@
   {
     "id": "0318",
     "char": "吐",
-    "pinyin": "tù",
+    "pinyin": "tǔ",
     "gradeId": 3,
     "orderInGrade": 78,
     "groupId": "g3_line20",
@@ -13522,7 +13522,7 @@
     "words": [
       {
         "text": "吐出",
-        "pinyin": "tù chū"
+        "pinyin": "tǔ chū"
       },
       {
         "text": "呕吐",
@@ -13530,12 +13530,12 @@
       },
       {
         "text": "吞吐",
-        "pinyin": "tūn tù"
+        "pinyin": "tūn tǔ"
       }
     ],
     "sentence": {
       "text": "他把骨头吐了出来。",
-      "pinyin": "tā bǎ gǔ tou tù le chū lái 。"
+      "pinyin": "tā bǎ gǔ tou tǔ le chū lái 。"
     },
     "imageAsset": "assets/images/0318.webp",
     "needsReview": false,
@@ -13616,7 +13616,7 @@
       },
       {
         "text": "放假",
-        "pinyin": "fàng jiǎ"
+        "pinyin": "fàng jià"
       }
     ],
     "sentence": {
@@ -13707,7 +13707,7 @@
     ],
     "sentence": {
       "text": "小河边长着很多柳树。",
-      "pinyin": "xiǎo hé biān cháng zhe hěn duō liǔ shù 。"
+      "pinyin": "xiǎo hé biān zhǎng zhe hěn duō liǔ shù 。"
     },
     "imageAsset": "assets/images/0322.webp",
     "needsReview": false,
@@ -13801,7 +13801,7 @@
     ],
     "sentence": {
       "text": "我们暑假去了海边玩。",
-      "pinyin": "wǒ men shǔ jiǎ qù le hǎi biān wán 。"
+      "pinyin": "wǒ men shǔ jià qù le hǎi biān wán 。"
     },
     "imageAsset": "assets/images/0324.webp",
     "needsReview": false,
@@ -13811,7 +13811,7 @@
   {
     "id": "0325",
     "char": "汗",
-    "pinyin": "hán",
+    "pinyin": "hàn",
     "gradeId": 3,
     "orderInGrade": 85,
     "groupId": "g3_line22",
@@ -13830,20 +13830,20 @@
     "words": [
       {
         "text": "汗水",
-        "pinyin": "hán shuǐ"
+        "pinyin": "hàn shuǐ"
       },
       {
         "text": "出汗",
-        "pinyin": "chū hán"
+        "pinyin": "chū hàn"
       },
       {
         "text": "流汗",
-        "pinyin": "liú hán"
+        "pinyin": "liú hàn"
       }
     ],
     "sentence": {
       "text": "运动后我流了很多汗。",
-      "pinyin": "yùn dòng hòu wǒ liú le hěn duō hán 。"
+      "pinyin": "yùn dòng hòu wǒ liú le hěn duō hàn 。"
     },
     "imageAsset": "assets/images/0325.webp",
     "needsReview": false,
@@ -13937,7 +13937,7 @@
   {
     "id": "0328",
     "char": "血",
-    "pinyin": "xiě",
+    "pinyin": "xuè",
     "gradeId": 3,
     "orderInGrade": 88,
     "groupId": "g3_line22",
@@ -13956,7 +13956,7 @@
     "words": [
       {
         "text": "血液",
-        "pinyin": "xiě yè"
+        "pinyin": "xuè yè"
       },
       {
         "text": "流血",
@@ -13964,12 +13964,12 @@
       },
       {
         "text": "鲜血",
-        "pinyin": "xiǎn xiě"
+        "pinyin": "xiān xuè"
       }
     ],
     "sentence": {
       "text": "他不小心摔破了手，流了一点血。",
-      "pinyin": "tā bù xiǎo xīn shuāi pò le shǒu ， liú le yī diǎn xiě 。"
+      "pinyin": "tā bù xiǎo xīn shuāi pò le shǒu ， liú le yī diǎn xuè 。"
     },
     "imageAsset": "assets/images/0328.webp",
     "needsReview": false,
@@ -13994,7 +13994,7 @@
     "words": [
       {
         "text": "刀子",
-        "pinyin": "dāo zǐ"
+        "pinyin": "dāo zi"
       },
       {
         "text": "小刀",
@@ -14033,7 +14033,7 @@
     "words": [
       {
         "text": "叉子",
-        "pinyin": "chā zǐ"
+        "pinyin": "chā zi"
       },
       {
         "text": "交叉",
@@ -14046,7 +14046,7 @@
     ],
     "sentence": {
       "text": "我用叉子吃水果。",
-      "pinyin": "wǒ yòng chā zǐ chī shuǐ guǒ 。"
+      "pinyin": "wǒ yòng chā zi chī shuǐ guǒ 。"
     },
     "imageAsset": "assets/images/0330.webp",
     "needsReview": false,
@@ -14072,7 +14072,7 @@
     "words": [
       {
         "text": "勺子",
-        "pinyin": "sháo zǐ"
+        "pinyin": "sháo zi"
       },
       {
         "text": "汤勺",
@@ -14085,7 +14085,7 @@
     ],
     "sentence": {
       "text": "我用勺子喝汤。",
-      "pinyin": "wǒ yòng sháo zǐ hē tāng 。"
+      "pinyin": "wǒ yòng sháo zi hē tāng 。"
     },
     "imageAsset": "assets/images/0331.webp",
     "needsReview": false,
@@ -14117,7 +14117,7 @@
     "words": [
       {
         "text": "钩子",
-        "pinyin": "gōu zǐ"
+        "pinyin": "gōu zi"
       },
       {
         "text": "鱼钩",
@@ -14130,7 +14130,7 @@
     ],
     "sentence": {
       "text": "墙上有一个挂衣服的钩子。",
-      "pinyin": "qiáng shàng yǒu yī gè guà yī fú de gōu zǐ 。"
+      "pinyin": "qiáng shàng yǒu yī gè guà yī fú de gōu zi 。"
     },
     "imageAsset": "assets/images/0332.webp",
     "needsReview": false,
@@ -14180,7 +14180,7 @@
   {
     "id": "0334",
     "char": "雨",
-    "pinyin": "yù",
+    "pinyin": "yǔ",
     "gradeId": 3,
     "orderInGrade": 94,
     "groupId": "g3_line24",
@@ -14201,20 +14201,20 @@
     "words": [
       {
         "text": "下雨",
-        "pinyin": "xià yù"
+        "pinyin": "xià yǔ"
       },
       {
         "text": "雨伞",
-        "pinyin": "yù sǎn"
+        "pinyin": "yǔ sǎn"
       },
       {
         "text": "雨水",
-        "pinyin": "yù shuǐ"
+        "pinyin": "yǔ shuǐ"
       }
     ],
     "sentence": {
       "text": "出门前我带上了雨伞。",
-      "pinyin": "chū mén qián wǒ dài shàng le yù sǎn 。"
+      "pinyin": "chū mén qián wǒ dài shàng le yǔ sǎn 。"
     },
     "imageAsset": "assets/images/0334.webp",
     "needsReview": false,
@@ -14427,7 +14427,7 @@
     ],
     "sentence": {
       "text": "他长大想当一名士兵。",
-      "pinyin": "tā cháng dà xiǎng dāng yī míng shì bīng 。"
+      "pinyin": "tā zhǎng dà xiǎng dāng yī míng shì bīng 。"
     },
     "imageAsset": "assets/images/0339.webp",
     "needsReview": false,
@@ -14508,12 +14508,12 @@
       },
       {
         "text": "观众",
-        "pinyin": "guàn zhòng"
+        "pinyin": "guān zhòng"
       }
     ],
     "sentence": {
       "text": "观众们为运动员加油。",
-      "pinyin": "guàn zhòng men wéi yùn dòng yún jiā yóu 。"
+      "pinyin": "guān zhòng men wèi yùn dòng yuán jiā yóu 。"
     },
     "imageAsset": "assets/images/0341.webp",
     "needsReview": false,
@@ -14613,7 +14613,7 @@
   {
     "id": "0344",
     "char": "主",
-    "pinyin": "zhù",
+    "pinyin": "zhǔ",
     "gradeId": 3,
     "orderInGrade": 104,
     "groupId": "g3_line26",
@@ -14631,20 +14631,20 @@
     "words": [
       {
         "text": "主人",
-        "pinyin": "zhù rén"
+        "pinyin": "zhǔ rén"
       },
       {
         "text": "主意",
-        "pinyin": "zhù yì"
+        "pinyin": "zhǔ yì"
       },
       {
         "text": "主要",
-        "pinyin": "zhù yào"
+        "pinyin": "zhǔ yào"
       }
     ],
     "sentence": {
       "text": "小狗认出了它的主人。",
-      "pinyin": "xiǎo gǒu rèn chū le tā de zhù rén 。"
+      "pinyin": "xiǎo gǒu rèn chū le tā de zhǔ rén 。"
     },
     "imageAsset": "assets/images/0344.webp",
     "needsReview": false,
@@ -14772,7 +14772,7 @@
     ],
     "sentence": {
       "text": "弟弟今年三岁了。",
-      "pinyin": "dì dì jīn nián sān suì le 。"
+      "pinyin": "dì di jīn nián sān suì le 。"
     },
     "imageAsset": "assets/images/0347.webp",
     "needsReview": false,
@@ -15030,7 +15030,7 @@
     ],
     "sentence": {
       "text": "教室里很明亮。",
-      "pinyin": "jiāo shì lǐ hěn míng liàng 。"
+      "pinyin": "jiào shì lǐ hěn míng liàng 。"
     },
     "imageAsset": "assets/images/0353.webp",
     "needsReview": false,
@@ -15121,7 +15121,7 @@
     ],
     "sentence": {
       "text": "阳光照进了教室。",
-      "pinyin": "yáng guāng zhào jìn le jiāo shì 。"
+      "pinyin": "yáng guāng zhào jìn le jiào shì 。"
     },
     "imageAsset": "assets/images/0355.webp",
     "needsReview": false,
@@ -15203,7 +15203,7 @@
       },
       {
         "text": "衣裳",
-        "pinyin": "yī cháng"
+        "pinyin": "yī shang"
       },
       {
         "text": "上衣",
@@ -15337,12 +15337,12 @@
       },
       {
         "text": "银行",
-        "pinyin": "yín xíng"
+        "pinyin": "yín háng"
       }
     ],
     "sentence": {
       "text": "我们暑假去外地旅行。",
-      "pinyin": "wǒ men shǔ jiǎ qù wài dì lǚ xíng 。"
+      "pinyin": "wǒ men shǔ jià qù wài dì lǚ xíng 。"
     },
     "imageAsset": "assets/images/0360.webp",
     "needsReview": false,
@@ -15508,7 +15508,7 @@
     ],
     "sentence": {
       "text": "雨终于停止了。",
-      "pinyin": "yù zhōng yú tíng zhǐ le 。"
+      "pinyin": "yǔ zhōng yú tíng zhǐ le 。"
     },
     "imageAsset": "assets/images/0364.webp",
     "needsReview": false,
@@ -15611,7 +15611,7 @@
   {
     "id": "0367",
     "char": "跑",
-    "pinyin": "páo",
+    "pinyin": "pǎo",
     "gradeId": 4,
     "orderInGrade": 7,
     "groupId": "g4_line2",
@@ -15636,20 +15636,20 @@
     "words": [
       {
         "text": "跑步",
-        "pinyin": "páo bù"
+        "pinyin": "pǎo bù"
       },
       {
         "text": "奔跑",
-        "pinyin": "bèn páo"
+        "pinyin": "bēn pǎo"
       },
       {
         "text": "跑道",
-        "pinyin": "páo dào"
+        "pinyin": "pǎo dào"
       }
     ],
     "sentence": {
       "text": "他在操场上跑步。",
-      "pinyin": "tā zài cāo cháng shàng páo bù 。"
+      "pinyin": "tā zài cāo chǎng shàng pǎo bù 。"
     },
     "imageAsset": "assets/images/0367.webp",
     "needsReview": false,
@@ -15890,7 +15890,7 @@
   {
     "id": "0373",
     "char": "漂",
-    "pinyin": "piào",
+    "pinyin": "piāo",
     "gradeId": 4,
     "orderInGrade": 13,
     "groupId": "g4_line4",
@@ -15916,16 +15916,16 @@
     "structure": "左右结构",
     "words": [
       {
-        "text": "漂亮",
-        "pinyin": "piào liàng"
+        "text": "漂流",
+        "pinyin": "piāo liú"
       },
       {
         "text": "漂浮",
-        "pinyin": "piào fú"
+        "pinyin": "piāo fú"
       },
       {
-        "text": "漂流",
-        "pinyin": "piào liú"
+        "text": "漂亮",
+        "pinyin": "piào liàng"
       }
     ],
     "sentence": {
@@ -16210,7 +16210,7 @@
     ],
     "sentence": {
       "text": "听到这个消息，她感到很哀伤。",
-      "pinyin": "tīng dào zhè gè xiāo xī ， tā gǎn dào hěn āi shāng 。"
+      "pinyin": "tīng dào zhè ge xiāo xī ， tā gǎn dào hěn āi shāng 。"
     },
     "imageAsset": "assets/images/0379.webp",
     "needsReview": false,
@@ -16259,7 +16259,7 @@
     ],
     "sentence": {
       "text": "他正在为这道题发愁。",
-      "pinyin": "tā zhèng zài wéi zhè dào tí fā chóu 。"
+      "pinyin": "tā zhèng zài wèi zhè dào tí fā chóu 。"
     },
     "imageAsset": "assets/images/0380.webp",
     "needsReview": false,
@@ -16398,7 +16398,7 @@
     ],
     "sentence": {
       "text": "这个消息让大家很惊讶。",
-      "pinyin": "zhè gè xiāo xī ràng dà jiā hěn jīng yà 。"
+      "pinyin": "zhè ge xiāo xī ràng dà jiā hěn jīng yà 。"
     },
     "imageAsset": "assets/images/0383.webp",
     "needsReview": false,
@@ -16442,7 +16442,7 @@
     ],
     "sentence": {
       "text": "弟弟一个人睡觉会害怕。",
-      "pinyin": "dì dì yī gè rén shuì jiào huì hài pà 。"
+      "pinyin": "dì di yī gè rén shuì jiào huì hài pà 。"
     },
     "imageAsset": "assets/images/0384.webp",
     "needsReview": false,
@@ -16495,7 +16495,7 @@
   {
     "id": "0386",
     "char": "拉",
-    "pinyin": "lá",
+    "pinyin": "lā",
     "gradeId": 4,
     "orderInGrade": 26,
     "groupId": "g4_line7",
@@ -16516,20 +16516,20 @@
     "words": [
       {
         "text": "拉手",
-        "pinyin": "lá shǒu"
+        "pinyin": "lā shǒu"
       },
       {
         "text": "拉车",
-        "pinyin": "lá chē"
+        "pinyin": "lā chē"
       },
       {
         "text": "拉链",
-        "pinyin": "lá liàn"
+        "pinyin": "lā liàn"
       }
     ],
     "sentence": {
       "text": "我们手拉手一起走。",
-      "pinyin": "wǒ men shǒu lá shǒu yī qǐ zǒu 。"
+      "pinyin": "wǒ men shǒu lā shǒu yī qǐ zǒu 。"
     },
     "imageAsset": "assets/images/0386.webp",
     "needsReview": false,
@@ -16563,11 +16563,11 @@
     "words": [
       {
         "text": "弹琴",
-        "pinyin": "dàn qín"
+        "pinyin": "tán qín"
       },
       {
         "text": "弹力",
-        "pinyin": "dàn lì"
+        "pinyin": "tán lì"
       },
       {
         "text": "子弹",
@@ -16576,7 +16576,7 @@
     ],
     "sentence": {
       "text": "姐姐每天练习弹琴。",
-      "pinyin": "jiě jiě měi tiān liàn xí dàn qín 。"
+      "pinyin": "jiě jiě měi tiān liàn xí tán qín 。"
     },
     "imageAsset": "assets/images/0387.webp",
     "needsReview": false,
@@ -16616,12 +16616,12 @@
       },
       {
         "text": "奏乐",
-        "pinyin": "zòu lè"
+        "pinyin": "zòu yuè"
       }
     ],
     "sentence": {
       "text": "乐队正在台上演奏。",
-      "pinyin": "lè duì zhèng zài tái shàng yǎn zòu 。"
+      "pinyin": "yuè duì zhèng zài tái shàng yǎn zòu 。"
     },
     "imageAsset": "assets/images/0388.webp",
     "needsReview": false,
@@ -16795,12 +16795,12 @@
       },
       {
         "text": "争吵",
-        "pinyin": "zhèng chǎo"
+        "pinyin": "zhēng chǎo"
       }
     ],
     "sentence": {
       "text": "他们俩因为小事吵架了。",
-      "pinyin": "tā men liǎng yīn wéi xiǎo shì chǎo jià le 。"
+      "pinyin": "tā men liǎ yīn wèi xiǎo shì chǎo jià le 。"
     },
     "imageAsset": "assets/images/0392.webp",
     "needsReview": false,
@@ -16810,7 +16810,7 @@
   {
     "id": "0393",
     "char": "语",
-    "pinyin": "yù",
+    "pinyin": "yǔ",
     "gradeId": 4,
     "orderInGrade": 33,
     "groupId": "g4_line9",
@@ -16832,20 +16832,20 @@
     "words": [
       {
         "text": "语文",
-        "pinyin": "yù wén"
+        "pinyin": "yǔ wén"
       },
       {
         "text": "语言",
-        "pinyin": "yù yán"
+        "pinyin": "yǔ yán"
       },
       {
         "text": "成语",
-        "pinyin": "chéng yù"
+        "pinyin": "chéng yǔ"
       }
     ],
     "sentence": {
       "text": "我最喜欢上语文课。",
-      "pinyin": "wǒ zuì xǐ huān shàng yù wén kè 。"
+      "pinyin": "wǒ zuì xǐ huān shàng yǔ wén kè 。"
     },
     "imageAsset": "assets/images/0393.webp",
     "needsReview": false,
@@ -16889,7 +16889,7 @@
       },
       {
         "text": "数量",
-        "pinyin": "shù liáng"
+        "pinyin": "shù liàng"
       }
     ],
     "sentence": {
@@ -16925,7 +16925,7 @@
     "words": [
       {
         "text": "英语",
-        "pinyin": "yīng yù"
+        "pinyin": "yīng yǔ"
       },
       {
         "text": "英雄",
@@ -16938,7 +16938,7 @@
     ],
     "sentence": {
       "text": "我每天都练习英语。",
-      "pinyin": "wǒ měi tiān dōu liàn xí yīng yù 。"
+      "pinyin": "wǒ měi tiān dōu liàn xí yīng yǔ 。"
     },
     "imageAsset": "assets/images/0395.webp",
     "needsReview": false,
@@ -16984,7 +16984,7 @@
     ],
     "sentence": {
       "text": "上课铃响了，大家快进教室。",
-      "pinyin": "shàng kè líng xiǎng le ， dà jiā kuài jìn jiāo shì 。"
+      "pinyin": "shàng kè líng xiǎng le ， dà jiā kuài jìn jiào shì 。"
     },
     "imageAsset": "assets/images/0396.webp",
     "needsReview": false,
@@ -17105,7 +17105,7 @@
     "words": [
       {
         "text": "格子",
-        "pinyin": "gé zǐ"
+        "pinyin": "gé zi"
       },
       {
         "text": "性格",
@@ -17118,7 +17118,7 @@
     ],
     "sentence": {
       "text": "我的本子上印着小格子。",
-      "pinyin": "wǒ de běn zǐ shàng yìn zhe xiǎo gé zǐ 。"
+      "pinyin": "wǒ de běn zi shàng yìn zhe xiǎo gé zi 。"
     },
     "imageAsset": "assets/images/0399.webp",
     "needsReview": false,
@@ -17386,7 +17386,7 @@
       },
       {
         "text": "相信",
-        "pinyin": "xiàng xìn"
+        "pinyin": "xiāng xìn"
       }
     ],
     "sentence": {
@@ -17505,7 +17505,7 @@
     "words": [
       {
         "text": "本子",
-        "pinyin": "běn zǐ"
+        "pinyin": "běn zi"
       },
       {
         "text": "课本",
@@ -17518,7 +17518,7 @@
     ],
     "sentence": {
       "text": "我的本子上写满了字。",
-      "pinyin": "wǒ de běn zǐ shàng xiě mǎn le zì 。"
+      "pinyin": "wǒ de běn zi shàng xiě mǎn le zì 。"
     },
     "imageAsset": "assets/images/0408.webp",
     "needsReview": false,
@@ -17592,7 +17592,7 @@
     "words": [
       {
         "text": "伯伯",
-        "pinyin": "bó bó"
+        "pinyin": "bó bo"
       },
       {
         "text": "伯父",
@@ -17605,7 +17605,7 @@
     ],
     "sentence": {
       "text": "伯伯送了我一本新书。",
-      "pinyin": "bó bó sòng le wǒ yī běn xīn shū 。"
+      "pinyin": "bó bo sòng le wǒ yī běn xīn shū 。"
     },
     "imageAsset": "assets/images/0410.webp",
     "needsReview": false,
@@ -17777,7 +17777,7 @@
     "words": [
       {
         "text": "给予",
-        "pinyin": "gěi yú"
+        "pinyin": "jǐ yǔ"
       },
       {
         "text": "送给",
@@ -17785,7 +17785,7 @@
       },
       {
         "text": "还给",
-        "pinyin": "hái gěi"
+        "pinyin": "huán gěi"
       }
     ],
     "sentence": {
@@ -17954,7 +17954,7 @@
       },
       {
         "text": "谈论",
-        "pinyin": "tán lún"
+        "pinyin": "tán lùn"
       },
       {
         "text": "交谈",
@@ -17993,11 +17993,11 @@
     "words": [
       {
         "text": "语言",
-        "pinyin": "yù yán"
+        "pinyin": "yǔ yán"
       },
       {
         "text": "言语",
-        "pinyin": "yán yù"
+        "pinyin": "yán yǔ"
       },
       {
         "text": "名言",
@@ -18045,12 +18045,12 @@
       },
       {
         "text": "话语",
-        "pinyin": "huà yù"
+        "pinyin": "huà yǔ"
       }
     ],
     "sentence": {
       "text": "妈妈打电话给奶奶。",
-      "pinyin": "mā mā dá diàn huà gěi nǎi nǎi 。"
+      "pinyin": "mā mā dǎ diàn huà gěi nǎi nǎi 。"
     },
     "imageAsset": "assets/images/0420.webp",
     "needsReview": false,
@@ -18089,7 +18089,7 @@
     "words": [
       {
         "text": "操场",
-        "pinyin": "cāo cháng"
+        "pinyin": "cāo chǎng"
       },
       {
         "text": "操心",
@@ -18102,7 +18102,7 @@
     ],
     "sentence": {
       "text": "我们在操场上做体操。",
-      "pinyin": "wǒ men zài cāo cháng shàng zuò tǐ cāo 。"
+      "pinyin": "wǒ men zài cāo chǎng shàng zuò tǐ cāo 。"
     },
     "imageAsset": "assets/images/0421.webp",
     "needsReview": false,
@@ -18112,7 +18112,7 @@
   {
     "id": "0422",
     "char": "场",
-    "pinyin": "cháng",
+    "pinyin": "chǎng",
     "gradeId": 4,
     "orderInGrade": 62,
     "groupId": "g4_line16",
@@ -18131,20 +18131,20 @@
     "words": [
       {
         "text": "操场",
-        "pinyin": "cāo cháng"
+        "pinyin": "cāo chǎng"
       },
       {
         "text": "场地",
-        "pinyin": "cháng dì"
+        "pinyin": "chǎng dì"
       },
       {
         "text": "市场",
-        "pinyin": "shì cháng"
+        "pinyin": "shì chǎng"
       }
     ],
     "sentence": {
       "text": "操场上有很多同学在跑步。",
-      "pinyin": "cāo cháng shàng yǒu hěn duō tóng xué zài páo bù 。"
+      "pinyin": "cāo chǎng shàng yǒu hěn duō tóng xué zài pǎo bù 。"
     },
     "imageAsset": "assets/images/0422.webp",
     "needsReview": false,
@@ -18177,7 +18177,7 @@
       },
       {
         "text": "厂长",
-        "pinyin": "chǎng cháng"
+        "pinyin": "chǎng zhǎng"
       }
     ],
     "sentence": {
@@ -18213,7 +18213,7 @@
     "words": [
       {
         "text": "房子",
-        "pinyin": "fáng zǐ"
+        "pinyin": "fáng zi"
       },
       {
         "text": "房间",
@@ -18226,7 +18226,7 @@
     ],
     "sentence": {
       "text": "我们住的房子很温馨。",
-      "pinyin": "wǒ men zhù de fáng zǐ hěn wēn xīn 。"
+      "pinyin": "wǒ men zhù de fáng zi hěn wēn xīn 。"
     },
     "imageAsset": "assets/images/0424.webp",
     "needsReview": false,
@@ -18312,7 +18312,7 @@
     ],
     "sentence": {
       "text": "他卖力地搬着箱子。",
-      "pinyin": "tā mài lì dì bān zhe xiāng zǐ 。"
+      "pinyin": "tā mài lì dì bān zhe xiāng zi 。"
     },
     "imageAsset": "assets/images/0426.webp",
     "needsReview": false,
@@ -18400,7 +18400,7 @@
       },
       {
         "text": "票价",
-        "pinyin": "piào jie"
+        "pinyin": "piào jià"
       }
     ],
     "sentence": {
@@ -18502,7 +18502,7 @@
     ],
     "sentence": {
       "text": "蜜蜂正在采花蜜。",
-      "pinyin": "mì fēng zhèng zài cài huā mì 。"
+      "pinyin": "mì fēng zhèng zài cǎi huā mì 。"
     },
     "imageAsset": "assets/images/0430.webp",
     "needsReview": false,
@@ -18618,7 +18618,7 @@
     "words": [
       {
         "text": "麦子",
-        "pinyin": "mài zǐ"
+        "pinyin": "mài zi"
       },
       {
         "text": "小麦",
@@ -18661,7 +18661,7 @@
     "words": [
       {
         "text": "豆子",
-        "pinyin": "dòu zǐ"
+        "pinyin": "dòu zi"
       },
       {
         "text": "黄豆",
@@ -18712,7 +18712,7 @@
     "words": [
       {
         "text": "稻子",
-        "pinyin": "dào zǐ"
+        "pinyin": "dào zi"
       },
       {
         "text": "水稻",
@@ -18755,7 +18755,7 @@
     "words": [
       {
         "text": "谷子",
-        "pinyin": "gǔ zǐ"
+        "pinyin": "gǔ zi"
       },
       {
         "text": "五谷",
@@ -18901,7 +18901,7 @@
     ],
     "sentence": {
       "text": "妹妹喜欢粉色的裙子。",
-      "pinyin": "mèi mèi xǐ huān fěn sè de qún zǐ 。"
+      "pinyin": "mèi mèi xǐ huān fěn sè de qún zi 。"
     },
     "imageAsset": "assets/images/0439.webp",
     "needsReview": false,
@@ -19032,7 +19032,7 @@
     "words": [
       {
         "text": "鼻子",
-        "pinyin": "bí zǐ"
+        "pinyin": "bí zi"
       },
       {
         "text": "鼻涕",
@@ -19045,7 +19045,7 @@
     ],
     "sentence": {
       "text": "大象的鼻子又长又粗。",
-      "pinyin": "dà xiàng de bí zǐ yòu cháng yòu cū 。"
+      "pinyin": "dà xiàng de bí zi yòu cháng yòu cū 。"
     },
     "imageAsset": "assets/images/0442.webp",
     "needsReview": false,
@@ -19144,7 +19144,7 @@
     ],
     "sentence": {
       "text": "弟弟的脸蛋红红的。",
-      "pinyin": "dì dì de liǎn dàn hóng hóng de 。"
+      "pinyin": "dì di de liǎn dàn hóng hóng de 。"
     },
     "imageAsset": "assets/images/0444.webp",
     "needsReview": false,
@@ -19315,7 +19315,7 @@
       },
       {
         "text": "朝暮",
-        "pinyin": "cháo mù"
+        "pinyin": "zhāo mù"
       }
     ],
     "sentence": {
@@ -19450,7 +19450,7 @@
       },
       {
         "text": "意思",
-        "pinyin": "yì sī"
+        "pinyin": "yì si"
       },
       {
         "text": "思念",
@@ -19459,7 +19459,7 @@
     ],
     "sentence": {
       "text": "他认真地思考这个问题。",
-      "pinyin": "tā rèn zhēn dì sī kǎo zhè gè wèn tí 。"
+      "pinyin": "tā rèn zhēn dì sī kǎo zhè ge wèn tí 。"
     },
     "imageAsset": "assets/images/0451.webp",
     "needsReview": false,
@@ -19469,7 +19469,7 @@
   {
     "id": "0452",
     "char": "转",
-    "pinyin": "zhuàn",
+    "pinyin": "zhuǎn",
     "gradeId": 4,
     "orderInGrade": 92,
     "groupId": "g4_line23",
@@ -19490,7 +19490,7 @@
     "words": [
       {
         "text": "转身",
-        "pinyin": "zhuàn shēn"
+        "pinyin": "zhuǎn shēn"
       },
       {
         "text": "转动",
@@ -19498,12 +19498,12 @@
       },
       {
         "text": "转弯",
-        "pinyin": "zhuàn wān"
+        "pinyin": "zhuǎn wān"
       }
     ],
     "sentence": {
       "text": "他转身向我们挥手。",
-      "pinyin": "tā zhuàn shēn xiàng wǒ men huī shǒu 。"
+      "pinyin": "tā zhuǎn shēn xiàng wǒ men huī shǒu 。"
     },
     "imageAsset": "assets/images/0452.webp",
     "needsReview": false,
@@ -19603,7 +19603,7 @@
   {
     "id": "0455",
     "char": "脏",
-    "pinyin": "zàng",
+    "pinyin": "zāng",
     "gradeId": 4,
     "orderInGrade": 95,
     "groupId": "g4_line24",
@@ -19630,16 +19630,16 @@
       },
       {
         "text": "弄脏",
-        "pinyin": "nòng zàng"
+        "pinyin": "nòng zāng"
       },
       {
         "text": "脏话",
-        "pinyin": "zàng huà"
+        "pinyin": "zāng huà"
       }
     ],
     "sentence": {
       "text": "他不小心弄脏了衣服。",
-      "pinyin": "tā bù xiǎo xīn nòng zàng le yī fú 。"
+      "pinyin": "tā bù xiǎo xīn nòng zāng le yī fú 。"
     },
     "imageAsset": "assets/images/0455.webp",
     "needsReview": false,
@@ -19670,7 +19670,7 @@
     "words": [
       {
         "text": "干净",
-        "pinyin": "gàn jìng"
+        "pinyin": "gān jìng"
       },
       {
         "text": "净化",
@@ -19683,7 +19683,7 @@
     ],
     "sentence": {
       "text": "妈妈把家里打扫得很干净。",
-      "pinyin": "mā mā bǎ jiā lǐ dá sào de hěn gàn jìng 。"
+      "pinyin": "mā mā bǎ jiā lǐ dǎ sǎo de hěn gān jìng 。"
     },
     "imageAsset": "assets/images/0456.webp",
     "needsReview": false,
@@ -19723,7 +19723,7 @@
       },
       {
         "text": "新鲜",
-        "pinyin": "xīn xiǎn"
+        "pinyin": "xīn xiān"
       },
       {
         "text": "新衣",
@@ -19773,7 +19773,7 @@
     ],
     "sentence": {
       "text": "这件衣服已经很旧了。",
-      "pinyin": "zhè jiàn yī fú yǐ jìng hěn jiù le 。"
+      "pinyin": "zhè jiàn yī fú yǐ jīng hěn jiù le 。"
     },
     "imageAsset": "assets/images/0458.webp",
     "needsReview": false,
@@ -19947,12 +19947,12 @@
       },
       {
         "text": "船长",
-        "pinyin": "chuán cháng"
+        "pinyin": "chuán zhǎng"
       }
     ],
     "sentence": {
       "text": "湖面上漂着一只小船。",
-      "pinyin": "hú miàn shàng piào zhe yī zhǐ xiǎo chuán 。"
+      "pinyin": "hú miàn shàng piāo zhe yī zhī xiǎo chuán 。"
     },
     "imageAsset": "assets/images/0462.webp",
     "needsReview": false,
@@ -19994,7 +19994,7 @@
     ],
     "sentence": {
       "text": "海面上有一只白色的帆船。",
-      "pinyin": "hǎi miàn shàng yǒu yī zhǐ bái sè de fān chuán 。"
+      "pinyin": "hǎi miàn shàng yǒu yī zhī bái sè de fān chuán 。"
     },
     "imageAsset": "assets/images/0463.webp",
     "needsReview": false,
@@ -20105,7 +20105,7 @@
     "words": [
       {
         "text": "村子",
-        "pinyin": "cūn zǐ"
+        "pinyin": "cūn zi"
       },
       {
         "text": "农村",
@@ -20118,7 +20118,7 @@
     ],
     "sentence": {
       "text": "这个村子坐落在山脚下。",
-      "pinyin": "zhè gè cūn zǐ zuò luò zài shān jué xià 。"
+      "pinyin": "zhè ge cūn zi zuò luò zài shān jiǎo xià 。"
     },
     "imageAsset": "assets/images/0466.webp",
     "needsReview": false,
@@ -20333,7 +20333,7 @@
       },
       {
         "text": "寒假",
-        "pinyin": "hán jiǎ"
+        "pinyin": "hán jià"
       },
       {
         "text": "严寒",
@@ -20388,7 +20388,7 @@
     ],
     "sentence": {
       "text": "市场里非常热闹。",
-      "pinyin": "shì cháng lǐ fēi cháng rè nào 。"
+      "pinyin": "shì chǎng lǐ fēi cháng rè nào 。"
     },
     "imageAsset": "assets/images/0472.webp",
     "needsReview": false,
@@ -20438,7 +20438,7 @@
     ],
     "sentence": {
       "text": "这个柠檬又酸又甜。",
-      "pinyin": "zhè gè níng méng yòu suān yòu tián 。"
+      "pinyin": "zhè ge níng méng yòu suān yòu tián 。"
     },
     "imageAsset": "assets/images/0473.webp",
     "needsReview": false,
@@ -20485,7 +20485,7 @@
     ],
     "sentence": {
       "text": "这个西瓜又香又甜。",
-      "pinyin": "zhè gè xī guā yòu xiāng yòu tián 。"
+      "pinyin": "zhè ge xī guā yòu xiāng yòu tián 。"
     },
     "imageAsset": "assets/images/0474.webp",
     "needsReview": false,
@@ -20666,7 +20666,7 @@
     ],
     "sentence": {
       "text": "这个柿子吃起来有点涩。",
-      "pinyin": "zhè gè shì zǐ chī qǐ lái yǒu diǎn sè 。"
+      "pinyin": "zhè ge shì zi chī qǐ lái yǒu diǎn sè 。"
     },
     "imageAsset": "assets/images/0478.webp",
     "needsReview": false,
@@ -20792,11 +20792,11 @@
     "words": [
       {
         "text": "钢琴",
-        "pinyin": "gàng qín"
+        "pinyin": "gāng qín"
       },
       {
         "text": "弹琴",
-        "pinyin": "dàn qín"
+        "pinyin": "tán qín"
       },
       {
         "text": "小提琴",
@@ -20805,7 +20805,7 @@
     ],
     "sentence": {
       "text": "姐姐每天练习弹钢琴。",
-      "pinyin": "jiě jiě měi tiān liàn xí dàn gàng qín 。"
+      "pinyin": "jiě jiě měi tiān liàn xí tán gāng qín 。"
     },
     "imageAsset": "assets/images/0481.webp",
     "needsReview": false,
@@ -20889,7 +20889,7 @@
     "words": [
       {
         "text": "打鼓",
-        "pinyin": "dá gǔ"
+        "pinyin": "dǎ gǔ"
       },
       {
         "text": "鼓掌",
@@ -20902,7 +20902,7 @@
     ],
     "sentence": {
       "text": "大家为他的表演鼓掌。",
-      "pinyin": "dà jiā wéi tā de biǎo yǎn gǔ zhǎng 。"
+      "pinyin": "dà jiā wèi tā de biǎo yǎn gǔ zhǎng 。"
     },
     "imageAsset": "assets/images/0483.webp",
     "needsReview": false,
@@ -21024,7 +21024,7 @@
     "words": [
       {
         "text": "哨子",
-        "pinyin": "shào zǐ"
+        "pinyin": "shào zi"
       },
       {
         "text": "吹哨",
@@ -21037,7 +21037,7 @@
     ],
     "sentence": {
       "text": "裁判吹响了哨子。",
-      "pinyin": "cái pàn chuī xiǎng le shào zǐ 。"
+      "pinyin": "cái pàn chuī xiǎng le shào zi 。"
     },
     "imageAsset": "assets/images/0486.webp",
     "needsReview": false,
@@ -21082,7 +21082,7 @@
     ],
     "sentence": {
       "text": "爷爷会拉二胡。",
-      "pinyin": "yé yé huì lá èr hú 。"
+      "pinyin": "yé yé huì lā èr hú 。"
     },
     "imageAsset": "assets/images/0487.webp",
     "needsReview": false,
@@ -21116,7 +21116,7 @@
     "words": [
       {
         "text": "笛子",
-        "pinyin": "dí zǐ"
+        "pinyin": "dí zi"
       },
       {
         "text": "长笛",
@@ -21129,7 +21129,7 @@
     ],
     "sentence": {
       "text": "他用笛子吹了一首曲子。",
-      "pinyin": "tā yòng dí zǐ chuī le yī shǒu qǔ zǐ 。"
+      "pinyin": "tā yòng dí zi chuī le yī shǒu qǔ zi 。"
     },
     "imageAsset": "assets/images/0488.webp",
     "needsReview": false,
@@ -21199,7 +21199,7 @@
     "words": [
       {
         "text": "尾巴",
-        "pinyin": "wěi bā"
+        "pinyin": "wěi ba"
       },
       {
         "text": "结尾",
@@ -21212,7 +21212,7 @@
     ],
     "sentence": {
       "text": "小狗摇着尾巴跑过来。",
-      "pinyin": "xiǎo gǒu yáo zhe wěi bā páo guò lái 。"
+      "pinyin": "xiǎo gǒu yáo zhe wěi ba pǎo guò lái 。"
     },
     "imageAsset": "assets/images/0490.webp",
     "needsReview": false,
@@ -21268,7 +21268,7 @@
   {
     "id": "0492",
     "char": "脚",
-    "pinyin": "jué",
+    "pinyin": "jiǎo",
     "gradeId": 5,
     "orderInGrade": 12,
     "groupId": "g5_line3",
@@ -21292,20 +21292,20 @@
     "words": [
       {
         "text": "脚步",
-        "pinyin": "jué bù"
+        "pinyin": "jiǎo bù"
       },
       {
         "text": "脚印",
-        "pinyin": "jué yìn"
+        "pinyin": "jiǎo yìn"
       },
       {
         "text": "脚趾",
-        "pinyin": "jué zhǐ"
+        "pinyin": "jiǎo zhǐ"
       }
     ],
     "sentence": {
       "text": "雪地上留下了一串脚印。",
-      "pinyin": "xuě dì shàng liú xià le yī chuàn jué yìn 。"
+      "pinyin": "xuě dì shàng liú xià le yī chuàn jiǎo yìn 。"
     },
     "imageAsset": "assets/images/0492.webp",
     "needsReview": false,
@@ -22240,7 +22240,7 @@
   {
     "id": "0513",
     "char": "沙",
-    "pinyin": "shà",
+    "pinyin": "shā",
     "gradeId": 5,
     "orderInGrade": 33,
     "groupId": "g5_line9",
@@ -22260,20 +22260,20 @@
     "words": [
       {
         "text": "沙子",
-        "pinyin": "shà zǐ"
+        "pinyin": "shā zi"
       },
       {
         "text": "沙滩",
-        "pinyin": "shà tān"
+        "pinyin": "shā tān"
       },
       {
         "text": "沙漠",
-        "pinyin": "shà mò"
+        "pinyin": "shā mò"
       }
     ],
     "sentence": {
       "text": "我们在沙滩上堆城堡。",
-      "pinyin": "wǒ men zài shà tān shàng duī chéng bǎo 。"
+      "pinyin": "wǒ men zài shā tān shàng duī chéng bǎo 。"
     },
     "imageAsset": "assets/images/0513.webp",
     "needsReview": false,
@@ -22317,7 +22317,7 @@
     ],
     "sentence": {
       "text": "雨后的路上有些泥泞。",
-      "pinyin": "yù hòu de lù shàng yǒu xiē ní nìng 。"
+      "pinyin": "yǔ hòu de lù shàng yǒu xiē ní nìng 。"
     },
     "imageAsset": "assets/images/0514.webp",
     "needsReview": false,
@@ -22405,7 +22405,7 @@
     ],
     "sentence": {
       "text": "村子旁边有一条小水沟。",
-      "pinyin": "cūn zǐ páng biān yǒu yī tiáo xiǎo shuǐ gōu 。"
+      "pinyin": "cūn zi páng biān yǒu yī tiáo xiǎo shuǐ gōu 。"
     },
     "imageAsset": "assets/images/0516.webp",
     "needsReview": false,
@@ -22453,12 +22453,12 @@
       },
       {
         "text": "朝霞",
-        "pinyin": "cháo xiá"
+        "pinyin": "zhāo xiá"
       }
     ],
     "sentence": {
       "text": "傍晚的晚霞非常美丽。",
-      "pinyin": "bàng wǎn de wǎn xiá fēi cháng měi lí 。"
+      "pinyin": "bàng wǎn de wǎn xiá fēi cháng měi lì 。"
     },
     "imageAsset": "assets/images/0517.webp",
     "needsReview": false,
@@ -22503,7 +22503,7 @@
     ],
     "sentence": {
       "text": "雨后天空出现了一道彩虹。",
-      "pinyin": "yù hòu tiān kōng chū xiàn le yī dào cǎi hóng 。"
+      "pinyin": "yǔ hòu tiān kōng chū xiàn le yī dào cǎi hóng 。"
     },
     "imageAsset": "assets/images/0518.webp",
     "needsReview": false,
@@ -22539,7 +22539,7 @@
     "words": [
       {
         "text": "打雷",
-        "pinyin": "dá léi"
+        "pinyin": "dǎ léi"
       },
       {
         "text": "雷声",
@@ -22547,7 +22547,7 @@
       },
       {
         "text": "雷雨",
-        "pinyin": "léi yù"
+        "pinyin": "léi yǔ"
       }
     ],
     "sentence": {
@@ -22821,7 +22821,7 @@
     ],
     "sentence": {
       "text": "小猫隐藏在沙发后面。",
-      "pinyin": "xiǎo māo yǐn cáng zài shà fā hòu miàn 。"
+      "pinyin": "xiǎo māo yǐn cáng zài shā fā hòu miàn 。"
     },
     "imageAsset": "assets/images/0525.webp",
     "needsReview": false,
@@ -22953,12 +22953,12 @@
       },
       {
         "text": "着急",
-        "pinyin": "zhe jí"
+        "pinyin": "zháo jí"
       }
     ],
     "sentence": {
       "text": "他急忙跑回家拿伞。",
-      "pinyin": "tā jí máng páo huí jiā ná sǎn 。"
+      "pinyin": "tā jí máng pǎo huí jiā ná sǎn 。"
     },
     "imageAsset": "assets/images/0528.webp",
     "needsReview": false,
@@ -23047,7 +23047,7 @@
     ],
     "sentence": {
       "text": "大家拍手为他鼓掌。",
-      "pinyin": "dà jiā pāi shǒu wéi tā gǔ zhǎng 。"
+      "pinyin": "dà jiā pāi shǒu wèi tā gǔ zhǎng 。"
     },
     "imageAsset": "assets/images/0530.webp",
     "needsReview": false,
@@ -23151,7 +23151,7 @@
   {
     "id": "0533",
     "char": "扫",
-    "pinyin": "sào",
+    "pinyin": "sǎo",
     "gradeId": 5,
     "orderInGrade": 53,
     "groupId": "g5_line14",
@@ -23170,11 +23170,11 @@
     "words": [
       {
         "text": "扫地",
-        "pinyin": "sào dì"
+        "pinyin": "sǎo dì"
       },
       {
         "text": "打扫",
-        "pinyin": "dá sào"
+        "pinyin": "dǎ sǎo"
       },
       {
         "text": "扫帚",
@@ -23183,7 +23183,7 @@
     ],
     "sentence": {
       "text": "我每天帮妈妈扫地。",
-      "pinyin": "wǒ měi tiān bāng mā mā sào dì 。"
+      "pinyin": "wǒ měi tiān bāng mā mā sǎo dì 。"
     },
     "imageAsset": "assets/images/0533.webp",
     "needsReview": false,
@@ -23227,7 +23227,7 @@
       },
       {
         "text": "擦汗",
-        "pinyin": "cā hán"
+        "pinyin": "cā hàn"
       },
       {
         "text": "摩擦",
@@ -23236,7 +23236,7 @@
     ],
     "sentence": {
       "text": "他用毛巾擦了擦汗。",
-      "pinyin": "tā yòng máo jīn cā le cā hán 。"
+      "pinyin": "tā yòng máo jīn cā le cā hàn 。"
     },
     "imageAsset": "assets/images/0534.webp",
     "needsReview": false,
@@ -23410,7 +23410,7 @@
       },
       {
         "text": "喷洒",
-        "pinyin": "pèn sǎ"
+        "pinyin": "pēn sǎ"
       }
     ],
     "sentence": {
@@ -23499,7 +23499,7 @@
     "words": [
       {
         "text": "淋雨",
-        "pinyin": "lín yù"
+        "pinyin": "lín yǔ"
       },
       {
         "text": "淋湿",
@@ -23512,7 +23512,7 @@
     ],
     "sentence": {
       "text": "我们淋雨跑回了家。",
-      "pinyin": "wǒ men lín yù páo huí le jiā 。"
+      "pinyin": "wǒ men lín yǔ pǎo huí le jiā 。"
     },
     "imageAsset": "assets/images/0540.webp",
     "needsReview": false,
@@ -23599,12 +23599,12 @@
       },
       {
         "text": "解脱",
-        "pinyin": "jiè tuō"
+        "pinyin": "jiě tuō"
       }
     ],
     "sentence": {
       "text": "回家后他先脱了鞋子。",
-      "pinyin": "huí jiā hòu tā xiān tuō le xié zǐ 。"
+      "pinyin": "huí jiā hòu tā xiān tuō le xié zi 。"
     },
     "imageAsset": "assets/images/0542.webp",
     "needsReview": false,
@@ -23643,12 +23643,12 @@
         "pinyin": "féng bǔ"
       },
       {
-        "text": "裂缝",
-        "pinyin": "liě féng"
-      },
-      {
         "text": "缝衣",
         "pinyin": "féng yī"
+      },
+      {
+        "text": "裂缝",
+        "pinyin": "liè fèng"
       }
     ],
     "sentence": {
@@ -23706,7 +23706,7 @@
   {
     "id": "0545",
     "char": "织",
-    "pinyin": "zhì",
+    "pinyin": "zhī",
     "gradeId": 5,
     "orderInGrade": 65,
     "groupId": "g5_line17",
@@ -23727,20 +23727,20 @@
     "words": [
       {
         "text": "编织",
-        "pinyin": "biān zhì"
+        "pinyin": "biān zhī"
       },
       {
         "text": "织布",
-        "pinyin": "zhì bù"
+        "pinyin": "zhī bù"
       },
       {
         "text": "纺织",
-        "pinyin": "fǎng zhì"
+        "pinyin": "fǎng zhī"
       }
     ],
     "sentence": {
       "text": "奶奶在编织一条围巾。",
-      "pinyin": "nǎi nǎi zài biān zhì yī tiáo wéi jīn 。"
+      "pinyin": "nǎi nǎi zài biān zhī yī tiáo wéi jīn 。"
     },
     "imageAsset": "assets/images/0545.webp",
     "needsReview": false,
@@ -23816,7 +23816,7 @@
       },
       {
         "text": "打针",
-        "pinyin": "dá zhēn"
+        "pinyin": "dǎ zhēn"
       },
       {
         "text": "指南针",
@@ -23869,7 +23869,7 @@
     ],
     "sentence": {
       "text": "奶奶给我织了一条毛线围巾。",
-      "pinyin": "nǎi nǎi gěi wǒ zhì le yī tiáo máo xiàn wéi jīn 。"
+      "pinyin": "nǎi nǎi gěi wǒ zhī le yī tiáo máo xiàn wéi jīn 。"
     },
     "imageAsset": "assets/images/0548.webp",
     "needsReview": false,
@@ -23913,7 +23913,7 @@
     ],
     "sentence": {
       "text": "我已经吃饱了。",
-      "pinyin": "wǒ yǐ jìng chī bǎo le 。"
+      "pinyin": "wǒ yǐ jīng chī bǎo le 。"
     },
     "imageAsset": "assets/images/0549.webp",
     "needsReview": false,
@@ -23954,7 +23954,7 @@
       },
       {
         "text": "饿肚子",
-        "pinyin": "è dù zǐ"
+        "pinyin": "è dù zi"
       }
     ],
     "sentence": {
@@ -24038,7 +24038,7 @@
     "words": [
       {
         "text": "暖和",
-        "pinyin": "nuǎn hé"
+        "pinyin": "nuǎn huo"
       },
       {
         "text": "温暖",
@@ -24051,7 +24051,7 @@
     ],
     "sentence": {
       "text": "屋子里开了暖气，很暖和。",
-      "pinyin": "wū zǐ lǐ kāi le nuǎn qì ， hěn nuǎn hé 。"
+      "pinyin": "wū zi lǐ kāi le nuǎn qì ， hěn nuǎn huo 。"
     },
     "imageAsset": "assets/images/0552.webp",
     "needsReview": false,
@@ -24268,7 +24268,7 @@
     "words": [
       {
         "text": "纺织",
-        "pinyin": "fǎng zhì"
+        "pinyin": "fǎng zhī"
       },
       {
         "text": "纺纱",
@@ -24281,7 +24281,7 @@
     ],
     "sentence": {
       "text": "这台机器是用来纺织的。",
-      "pinyin": "zhè tái jī qì shì yòng lái fǎng zhì de 。"
+      "pinyin": "zhè tái jī qì shì yòng lái fǎng zhī de 。"
     },
     "imageAsset": "assets/images/0557.webp",
     "needsReview": false,
@@ -24313,7 +24313,7 @@
     "words": [
       {
         "text": "种子",
-        "pinyin": "zhòng zǐ"
+        "pinyin": "zhǒng zi"
       },
       {
         "text": "种田",
@@ -24321,7 +24321,7 @@
       },
       {
         "text": "种类",
-        "pinyin": "zhòng lèi"
+        "pinyin": "zhǒng lèi"
       }
     ],
     "sentence": {
@@ -24336,7 +24336,7 @@
   {
     "id": "0559",
     "char": "采",
-    "pinyin": "cài",
+    "pinyin": "cǎi",
     "gradeId": 5,
     "orderInGrade": 79,
     "groupId": "g5_line20",
@@ -24357,20 +24357,20 @@
     "words": [
       {
         "text": "采摘",
-        "pinyin": "cài zhāi"
+        "pinyin": "cǎi zhāi"
       },
       {
         "text": "开采",
-        "pinyin": "kāi cài"
+        "pinyin": "kāi cǎi"
       },
       {
         "text": "采花",
-        "pinyin": "cài huā"
+        "pinyin": "cǎi huā"
       }
     ],
     "sentence": {
       "text": "我们去果园采摘水果。",
-      "pinyin": "wǒ men qù guǒ yuán cài zhāi shuǐ guǒ 。"
+      "pinyin": "wǒ men qù guǒ yuán cǎi zhāi shuǐ guǒ 。"
     },
     "imageAsset": "assets/images/0559.webp",
     "needsReview": false,
@@ -24411,7 +24411,7 @@
       },
       {
         "text": "采摘",
-        "pinyin": "cài zhāi"
+        "pinyin": "cǎi zhāi"
       },
       {
         "text": "摘要",
@@ -24546,7 +24546,7 @@
       },
       {
         "text": "争抢",
-        "pinyin": "zhèng qiǎng"
+        "pinyin": "zhēng qiǎng"
       }
     ],
     "sentence": {
@@ -24585,7 +24585,7 @@
     "words": [
       {
         "text": "打猎",
-        "pinyin": "dá liè"
+        "pinyin": "dǎ liè"
       },
       {
         "text": "猎人",
@@ -24598,7 +24598,7 @@
     ],
     "sentence": {
       "text": "猎人在森林里打猎。",
-      "pinyin": "liè rén zài sēn lín lǐ dá liè 。"
+      "pinyin": "liè rén zài sēn lín lǐ dǎ liè 。"
     },
     "imageAsset": "assets/images/0564.webp",
     "needsReview": false,
@@ -24630,7 +24630,7 @@
     "words": [
       {
         "text": "战争",
-        "pinyin": "zhàn zhèng"
+        "pinyin": "zhàn zhēng"
       },
       {
         "text": "战士",
@@ -24764,7 +24764,7 @@
     "words": [
       {
         "text": "打斗",
-        "pinyin": "dá dòu"
+        "pinyin": "dǎ dòu"
       },
       {
         "text": "战斗",
@@ -24772,12 +24772,12 @@
       },
       {
         "text": "斗争",
-        "pinyin": "dòu zhèng"
+        "pinyin": "dòu zhēng"
       }
     ],
     "sentence": {
       "text": "战士们在战场上奋勇战斗。",
-      "pinyin": "zhàn shì men zài zhàn cháng shàng fèn yǒng zhàn dòu 。"
+      "pinyin": "zhàn shì men zài zhàn chǎng shàng fèn yǒng zhàn dòu 。"
     },
     "imageAsset": "assets/images/0568.webp",
     "needsReview": false,
@@ -24787,7 +24787,7 @@
   {
     "id": "0569",
     "char": "打",
-    "pinyin": "dá",
+    "pinyin": "dǎ",
     "gradeId": 5,
     "orderInGrade": 89,
     "groupId": "g5_line23",
@@ -24805,20 +24805,20 @@
     "words": [
       {
         "text": "打球",
-        "pinyin": "dá qiú"
+        "pinyin": "dǎ qiú"
       },
       {
         "text": "打架",
-        "pinyin": "dá jià"
+        "pinyin": "dǎ jià"
       },
       {
         "text": "打开",
-        "pinyin": "dá kāi"
+        "pinyin": "dǎ kāi"
       }
     ],
     "sentence": {
       "text": "我们在操场上打球。",
-      "pinyin": "wǒ men zài cāo cháng shàng dá qiú 。"
+      "pinyin": "wǒ men zài cāo chǎng shàng dǎ qiú 。"
     },
     "imageAsset": "assets/images/0569.webp",
     "needsReview": false,
@@ -24873,7 +24873,7 @@
   {
     "id": "0571",
     "char": "挨",
-    "pinyin": "ái",
+    "pinyin": "āi",
     "gradeId": 5,
     "orderInGrade": 91,
     "groupId": "g5_line23",
@@ -24896,20 +24896,20 @@
     "words": [
       {
         "text": "挨着",
-        "pinyin": "ái zhe"
+        "pinyin": "āi zhe"
       },
       {
         "text": "挨打",
-        "pinyin": "ái dá"
+        "pinyin": "ái dǎ"
       },
       {
         "text": "挨近",
-        "pinyin": "ái jìn"
+        "pinyin": "āi jìn"
       }
     ],
     "sentence": {
       "text": "我和好朋友挨着坐。",
-      "pinyin": "wǒ hé hǎo péng yǒu ái zhe zuò 。"
+      "pinyin": "wǒ hé hǎo péng yǒu āi zhe zuò 。"
     },
     "imageAsset": "assets/images/0571.webp",
     "needsReview": false,
@@ -24943,7 +24943,7 @@
       },
       {
         "text": "要求",
-        "pinyin": "yào qiú"
+        "pinyin": "yāo qiú"
       },
       {
         "text": "请求",
@@ -24984,7 +24984,7 @@
     "words": [
       {
         "text": "逃跑",
-        "pinyin": "táo páo"
+        "pinyin": "táo pǎo"
       },
       {
         "text": "逃走",
@@ -24997,7 +24997,7 @@
     ],
     "sentence": {
       "text": "小偷被警察发现后逃跑了。",
-      "pinyin": "xiǎo tōu bèi jǐng chá fā xiàn hòu táo páo le 。"
+      "pinyin": "xiǎo tōu bèi jǐng chá fā xiàn hòu táo pǎo le 。"
     },
     "imageAsset": "assets/images/0573.webp",
     "needsReview": false,
@@ -25083,7 +25083,7 @@
       },
       {
         "text": "摸头",
-        "pinyin": "mō tou"
+        "pinyin": "mō tóu"
       },
       {
         "text": "摸黑",
@@ -25092,7 +25092,7 @@
     ],
     "sentence": {
       "text": "他摸了摸小狗的头。",
-      "pinyin": "tā mō le mō xiǎo gǒu de tou 。"
+      "pinyin": "tā mō le mō xiǎo gǒu de tóu 。"
     },
     "imageAsset": "assets/images/0575.webp",
     "needsReview": false,
@@ -25125,11 +25125,11 @@
       },
       {
         "text": "计划",
-        "pinyin": "jì huá"
+        "pinyin": "jì huà"
       },
       {
         "text": "划分",
-        "pinyin": "huá fēn"
+        "pinyin": "huà fēn"
       }
     ],
     "sentence": {
@@ -25182,7 +25182,7 @@
     ],
     "sentence": {
       "text": "冬天要盖厚厚的棉被。",
-      "pinyin": "dōng tiān yào gě hòu hòu de mián bèi 。"
+      "pinyin": "dōng tiān yào gài hòu hòu de mián bèi 。"
     },
     "imageAsset": "assets/images/0577.webp",
     "needsReview": false,
@@ -25359,7 +25359,7 @@
     "words": [
       {
         "text": "鞋子",
-        "pinyin": "xié zǐ"
+        "pinyin": "xié zi"
       },
       {
         "text": "皮鞋",
@@ -25407,7 +25407,7 @@
     "words": [
       {
         "text": "帽子",
-        "pinyin": "mào zǐ"
+        "pinyin": "mào zi"
       },
       {
         "text": "草帽",
@@ -25455,7 +25455,7 @@
     "words": [
       {
         "text": "裤子",
-        "pinyin": "kù zǐ"
+        "pinyin": "kù zi"
       },
       {
         "text": "短裤",
@@ -25478,7 +25478,7 @@
   {
     "id": "0584",
     "char": "袜",
-    "pinyin": "mò",
+    "pinyin": "wà",
     "gradeId": 5,
     "orderInGrade": 104,
     "groupId": "g5_line26",
@@ -25501,20 +25501,20 @@
     "words": [
       {
         "text": "袜子",
-        "pinyin": "mò zǐ"
+        "pinyin": "wà zi"
       },
       {
         "text": "棉袜",
-        "pinyin": "mián mò"
+        "pinyin": "mián wà"
       },
       {
         "text": "长袜",
-        "pinyin": "cháng mò"
+        "pinyin": "cháng wà"
       }
     ],
     "sentence": {
       "text": "妈妈给我买了棉袜。",
-      "pinyin": "mā mā gěi wǒ mǎi le mián mò 。"
+      "pinyin": "mā mā gěi wǒ mǎi le mián wà 。"
     },
     "imageAsset": "assets/images/0584.webp",
     "needsReview": false,
@@ -25694,7 +25694,7 @@
     ],
     "sentence": {
       "text": "我们班赢得了拔河比赛。",
-      "pinyin": "wǒ men bān yíng de le bá hé bǐ sài 。"
+      "pinyin": "wǒ men bān yíng dé le bá hé bǐ sài 。"
     },
     "imageAsset": "assets/images/0588.webp",
     "needsReview": false,
@@ -25874,12 +25874,12 @@
       },
       {
         "text": "槐荫",
-        "pinyin": "huái yìn"
+        "pinyin": "huái yīn"
       }
     ],
     "sentence": {
       "text": "院子里有一棵大槐树。",
-      "pinyin": "yuàn zǐ lǐ yǒu yī kē dà huái shù 。"
+      "pinyin": "yuàn zi lǐ yǒu yī kē dà huái shù 。"
     },
     "imageAsset": "assets/images/0592.webp",
     "needsReview": false,
@@ -25920,12 +25920,12 @@
       },
       {
         "text": "莓子",
-        "pinyin": "méi zǐ"
+        "pinyin": "méi zi"
       }
     ],
     "sentence": {
       "text": "妈妈买了一些新鲜草莓。",
-      "pinyin": "mā mā mǎi le yī xiē xīn xiǎn cǎo méi 。"
+      "pinyin": "mā mā mǎi le yī xiē xīn xiān cǎo méi 。"
     },
     "imageAsset": "assets/images/0593.webp",
     "needsReview": false,
@@ -26004,7 +26004,7 @@
       },
       {
         "text": "笋干",
-        "pinyin": "sǔn gàn"
+        "pinyin": "sǔn gān"
       },
       {
         "text": "春笋",
@@ -26013,7 +26013,7 @@
     ],
     "sentence": {
       "text": "春天的竹笋十分鲜嫩。",
-      "pinyin": "chūn tiān de zhú sǔn shí fēn xiǎn nèn 。"
+      "pinyin": "chūn tiān de zhú sǔn shí fēn xiān nèn 。"
     },
     "imageAsset": "assets/images/0595.webp",
     "needsReview": false,
@@ -26188,7 +26188,7 @@
     ],
     "sentence": {
       "text": "山上长着许多松树。",
-      "pinyin": "shān shàng cháng zhe xǔ duō sōng shù 。"
+      "pinyin": "shān shàng zhǎng zhe xǔ duō sōng shù 。"
     },
     "imageAsset": "assets/images/0599.webp",
     "needsReview": false,
@@ -26270,7 +26270,7 @@
     "words": [
       {
         "text": "旗子",
-        "pinyin": "qí zǐ"
+        "pinyin": "qí zi"
       },
       {
         "text": "红旗",
@@ -26283,7 +26283,7 @@
     ],
     "sentence": {
       "text": "教室前面挂着一面国旗。",
-      "pinyin": "jiāo shì qián miàn guà zhe yī miàn guó qí 。"
+      "pinyin": "jiào shì qián miàn guà zhe yī miàn guó qí 。"
     },
     "imageAsset": "assets/images/0601.webp",
     "needsReview": false,
@@ -26323,7 +26323,7 @@
       },
       {
         "text": "竿子",
-        "pinyin": "gān zǐ"
+        "pinyin": "gān zi"
       }
     ],
     "sentence": {
@@ -26420,7 +26420,7 @@
     ],
     "sentence": {
       "text": "我们一起在操场上打篮球。",
-      "pinyin": "wǒ men yī qǐ zài cāo cháng shàng dá lán qiú 。"
+      "pinyin": "wǒ men yī qǐ zài cāo chǎng shàng dǎ lán qiú 。"
     },
     "imageAsset": "assets/images/0604.webp",
     "needsReview": false,
@@ -26455,7 +26455,7 @@
     "words": [
       {
         "text": "裙子",
-        "pinyin": "qún zǐ"
+        "pinyin": "qún zi"
       },
       {
         "text": "长裙",
@@ -26468,7 +26468,7 @@
     ],
     "sentence": {
       "text": "妹妹穿了一条漂亮的裙子。",
-      "pinyin": "mèi mèi chuān le yī tiáo piào liàng de qún zǐ 。"
+      "pinyin": "mèi mèi chuān le yī tiáo piào liàng de qún zi 。"
     },
     "imageAsset": "assets/images/0605.webp",
     "needsReview": false,
@@ -26500,7 +26500,7 @@
     "words": [
       {
         "text": "带子",
-        "pinyin": "dài zǐ"
+        "pinyin": "dài zi"
       },
       {
         "text": "皮带",
@@ -26546,7 +26546,7 @@
     "words": [
       {
         "text": "袖子",
-        "pinyin": "xiù zǐ"
+        "pinyin": "xiù zi"
       },
       {
         "text": "长袖",
@@ -26594,11 +26594,11 @@
       },
       {
         "text": "帕子",
-        "pinyin": "pà zǐ"
+        "pinyin": "pà zi"
       },
       {
         "text": "头帕",
-        "pinyin": "tou pà"
+        "pinyin": "tóu pà"
       }
     ],
     "sentence": {
@@ -26638,7 +26638,7 @@
     "words": [
       {
         "text": "猴子",
-        "pinyin": "hóu zǐ"
+        "pinyin": "hóu zi"
       },
       {
         "text": "猿猴",
@@ -26651,7 +26651,7 @@
     ],
     "sentence": {
       "text": "动物园里有一群猴子。",
-      "pinyin": "dòng wù yuán lǐ yǒu yī qún hóu zǐ 。"
+      "pinyin": "dòng wù yuán lǐ yǒu yī qún hóu zi 。"
     },
     "imageAsset": "assets/images/0609.webp",
     "needsReview": false,
@@ -26698,7 +26698,7 @@
     ],
     "sentence": {
       "text": "森林里有一只可爱的小鹿。",
-      "pinyin": "sēn lín lǐ yǒu yī zhǐ kě ài de xiǎo lù 。"
+      "pinyin": "sēn lín lǐ yǒu yī zhī kě ài de xiǎo lù 。"
     },
     "imageAsset": "assets/images/0610.webp",
     "needsReview": false,
@@ -26745,7 +26745,7 @@
     ],
     "sentence": {
       "text": "大象用长长的鼻子喝水。",
-      "pinyin": "dà xiàng yòng cháng cháng de bí zǐ hē shuǐ 。"
+      "pinyin": "dà xiàng yòng cháng cháng de bí zi hē shuǐ 。"
     },
     "imageAsset": "assets/images/0611.webp",
     "needsReview": false,
@@ -26794,7 +26794,7 @@
     ],
     "sentence": {
       "text": "树上有一只活泼的小松鼠。",
-      "pinyin": "shù shàng yǒu yī zhǐ huó pō de xiǎo sōng shǔ 。"
+      "pinyin": "shù shàng yǒu yī zhī huó pō de xiǎo sōng shǔ 。"
     },
     "imageAsset": "assets/images/0612.webp",
     "needsReview": false,
@@ -26927,7 +26927,7 @@
     "words": [
       {
         "text": "蚊子",
-        "pinyin": "wén zǐ"
+        "pinyin": "wén zi"
       },
       {
         "text": "蚊虫",
@@ -26940,7 +26940,7 @@
     ],
     "sentence": {
       "text": "夏天晚上蚊子特别多。",
-      "pinyin": "xià tiān wǎn shàng wén zǐ tè bié duō 。"
+      "pinyin": "xià tiān wǎn shàng wén zi tè bié duō 。"
     },
     "imageAsset": "assets/images/0615.webp",
     "needsReview": false,
@@ -26990,7 +26990,7 @@
     ],
     "sentence": {
       "text": "厨房里飞进了一只苍蝇。",
-      "pinyin": "chú fáng lǐ fēi jìn le yī zhǐ cāng yíng 。"
+      "pinyin": "chú fáng lǐ fēi jìn le yī zhī cāng yíng 。"
     },
     "imageAsset": "assets/images/0616.webp",
     "needsReview": false,
@@ -27040,7 +27040,7 @@
     ],
     "sentence": {
       "text": "池塘上有一只蜻蜓飞过。",
-      "pinyin": "chí táng shàng yǒu yī zhǐ qīng tíng fēi guò 。"
+      "pinyin": "chí táng shàng yǒu yī zhī qīng tíng fēi guò 。"
     },
     "imageAsset": "assets/images/0617.webp",
     "needsReview": false,
@@ -27122,7 +27122,7 @@
     "words": [
       {
         "text": "蚂蚁",
-        "pinyin": "mà yǐ"
+        "pinyin": "mǎ yǐ"
       },
       {
         "text": "蚁穴",
@@ -27135,7 +27135,7 @@
     ],
     "sentence": {
       "text": "一群蚂蚁正在搬运食物。",
-      "pinyin": "yī qún mà yǐ zhèng zài bān yùn shí wù 。"
+      "pinyin": "yī qún mǎ yǐ zhèng zài bān yùn shí wù 。"
     },
     "imageAsset": "assets/images/0619.webp",
     "needsReview": false,
@@ -27216,7 +27216,7 @@
     "words": [
       {
         "text": "桃子",
-        "pinyin": "táo zǐ"
+        "pinyin": "táo zi"
       },
       {
         "text": "桃花",
@@ -27229,7 +27229,7 @@
     ],
     "sentence": {
       "text": "果园里的桃子又大又甜。",
-      "pinyin": "guǒ yuán lǐ de táo zǐ yòu dà yòu tián 。"
+      "pinyin": "guǒ yuán lǐ de táo zi yòu dà yòu tián 。"
     },
     "imageAsset": "assets/images/0621.webp",
     "needsReview": false,
@@ -27263,7 +27263,7 @@
     "words": [
       {
         "text": "梨子",
-        "pinyin": "lí zǐ"
+        "pinyin": "lí zi"
       },
       {
         "text": "雪梨",
@@ -27276,7 +27276,7 @@
     ],
     "sentence": {
       "text": "妈妈买了几个又大又甜的梨子。",
-      "pinyin": "mā mā mǎi le jǐ gè yòu dà yòu tián de lí zǐ 。"
+      "pinyin": "mā mā mǎi le jǐ gè yòu dà yòu tián de lí zi 。"
     },
     "imageAsset": "assets/images/0622.webp",
     "needsReview": false,
@@ -27308,7 +27308,7 @@
     "words": [
       {
         "text": "柿子",
-        "pinyin": "shì zǐ"
+        "pinyin": "shì zi"
       },
       {
         "text": "柿饼",
@@ -27321,7 +27321,7 @@
     ],
     "sentence": {
       "text": "秋天树上挂满了红柿子。",
-      "pinyin": "qiū tiān shù shàng guà mǎn le hóng shì zǐ 。"
+      "pinyin": "qiū tiān shù shàng guà mǎn le hóng shì zi 。"
     },
     "imageAsset": "assets/images/0623.webp",
     "needsReview": false,
@@ -27402,7 +27402,7 @@
     "words": [
       {
         "text": "杏子",
-        "pinyin": "xìng zǐ"
+        "pinyin": "xìng zi"
       },
       {
         "text": "杏仁",
@@ -27445,7 +27445,7 @@
     "words": [
       {
         "text": "李子",
-        "pinyin": "lǐ zǐ"
+        "pinyin": "lǐ zi"
       },
       {
         "text": "行李",
@@ -27489,7 +27489,7 @@
     "words": [
       {
         "text": "枣子",
-        "pinyin": "zǎo zǐ"
+        "pinyin": "zǎo zi"
       },
       {
         "text": "红枣",
@@ -27502,7 +27502,7 @@
     ],
     "sentence": {
       "text": "奶奶院子里种着一棵枣树。",
-      "pinyin": "nǎi nǎi yuàn zǐ lǐ zhòng zhe yī kē zǎo shù 。"
+      "pinyin": "nǎi nǎi yuàn zi lǐ zhòng zhe yī kē zǎo shù 。"
     },
     "imageAsset": "assets/images/0627.webp",
     "needsReview": false,
@@ -27577,7 +27577,7 @@
     "words": [
       {
         "text": "金子",
-        "pinyin": "jīn zǐ"
+        "pinyin": "jīn zi"
       },
       {
         "text": "黄金",
@@ -27624,7 +27624,7 @@
     "words": [
       {
         "text": "银子",
-        "pinyin": "yín zǐ"
+        "pinyin": "yín zi"
       },
       {
         "text": "白银",
@@ -27632,12 +27632,12 @@
       },
       {
         "text": "银行",
-        "pinyin": "yín xíng"
+        "pinyin": "yín háng"
       }
     ],
     "sentence": {
       "text": "爸爸去银行办理业务。",
-      "pinyin": "bà bà qù yín xíng bàn lǐ yè wù 。"
+      "pinyin": "bà bà qù yín háng bàn lǐ yè wù 。"
     },
     "imageAsset": "assets/images/0630.webp",
     "needsReview": false,
@@ -27647,7 +27647,7 @@
   {
     "id": "0631",
     "char": "钢",
-    "pinyin": "gàng",
+    "pinyin": "gāng",
     "gradeId": 6,
     "orderInGrade": 31,
     "groupId": "g6_line8",
@@ -27669,20 +27669,20 @@
     "words": [
       {
         "text": "钢铁",
-        "pinyin": "gàng tiě"
+        "pinyin": "gāng tiě"
       },
       {
         "text": "钢笔",
-        "pinyin": "gàng bǐ"
+        "pinyin": "gāng bǐ"
       },
       {
         "text": "钢琴",
-        "pinyin": "gàng qín"
+        "pinyin": "gāng qín"
       }
     ],
     "sentence": {
       "text": "姐姐每天练习弹钢琴。",
-      "pinyin": "jiě jiě měi tiān liàn xí dàn gàng qín 。"
+      "pinyin": "jiě jiě měi tiān liàn xí tán gāng qín 。"
     },
     "imageAsset": "assets/images/0631.webp",
     "needsReview": false,
@@ -27723,7 +27723,7 @@
       },
       {
         "text": "钢铁",
-        "pinyin": "gàng tiě"
+        "pinyin": "gāng tiě"
       }
     ],
     "sentence": {
@@ -27764,7 +27764,7 @@
     "words": [
       {
         "text": "筷子",
-        "pinyin": "kuài zǐ"
+        "pinyin": "kuài zi"
       },
       {
         "text": "木筷",
@@ -27777,7 +27777,7 @@
     ],
     "sentence": {
       "text": "我用筷子吃饭。",
-      "pinyin": "wǒ yòng kuài zǐ chī fàn 。"
+      "pinyin": "wǒ yòng kuài zi chī fàn 。"
     },
     "imageAsset": "assets/images/0633.webp",
     "needsReview": false,
@@ -27814,7 +27814,7 @@
     "words": [
       {
         "text": "碟子",
-        "pinyin": "dié zǐ"
+        "pinyin": "dié zi"
       },
       {
         "text": "光碟",
@@ -27827,7 +27827,7 @@
     ],
     "sentence": {
       "text": "桌上放着一个小碟子。",
-      "pinyin": "zhuō shàng fàng zhe yī gè xiǎo dié zǐ 。"
+      "pinyin": "zhuō shàng fàng zhe yī gè xiǎo dié zi 。"
     },
     "imageAsset": "assets/images/0634.webp",
     "needsReview": false,
@@ -27861,7 +27861,7 @@
     "words": [
       {
         "text": "盘子",
-        "pinyin": "pán zǐ"
+        "pinyin": "pán zi"
       },
       {
         "text": "茶盘",
@@ -27951,7 +27951,7 @@
     "words": [
       {
         "text": "杯子",
-        "pinyin": "bēi zǐ"
+        "pinyin": "bēi zi"
       },
       {
         "text": "茶杯",
@@ -27997,7 +27997,7 @@
     "words": [
       {
         "text": "瓶子",
-        "pinyin": "píng zǐ"
+        "pinyin": "píng zi"
       },
       {
         "text": "花瓶",
@@ -28010,7 +28010,7 @@
     ],
     "sentence": {
       "text": "桌上的花瓶里插着鲜花。",
-      "pinyin": "zhuō shàng de huā píng lǐ chā zhe xiǎn huā 。"
+      "pinyin": "zhuō shàng de huā píng lǐ chā zhe xiān huā 。"
     },
     "imageAsset": "assets/images/0638.webp",
     "needsReview": false,
@@ -28044,7 +28044,7 @@
     "words": [
       {
         "text": "袋子",
-        "pinyin": "dài zǐ"
+        "pinyin": "dài zi"
       },
       {
         "text": "口袋",
@@ -28097,7 +28097,7 @@
       },
       {
         "text": "缸子",
-        "pinyin": "gāng zǐ"
+        "pinyin": "gāng zi"
       }
     ],
     "sentence": {
@@ -28178,7 +28178,7 @@
     "words": [
       {
         "text": "亭子",
-        "pinyin": "tíng zǐ"
+        "pinyin": "tíng zi"
       },
       {
         "text": "凉亭",
@@ -28365,7 +28365,7 @@
     ],
     "sentence": {
       "text": "妈妈用棉布做了一条裙子。",
-      "pinyin": "mā mā yòng mián bù zuò le yī tiáo qún zǐ 。"
+      "pinyin": "mā mā yòng mián bù zuò le yī tiáo qún zi 。"
     },
     "imageAsset": "assets/images/0646.webp",
     "needsReview": false,
@@ -28440,7 +28440,7 @@
       },
       {
         "text": "头巾",
-        "pinyin": "tou jīn"
+        "pinyin": "tóu jīn"
       },
       {
         "text": "围巾",
@@ -28449,7 +28449,7 @@
     ],
     "sentence": {
       "text": "妈妈给我织了一条围巾。",
-      "pinyin": "mā mā gěi wǒ zhì le yī tiáo wéi jīn 。"
+      "pinyin": "mā mā gěi wǒ zhī le yī tiáo wéi jīn 。"
     },
     "imageAsset": "assets/images/0648.webp",
     "needsReview": false,
@@ -28533,7 +28533,7 @@
     "words": [
       {
         "text": "摇头",
-        "pinyin": "yáo tou"
+        "pinyin": "yáo tóu"
       },
       {
         "text": "摇晃",
@@ -28713,7 +28713,7 @@
     "words": [
       {
         "text": "被子",
-        "pinyin": "bèi zǐ"
+        "pinyin": "bèi zi"
       },
       {
         "text": "棉被",
@@ -28726,7 +28726,7 @@
     ],
     "sentence": {
       "text": "冬天我喜欢盖厚厚的棉被。",
-      "pinyin": "dōng tiān wǒ xǐ huān gě hòu hòu de mián bèi 。"
+      "pinyin": "dōng tiān wǒ xǐ huān gài hòu hòu de mián bèi 。"
     },
     "imageAsset": "assets/images/0654.webp",
     "needsReview": false,
@@ -28765,12 +28765,12 @@
       },
       {
         "text": "帘子",
-        "pinyin": "lián zǐ"
+        "pinyin": "lián zi"
       }
     ],
     "sentence": {
       "text": "妈妈拉开了窗帘。",
-      "pinyin": "mā mā lá kāi le chuāng lián 。"
+      "pinyin": "mā mā lā kāi le chuāng lián 。"
     },
     "imageAsset": "assets/images/0655.webp",
     "needsReview": false,
@@ -28799,7 +28799,7 @@
     "words": [
       {
         "text": "雨伞",
-        "pinyin": "yù sǎn"
+        "pinyin": "yǔ sǎn"
       },
       {
         "text": "阳伞",
@@ -28812,7 +28812,7 @@
     ],
     "sentence": {
       "text": "下雨了，我打开了雨伞。",
-      "pinyin": "xià yù le ， wǒ dá kāi le yù sǎn 。"
+      "pinyin": "xià yǔ le ， wǒ dǎ kāi le yǔ sǎn 。"
     },
     "imageAsset": "assets/images/0656.webp",
     "needsReview": false,
@@ -28892,7 +28892,7 @@
     "words": [
       {
         "text": "凳子",
-        "pinyin": "dèng zǐ"
+        "pinyin": "dèng zi"
       },
       {
         "text": "板凳",
@@ -28905,7 +28905,7 @@
     ],
     "sentence": {
       "text": "他坐在小凳子上看书。",
-      "pinyin": "tā zuò zài xiǎo dèng zǐ shàng kàn shū 。"
+      "pinyin": "tā zuò zài xiǎo dèng zi shàng kàn shū 。"
     },
     "imageAsset": "assets/images/0658.webp",
     "needsReview": false,
@@ -28943,7 +28943,7 @@
     "words": [
       {
         "text": "箱子",
-        "pinyin": "xiāng zǐ"
+        "pinyin": "xiāng zi"
       },
       {
         "text": "冰箱",
@@ -28987,7 +28987,7 @@
     "words": [
       {
         "text": "柜子",
-        "pinyin": "guì zǐ"
+        "pinyin": "guì zi"
       },
       {
         "text": "衣柜",
@@ -29042,7 +29042,7 @@
       },
       {
         "text": "影子",
-        "pinyin": "yǐng zǐ"
+        "pinyin": "yǐng zi"
       },
       {
         "text": "影响",
@@ -29100,7 +29100,7 @@
     ],
     "sentence": {
       "text": "天空好像要下雨了。",
-      "pinyin": "tiān kōng hǎo xiàng yào xià yù le 。"
+      "pinyin": "tiān kōng hǎo xiàng yào xià yǔ le 。"
     },
     "imageAsset": "assets/images/0662.webp",
     "needsReview": false,
@@ -29136,7 +29136,7 @@
       },
       {
         "text": "音乐",
-        "pinyin": "yīn lè"
+        "pinyin": "yīn yuè"
       },
       {
         "text": "音符",
@@ -29145,7 +29145,7 @@
     ],
     "sentence": {
       "text": "远处传来美妙的音乐声。",
-      "pinyin": "yuǎn chù chuán lái měi miào de yīn lè shēng 。"
+      "pinyin": "yuǎn chù chuán lái měi miào de yīn yuè shēng 。"
     },
     "imageAsset": "assets/images/0663.webp",
     "needsReview": false,
@@ -29155,7 +29155,7 @@
   {
     "id": "0664",
     "char": "相",
-    "pinyin": "xiàng",
+    "pinyin": "xiāng",
     "gradeId": 6,
     "orderInGrade": 64,
     "groupId": "g6_line16",
@@ -29176,21 +29176,21 @@
     "structure": "左右结构",
     "words": [
       {
-        "text": "相片",
-        "pinyin": "xiàng piàn"
-      },
-      {
         "text": "互相",
-        "pinyin": "hù xiàng"
+        "pinyin": "hù xiāng"
       },
       {
         "text": "相信",
-        "pinyin": "xiàng xìn"
+        "pinyin": "xiāng xìn"
+      },
+      {
+        "text": "相片",
+        "pinyin": "xiàng piàn"
       }
     ],
     "sentence": {
       "text": "我们要互相帮助。",
-      "pinyin": "wǒ men yào hù xiàng bāng zhù 。"
+      "pinyin": "wǒ men yào hù xiāng bāng zhù 。"
     },
     "imageAsset": "assets/images/0664.webp",
     "needsReview": false,
@@ -29305,7 +29305,7 @@
     "words": [
       {
         "text": "乌龟",
-        "pinyin": "wù guī"
+        "pinyin": "wū guī"
       },
       {
         "text": "龟壳",
@@ -29318,7 +29318,7 @@
     ],
     "sentence": {
       "text": "我家养了一只小乌龟。",
-      "pinyin": "wǒ jiā yǎng le yī zhǐ xiǎo wù guī 。"
+      "pinyin": "wǒ jiā yǎng le yī zhī xiǎo wū guī 。"
     },
     "imageAsset": "assets/images/0667.webp",
     "needsReview": false,
@@ -29365,7 +29365,7 @@
     ],
     "sentence": {
       "text": "海洋馆里有几只可爱的海豚。",
-      "pinyin": "hǎi yáng guǎn lǐ yǒu jǐ zhǐ kě ài de hǎi tún 。"
+      "pinyin": "hǎi yáng guǎn lǐ yǒu jǐ zhī kě ài de hǎi tún 。"
     },
     "imageAsset": "assets/images/0668.webp",
     "needsReview": false,
@@ -29451,7 +29451,7 @@
       },
       {
         "text": "干柴",
-        "pinyin": "gàn chái"
+        "pinyin": "gān chái"
       }
     ],
     "sentence": {
@@ -29530,7 +29530,7 @@
     "words": [
       {
         "text": "炉子",
-        "pinyin": "lú zǐ"
+        "pinyin": "lú zi"
       },
       {
         "text": "火炉",
@@ -29580,12 +29580,12 @@
       },
       {
         "text": "宇航员",
-        "pinyin": "yǔ háng yún"
+        "pinyin": "yǔ háng yuán"
       }
     ],
     "sentence": {
       "text": "宇航员乘坐飞船进入了宇宙。",
-      "pinyin": "yǔ háng yún chéng zuò fēi chuán jìn rù le yǔ zhòu 。"
+      "pinyin": "yǔ háng yuán chéng zuò fēi chuán jìn rù le yǔ zhòu 。"
     },
     "imageAsset": "assets/images/0673.webp",
     "needsReview": false,
@@ -29626,7 +29626,7 @@
     ],
     "sentence": {
       "text": "世界上有很多美丽的地方。",
-      "pinyin": "shì jiè shàng yǒu hěn duō měi lí de dì fāng 。"
+      "pinyin": "shì jiè shàng yǒu hěn duō měi lì de dì fāng 。"
     },
     "imageAsset": "assets/images/0674.webp",
     "needsReview": false,
@@ -29799,12 +29799,12 @@
       },
       {
         "text": "轮子",
-        "pinyin": "lún zǐ"
+        "pinyin": "lún zi"
       }
     ],
     "sentence": {
       "text": "汽车的轮子转得很快。",
-      "pinyin": "qì chē de lún zǐ zhuàn de hěn kuài 。"
+      "pinyin": "qì chē de lún zi zhuàn de hěn kuài 。"
     },
     "imageAsset": "assets/images/0678.webp",
     "needsReview": false,
@@ -29857,7 +29857,7 @@
   {
     "id": "0680",
     "char": "泊",
-    "pinyin": "pō",
+    "pinyin": "bó",
     "gradeId": 6,
     "orderInGrade": 80,
     "groupId": "g6_line20",
@@ -29878,7 +29878,7 @@
     "words": [
       {
         "text": "停泊",
-        "pinyin": "tíng pō"
+        "pinyin": "tíng bó"
       },
       {
         "text": "湖泊",
@@ -29886,12 +29886,12 @@
       },
       {
         "text": "漂泊",
-        "pinyin": "piào pō"
+        "pinyin": "piāo bó"
       }
     ],
     "sentence": {
       "text": "船只停泊在港口。",
-      "pinyin": "chuán zhǐ tíng pō zài gǎng kǒu 。"
+      "pinyin": "chuán zhī tíng bó zài gǎng kǒu 。"
     },
     "imageAsset": "assets/images/0680.webp",
     "needsReview": false,
@@ -30028,7 +30028,7 @@
       },
       {
         "text": "街头",
-        "pinyin": "jiē tou"
+        "pinyin": "jiē tóu"
       }
     ],
     "sentence": {
@@ -30065,7 +30065,7 @@
       },
       {
         "text": "市场",
-        "pinyin": "shì cháng"
+        "pinyin": "shì chǎng"
       },
       {
         "text": "市民",
@@ -30074,7 +30074,7 @@
     ],
     "sentence": {
       "text": "这座城市非常美丽。",
-      "pinyin": "zhè zuò chéng shì fēi cháng měi lí 。"
+      "pinyin": "zhè zuò chéng shì fēi cháng měi lì 。"
     },
     "imageAsset": "assets/images/0684.webp",
     "needsReview": false,
@@ -30117,7 +30117,7 @@
       },
       {
         "text": "跑道",
-        "pinyin": "páo dào"
+        "pinyin": "pǎo dào"
       }
     ],
     "sentence": {
@@ -30296,11 +30296,11 @@
       },
       {
         "text": "梅雨",
-        "pinyin": "méi yù"
+        "pinyin": "méi yǔ"
       },
       {
         "text": "梅子",
-        "pinyin": "méi zǐ"
+        "pinyin": "méi zi"
       }
     ],
     "sentence": {
@@ -30375,7 +30375,7 @@
     "words": [
       {
         "text": "竹子",
-        "pinyin": "zhú zǐ"
+        "pinyin": "zhú zi"
       },
       {
         "text": "竹叶",
@@ -30388,7 +30388,7 @@
     ],
     "sentence": {
       "text": "熊猫最爱吃竹子。",
-      "pinyin": "xióng māo zuì ài chī zhú zǐ 。"
+      "pinyin": "xióng māo zuì ài chī zhú zi 。"
     },
     "imageAsset": "assets/images/0691.webp",
     "needsReview": false,
@@ -30585,7 +30585,7 @@
       },
       {
         "text": "雹子",
-        "pinyin": "báo zǐ"
+        "pinyin": "báo zi"
       },
       {
         "text": "下雹",
@@ -30677,7 +30677,7 @@
     "words": [
       {
         "text": "绳子",
-        "pinyin": "shéng zǐ"
+        "pinyin": "shéng zi"
       },
       {
         "text": "跳绳",
@@ -30771,7 +30771,7 @@
     "words": [
       {
         "text": "珠子",
-        "pinyin": "zhū zǐ"
+        "pinyin": "zhū zi"
       },
       {
         "text": "珍珠",
@@ -30865,7 +30865,7 @@
     "words": [
       {
         "text": "锅子",
-        "pinyin": "guō zǐ"
+        "pinyin": "guō zi"
       },
       {
         "text": "火锅",
@@ -30979,7 +30979,7 @@
     ],
     "sentence": {
       "text": "花丛中有一只可爱的瓢虫。",
-      "pinyin": "huā cóng zhōng yǒu yī zhǐ kě ài de piáo chóng 。"
+      "pinyin": "huā cóng zhōng yǒu yī zhī kě ài de piáo chóng 。"
     },
     "imageAsset": "assets/images/0703.webp",
     "needsReview": false,
@@ -31019,7 +31019,7 @@
       },
       {
         "text": "盆子",
-        "pinyin": "pén zǐ"
+        "pinyin": "pén zi"
       }
     ],
     "sentence": {
@@ -31059,7 +31059,7 @@
       },
       {
         "text": "虎头",
-        "pinyin": "hǔ tou"
+        "pinyin": "hǔ tóu"
       },
       {
         "text": "虎牙",
@@ -31190,7 +31190,7 @@
     "words": [
       {
         "text": "狮子",
-        "pinyin": "shī zǐ"
+        "pinyin": "shī zi"
       },
       {
         "text": "狮王",
@@ -31203,7 +31203,7 @@
     ],
     "sentence": {
       "text": "狮子是草原上的王者。",
-      "pinyin": "shī zǐ shì cǎo yuán shàng de wáng zhě 。"
+      "pinyin": "shī zi shì cǎo yuán shàng de wáng zhě 。"
     },
     "imageAsset": "assets/images/0708.webp",
     "needsReview": false,
@@ -31343,7 +31343,7 @@
     ],
     "sentence": {
       "text": "树枝上停着几只麻雀。",
-      "pinyin": "shù zhī shàng tíng zhe jǐ zhǐ má què 。"
+      "pinyin": "shù zhī shàng tíng zhe jǐ zhī má què 。"
     },
     "imageAsset": "assets/images/0711.webp",
     "needsReview": false,
@@ -31375,7 +31375,7 @@
     "words": [
       {
         "text": "乌鸦",
-        "pinyin": "wù yā"
+        "pinyin": "wū yā"
       },
       {
         "text": "寒鸦",
@@ -31388,7 +31388,7 @@
     ],
     "sentence": {
       "text": "树上落着几只乌鸦。",
-      "pinyin": "shù shàng luò zhe jǐ zhǐ wù yā 。"
+      "pinyin": "shù shàng luò zhe jǐ zhī wū yā 。"
     },
     "imageAsset": "assets/images/0712.webp",
     "needsReview": false,
@@ -31424,7 +31424,7 @@
     "words": [
       {
         "text": "锤子",
-        "pinyin": "chuí zǐ"
+        "pinyin": "chuí zi"
       },
       {
         "text": "铁锤",
@@ -31432,12 +31432,12 @@
       },
       {
         "text": "锤打",
-        "pinyin": "chuí dá"
+        "pinyin": "chuí dǎ"
       }
     ],
     "sentence": {
       "text": "工人用锤子敲打铁块。",
-      "pinyin": "gōng rén yòng chuí zǐ qiāo dá tiě kuài 。"
+      "pinyin": "gōng rén yòng chuí zi qiāo dǎ tiě kuài 。"
     },
     "imageAsset": "assets/images/0713.webp",
     "needsReview": false,
@@ -31471,7 +31471,7 @@
     "words": [
       {
         "text": "盒子",
-        "pinyin": "hé zǐ"
+        "pinyin": "hé zi"
       },
       {
         "text": "饭盒",
@@ -31519,7 +31519,7 @@
     "words": [
       {
         "text": "筐子",
-        "pinyin": "kuāng zǐ"
+        "pinyin": "kuāng zi"
       },
       {
         "text": "竹筐",
@@ -31571,7 +31571,7 @@
     "words": [
       {
         "text": "篮子",
-        "pinyin": "lán zǐ"
+        "pinyin": "lán zi"
       },
       {
         "text": "篮球",
@@ -31584,7 +31584,7 @@
     ],
     "sentence": {
       "text": "妈妈提着篮子去市场买菜。",
-      "pinyin": "mā mā tí zhe lán zǐ qù shì cháng mǎi cài 。"
+      "pinyin": "mā mā tí zhe lán zi qù shì chǎng mǎi cài 。"
     },
     "imageAsset": "assets/images/0716.webp",
     "needsReview": false,
@@ -31664,7 +31664,7 @@
       },
       {
         "text": "鸭子",
-        "pinyin": "yā zǐ"
+        "pinyin": "yā zi"
       },
       {
         "text": "鸭蛋",
@@ -31673,7 +31673,7 @@
     ],
     "sentence": {
       "text": "池塘里有几只小鸭子在游泳。",
-      "pinyin": "chí táng lǐ yǒu jǐ zhǐ xiǎo yā zǐ zài yóu yǒng 。"
+      "pinyin": "chí táng lǐ yǒu jǐ zhī xiǎo yā zi zài yóu yǒng 。"
     },
     "imageAsset": "assets/images/0718.webp",
     "needsReview": false,
@@ -31760,7 +31760,7 @@
     "words": [
       {
         "text": "燕子",
-        "pinyin": "yàn zǐ"
+        "pinyin": "yàn zi"
       },
       {
         "text": "燕窝",
@@ -31773,7 +31773,7 @@
     ],
     "sentence": {
       "text": "春天燕子飞回了屋檐下。",
-      "pinyin": "chūn tiān yàn zǐ fēi huí le wū yán xià 。"
+      "pinyin": "chūn tiān yàn zi fēi huí le wū yán xià 。"
     },
     "imageAsset": "assets/images/0720.webp",
     "needsReview": false,
