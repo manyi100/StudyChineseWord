@@ -2,7 +2,6 @@ import 'dart:math' as math;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import '../services/stroke_repository.dart';
-import 'audio_feedback.dart';
 
 enum _StrokeMode {
   demo, // 自动笔顺演示
@@ -24,9 +23,6 @@ class TianZiGeBox extends StatefulWidget {
   final VoidCallback? onSpeak;
   final bool showControls;
 
-  /// 朗读动效使用的唯一标识（一般由卡片传入 `char_<汉字ID>`）
-  final String? audioTag;
-
   const TianZiGeBox({
     super.key,
     required this.char,
@@ -37,7 +33,6 @@ class TianZiGeBox extends StatefulWidget {
     this.strokeOrderNames = const [],
     this.onSpeak,
     this.showControls = true,
-    this.audioTag,
   });
 
   @override
@@ -502,22 +497,6 @@ class _TianZiGeBoxState extends State<TianZiGeBox>
         Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Material(
-              color: Colors.white.withValues(alpha: 0.85),
-              shape: const CircleBorder(),
-              child: InkWell(
-                customBorder: const CircleBorder(),
-                onTap: widget.onSpeak,
-                child: Padding(
-                  padding: const EdgeInsets.all(4),
-                  child: SpeakerIcon(
-                    tag: widget.audioTag ?? 'char_${widget.char}',
-                    size: 18,
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(width: 10),
             _ModeButton(
               icon: Icons.play_circle_outline_rounded,
               label: '笔顺演示',

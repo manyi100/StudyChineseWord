@@ -174,7 +174,6 @@ class CharacterCard extends StatelessWidget {
                   char: hanzi.char,
                   size: 152,
                   strokeOrderNames: hanzi.strokeOrderNames,
-                  audioTag: _charTag,
                   onSpeak: () => TtsService.instance
                       .speak(hanzi.char, tag: _charTag),
                 ),
@@ -227,7 +226,7 @@ class CharacterCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(14),
                   ),
                   child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       SpeakerIcon(
                         tag: _sentenceTag,

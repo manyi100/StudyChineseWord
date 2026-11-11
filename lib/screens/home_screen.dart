@@ -18,6 +18,9 @@ class HomeScreen extends StatefulWidget {
   final String? progressKey;
   final int? initialIndex;
 
+  /// 本课 4 个字都学完后，继续左滑时触发（用于切到下一课）
+  final VoidCallback? onFinished;
+
   const HomeScreen({
     super.key,
     this.gradeId = 0,
@@ -25,6 +28,7 @@ class HomeScreen extends StatefulWidget {
     this.title,
     this.progressKey,
     this.initialIndex,
+    this.onFinished,
   });
 
   @override
@@ -34,7 +38,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   PageController? _pageController;
   Set<String> _favoriteIds = {};
+  Set<String> _viewedIds = {};
   bool _isLoading = true;
+  bool _nextTriggered = false;
+  bool _dragStartedAtEnd = false;
+  DateTime? _lastFinishHintAt;
 
   List<HanziModel> _hanziList = [];
   String _titleText = '';
@@ -72,6 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final lastIndex =
         await StorageService.instance.getLastIndexForKey(_progressKey);
     final favorites = await StorageService.instance.getFavoriteIds();
+    final viewedIds = await StorageService.instance.getViewedIds();
     final safeIndex = _hanziList.isEmpty
         ? 0
         : (widget.initialIndex ?? lastIndex)
@@ -79,6 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     setState(() {
       _favoriteIds = favorites;
+      _viewedIds = viewedIds;
       _pageController = PageController(initialPage: safeIndex);
       _isLoading = false;
     });
@@ -107,10 +117,65 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _markViewedAndSpeak(int index) {
     final hanzi = _hanziList[index];
+    _viewedIds.add(hanzi.id);
     StorageService.instance.markViewed(hanzi.id);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       TtsService.instance.speak(hanzi.char, tag: 'char_${hanzi.id}');
     });
+  }
+
+  bool get _allViewed =>
+      _hanziList.isNotEmpty && _hanziList.every((h) => _viewedIds.contains(h.id));
+
+  /// 在最后一页继续向左滑时：四个字都学完则进入下一课，否则轻提示
+  void _handleScrollNotification(ScrollNotification notification) {
+    if (widget.onFinished == null || _nextTriggered) return;
+    if (notification.depth != 0) return;
+    if (notification.metrics.axis != Axis.horizontal) return;
+
+    final metrics = notification.metrics;
+    final atEnd = metrics.pixels >= metrics.maxScrollExtent - 1;
+
+    if (notification is ScrollStartNotification) {
+      _dragStartedAtEnd = notification.dragDetails != null && atEnd;
+    } else if (notification is OverscrollNotification) {
+      if (atEnd && notification.overscroll.abs() > 24) {
+        _tryFinishCourse();
+      }
+    } else if (notification is ScrollEndNotification) {
+      final startedAtEnd = _dragStartedAtEnd;
+      _dragStartedAtEnd = false;
+      final velocityX =
+          notification.dragDetails?.velocity.pixelsPerSecond.dx ?? 0;
+      if (startedAtEnd && atEnd && velocityX < -80) {
+        _tryFinishCourse();
+      }
+    }
+  }
+
+  void _tryFinishCourse() {
+    if (widget.onFinished == null || _nextTriggered) return;
+
+    final page = _pageController?.page;
+    if (page == null || page.round() < _hanziList.length - 1) return;
+
+    if (!_allViewed) {
+      final now = DateTime.now();
+      final last = _lastFinishHintAt;
+      if (last == null || now.difference(last) > const Duration(seconds: 3)) {
+        _lastFinishHintAt = now;
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('先看完本课 ${_hanziList.length} 个字，再滑到下一课'),
+            duration: const Duration(seconds: 2),
+          ),
+        );
+      }
+      return;
+    }
+
+    _nextTriggered = true;
+    widget.onFinished!();
   }
 
   void _onPageChanged(int index) {
@@ -137,7 +202,7 @@ class _HomeScreenState extends State<HomeScreen> {
   void dispose() {
     _audioHintTimer?.cancel();
     _pageController?.dispose();
-    TtsService.instance.stop();
+    TtsService.instance.stop(notify: false);
     super.dispose();
   }
 
@@ -172,18 +237,24 @@ class _HomeScreenState extends State<HomeScreen> {
           const SizedBox(height: 4),
           if (_showAudioHint) AudioHintBanner(onClose: _dismissAudioHint),
           Expanded(
-            child: PageView.builder(
-              controller: _pageController,
-              itemCount: _hanziList.length,
-              onPageChanged: _onPageChanged,
-              itemBuilder: (context, index) {
-                final hanzi = _hanziList[index];
-                return CharacterCard(
-                  hanzi: hanzi,
-                  isFavorite: _favoriteIds.contains(hanzi.id),
-                  onToggleFavorite: () => _toggleFavorite(hanzi.id),
-                );
+            child: NotificationListener<ScrollNotification>(
+              onNotification: (notification) {
+                _handleScrollNotification(notification);
+                return false;
               },
+              child: PageView.builder(
+                controller: _pageController,
+                itemCount: _hanziList.length,
+                onPageChanged: _onPageChanged,
+                itemBuilder: (context, index) {
+                  final hanzi = _hanziList[index];
+                  return CharacterCard(
+                    hanzi: hanzi,
+                    isFavorite: _favoriteIds.contains(hanzi.id),
+                    onToggleFavorite: () => _toggleFavorite(hanzi.id),
+                  );
+                },
+              ),
             ),
           ),
         ],

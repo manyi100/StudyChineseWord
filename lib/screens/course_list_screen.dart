@@ -39,17 +39,30 @@ class _CourseListScreenState extends State<CourseListScreen> {
     });
   }
 
-  Future<void> _openCourse(HanziCourse course) async {
+  Widget _courseStudy(int index) {
+    final course = _courses[index];
+    return HomeScreen(
+      chars: course.chars,
+      title: '${course.label} · ${course.title}',
+      progressKey: 'course_${course.groupId}',
+      // 一课学完后继续左滑，直接替换为下一课
+      onFinished: index + 1 < _courses.length
+          ? () => _replaceWithCourse(index + 1)
+          : null,
+    );
+  }
+
+  Future<void> _openCourseAt(int index) async {
     await Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (_) => HomeScreen(
-          chars: course.chars,
-          title: '${course.label} · ${course.title}',
-          progressKey: 'course_${course.groupId}',
-        ),
-      ),
+      MaterialPageRoute(builder: (_) => _courseStudy(index)),
     );
     _load();
+  }
+
+  void _replaceWithCourse(int index) {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (_) => _courseStudy(index)),
+    );
   }
 
   Future<void> _openContinuous() async {
@@ -93,7 +106,7 @@ class _CourseListScreenState extends State<CourseListScreen> {
           return _CourseCard(
             course: course,
             viewedIds: _viewedIds,
-            onTap: () => _openCourse(course),
+            onTap: () => _openCourseAt(index - 1),
           );
         },
       ),

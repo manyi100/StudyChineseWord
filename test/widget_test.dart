@@ -66,4 +66,41 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.textContaining('1~3'), findsOneWidget);
   });
+
+  testWidgets('swiping past the last character opens the next course',
+      (WidgetTester tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await tester.binding.setSurfaceSize(const Size(360, 800));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+
+    await tester.runAsync(() async {
+      await HanziRepository.instance.ensureLoaded();
+    });
+
+    await tester.pumpWidget(const MyApp());
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 200));
+
+    await tester.tap(find.text('第 1 阶段'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('第 1 课'));
+    await tester.pumpAndSettle();
+    expect(find.text('第 1 课 · 一二三四'), findsOneWidget);
+
+    // 依次看完 4 个字（从配图区域滑动，避开田字格的手势）
+    for (var i = 0; i < 3; i++) {
+      await tester.dragFrom(const Offset(180, 220), const Offset(-300, 0));
+      await tester.pumpAndSettle();
+    }
+    expect(find.text('第 1 课 · 一二三四'), findsOneWidget);
+
+    // 在最后一页继续左滑，应进入下一课
+    await tester.flingFrom(
+        const Offset(180, 220), const Offset(-300, 0), 1200);
+    await tester.pumpAndSettle();
+    expect(find.text('第 2 课 · 五六七八'), findsOneWidget);
+
+    // 让首次提示条 / 朗读兜底定时器走完，避免测试结束时报 pending timer
+    await tester.pump(const Duration(seconds: 16));
+  });
 }

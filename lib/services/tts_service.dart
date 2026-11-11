@@ -190,11 +190,13 @@ class TtsService {
     onUnavailable?.call(_unavailableMessage);
   }
 
-  Future<void> stop() async {
+  Future<void> stop({bool notify = true}) async {
     _generation++;
     _fallbackTimer?.cancel();
     _fallbackTimer = null;
-    if (speakingTag.value != null) {
+    // 组件销毁（dispose）时树处于锁定状态，不能再通知 ValueListenableBuilder；
+    // 此时相关监听者也会被销毁，直接跳过通知即可。
+    if (notify && speakingTag.value != null) {
       speakingTag.value = null;
     }
     await _flutterTts.stop();

@@ -126,6 +126,7 @@ class SpeakingLabel extends StatelessWidget {
             opacity: activeTag == tag ? 1 : 0,
             child: const Text(
               '朗读中',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 11,
                 fontWeight: FontWeight.w600,
