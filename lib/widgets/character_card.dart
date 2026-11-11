@@ -106,12 +106,37 @@ class CharacterCard extends StatelessWidget {
                       ),
                     Positioned(
                       top: 8,
-                      right: 8,
+                      left: 8,
                       child: SpeakerIcon(
                         tag: _imageTag,
                         size: 18,
                         color: Colors.black54,
                         backgroundColor: Colors.white.withValues(alpha: 0.88),
+                      ),
+                    ),
+                    Positioned(
+                      top: 8,
+                      right: 8,
+                      child: Material(
+                        color: Colors.white.withValues(alpha: 0.9),
+                        shape: const CircleBorder(),
+                        elevation: 1,
+                        child: InkWell(
+                          customBorder: const CircleBorder(),
+                          onTap: onToggleFavorite,
+                          child: Padding(
+                            padding: const EdgeInsets.all(6),
+                            child: Icon(
+                              isFavorite
+                                  ? Icons.star_rounded
+                                  : Icons.star_border_rounded,
+                              color: isFavorite
+                                  ? Colors.amber[700]
+                                  : Colors.black38,
+                              size: 22,
+                            ),
+                          ),
+                        ),
                       ),
                     ),
                     Positioned(
@@ -157,21 +182,32 @@ class CharacterCard extends StatelessWidget {
             ),
             const SizedBox(height: 16),
 
-            // 组词区：没有数据时整块隐藏，不显示空白
+            // 组词区：没有数据时整块隐藏，不显示空白。
+            // 固定为一行三等分，词语再长也不换行：拼音最多折两行，词语单行缩放。
             if (hanzi.words.isNotEmpty) ...[
               const _SectionLabel(label: '组词'),
               const SizedBox(height: 8),
-              Wrap(
-                spacing: 10,
-                runSpacing: 10,
-                children: hanzi.words.map((w) {
-                  return _WordChip(
-                    word: w,
-                    tag: _wordTag(w),
-                    onTap: () => TtsService.instance
-                        .speak(w.text, tag: _wordTag(w)),
-                  );
-                }).toList(),
+              SizedBox(
+                height: 78,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    for (var i = 0; i < hanzi.words.length; i++)
+                      Expanded(
+                        child: Padding(
+                          padding: EdgeInsets.only(left: i == 0 ? 0 : 8),
+                          child: _WordChip(
+                            word: hanzi.words[i],
+                            tag: _wordTag(hanzi.words[i]),
+                            onTap: () => TtsService.instance.speak(
+                              hanzi.words[i].text,
+                              tag: _wordTag(hanzi.words[i]),
+                            ),
+                          ),
+                        ),
+                      ),
+                  ],
+                ),
               ),
               const SizedBox(height: 16),
             ],
@@ -213,35 +249,18 @@ class CharacterCard extends StatelessWidget {
               const SizedBox(height: 16),
             ],
 
-            // 底部信息条：部首/笔顺（真实校验数据） + 收藏按钮
-            Row(
+            // 底部信息条：部首/笔顺（真实校验数据）
+            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        '部首：${hanzi.radical ?? '—'}　共${hanzi.strokeCount ?? '?'}画',
-                        style: const TextStyle(
-                            fontSize: 13, color: Colors.black54),
-                      ),
-                      const SizedBox(height: 4),
-                      Text(
-                        '笔顺：${hanzi.strokeOrderDisplay}',
-                        style: const TextStyle(
-                            fontSize: 13, color: Colors.black54),
-                      ),
-                    ],
-                  ),
+                Text(
+                  '部首：${hanzi.radical ?? '—'}　共${hanzi.strokeCount ?? '?'}画',
+                  style: const TextStyle(fontSize: 13, color: Colors.black54),
                 ),
-                IconButton(
-                  onPressed: onToggleFavorite,
-                  icon: Icon(
-                    isFavorite ? Icons.star_rounded : Icons.star_border_rounded,
-                    color: isFavorite ? Colors.amber[700] : Colors.black38,
-                    size: 30,
-                  ),
+                const SizedBox(height: 4),
+                Text(
+                  '笔顺：${hanzi.strokeOrderDisplay}',
+                  style: const TextStyle(fontSize: 13, color: Colors.black54),
                 ),
               ],
             ),
@@ -290,35 +309,54 @@ class _WordChip extends StatelessWidget {
           final active = activeTag == tag;
           return AnimatedContainer(
             duration: const Duration(milliseconds: 180),
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
             decoration: BoxDecoration(
               color: active ? const Color(0xFFF1F8E9) : Colors.white,
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(14),
               border: Border.all(
                 color: active ? const Color(0xFF7CB342) : Colors.black12,
                 width: active ? 1.6 : 1,
               ),
             ),
-            child: Row(
-              mainAxisSize: MainAxisSize.min,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SpeakerIcon(
-                  tag: tag,
-                  size: 14,
-                  color: active
-                      ? const Color(0xFF558B2F)
-                      : Colors.black45,
-                ),
-                const SizedBox(width: 6),
-                Column(
+                Row(
                   children: [
-                    Text(
-                      word.pinyin,
-                      style: const TextStyle(
-                          fontSize: 11, color: Colors.black45),
+                    SpeakerIcon(
+                      tag: tag,
+                      size: 12,
+                      gap: 2,
+                      color: active
+                          ? const Color(0xFF558B2F)
+                          : Colors.black45,
                     ),
-                    Text(word.text, style: const TextStyle(fontSize: 17)),
+                    const SizedBox(width: 2),
+                    Expanded(
+                      child: Text(
+                        word.pinyin,
+                        maxLines: 2,
+                        textAlign: TextAlign.center,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 10.5,
+                          height: 1.12,
+                          color: active
+                              ? const Color(0xFF558B2F)
+                              : Colors.black45,
+                        ),
+                      ),
+                    ),
                   ],
+                ),
+                const SizedBox(height: 3),
+                FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    word.text,
+                    maxLines: 1,
+                    style: const TextStyle(fontSize: 17),
+                  ),
                 ),
               ],
             ),

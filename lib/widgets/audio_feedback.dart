@@ -13,12 +13,16 @@ class SpeakerIcon extends StatelessWidget {
   final Color color;
   final Color? backgroundColor;
 
+  /// 图标圆形热区的额外留白，紧凑场景（如词语 chip）可设为 2~4
+  final double gap;
+
   const SpeakerIcon({
     super.key,
     required this.tag,
     this.size = 18,
     this.color = const Color(0xFF455A64),
     this.backgroundColor,
+    this.gap = 12,
   });
 
   @override
@@ -32,8 +36,8 @@ class SpeakerIcon extends StatelessWidget {
           final active = activeTag == tag;
           return AnimatedContainer(
             duration: const Duration(milliseconds: 180),
-            width: size + 12,
-            height: size + 12,
+            width: size + gap,
+            height: size + gap,
             alignment: Alignment.center,
             decoration: BoxDecoration(
               color: backgroundColor ?? Colors.transparent,

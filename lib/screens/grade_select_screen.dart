@@ -5,6 +5,7 @@ import '../services/hanzi_repository.dart';
 import '../services/progress_service.dart';
 import '../services/storage_service.dart';
 import 'course_list_screen.dart';
+import 'favorites_screen.dart';
 import 'hanzi_grid_screen.dart';
 import 'home_screen.dart';
 
@@ -52,6 +53,7 @@ class _GradeSelectScreenState extends State<GradeSelectScreen> {
   int _totalAll = 0;
   int _learnedAll = 0;
   int _unlockedTotal = 0;
+  int _favoriteCount = 0;
 
   @override
   void initState() {
@@ -63,6 +65,7 @@ class _GradeSelectScreenState extends State<GradeSelectScreen> {
     await HanziRepository.instance.ensureLoaded();
     final viewedIds = await StorageService.instance.getViewedIds();
     final unlockedGradeIds = await ProgressService.getUnlockedGradeIds();
+    final favorites = await StorageService.instance.getFavoriteIds();
 
     final list = <_GradeProgress>[];
     for (final grade in gradeInfoList) {
@@ -85,11 +88,31 @@ class _GradeSelectScreenState extends State<GradeSelectScreen> {
       _strokeBands = HanziRepository.instance.strokeBands;
       _totalAll = HanziRepository.instance.all.length;
       _learnedAll = viewedIds.length;
+      _favoriteCount = favorites.length;
       _unlockedTotal = list
           .where((p) => p.isUnlocked)
           .fold(0, (sum, p) => sum + p.total);
       _isLoading = false;
     });
+  }
+
+  Future<void> _openFavorites() async {
+    final favorites = await StorageService.instance.getFavoriteIds();
+    if (!mounted) return;
+    await Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => FavoritesScreen(
+          allHanzi: HanziRepository.instance.all,
+          favoriteIds: favorites,
+          onToggleFavorite: (id) async {
+            final current = await StorageService.instance.getFavoriteIds();
+            if (!current.add(id)) current.remove(id);
+            await StorageService.instance.saveFavoriteIds(current);
+          },
+        ),
+      ),
+    );
+    _load();
   }
 
   Future<void> _enterStage(int stageId) async {
@@ -195,6 +218,8 @@ class _GradeSelectScreenState extends State<GradeSelectScreen> {
               _load();
             },
           ),
+          const SizedBox(height: 12),
+          _FavoritesCard(count: _favoriteCount, onTap: _openFavorites),
         ];
       case _BrowseMode.radical:
         return [
@@ -398,6 +423,71 @@ class _AllGradesCard extends StatelessWidget {
                 ),
               ),
               const Icon(Icons.chevron_right_rounded, color: Colors.white70),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _FavoritesCard extends StatelessWidget {
+  final int count;
+  final VoidCallback onTap;
+
+  const _FavoritesCard({required this.count, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(20),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(20),
+        onTap: onTap,
+        child: Container(
+          padding: const EdgeInsets.all(16),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: Colors.black.withValues(alpha: 0.06)),
+          ),
+          child: Row(
+            children: [
+              Container(
+                width: 44,
+                height: 44,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: const Color(0xFFFFF8E1),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: const Icon(Icons.star_rounded,
+                    color: Color(0xFFFFB300), size: 24),
+              ),
+              const SizedBox(width: 14),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text(
+                      '收藏复习',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      count > 0 ? '已收藏 $count 字，点击集中复习' : '还没有收藏，学习时点右上角星标',
+                      style: const TextStyle(
+                        fontSize: 12,
+                        color: Colors.black45,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const Icon(Icons.chevron_right_rounded, color: Colors.black26),
             ],
           ),
         ),

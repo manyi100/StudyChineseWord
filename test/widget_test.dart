@@ -10,6 +10,10 @@ void main() {
       (WidgetTester tester) async {
     SharedPreferences.setMockInitialValues({});
 
+    // 按手机常见宽度验证布局，避免词语 chip 等组件在窄屏溢出
+    await tester.binding.setSurfaceSize(const Size(360, 800));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+
     // 资源较大，先在真实异步环境里完成加载，避免 pumpAndSettle 卡在 loading
     await tester.runAsync(() async {
       await HanziRepository.instance.ensureLoaded();
@@ -19,7 +23,7 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 200));
 
-    // 首页：三种分类入口 + 6 个阶段
+    // 首页：三种分类入口 + 6 个阶段 + 收藏复习入口
     expect(find.text('选择学习阶段'), findsOneWidget);
     expect(find.text('按主题'), findsOneWidget);
     expect(find.text('按部首'), findsOneWidget);
@@ -45,6 +49,12 @@ void main() {
     await tester.pumpAndSettle();
     await tester.pageBack();
     await tester.pumpAndSettle();
+
+    // 收藏复习入口已从学习页移到首页底部
+    await tester.scrollUntilVisible(find.text('收藏复习'), 300);
+    expect(find.text('收藏复习'), findsOneWidget);
+    await tester.scrollUntilVisible(find.text('按部首'), -300);
+
     await tester.tap(find.text('按部首'));
     await tester.pumpAndSettle();
     expect(find.textContaining('个部首'), findsOneWidget);

@@ -8,7 +8,6 @@ import '../services/storage_service.dart';
 import '../services/tts_service.dart';
 import '../widgets/audio_feedback.dart';
 import '../widgets/character_card.dart';
-import 'favorites_screen.dart';
 import 'grade_select_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -171,24 +170,6 @@ class _HomeScreenState extends State<HomeScreen> {
           tooltip: '返回阶段选择',
           onPressed: _goToGradeSelect,
         ),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.star_rounded),
-            tooltip: '收藏复习',
-            onPressed: () async {
-              await Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => FavoritesScreen(
-                    allHanzi: HanziRepository.instance.all,
-                    favoriteIds: _favoriteIds,
-                    onToggleFavorite: _toggleFavorite,
-                  ),
-                ),
-              );
-              setState(() {});
-            },
-          ),
-        ],
       ),
       body: Column(
         children: [
