@@ -188,7 +188,7 @@ class CharacterCard extends StatelessWidget {
               const _SectionLabel(label: '组词'),
               const SizedBox(height: 8),
               SizedBox(
-                height: 78,
+                height: 56,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
@@ -309,10 +309,10 @@ class _WordChip extends StatelessWidget {
           final active = activeTag == tag;
           return AnimatedContainer(
             duration: const Duration(milliseconds: 180),
-            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 6),
+            padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 4),
             decoration: BoxDecoration(
               color: active ? const Color(0xFFF1F8E9) : Colors.white,
-              borderRadius: BorderRadius.circular(14),
+              borderRadius: BorderRadius.circular(12),
               border: Border.all(
                 color: active ? const Color(0xFF7CB342) : Colors.black12,
                 width: active ? 1.6 : 1,
@@ -321,42 +321,42 @@ class _WordChip extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Text(
+                  word.pinyin,
+                  maxLines: 2,
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 9.5,
+                    height: 1.05,
+                    color:
+                        active ? const Color(0xFF558B2F) : Colors.black45,
+                  ),
+                ),
+                const SizedBox(height: 1),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SpeakerIcon(
                       tag: tag,
-                      size: 12,
-                      gap: 2,
+                      size: 11,
+                      gap: 0,
                       color: active
                           ? const Color(0xFF558B2F)
                           : Colors.black45,
                     ),
                     const SizedBox(width: 2),
-                    Expanded(
-                      child: Text(
-                        word.pinyin,
-                        maxLines: 2,
-                        textAlign: TextAlign.center,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          fontSize: 10.5,
-                          height: 1.12,
-                          color: active
-                              ? const Color(0xFF558B2F)
-                              : Colors.black45,
+                    Flexible(
+                      child: FittedBox(
+                        fit: BoxFit.scaleDown,
+                        child: Text(
+                          word.text,
+                          maxLines: 1,
+                          style: const TextStyle(fontSize: 16),
                         ),
                       ),
                     ),
                   ],
-                ),
-                const SizedBox(height: 3),
-                FittedBox(
-                  fit: BoxFit.scaleDown,
-                  child: Text(
-                    word.text,
-                    maxLines: 1,
-                    style: const TextStyle(fontSize: 17),
-                  ),
                 ),
               ],
             ),
