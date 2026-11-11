@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import '../l10n/app_strings.dart';
 
 /// 朗读服务：封装 flutter_tts，统一管理朗读单字/词语/句子的逻辑。
 /// 使用系统自带TTS引擎，完全离线，无需联网、无需额外申请API Key。
@@ -23,9 +24,9 @@ class TtsService {
   static void Function(String message)? onUnavailable;
 
   static const _candidateLanguages = ['zh-CN', 'zh-Hans-CN', 'zh-Hans', 'zh'];
-  static const _unavailableMessage =
-      '没有可用的中文语音。请到 设置 - 更多设置 - 无障碍 - 文字转语音(TTS)输出 '
-      '里选择或安装一个支持中文的语音引擎。';
+
+  static String get _unavailableMessage =>
+      AppStrings.ofCurrent().ttsUnavailable;
 
   final FlutterTts _flutterTts = FlutterTts();
   Future<bool>? _readyFuture;

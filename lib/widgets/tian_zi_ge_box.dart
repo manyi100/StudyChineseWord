@@ -1,12 +1,15 @@
 import 'dart:math' as math;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import '../l10n/app_strings.dart';
 import '../services/stroke_repository.dart';
 
 enum _StrokeMode {
   demo, // 自动笔顺演示
   trace, // 手指跟写描红
 }
+
+enum _FeedbackKind { none, retry, success }
 
 /// 汉字"田字格"组件（支持自动笔顺动画演示 + 手指一笔一画跟写描红）。
 ///
@@ -54,8 +57,8 @@ class _TianZiGeBoxState extends State<TianZiGeBox>
   late final AnimationController _hintController;
   int _traceStrokeIndex = 0;
   final List<Offset> _userPoints = [];
-  String? _feedbackText;
-  bool _feedbackIsError = false;
+  _FeedbackKind _feedbackKind = _FeedbackKind.none;
+  bool get _feedbackIsError => _feedbackKind == _FeedbackKind.retry;
 
   @override
   void initState() {
@@ -96,8 +99,7 @@ class _TianZiGeBoxState extends State<TianZiGeBox>
   void _loadCharAndStartDemo() {
     _strokeData = StrokeRepository.instance.getStrokeData(widget.char);
     _userPoints.clear();
-    _feedbackText = null;
-    _feedbackIsError = false;
+    _feedbackKind = _FeedbackKind.none;
     _traceStrokeIndex = 0;
     _startDemo();
   }
@@ -121,7 +123,7 @@ class _TianZiGeBoxState extends State<TianZiGeBox>
       _mode = _StrokeMode.demo;
       _demoStrokeIndex = 0;
       _demoFinished = false;
-      _feedbackText = null;
+      _feedbackKind = _FeedbackKind.none;
     });
 
     // 稍微停顿让页面切换动画稳定后再开始第一笔
@@ -166,8 +168,7 @@ class _TianZiGeBoxState extends State<TianZiGeBox>
       _mode = _StrokeMode.trace;
       _traceStrokeIndex = 0;
       _userPoints.clear();
-      _feedbackText = null;
-      _feedbackIsError = false;
+      _feedbackKind = _FeedbackKind.none;
     });
   }
 
@@ -214,15 +215,13 @@ class _TianZiGeBoxState extends State<TianZiGeBox>
       _demoController.stop();
       _mode = _StrokeMode.trace;
       _traceStrokeIndex = 0;
-      _feedbackText = null;
-      _feedbackIsError = false;
+      _feedbackKind = _FeedbackKind.none;
     } else if (_mode == _StrokeMode.trace &&
         _traceStrokeIndex >= data.strokeCount &&
         _polylineLength(_userPoints) > 55.0) {
       // 已经写完一遍后再次动笔，自动开启新一轮描红
       _traceStrokeIndex = 0;
-      _feedbackText = null;
-      _feedbackIsError = false;
+      _feedbackKind = _FeedbackKind.none;
     }
 
     setState(() {});
@@ -267,18 +266,14 @@ class _TianZiGeBoxState extends State<TianZiGeBox>
     if (ok) {
       _hintController.stop();
       _traceStrokeIndex++;
-      _feedbackIsError = false;
       if (_traceStrokeIndex >= data.strokeCount) {
-        _feedbackText = '🎉 太棒啦！全部 ${data.strokeCount} 画都写对啦';
+        _feedbackKind = _FeedbackKind.success;
         widget.onSpeak?.call();
       } else {
-        _feedbackText = null;
+        _feedbackKind = _FeedbackKind.none;
       }
     } else {
-      final strokeName = _strokeNameAt(_traceStrokeIndex);
-      _feedbackIsError = true;
-      _feedbackText = '顺着红点方向写第 ${_traceStrokeIndex + 1} 画'
-          '${strokeName != null ? "（$strokeName）" : ""}';
+      _feedbackKind = _FeedbackKind.retry;
       _hintController.forward(from: 0.0);
     }
 
@@ -394,30 +389,50 @@ class _TianZiGeBoxState extends State<TianZiGeBox>
     return (bestAlong / total).clamp(0.0, 1.0);
   }
 
-  String _buildStatusText(CharStrokeData data) {
-    if (_feedbackText != null) return _feedbackText!;
+  String _buildStatusText(BuildContext context, CharStrokeData data) {
+    final s = context.s;
+
+    if (_feedbackKind == _FeedbackKind.success) {
+      return s.traceSuccess(data.strokeCount);
+    }
+    if (_feedbackKind == _FeedbackKind.retry) {
+      return s.traceRetry(
+        _traceStrokeIndex + 1,
+        _localizedStrokeName(context, _traceStrokeIndex),
+      );
+    }
 
     if (_mode == _StrokeMode.demo) {
       if (_demoFinished) {
-        return '共 ${data.strokeCount} 画 · 直接在格子里写即可描红';
+        return s.demoDone(data.strokeCount);
       }
       final idx = _demoStrokeIndex.clamp(0, data.strokeCount - 1);
-      final name = _strokeNameAt(idx);
-      return '笔顺演示：第 ${idx + 1} / ${data.strokeCount} 画'
-          '${name != null ? "（$name）" : ""}';
+      return s.demoProgress(
+        idx + 1,
+        data.strokeCount,
+        _localizedStrokeName(context, idx),
+      );
     } else {
       if (_traceStrokeIndex >= data.strokeCount) {
-        return '🎉 全部 ${data.strokeCount} 画描写完成！';
+        return s.traceDone(data.strokeCount);
       }
-      final name = _strokeNameAt(_traceStrokeIndex);
-      return '请顺着红点写：第 ${_traceStrokeIndex + 1} / ${data.strokeCount} 画'
-          '${name != null ? "（$name）" : ""}';
+      return s.tracePrompt(
+        _traceStrokeIndex + 1,
+        data.strokeCount,
+        _localizedStrokeName(context, _traceStrokeIndex),
+      );
     }
+  }
+
+  String? _localizedStrokeName(BuildContext context, int index) {
+    final raw = _strokeNameAt(index);
+    return raw == null ? null : context.s.strokeName(raw);
   }
 
   @override
   Widget build(BuildContext context) {
     final data = _strokeData;
+    final s = context.s;
 
     final gridBox = RawGestureDetector(
       behavior: HitTestBehavior.opaque,
@@ -483,7 +498,7 @@ class _TianZiGeBoxState extends State<TianZiGeBox>
         gridBox,
         const SizedBox(height: 8),
         Text(
-          _buildStatusText(data),
+          _buildStatusText(context, data),
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 12.5,
@@ -494,31 +509,35 @@ class _TianZiGeBoxState extends State<TianZiGeBox>
           ),
         ),
         const SizedBox(height: 8),
-        Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            _ModeButton(
-              icon: Icons.play_circle_outline_rounded,
-              label: '笔顺演示',
-              selected: _mode == _StrokeMode.demo,
-              activeColor: const Color(0xFF1976D2),
-              onTap: () {
-                widget.onSpeak?.call();
-                _startDemo();
-              },
-            ),
-            const SizedBox(width: 10),
-            _ModeButton(
-              icon: Icons.edit_rounded,
-              label: _mode == _StrokeMode.trace &&
-                      _traceStrokeIndex >= data.strokeCount
-                  ? '再写一遍'
-                  : '手写描红',
-              selected: _mode == _StrokeMode.trace,
-              activeColor: const Color(0xFFE53935),
-              onTap: _startTraceMode,
-            ),
-          ],
+        // 英文文案比中文长，窄屏下按比例整体缩放，保证两个按钮始终在一行
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              _ModeButton(
+                icon: Icons.play_circle_outline_rounded,
+                label: s.strokeDemo,
+                selected: _mode == _StrokeMode.demo,
+                activeColor: const Color(0xFF1976D2),
+                onTap: () {
+                  widget.onSpeak?.call();
+                  _startDemo();
+                },
+              ),
+              const SizedBox(width: 10),
+              _ModeButton(
+                icon: Icons.edit_rounded,
+                label: _mode == _StrokeMode.trace &&
+                        _traceStrokeIndex >= data.strokeCount
+                    ? s.traceAgain
+                    : s.traceWrite,
+                selected: _mode == _StrokeMode.trace,
+                activeColor: const Color(0xFFE53935),
+                onTap: _startTraceMode,
+              ),
+            ],
+          ),
         ),
       ],
     );

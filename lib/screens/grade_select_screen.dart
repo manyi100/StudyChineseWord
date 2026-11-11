@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import '../l10n/app_strings.dart';
 import '../models/hanzi_model.dart';
 import '../models/hanzi_course.dart';
 import '../services/hanzi_repository.dart';
 import '../services/progress_service.dart';
 import '../services/storage_service.dart';
+import '../widgets/language_button.dart';
 import 'course_list_screen.dart';
 import 'favorites_screen.dart';
 import 'hanzi_grid_screen.dart';
@@ -124,12 +126,12 @@ class _GradeSelectScreenState extends State<GradeSelectScreen> {
   }
 
   void _onLockedTap(_GradeProgress progress) {
-    final prevName = gradeInfoList
-        .firstWhere((g) => g.id == progress.info.id - 1)
-        .name;
+    final s = context.s;
+    final prevName = s.stageName(progress.info.id - 1);
+    final currentName = s.stageName(progress.info.id);
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text('请先学完"$prevName"的全部字，才能解锁"${progress.info.name}"哦'),
+        content: Text(s.lockedMessage(prevName, currentName)),
         duration: const Duration(seconds: 2),
       ),
     );
@@ -153,36 +155,38 @@ class _GradeSelectScreenState extends State<GradeSelectScreen> {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
+    final s = context.s;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('选择学习阶段'),
+        title: Text(s.homeTitle),
         centerTitle: true,
         elevation: 0,
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.black87,
+        actions: const [LanguageButton()],
       ),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(20, 4, 20, 24),
         children: [
           Text(
-            '720 字按由易到难分为 6 个阶段，每阶段 30 课、每课 4 字；'
-            '共学完 $_learnedAll / $_totalAll 字',
+            s.homeIntro(_learnedAll, _totalAll),
             style: const TextStyle(color: Colors.black45, fontSize: 13),
           ),
           const SizedBox(height: 14),
           SegmentedButton<_BrowseMode>(
-            segments: const [
+            segments: [
               ButtonSegment(
                 value: _BrowseMode.theme,
-                label: Text('按主题'),
+                label: Text(s.byTheme),
               ),
               ButtonSegment(
                 value: _BrowseMode.radical,
-                label: Text('按部首'),
+                label: Text(s.byRadical),
               ),
               ButtonSegment(
                 value: _BrowseMode.stroke,
-                label: Text('按笔画'),
+                label: Text(s.byStrokes),
               ),
             ],
             selected: {_mode},
@@ -192,13 +196,13 @@ class _GradeSelectScreenState extends State<GradeSelectScreen> {
             },
           ),
           const SizedBox(height: 16),
-          ..._buildContent(),
+          ..._buildContent(s),
         ],
       ),
     );
   }
 
-  List<Widget> _buildContent() {
+  List<Widget> _buildContent(AppStrings s) {
     switch (_mode) {
       case _BrowseMode.theme:
         return [
@@ -224,14 +228,14 @@ class _GradeSelectScreenState extends State<GradeSelectScreen> {
       case _BrowseMode.radical:
         return [
           Text(
-            '共 ${_radicalGroups.length} 个部首，按字数从多到少排列',
+            s.radicalIntro(_radicalGroups.length),
             style: const TextStyle(color: Colors.black45, fontSize: 12),
           ),
           const SizedBox(height: 8),
           ..._radicalGroups.map((group) => _RadicalRow(
                 group: group,
                 onTap: () => _openGrid(
-                  '部首 · ${group.radical}',
+                  s.radicalTitle(group.radical),
                   'radical_${group.radical}',
                   group.chars,
                 ),
@@ -240,14 +244,18 @@ class _GradeSelectScreenState extends State<GradeSelectScreen> {
       case _BrowseMode.stroke:
         return [
           Text(
-            '笔画由少到多，适合零基础起步',
+            s.strokeIntro,
             style: const TextStyle(color: Colors.black45, fontSize: 12),
           ),
           const SizedBox(height: 8),
           ..._strokeBands.map((band) => _StrokeBandCard(
                 band: band,
                 onTap: () => _openGrid(
-                  '笔画 · ${band.label}',
+                  s.strokeTitle(s.strokeBandLabel(
+                    band.label,
+                    band.minStrokes,
+                    band.maxStrokes,
+                  )),
                   'stroke_${band.minStrokes}',
                   band.chars,
                 ),
@@ -266,6 +274,7 @@ class _StageCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final locked = !progress.isUnlocked;
+    final s = context.s;
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 14),
@@ -318,7 +327,7 @@ class _StageCard extends StatelessWidget {
                       Row(
                         children: [
                           Text(
-                            progress.info.name,
+                            s.stageName(progress.info.id),
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w600,
@@ -334,9 +343,10 @@ class _StageCard extends StatelessWidget {
                       ),
                       const SizedBox(height: 6),
                       if (locked)
-                        const Text(
-                          '完成上一阶段后解锁',
-                          style: TextStyle(fontSize: 12, color: Colors.black38),
+                        Text(
+                          s.stageLockedHint,
+                          style: const TextStyle(
+                              fontSize: 12, color: Colors.black38),
                         )
                       else
                         Column(
@@ -355,8 +365,12 @@ class _StageCard extends StatelessWidget {
                             ),
                             const SizedBox(height: 4),
                             Text(
-                              '已学 ${progress.learned} / ${progress.total} 字 · '
-                              '完成 ${progress.coursesDone} / ${progress.coursesTotal} 课',
+                              s.stageProgress(
+                                progress.learned,
+                                progress.total,
+                                progress.coursesDone,
+                                progress.coursesTotal,
+                              ),
                               style: const TextStyle(
                                   fontSize: 12, color: Colors.black45),
                             ),
@@ -389,6 +403,8 @@ class _AllGradesCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = context.s;
+
     return Material(
       color: const Color(0xFF4CAF50),
       borderRadius: BorderRadius.circular(20),
@@ -406,9 +422,9 @@ class _AllGradesCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      '已解锁阶段连续学',
-                      style: TextStyle(
+                    Text(
+                      s.allStagesTitle,
+                      style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
                         color: Colors.white,
@@ -416,8 +432,9 @@ class _AllGradesCard extends StatelessWidget {
                     ),
                     const SizedBox(height: 2),
                     Text(
-                      '按顺序学习目前已解锁的$count字',
-                      style: const TextStyle(fontSize: 13, color: Colors.white70),
+                      s.allStagesSubtitle(count),
+                      style: const TextStyle(
+                          fontSize: 13, color: Colors.white70),
                     ),
                   ],
                 ),
@@ -439,6 +456,8 @@ class _FavoritesCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = context.s;
+
     return Material(
       color: Colors.white,
       borderRadius: BorderRadius.circular(20),
@@ -469,16 +488,16 @@ class _FavoritesCard extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      '收藏复习',
-                      style: TextStyle(
+                    Text(
+                      s.favoritesTitle,
+                      style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                     const SizedBox(height: 2),
                     Text(
-                      count > 0 ? '已收藏 $count 字，点击集中复习' : '还没有收藏，学习时点右上角星标',
+                      s.favoritesSubtitle(count),
                       style: const TextStyle(
                         fontSize: 12,
                         color: Colors.black45,
@@ -505,6 +524,7 @@ class _RadicalRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final sample = group.chars.take(6).map((e) => e.char).join(' ');
+    final s = context.s;
     return Material(
       color: Colors.white,
       borderRadius: BorderRadius.circular(14),
@@ -529,7 +549,7 @@ class _RadicalRow extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Text(
-                  group.radical,
+                  s.radicalLabel(group.radical),
                   style: const TextStyle(
                     fontFamily: 'KaiTiCustom',
                     fontSize: 22,
@@ -543,7 +563,7 @@ class _RadicalRow extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      '${group.chars.length} 字',
+                      s.charCount(group.chars.length),
                       style: const TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w600,
@@ -580,6 +600,15 @@ class _StrokeBandCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final sample = band.chars.take(10).map((e) => e.char).join(' ');
+    final s = context.s;
+    final bandLabel = s.strokeBandLabel(
+      band.label,
+      band.minStrokes,
+      band.maxStrokes,
+    );
+    final labelText = s.isEn
+        ? bandLabel.replaceFirst(' ', '\n')
+        : bandLabel.replaceAll('画', '\n画');
     return Material(
       color: Colors.white,
       borderRadius: BorderRadius.circular(16),
@@ -604,7 +633,7 @@ class _StrokeBandCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(14),
                 ),
                 child: Text(
-                  band.label.replaceAll('画', '\n画'),
+                  labelText,
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     fontSize: 12,
@@ -620,7 +649,7 @@ class _StrokeBandCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      '${band.chars.length} 字',
+                      s.charCount(band.chars.length),
                       style: const TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.w600,

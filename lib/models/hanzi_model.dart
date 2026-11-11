@@ -70,7 +70,8 @@ class HanziModel {
     this.needsReview = false,
   });
 
-  /// 把笔顺名称数组拼接成可读字符串，例如 "撇 → 横 → 竖 → 竖 → 横折 → 横"
+  /// 把笔顺名称数组拼接成可读字符串（中文数据原样拼接；
+  /// 界面展示请使用 AppStrings.strokeOrder，以跟随界面语言）。
   String get strokeOrderDisplay =>
       strokeOrderNames.isEmpty ? '暂无笔顺数据' : strokeOrderNames.join(' → ');
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../l10n/app_strings.dart';
 import '../models/hanzi_course.dart';
 import '../services/hanzi_repository.dart';
 import '../services/storage_service.dart';
@@ -19,7 +20,6 @@ class _CourseListScreenState extends State<CourseListScreen> {
   bool _isLoading = true;
   List<HanziCourse> _courses = [];
   Set<String> _viewedIds = {};
-  String _stageName = '';
 
   @override
   void initState() {
@@ -34,7 +34,6 @@ class _CourseListScreenState extends State<CourseListScreen> {
     setState(() {
       _courses = HanziRepository.instance.coursesForGrade(widget.stageId);
       _viewedIds = viewed;
-      _stageName = '第 ${widget.stageId} 阶段';
       _isLoading = false;
     });
   }
@@ -43,7 +42,7 @@ class _CourseListScreenState extends State<CourseListScreen> {
     final course = _courses[index];
     return HomeScreen(
       chars: course.chars,
-      title: '${course.label} · ${course.title}',
+      lessonNumber: course.indexInStage,
       progressKey: 'course_${course.groupId}',
       // 一课学完后继续左滑，直接替换为下一课
       onFinished: index + 1 < _courses.length
@@ -88,9 +87,11 @@ class _CourseListScreenState extends State<CourseListScreen> {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
+    final s = context.s;
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('$_stageName · 课程'),
+        title: Text(s.courseListTitle(widget.stageId)),
         centerTitle: true,
         elevation: 0,
         backgroundColor: Colors.transparent,
@@ -114,14 +115,19 @@ class _CourseListScreenState extends State<CourseListScreen> {
   }
 
   Widget _buildHeader() {
+    final s = context.s;
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            '每课 4 字，共 ${_courses.length} 课；已学 $_learnedTotal / $_totalChars 字，'
-            '完成 $_completedCourses / ${_courses.length} 课',
+            s.courseListIntro(
+              _learnedTotal,
+              _totalChars,
+              _courses.length,
+              _completedCourses,
+            ),
             style: const TextStyle(color: Colors.black45, fontSize: 13),
           ),
           const SizedBox(height: 12),
@@ -140,6 +146,7 @@ class _CourseListScreenState extends State<CourseListScreen> {
   }
 
   Widget _buildContinuousCard() {
+    final s = context.s;
     return Padding(
       padding: const EdgeInsets.only(top: 8),
       child: Material(
@@ -154,10 +161,10 @@ class _CourseListScreenState extends State<CourseListScreen> {
               children: [
                 const Icon(Icons.all_inclusive_rounded, color: Colors.white),
                 const SizedBox(width: 12),
-                const Expanded(
+                Expanded(
                   child: Text(
-                    '连续学完本阶段',
-                    style: TextStyle(
+                    s.continuousStage,
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
@@ -189,6 +196,7 @@ class _CourseCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final completed = course.isCompleted(viewedIds);
     final learned = course.learnedCount(viewedIds);
+    final s = context.s;
 
     return Padding(
       padding: const EdgeInsets.only(bottom: 10),
@@ -235,21 +243,32 @@ class _CourseCard extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          Text(
-                            course.label,
-                            style: const TextStyle(
-                              fontSize: 13,
-                              color: Colors.black54,
+                          Flexible(
+                            child: Text(
+                              s.courseLabel(course.indexInStage),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: const TextStyle(
+                                fontSize: 13,
+                                color: Colors.black54,
+                              ),
                             ),
                           ),
                           const SizedBox(width: 8),
-                          Text(
-                            completed ? '已完成' : '$learned / ${course.chars.length} 字',
-                            style: TextStyle(
-                              fontSize: 12,
-                              color: completed
-                                  ? const Color(0xFFFF9800)
-                                  : Colors.black38,
+                          Flexible(
+                            child: Text(
+                              completed
+                                  ? s.courseDone
+                                  : s.courseProgress(
+                                      learned, course.chars.length),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 12,
+                                color: completed
+                                    ? const Color(0xFFFF9800)
+                                    : Colors.black38,
+                              ),
                             ),
                           ),
                         ],

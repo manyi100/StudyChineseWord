@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../l10n/app_strings.dart';
 import '../models/hanzi_model.dart';
 import '../services/tts_service.dart';
 import 'audio_feedback.dart';
@@ -47,6 +48,7 @@ class CharacterCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = context.s;
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       decoration: BoxDecoration(
@@ -75,9 +77,9 @@ class CharacterCard extends StatelessWidget {
                   color: Colors.red.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Text(
-                  '⚠️ 该字数据需人工核对原书',
-                  style: TextStyle(fontSize: 12, color: Colors.red),
+                child: Text(
+                  s.needsReview,
+                  style: const TextStyle(fontSize: 12, color: Colors.red),
                 ),
               ),
 
@@ -184,7 +186,7 @@ class CharacterCard extends StatelessWidget {
             // 组词区：没有数据时整块隐藏，不显示空白。
             // 固定为一行三等分，词语再长也不换行：拼音最多折两行，词语单行缩放。
             if (hanzi.words.isNotEmpty) ...[
-              const _SectionLabel(label: '组词'),
+              _SectionLabel(label: s.sectionWords),
               const SizedBox(height: 8),
               SizedBox(
                 height: 56,
@@ -213,7 +215,7 @@ class CharacterCard extends StatelessWidget {
 
             // 例句区：没有数据时整块隐藏
             if (hanzi.sentence != null) ...[
-              const _SectionLabel(label: '造句'),
+              _SectionLabel(label: s.sectionSentence),
               const SizedBox(height: 8),
               GestureDetector(
                 onTap: () => TtsService.instance
@@ -253,12 +255,17 @@ class CharacterCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '部首：${hanzi.radical ?? '—'}　共${hanzi.strokeCount ?? '?'}画',
+                  s.radicalMeta(
+                    hanzi.radical ?? '—',
+                    '${hanzi.strokeCount ?? '?'}',
+                  ),
                   style: const TextStyle(fontSize: 13, color: Colors.black54),
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  '笔顺：${hanzi.strokeOrderDisplay}',
+                  s.strokeOrderMeta(
+                    s.strokeOrder(hanzi.strokeOrderNames),
+                  ),
                   style: const TextStyle(fontSize: 13, color: Colors.black54),
                 ),
               ],

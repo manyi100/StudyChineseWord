@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../l10n/app_strings.dart';
 import '../models/hanzi_model.dart';
 import '../services/tts_service.dart';
 
@@ -29,24 +30,23 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     _localFavorites = {...widget.favoriteIds};
   }
 
-  String _gradeNameOf(HanziModel h) {
-    final match = gradeInfoList.where((g) => g.id == h.gradeId);
-    return match.isEmpty ? '' : match.first.name;
-  }
+  String _gradeNameOf(BuildContext context, HanziModel h) =>
+      context.s.stageName(h.gradeId);
 
   @override
   Widget build(BuildContext context) {
+    final s = context.s;
     final favoriteList =
         widget.allHanzi.where((h) => _localFavorites.contains(h.id)).toList();
 
     return Scaffold(
-      appBar: AppBar(title: const Text('收藏复习')),
+      appBar: AppBar(title: Text(s.favoritesTitle)),
       body: favoriteList.isEmpty
-          ? const Center(
+          ? Center(
               child: Text(
-                '还没有收藏的字\n在学习页点击星星即可收藏',
+                s.favoritesEmpty,
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.black45, fontSize: 15),
+                style: const TextStyle(color: Colors.black45, fontSize: 15),
               ),
             )
           : ListView.separated(
@@ -77,7 +77,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Text(
-                            _gradeNameOf(h),
+                            _gradeNameOf(context, h),
                             style: const TextStyle(
                                 fontSize: 11, color: Color(0xFF4CAF50)),
                           ),

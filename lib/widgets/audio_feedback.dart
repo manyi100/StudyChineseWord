@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import '../l10n/app_strings.dart';
 import '../services/tts_service.dart';
 
 /// 会随朗读状态变化的喇叭图标：
@@ -28,7 +29,7 @@ class SpeakerIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Semantics(
-      label: '朗读',
+      label: context.s.semanticsRead,
       button: true,
       child: ValueListenableBuilder<String?>(
         valueListenable: TtsService.instance.speakingTag,
@@ -116,6 +117,7 @@ class SpeakingLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final label = context.s.readingLabel;
     return ValueListenableBuilder<String?>(
       valueListenable: TtsService.instance.speakingTag,
       builder: (context, activeTag, _) {
@@ -124,10 +126,10 @@ class SpeakingLabel extends StatelessWidget {
           child: AnimatedOpacity(
             duration: const Duration(milliseconds: 180),
             opacity: activeTag == tag ? 1 : 0,
-            child: const Text(
-              '朗读中',
+            child: Text(
+              label,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 11,
                 fontWeight: FontWeight.w600,
                 color: Color(0xFF4CAF50),
@@ -211,10 +213,11 @@ class AudioHintBanner extends StatelessWidget {
           const Icon(Icons.volume_up_rounded,
               size: 18, color: Color(0xFFEF6C00)),
           const SizedBox(width: 8),
-          const Expanded(
+          Expanded(
             child: Text(
-              '点汉字、词语、句子或图片，都能听发音',
-              style: TextStyle(fontSize: 12.5, color: Color(0xFF8D4E00)),
+              context.s.audioHint,
+              style: const TextStyle(
+                  fontSize: 12.5, color: Color(0xFF8D4E00)),
             ),
           ),
           InkResponse(

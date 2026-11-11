@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../l10n/app_strings.dart';
 import '../models/hanzi_model.dart';
 import 'home_screen.dart';
 
@@ -31,6 +32,7 @@ class HanziGridScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = context.s;
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
@@ -46,7 +48,7 @@ class HanziGridScreen extends StatelessWidget {
             child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                '共 ${chars.length} 字 · 点击任意字开始学习',
+                s.gridIntro(chars.length),
                 style: const TextStyle(color: Colors.black45, fontSize: 13),
               ),
             ),

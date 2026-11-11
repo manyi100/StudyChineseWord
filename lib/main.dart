@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'l10n/app_strings.dart';
 import 'screens/grade_select_screen.dart';
 import 'services/tts_service.dart';
 
@@ -7,7 +8,9 @@ import 'services/tts_service.dart';
 final GlobalKey<ScaffoldMessengerState> rootScaffoldMessengerKey =
     GlobalKey<ScaffoldMessengerState>();
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await AppLocale.load();
   TtsService.onUnavailable = (message) {
     rootScaffoldMessengerKey.currentState?.showSnackBar(
       SnackBar(content: Text(message), duration: const Duration(seconds: 8)),
@@ -21,17 +24,24 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: '入学必备720字',
-      debugShowCheckedModeBanner: false,
-      scaffoldMessengerKey: rootScaffoldMessengerKey,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: const Color(0xFF4CAF50),
-        scaffoldBackgroundColor: const Color(0xFFF7F7F5),
+    // 语言状态放在 MaterialApp 之上：切换语言时整个界面（含弹窗、SnackBar）
+    // 都会按新语言重建，导航栈保持不变。
+    return AppLocaleScope(
+      notifier: AppLocale.notifier,
+      child: Builder(
+        builder: (context) => MaterialApp(
+          title: context.s.appTitle,
+          debugShowCheckedModeBanner: false,
+          scaffoldMessengerKey: rootScaffoldMessengerKey,
+          theme: ThemeData(
+            useMaterial3: true,
+            colorSchemeSeed: const Color(0xFF4CAF50),
+            scaffoldBackgroundColor: const Color(0xFFF7F7F5),
+          ),
+          // 默认启动直接进入学习入口（阶段/主题、部首、笔画三种分类）
+          home: const GradeSelectScreen(),
+        ),
       ),
-      // 默认启动直接进入学习入口（阶段/主题、部首、笔画三种分类）
-      home: const GradeSelectScreen(),
     );
   }
 }

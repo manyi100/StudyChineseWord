@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import '../l10n/app_strings.dart';
 import '../models/hanzi_model.dart';
 import '../services/hanzi_repository.dart';
 import '../services/progress_service.dart';
@@ -15,6 +16,9 @@ class HomeScreen extends StatefulWidget {
   final int gradeId;
   final List<HanziModel>? chars;
   final String? title;
+
+  /// 课程学习时传入“本阶段第几课”，标题会随界面语言自动切换。
+  final int? lessonNumber;
   final String? progressKey;
   final int? initialIndex;
 
@@ -26,6 +30,7 @@ class HomeScreen extends StatefulWidget {
     this.gradeId = 0,
     this.chars,
     this.title,
+    this.lessonNumber,
     this.progressKey,
     this.initialIndex,
     this.onFinished,
@@ -45,7 +50,6 @@ class _HomeScreenState extends State<HomeScreen> {
   DateTime? _lastFinishHintAt;
 
   List<HanziModel> _hanziList = [];
-  String _titleText = '';
   bool _showAudioHint = false;
   Timer? _audioHintTimer;
 
@@ -63,18 +67,14 @@ class _HomeScreenState extends State<HomeScreen> {
     final explicitChars = widget.chars;
     if (explicitChars != null) {
       _hanziList = explicitChars;
-      _titleText = widget.title ?? '';
     } else if (widget.gradeId == 0) {
       final unlockedIds = await ProgressService.getUnlockedGradeIds();
       _hanziList = HanziRepository.instance
           .forAllGrades()
           .where((h) => unlockedIds.contains(h.gradeId))
           .toList();
-      _titleText = '入学必备720字 · 已解锁';
     } else {
       _hanziList = HanziRepository.instance.forGrade(widget.gradeId);
-      final grade = gradeInfoList.firstWhere((g) => g.id == widget.gradeId);
-      _titleText = grade.name;
     }
 
     final lastIndex =
@@ -166,7 +166,7 @@ class _HomeScreenState extends State<HomeScreen> {
         _lastFinishHintAt = now;
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('先看完本课 ${_hanziList.length} 个字，再滑到下一课'),
+            content: Text(context.s.lessonFinishedHint(_hanziList.length)),
             duration: const Duration(seconds: 2),
           ),
         );
@@ -206,29 +206,46 @@ class _HomeScreenState extends State<HomeScreen> {
     super.dispose();
   }
 
+  String _resolvedTitle(AppStrings s) {
+    final lesson = widget.lessonNumber;
+    final chars = widget.chars;
+    if (lesson != null && chars != null) {
+      return s.lessonTitle(lesson, chars.map((e) => e.char).join());
+    }
+    if (widget.gradeId == 0 && chars == null) {
+      return s.allUnlockedTitle;
+    }
+    if (widget.gradeId > 0 && chars == null) {
+      return s.stageName(widget.gradeId);
+    }
+    return widget.title ?? '';
+  }
+
   @override
   Widget build(BuildContext context) {
     if (_isLoading || _pageController == null) {
       return const Scaffold(body: Center(child: CircularProgressIndicator()));
     }
 
+    final s = context.s;
+
     if (_hanziList.isEmpty) {
       return Scaffold(
-        appBar: AppBar(title: Text(_titleText)),
-        body: const Center(child: Text('该阶段暂无数据')),
+        appBar: AppBar(title: Text(_resolvedTitle(s))),
+        body: Center(child: Text(s.emptyStage)),
       );
     }
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(_titleText),
+        title: Text(_resolvedTitle(s)),
         centerTitle: true,
         elevation: 0,
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.black87,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back_rounded),
-          tooltip: '返回阶段选择',
+          tooltip: s.backToStages,
           onPressed: _goToGradeSelect,
         ),
       ),

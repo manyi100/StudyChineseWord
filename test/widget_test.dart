@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'package:entrance_720_words/l10n/app_strings.dart';
 import 'package:entrance_720_words/main.dart';
 import 'package:entrance_720_words/services/hanzi_repository.dart';
 
@@ -9,6 +10,7 @@ void main() {
   testWidgets('home shows stage/radical/stroke navigation and course list',
       (WidgetTester tester) async {
     SharedPreferences.setMockInitialValues({});
+    AppLocale.notifier.value = AppLang.zh;
 
     // 按手机常见宽度验证布局，避免词语 chip 等组件在窄屏溢出
     await tester.binding.setSurfaceSize(const Size(360, 800));
@@ -70,6 +72,7 @@ void main() {
   testWidgets('swiping past the last character opens the next course',
       (WidgetTester tester) async {
     SharedPreferences.setMockInitialValues({});
+    AppLocale.notifier.value = AppLang.zh;
     await tester.binding.setSurfaceSize(const Size(360, 800));
     addTearDown(() => tester.binding.setSurfaceSize(null));
 
@@ -102,5 +105,67 @@ void main() {
 
     // 让首次提示条 / 朗读兜底定时器走完，避免测试结束时报 pending timer
     await tester.pump(const Duration(seconds: 16));
+  });
+
+  testWidgets('language button switches the whole interface to English',
+      (WidgetTester tester) async {
+    SharedPreferences.setMockInitialValues({});
+    AppLocale.notifier.value = AppLang.zh;
+
+    await tester.binding.setSurfaceSize(const Size(360, 800));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+
+    await tester.runAsync(() async {
+      await HanziRepository.instance.ensureLoaded();
+    });
+
+    await tester.pumpWidget(const MyApp());
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 200));
+
+    expect(find.text('选择学习阶段'), findsOneWidget);
+    expect(find.text('EN'), findsOneWidget);
+
+    // 切换到英文
+    await tester.tap(find.text('EN'));
+    await tester.pumpAndSettle();
+    expect(find.text('Choose a Stage'), findsOneWidget);
+    expect(find.text('By theme'), findsOneWidget);
+    expect(find.text('By radical'), findsOneWidget);
+    expect(find.text('By strokes'), findsOneWidget);
+    expect(find.text('Stage 1'), findsOneWidget);
+    expect(find.text('中文'), findsOneWidget);
+
+    // 进入阶段/课程，确认深层页面也是英文
+    await tester.tap(find.text('Stage 1'));
+    await tester.pumpAndSettle();
+    expect(find.text('Stage 1 · Lessons'), findsOneWidget);
+    expect(find.text('Lesson 1'), findsOneWidget);
+
+    // 进入学习卡片：英文文案 + 360dp 下不溢出
+    await tester.tap(find.text('Lesson 1'));
+    await tester.pumpAndSettle();
+    expect(find.text('Words'), findsOneWidget);
+    expect(find.text('Sentence'), findsOneWidget);
+    expect(find.text('Stroke demo'), findsOneWidget);
+    expect(find.text('Trace'), findsOneWidget);
+
+    await tester.tap(find.byIcon(Icons.arrow_back_rounded));
+    await tester.pumpAndSettle();
+
+    await tester.pageBack();
+    await tester.pumpAndSettle();
+
+    // 切回中文
+    await tester.tap(find.text('中文'));
+    await tester.pumpAndSettle();
+    expect(find.text('选择学习阶段'), findsOneWidget);
+    expect(find.text('按主题'), findsOneWidget);
+
+    // 消化提示条与朗读兜底定时器
+    await tester.pump(const Duration(seconds: 16));
+
+    // 避免影响其它用例
+    AppLocale.notifier.value = AppLang.zh;
   });
 }

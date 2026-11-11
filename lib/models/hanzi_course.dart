@@ -28,8 +28,6 @@ class HanziCourse {
   /// 课程标题就用 4 个汉字本身，例如 "上下左右"
   String get title => chars.map((e) => e.char).join();
 
-  String get label => '第 $indexInStage 课';
-
   /// 该课是否已学完（4 个字都浏览/描红过）
   bool isCompleted(Set<String> viewedIds) =>
       chars.isNotEmpty && chars.every((h) => viewedIds.contains(h.id));
