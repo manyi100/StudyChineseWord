@@ -126,13 +126,19 @@ class SpeakingLabel extends StatelessWidget {
           child: AnimatedOpacity(
             duration: const Duration(milliseconds: 180),
             opacity: activeTag == tag ? 1 : 0,
-            child: Text(
-              label,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 11,
-                fontWeight: FontWeight.w600,
-                color: Color(0xFF4CAF50),
+            // 英文 “Reading” 比中文“朗读中”宽，按可用宽度整体缩放，避免折行
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Text(
+                label,
+                maxLines: 1,
+                softWrap: false,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 11,
+                  fontWeight: FontWeight.w600,
+                  color: Color(0xFF4CAF50),
+                ),
               ),
             ),
           ),

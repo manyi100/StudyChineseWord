@@ -164,14 +164,28 @@ scripts/
 ```bash
 flutter pub get
 flutter test                          # 含 360dp 宽度布局检查
-flutter build apk --release           # 产物：build/app/outputs/flutter-apk/app-release.apk
+flutter build apk --release           # 产物：build/app/outputs/flutter-apk/HanziRoots-v0.1.0.apk
 ```
 
 安装到设备：
 
 ```bash
-adb install -r build/app/outputs/flutter-apk/app-release.apk
+adb install -r build/app/outputs/flutter-apk/HanziRoots-v0.1.0.apk
 ```
+
+### 应用标识与 APK 命名
+
+| 项目 | 值 |
+| --- | --- |
+| 应用包名（applicationId / namespace） | `com.ailexin.HanziRoots` |
+| 启动 Activity | `com.ailexin.HanziRoots.MainActivity` |
+| APK 文件名 | `HanziRoots-v<版本号>.apk`，版本号取自 `pubspec.yaml` 的 `version` |
+| 当前产物 | `build/app/outputs/flutter-apk/HanziRoots-v0.1.0.apk` |
+
+- 命名规则写在 `android/app/build.gradle.kts`：`assemble*` 结束后由 `copyNamedApk*` 任务把 `app-<mode>.apk` 另存为带版本号的副本
+- `app-release.apk` 仍保留，`flutter install`、`flutter run` 等工具依赖该固定文件名
+- 改版本号只需改 `pubspec.yaml` 的 `version`，重新构建后 APK 名会自动跟着变化
+- 包名变更后与旧包 `com.example.untitled` 属于两个独立应用，需要先卸载旧包或手动清理
 
 ### Gradle 全局仓库配置说明
 
@@ -264,6 +278,9 @@ python3 scripts/generate_images_nanobanana.py --dry-run  # 只打印提示词
   - 全站文案集中到 `lib/l10n/app_strings.dart`，切换即时生效并本地保存
   - 笔顺名称增加英文映射，英文界面下显示 horizontal / vertical 等
   - 学习内容（汉字、拼音、组词、例句）保持中文，朗读仍为中文
+- **应用标识与产物命名**
+  - 包名由 `com.example.untitled` 改为 `com.ailexin.HanziRoots`，MainActivity 同步迁移
+  - APK 产物自动命名为 `HanziRoots-v<版本号>.apk`，例如 `HanziRoots-v0.1.0.apk`
 - **测试**
   - 增加 360dp 窄屏导航与布局冒烟测试，替换原默认计数器测试
   - 增加中英文切换测试（首页 → 阶段 → 课程 → 切回中文）
