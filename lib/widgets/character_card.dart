@@ -89,16 +89,25 @@ class CharacterCard extends StatelessWidget {
             ),
             const SizedBox(height: 16),
 
-            // 拼音(四线三格) + 汉字(田字格+楷体)，点击朗读单字
-            GestureDetector(
-              onTap: () => TtsService.instance.speak(hanzi.char),
-              child: Column(
-                children: [
-                  PinyinGridText(pinyin: hanzi.pinyin, width: 140, height: 50),
-                  const SizedBox(height: 10),
-                  TianZiGeBox(char: hanzi.char, size: 120),
-                ],
-              ),
+            // 拼音(四线三格) + 汉字(田字格：自动笔顺演示 + 手写描红)
+            Column(
+              children: [
+                GestureDetector(
+                  onTap: () => TtsService.instance.speak(hanzi.char),
+                  child: PinyinGridText(
+                    pinyin: hanzi.pinyin,
+                    width: 140,
+                    height: 50,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                TianZiGeBox(
+                  char: hanzi.char,
+                  size: 152,
+                  strokeOrderNames: hanzi.strokeOrderNames,
+                  onSpeak: () => TtsService.instance.speak(hanzi.char),
+                ),
+              ],
             ),
             const SizedBox(height: 16),
 

@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 import '../models/hanzi_model.dart';
+import 'stroke_repository.dart';
 
 /// 汉字数据仓库：720字数据量较大，不再硬编码在Dart源码里，
 /// 改为打包成 assets/data/hanzi_data.json，启动时读取一次并缓存在内存中。
@@ -17,6 +18,7 @@ class HanziRepository {
     final List<dynamic> raw = jsonDecode(jsonStr);
     _all =
         raw.map((e) => HanziModel.fromJson(e as Map<String, dynamic>)).toList();
+    await StrokeRepository.instance.ensureLoaded();
     _loaded = true;
   }
 
