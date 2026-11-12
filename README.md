@@ -189,7 +189,18 @@ adb shell am start -n com.ailexin.HanziRoots/com.ailexin.HanziRoots.MainActivity
 
 - 通用 APK 已包含 `armeabi-v7a`，32 位电视盒子 / 投影仪可直接安装
 - 横屏 1920×1080 下内容按 `ContentFrame` 居中（720dp），列表与学习卡片显示正常
-- **朗读**依赖系统 TTS 引擎。坚果 S700 自带系统里没有中文 TTS（只有语音助手 `com.jmgo.ai.voice`），进入学习页会提示“没有可用的中文语音”，需要先安装一个中文 TTS 引擎
+- **朗读**依赖系统 TTS 引擎。坚果 S700 自带系统里没有中文 TTS（只有语音助手 `com.jmgo.ai.voice`），已实测安装离线引擎并可正常朗读：
+
+  ```bash
+  # sherpa-onnx 离线中文 TTS 引擎（126 MB，无需 GMS / 联网）
+  adb install -r sherpa-onnx-1.12.22-armeabi-v7a-zh-tts-engine-vits-zh-hf-fanchen-ZhiHuiLaoZhe.apk
+  adb shell settings put secure tts_default_synth com.k2fsa.sherpa.onnx.tts.engine
+  adb shell settings put secure tts_enabled_plugins com.k2fsa.sherpa.onnx.tts.engine
+  ```
+
+  - 引擎包名：`com.k2fsa.sherpa.onnx.tts.engine`，自带中文模型，语速可在其设置页调节
+  - 未装引擎时进入学习页会提示“没有可用的中文语音”，属于预期行为
+  - Google 文字转语音在该机型上不可行：系统无 GMS，中文语音包依赖 Google 服务在线下载
 - 部分坚果机型带“学习模式 / 题了个题”桌面，会盖住第三方应用；按返回键或退出学习模式即可
 - 遥控器若支持空鼠 / 鼠标模式，可直接点击；纯方向键下 Flutter 的默认焦点高亮较淡
 
