@@ -320,27 +320,60 @@ but repository 'MavenLocal' was added by settings file 'settings.gradle.kts'
 
 ## 五、配图批量生成（可选）
 
-`scripts/generate_images_nanobanana.py` 调用 Google Gemini / Nano Banana 系列模型批量生成插画。
+仓库里 720 张 `assets/images/NNNN.webp` 已经全部生成完毕（526×290、纯插画、无文字），
+正常开发不需要再跑这个脚本。需要重画或换风格时再用
+`scripts/generate_images_nanobanana.py`。
 
-**运行要求**：需要联网并自备 `GEMINI_API_KEY`（免费额度见 https://aistudio.google.com/apikey）。
+**三个图像服务**（`--provider` 切换，不写则读 `IMAGE_PROVIDER`，再没有就用 cloudflare）：
+
+| provider | 服务 | 免费额度 | 提示词语言 | 一次出几张 |
+|---|---|---|---|---|
+| `cloudflare`（默认） | Cloudflare Workers AI `flux-1-schnell` | 每天约 173 张 | 英文 | 1 |
+| `modelscope` | 魔搭 `Qwen/Qwen-Image` | 约 250 张/天，需实名、限非商用 | 中文 | 1 |
+| `gemini` | Google `gemini-2.5-flash-image` | 无，约 $0.039/张 | 中文 | 4（2×2 四宫格） |
 
 ```bash
 pip install requests pillow
-export GEMINI_API_KEY="你的key"
-python3 scripts/generate_images_nanobanana.py            # 本轮 20 张
-python3 scripts/generate_images_nanobanana.py --all      # 跑完全部剩余
-python3 scripts/generate_images_nanobanana.py --limit 40 # 本轮 40 张
-python3 scripts/generate_images_nanobanana.py --dry-run  # 只打印提示词
+
+# Cloudflare（推荐，免费）
+export CLOUDFLARE_ACCOUNT_ID=你的account_id
+export CLOUDFLARE_API_TOKEN=你的api_token          # 权限勾 Workers AI:Read
+python3 scripts/generate_images_nanobanana.py --limit 20
+
+# 魔搭 Qwen-Image
+export MODELSCOPE_API_TOKEN=你的token
+python3 scripts/generate_images_nanobanana.py --provider modelscope --limit 20
+
+# Gemini（付费，四宫格）
+export GEMINI_API_KEY=你的key
+python3 scripts/generate_images_nanobanana.py --provider gemini --limit 20
 ```
+
+| 参数 | 作用 |
+|---|---|
+| `--all` | 跑完全部剩余汉字，忽略 `--limit` |
+| `--limit N` | 本轮最多生成 N 张（默认 20） |
+| `--dry-run` | 只打印提示词，不调用 API、不写文件 |
+| `--overlay none\|textbook` | `none`（默认）只出纯插画；`textbook` 用 PIL 把左上角字、左下角圈号、底部例句印在图上 |
+| `--reset 51-74` | 清掉这些 id 的配图记录并删除对应 webp，换风格重画（只删脚本生成的 `.webp`，教材原图 `.gif` 不碰） |
+| `--translate-prompts` | 用 Cloudflare 免费文本模型把例句翻成英文画面描述写回 `promptEn`，不生成图片 |
 
 脚本特性：
 
-- 画面内容来自例句，比单纯画字更有叙事感
-- 固定风格前缀 / 后缀（手绘水彩、无文字、简洁背景），可传入参考图锁定风格
-- 每次请求生成 2×2 四宫格，自动切分为 4 张单图
-- 输出统一为 526×290 WebP（q85），并自动写回 `imageAsset`
-- 已有配图的字自动跳过，支持断点续跑，不重复调用、不覆盖旧图
-- 默认每轮 20 张，便于先检查质量
+- **画面内容来自例句**，比单纯画字更有叙事感
+- **文字默认不叠在图上**：和当前 App 一致，字/拼音/例句由 Flutter 卡片渲染；
+  需要旧教材页版式时加 `--overlay textbook`
+- **固定风格前缀 / 后缀**（扁平卡通、清晰描边、纯白背景、无文字），整批风格统一；
+  Gemini 还支持传入参考图锁定风格
+- **提示词里不要出现中文**：FLUX 看到中文容易把它当画面内容画出来，导致和图上的文字重复。
+  跑一次 `--translate-prompts` 把例句翻成英文描述写回 `promptEn`，之后 prompt 里就没有中文字符了
+- **输出统一为 526×290 WebP（q85）**，并自动写回 `imageAsset`
+- **已有配图的字自动跳过**，支持断点续跑，不重复调用、不覆盖旧图
+- **默认每轮 20 张**，便于先检查质量
+
+> 文字合成用的字体：项目自带的 `LXGWWenKai-Subset.ttf` 只是 720 个单字的子集，
+> 画不了例句。脚本会依次尝试 `IMAGE_OVERLAY_FONT` → Noto Sans SC → 系统黑体
+> （macOS 冬青黑体 W6 / Windows 微软雅黑 Bold / Linux Noto CJK）。
 
 ---
 
