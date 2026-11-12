@@ -245,7 +245,59 @@ flutter build ipa --release
 cp build/ios/ipa/Runner.ipa build/ios/ipa/HanziRoots-v1.0.0.ipa
 ```
 
-#### 三、iPhone / iPad 适配现状
+#### 三、用 GitHub Actions 生成 ipa（无需 Mac、无需付费账号）
+
+仓库已带工作流 `.github/workflows/ios-unsigned-ipa.yml`：在 GitHub 的 macOS runner
+上跑 `flutter build ios --release --no-codesign`，把 `Runner.app` 打成
+`Payload/` 结构的**未签名 ipa**，作为 artifact 上传。
+
+> 未签名 ipa 不能直接双击安装，也不能传 App Store；下载后用 Sideloadly / AltStore
+> 等工具拿你的 **免费 Apple ID 在本地重新签名**，才能装进 iPhone / iPad。
+
+**1. 触发构建**
+
+- 手动：仓库页面 → **Actions** → 左侧 `Build unsigned iOS IPA` → **Run workflow**
+- 自动：推送 `v*` 标签时触发，例如 `git tag v1.0.0 && git push origin v1.0.0`
+
+一次完整构建约 8–15 分钟。
+
+**2. 下载 ipa**
+
+构建完成后进入这次 run 的页面，底部 **Artifacts** → 下载
+`HanziRoots-unsigned-ipa-r<构建号>`，解压得到 `HanziRoots-unsigned-<构建号>.ipa`。
+artifact 默认保留 30 天，需要长期保存请自己转存。
+
+**3. 用免费 Apple ID 安装**
+
+推荐 [Sideloadly](https://sideloadly.io/)（Windows / macOS 都有）：
+
+1. 电脑安装 Sideloadly，iPhone 用数据线连电脑
+2. 把 `.ipa` 拖进 Sideloadly，`Apple account` 填自己的 Apple ID
+3. 点 **Start**，按提示输入 Apple ID 密码 / 双重认证验证码
+4. iPhone 上「设置 → 隐私与安全性 → 开发者模式」打开并重启（iOS 16+ 必须）
+5. 「设置 → 通用 → VPN 与设备管理」里信任刚生成的开发者证书
+
+也可以用 [AltStore](https://altstore.io/)：电脑装 AltServer，手机装 AltStore，
+在 AltStore 的 `My Apps` 里用 `+` 选择 ipa 安装，之后每周在同一 Wi-Fi 下自动续签。
+
+**免费账号的限制**
+
+| 限制 | 说明 |
+| --- | --- |
+| 有效期 7 天 | 到期 App 打不开，重新用 Sideloadly 装一次即可，数据通常保留 |
+| 最多 3 个 App | 同一 Apple ID 同时签名的 App 数量 |
+| 每周 10 个 App ID | 频繁改 Bundle Identifier 会更快耗尽额度 |
+| 无推送等能力 | 本 App 只用了 `flutter_tts` / `shared_preferences`，不受影响 |
+
+**4. 注意事项**
+
+- 每次发新版本前先把 `pubspec.yaml` 的 `version: 1.0.0+1` 里的 build 号 `+1` 递增
+- 免费签名和 Bundle Identifier 绑定；如果 `com.ailexin.HanziRoots` 在你的账号下
+  已被占用，改成自己的（见上一节），并同步 `android/app/build.gradle.kts`
+- GitHub Actions 的 macOS 分钟数：公开仓库免费；私有仓库按 10 倍计费
+  （免费额度 2000 分钟/月 ≈ 200 分钟 macOS，约 15–20 次构建）
+
+#### 四、iPhone / iPad 适配现状
 
 | 项目 | 状态 |
 | --- | --- |
@@ -268,7 +320,7 @@ cp build/ios/ipa/Runner.ipa build/ios/ipa/HanziRoots-v1.0.0.ipa
 - 英文界面下底部提示、按钮在 iPad 分屏窄宽度时是否溢出
 - 首次朗读若没声音，检查「设置 → 辅助功能 → 朗读内容 → 声音 → 中文」是否已下载
 
-#### 四、上架前清单
+#### 五、上架前清单
 
 1. **图标**：已生成 iOS / Android 全尺寸（含自适应图标）。上架前确认 App Store Connect 的 1024 图标与 `assets/branding/app_icon.png` 一致
 2. **启动图**：已生成，iPhone / iPad / Android 12+ 均为米色底 + 居中 Logo

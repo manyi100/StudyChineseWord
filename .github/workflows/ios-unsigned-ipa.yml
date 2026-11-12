@@ -1,0 +1,66 @@
+name: Build unsigned iOS IPA
+
+# 手动触发：仓库页面 → Actions → Build unsigned iOS IPA → Run workflow
+# 打 tag（v1.0.0 之类）也会自动构建一次
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+jobs:
+  build-ipa:
+    name: Flutter iOS (no codesign)
+    # 必须用 macOS runner；macos-latest 自带 Xcode / CocoaPods，比固定旧版本更省心
+    runs-on: macos-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Show toolchain versions
+        run: |
+          flutter --version
+          xcodebuild -version
+
+      # 这个工程的 iOS 依赖用的是 Swift Package Manager（没有 Podfile），
+      # 显式打开一次，避免 runner 上默认关闭时找不到 FlutterGeneratedPluginSwiftPackage
+      - name: Enable Swift Package Manager
+        run: flutter config --enable-swift-package-manager
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      # --no-codesign：不签名，产物用于 Sideloadly / AltStore 在本地用 Apple ID 自签
+      - name: Build iOS app (unsigned)
+        run: flutter build ios --release --no-codesign
+
+      - name: Package Payload into .ipa
+        run: |
+          set -euo pipefail
+          APP_PATH="build/ios/iphoneos/Runner.app"
+          test -d "$APP_PATH"
+          rm -rf Payload "HanziRoots-unsigned-${GITHUB_RUN_NUMBER}.ipa"
+          mkdir -p Payload
+          # -R 保留 .app 内部结构；zip -y 保留符号链接，否则自签工具会报错
+          cp -R "$APP_PATH" Payload/
+          zip -qry "HanziRoots-unsigned-${GITHUB_RUN_NUMBER}.ipa" Payload
+          ls -lh "HanziRoots-unsigned-${GITHUB_RUN_NUMBER}.ipa"
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: HanziRoots-unsigned-ipa-r${{ github.run_number }}
+          path: HanziRoots-unsigned-${{ github.run_number }}.ipa
+          if-no-files-found: error
+          retention-days: 30
