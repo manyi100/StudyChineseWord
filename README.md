@@ -2,7 +2,7 @@
 
 一个面向学龄前 / 低年级儿童和中文学习者的离线识字 App（Flutter + Android）。内置 720 个常用汉字，每字配拼音、部首、笔顺、组词、例句和插画，并支持笔顺描红、点读发音、阶段化学习与中英文界面。
 
-当前版本：`1.1.0`（构建号 2）
+当前版本：`1.2.0`（构建号 3）
 
 ---
 
@@ -58,6 +58,7 @@
 - 连续点击不同内容会自动打断上一段朗读，不串音
 - 朗读结束优先使用 TTS 完成回调；部分国产 ROM 回调不稳定时，按“字数 × 0.38 秒 + 1.4 秒”兜底自动收起动效
 - 点击图片的朗读顺序：**例句 → 第一个组词 → 单字**
+- **朗读优先播放随包内置的音频**（见「内置朗读音频」），不依赖系统 TTS；只有查不到音频时才回退系统引擎
 - 小米 / 红米机型已在 `AndroidManifest.xml` 声明 `TTS_SERVICE` 查询权限，并会枚举已安装语音引擎逐个尝试中文发音；没有可用引擎时会提示去系统设置安装
 
 ### 4. 收藏与复习
@@ -118,6 +119,48 @@
 - 笔顺名称本地化：日文（横 / 縦 / 左払い / 横折れ鉤）、韩文（가로 / 세로 / 왼삐침）、英越用英文名（horizontal / vertical / left-falling）
 - 文案集中在 `lib/l10n/app_strings.dart`，每个文案一行、按「中英日韩越」顺序给出，新增语言只需在 `AppLang` 与 `_t(...)` 里各加一项
 
+### 9. 内置朗读音频（不依赖系统 TTS）
+
+海外设备、电视盒子、投影仪经常没有中文 TTS 引擎，系统朗读会直接无声。现在把朗读音频随 App 打包：
+
+| 内容 | 条数 | 说明 |
+| --- | --- | --- |
+| 单字 | 720 | 每个字的独立读音 |
+| 组词 | 1954 | 与卡片上的词语一一对应（2160 条去重后） |
+| 例句 | 706 | 整句朗读（720 条去重后） |
+| 合计 | 3380 条 | 24 kHz 单声道 mp3，共 28.5 MB |
+
+播放策略：**内置音频 → 系统 TTS → 提示安装引擎**。`assets/audio/manifest.json` 里查不到文本（例如以后新增内容）时才回退系统 TTS，所以缺文件也不会哑。
+
+多音字用「同音字替换」保证读音正确——单字音频只承载音节，用同音字合成不会改变发音：
+
+| 字 | 数据标注 | 引擎默认读法 | 实际合成 |
+| --- | --- | --- | --- |
+| 长 | cháng | zhǎng | 常 |
+| 干 | gān | gàn | 竿 |
+| 薄 | bó | báo | 博 |
+| 教 | jiāo | jiào | 蕉 |
+| 种 | zhòng | zhǒng | 重 |
+| 划 | huá | huà | 滑 |
+| 泊 | bó | pō | 博 |
+| 子 | zǐ | zi | 紫 |
+| 脏 | zāng | zàng | 赃 |
+| 缝 | féng | fèng | 逢 |
+
+（`爪 zhuǎ` 在常用字里没有同音字，单字音频仍是 zhǎo，属于已知小瑕疵。）
+
+重新生成或补录内容：
+
+```bash
+python scripts/generate_audio.py --limit 10   # 先验证音色
+python scripts/generate_audio.py              # 全量生成，已存在会自动跳过
+```
+
+- 需要联网；走代理先设 `HTTPS_PROXY`
+- 音色默认 `zh-CN-XiaoxiaoNeural`，可用 `--voice` 更换
+- 生成完成后会重写 `assets/audio/manifest.json`（文本 → 资源路径）
+- 商用前请确认音源授权：Edge TTS 是微软在线服务的免费接口，正式发行建议换成 Azure 付费语音或真人录音
+
 ---
 
 ## 二、目录结构
@@ -150,8 +193,16 @@ lib/
     ├── content_frame.dart        # 宽屏内容最大宽度（iPad / 横屏居中）
     └── audio_feedback.dart       # 喇叭图标、声波动效、气泡、首次提示
 
+assets/
+├── data/                         # 720 字数据 + 笔顺矢量数据
+├── images/                       # 720 张 WebP 插画
+├── fonts/                        # 楷体子集字体
+├── branding/                     # 图标 / 启动图源图与生成素材
+└── audio/                        # 内置朗读音频（chars / words / sentences + manifest.json）
+
 scripts/
 ├── generate_images_nanobanana.py # 批量生成配图
+├── generate_audio.py             # 批量生成离线朗读音频
 ├── make_brand_assets.py          # 由 1024 源图生成图标 / 启动图素材
 ├── fetch_stroke_data.py          # 生成笔顺矢量数据
 ├── crop_hanzi_grid.py            # 四宫格切图（旧版）
@@ -178,13 +229,13 @@ scripts/
 ```bash
 flutter pub get
 flutter test                          # 含 360dp 宽度布局检查
-flutter build apk --release           # 产物：build/app/outputs/flutter-apk/HanziRoots-v1.1.0.apk
+flutter build apk --release           # 产物：build/app/outputs/flutter-apk/HanziRoots-v1.2.0.apk
 ```
 
 安装到设备：
 
 ```bash
-adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.1.0.apk
+adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.2.0.apk
 ```
 
 ### 在 Android TV / 投影仪上安装
@@ -193,7 +244,7 @@ adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.1.0.apk
 
 ```bash
 adb connect 192.168.0.16:5555          # 投影仪需开启「网络调试 / ADB 调试」
-adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.1.0.apk
+adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.2.0.apk
 adb shell am start -n com.ailexin.HanziRoots/com.ailexin.HanziRoots.MainActivity
 ```
 
@@ -223,7 +274,7 @@ adb shell am start -n com.ailexin.HanziRoots/com.ailexin.HanziRoots.MainActivity
 | 应用包名（applicationId / namespace） | `com.ailexin.HanziRoots` |
 | 启动 Activity | `com.ailexin.HanziRoots.MainActivity` |
 | APK 文件名 | `HanziRoots-v<版本号>.apk`，版本号取自 `pubspec.yaml` 的 `version` |
-| 当前产物 | `build/app/outputs/flutter-apk/HanziRoots-v1.1.0.apk` |
+| 当前产物 | `build/app/outputs/flutter-apk/HanziRoots-v1.2.0.apk` |
 | iOS Bundle ID | `com.ailexin.HanziRoots`（RunnerTests 为 `.RunnerTests`） |
 | iOS 产物 | `build/ios/ipa/Runner.ipa`（`flutter build ipa`） |
 
@@ -283,7 +334,7 @@ flutter build ipa --release
 想和 APK 一样带版本号，导出后重命名即可：
 
 ```bash
-cp build/ios/ipa/Runner.ipa build/ios/ipa/HanziRoots-v1.1.0.ipa
+cp build/ios/ipa/Runner.ipa build/ios/ipa/HanziRoots-v1.2.0.ipa
 ```
 
 #### 三、用 GitHub Actions 生成 ipa（无需 Mac、无需付费账号）
@@ -332,7 +383,7 @@ artifact 默认保留 30 天，需要长期保存请自己转存。
 
 **4. 注意事项**
 
-- 每次发新版本前先把 `pubspec.yaml` 的 `version: 1.1.0+2` 里的 build 号 `+1` 递增
+- 每次发新版本前先把 `pubspec.yaml` 的 `version: 1.2.0+3` 里的 build 号 `+1` 递增
 - 免费签名和 Bundle Identifier 绑定；如果 `com.ailexin.HanziRoots` 在你的账号下
   已被占用，改成自己的（见上一节），并同步 `android/app/build.gradle.kts`
 - GitHub Actions 的 macOS 分钟数：公开仓库免费；私有仓库按 10 倍计费
@@ -365,10 +416,10 @@ artifact 默认保留 30 天，需要长期保存请自己转存。
 
 1. **图标**：已生成 iOS / Android 全尺寸（含自适应图标）。上架前确认 App Store Connect 的 1024 图标与 `assets/branding/app_icon.png` 一致
 2. **启动图**：已生成，iPhone / iPad / Android 12+ 均为米色底 + 居中 Logo
-3. **版本号**：已是 `1.1.0+2`，iOS 的 `CFBundleShortVersionString` / `CFBundleVersion` 自动取这两个值；每次提审 build 号必须递增
+3. **版本号**：已是 `1.2.0+3`，iOS 的 `CFBundleShortVersionString` / `CFBundleVersion` 自动取这两个值；每次提审 build 号必须递增
 4. **隐私清单**：`ios/Runner/PrivacyInfo.xcprivacy` 已提供（声明 `UserDefaults` 用途 CA92.1）。**需在 Xcode 里把它拖进 Runner target 的 Copy Bundle Resources**，只放文件不生效
 5. **App Store 资料**：中英文名称、副标题、截图（6.7"/6.5"/12.9" iPad）、隐私政策 URL（本 App 不收集数据，填“不收集”）
-6. **体积**：图片 26.8 MB + 笔顺 1.6 MB，IPA 约 80–90 MB，仍在 200 MB 蜂窝下载限制内
+6. **体积**：图片 26.8 MB + 笔顺 1.6 MB + 音频 28.5 MB，IPA 约 95–105 MB，仍在 200 MB 蜂窝下载限制内
 
 ### 图标与启动图
 
@@ -486,6 +537,7 @@ python3 scripts/generate_images_nanobanana.py --provider gemini --limit 20
 12. 退出重进后，学习位置、收藏、已学进度是否保留
 13. 首页右上角语言菜单能否在中 / 英 / 日 / 韩 / 越之间切换，退出重进后是否保持
 14. 英文界面下阶段 / 课程 / 部首 / 笔画 / 学习卡片 / 收藏页文案是否完整，360dp 窄屏是否不溢出
+15. 在**没有中文 TTS 引擎**的设备（坚果投影仪）上，点读是否仍有声音（走内置音频）
 
 ---
 
@@ -493,6 +545,12 @@ python3 scripts/generate_images_nanobanana.py --provider gemini --limit 20
 
 ### 2026-11
 
+- **内置朗读音频（1.2.0）**
+  - 720 单字 + 1954 组词 + 706 例句（去重后 3380 条，28.5 MB）全部离线打包，彻底不依赖系统 TTS
+  - 播放优先级：内置音频 → 系统 TTS → 提示（缺文件也不会哑）
+  - 多音字用同音字合成校正（长→常、干→竿、教→蕉…），读音可控可校对
+  - 新增 `scripts/generate_audio.py`，支持断点续跑与 `--limit` 试听
+  - Android / iOS 统一用 `just_audio` 播放 mp3，无额外权限
 - **多语言界面（1.1.0）**
   - 新增日本語 / 한국어 / Tiếng Việt 三套界面文案，加上原有中英文共五种
   - 语言入口改为菜单，胶囊按钮显示当前语言（中 / EN / 日 / 한 / VI），选择结果本地保存
@@ -521,7 +579,7 @@ python3 scripts/generate_images_nanobanana.py --provider gemini --limit 20
   - 内置 720 字离线笔顺矢量数据
   - 自动笔顺动画 + 手指跟写描红（方向 / 起笔 / 收笔校验）
 - **数据与资源**
-  - 720 张配图由 GIF 全量替换为 WebP，APK 约 72.5 MB
+  - 720 张配图由 GIF 全量替换为 WebP；内置音频后 APK 约 109 MB
   - 全量校对 720 字、2160 个组词、720 个例句的拼音与声调
 - **中英文界面**
   - 开屏右上角新增语言切换按钮，支持中文 / English
@@ -530,7 +588,7 @@ python3 scripts/generate_images_nanobanana.py --provider gemini --limit 20
   - 学习内容（汉字、拼音、组词、例句）保持中文，朗读仍为中文
 - **应用标识与产物命名**
   - 包名由 `com.example.untitled` 改为 `com.ailexin.HanziRoots`，MainActivity 同步迁移
-  - APK 产物自动命名为 `HanziRoots-v<版本号>.apk`，例如 `HanziRoots-v1.1.0.apk`
+  - APK 产物自动命名为 `HanziRoots-v<版本号>.apk`，例如 `HanziRoots-v1.2.0.apk`
   - iOS Bundle ID 同步为 `com.ailexin.HanziRoots`，显示名改为“入学必备720字”
   - 新增 `ios/Runner/PrivacyInfo.xcprivacy`（UserDefaults 用途声明）
   - README 新增 iOS / iPad 打包与上架说明

@@ -5,9 +5,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:entrance_720_words/l10n/app_strings.dart';
 import 'package:entrance_720_words/main.dart';
 import 'package:entrance_720_words/services/hanzi_repository.dart';
+import 'package:entrance_720_words/services/tts_service.dart';
 import 'package:entrance_720_words/widgets/character_card.dart';
 
 void main() {
+  // 测试环境没有原生音频插件，朗读直接走系统 TTS 分支
+  TtsService.disableBundledAudio = true;
+
   testWidgets('home shows stage/radical/stroke navigation and course list',
       (WidgetTester tester) async {
     SharedPreferences.setMockInitialValues({});

@@ -1,11 +1,20 @@
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:just_audio/just_audio.dart';
 import '../l10n/app_strings.dart';
 
-/// 朗读服务：封装 flutter_tts，统一管理朗读单字/词语/句子的逻辑。
-/// 使用系统自带TTS引擎，完全离线，无需联网、无需额外申请API Key。
+/// 朗读服务：优先播放随 App 打包的离线音频，缺失时回退系统 TTS。
+///
+/// 为什么内置音频：不少海外设备、电视盒子、投影仪没有中文 TTS 引擎，
+/// 系统朗读会直接无声。720 单字 + 组词 + 例句的音频已随包分发，
+/// 既不依赖系统语音，也能逐条校对多音字。
+///
+/// 兜底逻辑：`assets/audio/manifest.json` 里没有对应文本（例如以后新增的内容）
+/// 时，才走系统 TTS，仍然保留原有引擎枚举与提示。
 ///
 /// 小米/红米（MIUI、HyperOS）适配要点：
 /// 1. Android 11+ 的包可见性限制会拦截"绑定其它应用的语音引擎服务"，必须在
@@ -25,12 +34,22 @@ class TtsService {
 
   static const _candidateLanguages = ['zh-CN', 'zh-Hans-CN', 'zh-Hans', 'zh'];
 
+  /// 组件测试环境没有原生音频插件，置 true 后朗读直接走系统 TTS 分支。
+  static bool disableBundledAudio = false;
+
   static String get _unavailableMessage =>
       AppStrings.ofCurrent().ttsUnavailable;
 
   final FlutterTts _flutterTts = FlutterTts();
   Future<bool>? _readyFuture;
   bool _notified = false;
+
+  /// 文本 -> 内置音频资源路径，启动后只加载一次。
+  Map<String, String>? _audioIndex;
+  Future<Map<String, String>?>? _audioIndexFuture;
+
+  AudioPlayer? _player;
+  StreamSubscription<PlayerState>? _playerSub;
 
   /// 当前正在朗读的目标标识（字/词/句/图片各自的 tag）。
   /// UI 用它来显示“声波跳动 / 朗读中”动效，读完自动变回喇叭图标。
@@ -125,6 +144,10 @@ class TtsService {
     final generation = ++_generation;
     _beginSpeaking(tag ?? text, text, generation);
 
+    // 1) 内置音频优先：完全离线，不依赖系统 TTS 引擎
+    if (await _speakAsset(text, generation)) return true;
+
+    // 2) 没有对应音频时，回退系统 TTS
     if (!await _ensureReady()) {
       _finishSpeaking(generation);
       _notifyUnavailable();
@@ -140,6 +163,66 @@ class TtsService {
     _finishSpeaking(generation);
     _notifyUnavailable();
     return false;
+  }
+
+  /// 读取内置音频索引（text -> 资源路径），只加载一次。
+  Future<Map<String, String>?> _loadAudioIndex() {
+    final cached = _audioIndex;
+    if (cached != null) return Future<Map<String, String>?>.value(cached);
+
+    return _audioIndexFuture ??= rootBundle
+        .loadString('assets/audio/manifest.json')
+        .then<Map<String, String>?>((raw) {
+          final decoded = jsonDecode(raw) as Map<String, dynamic>;
+          final map = <String, String>{};
+          decoded.forEach((key, value) {
+            if (value is String) map[key] = value;
+          });
+          _audioIndex = map;
+          debugPrint('[Audio] 内置音频 ${map.length} 条');
+          return map;
+        })
+        .catchError((Object error) {
+          debugPrint('[Audio] 读取内置音频索引失败：$error');
+          _audioIndexFuture = null;
+          return null;
+        });
+  }
+
+  /// 尝试播放内置音频；没有对应文件或播放失败时返回 false，交给系统 TTS。
+  Future<bool> _speakAsset(String text, int generation) async {
+    if (disableBundledAudio) return false;
+    final index = await _loadAudioIndex();
+    final path = index?[text];
+    if (path == null) return false;
+
+    try {
+      final player = _player ??= AudioPlayer();
+      _playerSub ??= player.playerStateStream.listen((state) {
+        if (state.processingState == ProcessingState.completed) {
+          _finishSpeaking(_generation);
+        }
+      });
+
+      await player.stop();
+      await player.setAsset(path);
+
+      // 用真实时长兜底，避免动效提前消失或一直转
+      final duration = player.duration;
+      if (duration != null) {
+        _fallbackTimer?.cancel();
+        _fallbackTimer = Timer(
+          duration + const Duration(milliseconds: 600),
+          () => _finishSpeaking(generation),
+        );
+      }
+
+      unawaited(player.play());
+      return true;
+    } catch (error) {
+      debugPrint('[Audio] 内置音频播放失败，回退系统 TTS：$error');
+      return false;
+    }
   }
 
   void _beginSpeaking(String tag, String text, int generation) {
@@ -199,6 +282,11 @@ class TtsService {
     // 此时相关监听者也会被销毁，直接跳过通知即可。
     if (notify && speakingTag.value != null) {
       speakingTag.value = null;
+    }
+    try {
+      await _player?.stop();
+    } catch (e) {
+      debugPrint('[Audio] 停止内置音频失败：$e');
     }
     await _flutterTts.stop();
   }

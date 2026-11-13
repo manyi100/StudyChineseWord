@@ -1,7 +1,7 @@
 name: entrance_720_words
 description: "入学必备720字 - 识字学习App（MVP测试版）"
 publish_to: 'none'
-version: 1.1.0+2
+version: 1.2.0+3
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -12,6 +12,7 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_tts: ^4.0.2
   shared_preferences: ^2.2.3
+  just_audio: ^0.9.42
 
 dev_dependencies:
   flutter_test:
@@ -26,6 +27,10 @@ flutter:
   assets:
     - assets/images/
     - assets/data/
+    - assets/audio/manifest.json
+    - assets/audio/chars/
+    - assets/audio/words/
+    - assets/audio/sentences/
   fonts:
     - family: KaiTiCustom
       fonts:
