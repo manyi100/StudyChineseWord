@@ -330,12 +330,16 @@ class _StageCard extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          Text(
-                            s.stageName(progress.info.id),
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                              color: locked ? Colors.black45 : Colors.black87,
+                          Flexible(
+                            child: Text(
+                              s.stageName(progress.info.id),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w600,
+                                color: locked ? Colors.black45 : Colors.black87,
+                              ),
                             ),
                           ),
                           if (progress.isCompleted) ...[
@@ -610,9 +614,7 @@ class _StrokeBandCard extends StatelessWidget {
       band.minStrokes,
       band.maxStrokes,
     );
-    final labelText = s.isEn
-        ? bandLabel.replaceFirst(' ', '\n')
-        : bandLabel.replaceAll('画', '\n画');
+    final labelText = s.strokeBandMultiline(bandLabel);
     return Material(
       color: Colors.white,
       borderRadius: BorderRadius.circular(16),

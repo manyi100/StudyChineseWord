@@ -2,7 +2,7 @@
 
 一个面向学龄前 / 低年级儿童和中文学习者的离线识字 App（Flutter + Android）。内置 720 个常用汉字，每字配拼音、部首、笔顺、组词、例句和插画，并支持笔顺描红、点读发音、阶段化学习与中英文界面。
 
-当前版本：`1.0.0`（构建号 1）
+当前版本：`1.1.0`（构建号 2）
 
 ---
 
@@ -97,14 +97,26 @@
 - 例句中的 `gě（盖）`、`yún（员）`、`wù（乌）` 等错音已全部修正
 - `一`、`不` 采用本调 `yī`、`bù`，未做变调标注
 
-### 8. 中英文界面
+### 8. 多语言界面（中 / 英 / 日 / 韩 / 越）
 
-- 开屏（选择学习阶段）右上角有语言切换按钮：中文界面显示 `EN`，英文界面显示 `中文`，点一下立即切换
-- 选择结果保存在本地（`app_language`），退出重进后保持不变
-- 切换的只是**界面语言**：汉字、拼音、组词、例句以及朗读内容始终是中文，方便外国学习者把英文说明和中文内容对照起来学
-- 英文界面覆盖全部页面：阶段 / 课程 / 部首 / 笔画、学习卡片、田字格按钮与状态、收藏页、空状态和 SnackBar 提示
-- 笔顺名称也做了英文映射，例如 横 → horizontal、竖 → vertical、横折钩 → horizontal-turn hook
-- 文案集中在 `lib/l10n/app_strings.dart`，新增语言只需要在该文件加一个分支
+汉字文化圈里大量接触汉字的国家和地区：
+
+| 国家 / 地区 | 汉字使用情况 |
+| --- | --- |
+| 中国（含港澳台） | 母语，小学阶段识字 2500–3000 字 |
+| 日本 | 常用汉字 2136 个，小学 6 年学 1026 个（教育汉字） |
+| 韩国 | 汉字（한자）为选修，中学阶段 1800 个基础汉字 |
+| 越南 | 历史上使用汉字与字喃，现多为兴趣学习、汉越词研究 |
+| 新加坡 / 马来西亚 | 华文教育，采用简体字，与国内教材接近 |
+
+因此界面提供五种语言：
+
+- 开屏右上角是语言按钮，显示当前语言（`中` / `EN` / `日` / `한` / `VI`），点开后在菜单里选择
+- 选择结果保存在本地（`app_language`，取值为 `zh` / `en` / `ja` / `ko` / `vi`），退出重进后保持不变
+- 切换的只是**界面语言**：汉字、拼音、组词、例句以及朗读内容始终是中文，方便学习者把母语说明和中文内容对照起来
+- 覆盖全部页面：阶段 / 课程 / 部首 / 笔画、学习卡片、田字格按钮与状态、收藏页、空状态和 SnackBar 提示
+- 笔顺名称本地化：日文（横 / 縦 / 左払い / 横折れ鉤）、韩文（가로 / 세로 / 왼삐침）、英越用英文名（horizontal / vertical / left-falling）
+- 文案集中在 `lib/l10n/app_strings.dart`，每个文案一行、按「中英日韩越」顺序给出，新增语言只需在 `AppLang` 与 `_t(...)` 里各加一项
 
 ---
 
@@ -166,13 +178,13 @@ scripts/
 ```bash
 flutter pub get
 flutter test                          # 含 360dp 宽度布局检查
-flutter build apk --release           # 产物：build/app/outputs/flutter-apk/HanziRoots-v1.0.0.apk
+flutter build apk --release           # 产物：build/app/outputs/flutter-apk/HanziRoots-v1.1.0.apk
 ```
 
 安装到设备：
 
 ```bash
-adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.0.0.apk
+adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.1.0.apk
 ```
 
 ### 在 Android TV / 投影仪上安装
@@ -181,7 +193,7 @@ adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.0.0.apk
 
 ```bash
 adb connect 192.168.0.16:5555          # 投影仪需开启「网络调试 / ADB 调试」
-adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.0.0.apk
+adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.1.0.apk
 adb shell am start -n com.ailexin.HanziRoots/com.ailexin.HanziRoots.MainActivity
 ```
 
@@ -211,7 +223,7 @@ adb shell am start -n com.ailexin.HanziRoots/com.ailexin.HanziRoots.MainActivity
 | 应用包名（applicationId / namespace） | `com.ailexin.HanziRoots` |
 | 启动 Activity | `com.ailexin.HanziRoots.MainActivity` |
 | APK 文件名 | `HanziRoots-v<版本号>.apk`，版本号取自 `pubspec.yaml` 的 `version` |
-| 当前产物 | `build/app/outputs/flutter-apk/HanziRoots-v1.0.0.apk` |
+| 当前产物 | `build/app/outputs/flutter-apk/HanziRoots-v1.1.0.apk` |
 | iOS Bundle ID | `com.ailexin.HanziRoots`（RunnerTests 为 `.RunnerTests`） |
 | iOS 产物 | `build/ios/ipa/Runner.ipa`（`flutter build ipa`） |
 
@@ -271,7 +283,7 @@ flutter build ipa --release
 想和 APK 一样带版本号，导出后重命名即可：
 
 ```bash
-cp build/ios/ipa/Runner.ipa build/ios/ipa/HanziRoots-v1.0.0.ipa
+cp build/ios/ipa/Runner.ipa build/ios/ipa/HanziRoots-v1.1.0.ipa
 ```
 
 #### 三、用 GitHub Actions 生成 ipa（无需 Mac、无需付费账号）
@@ -320,7 +332,7 @@ artifact 默认保留 30 天，需要长期保存请自己转存。
 
 **4. 注意事项**
 
-- 每次发新版本前先把 `pubspec.yaml` 的 `version: 1.0.0+1` 里的 build 号 `+1` 递增
+- 每次发新版本前先把 `pubspec.yaml` 的 `version: 1.1.0+2` 里的 build 号 `+1` 递增
 - 免费签名和 Bundle Identifier 绑定；如果 `com.ailexin.HanziRoots` 在你的账号下
   已被占用，改成自己的（见上一节），并同步 `android/app/build.gradle.kts`
 - GitHub Actions 的 macOS 分钟数：公开仓库免费；私有仓库按 10 倍计费
@@ -353,7 +365,7 @@ artifact 默认保留 30 天，需要长期保存请自己转存。
 
 1. **图标**：已生成 iOS / Android 全尺寸（含自适应图标）。上架前确认 App Store Connect 的 1024 图标与 `assets/branding/app_icon.png` 一致
 2. **启动图**：已生成，iPhone / iPad / Android 12+ 均为米色底 + 居中 Logo
-3. **版本号**：已是 `1.0.0+1`，iOS 的 `CFBundleShortVersionString` / `CFBundleVersion` 自动取这两个值；每次提审 build 号必须递增
+3. **版本号**：已是 `1.1.0+2`，iOS 的 `CFBundleShortVersionString` / `CFBundleVersion` 自动取这两个值；每次提审 build 号必须递增
 4. **隐私清单**：`ios/Runner/PrivacyInfo.xcprivacy` 已提供（声明 `UserDefaults` 用途 CA92.1）。**需在 Xcode 里把它拖进 Runner target 的 Copy Bundle Resources**，只放文件不生效
 5. **App Store 资料**：中英文名称、副标题、截图（6.7"/6.5"/12.9" iPad）、隐私政策 URL（本 App 不收集数据，填“不收集”）
 6. **体积**：图片 26.8 MB + 笔顺 1.6 MB，IPA 约 80–90 MB，仍在 200 MB 蜂窝下载限制内
@@ -472,7 +484,7 @@ python3 scripts/generate_images_nanobanana.py --provider gemini --limit 20
 10. 学完一个阶段 120 字后，下一阶段是否解锁
 11. 没有中文语音引擎时，是否弹出安装 / 启用提示
 12. 退出重进后，学习位置、收藏、已学进度是否保留
-13. 首页右上角语言按钮能否在中文 / English 之间切换，退出重进后是否保持
+13. 首页右上角语言菜单能否在中 / 英 / 日 / 韩 / 越之间切换，退出重进后是否保持
 14. 英文界面下阶段 / 课程 / 部首 / 笔画 / 学习卡片 / 收藏页文案是否完整，360dp 窄屏是否不溢出
 
 ---
@@ -481,6 +493,12 @@ python3 scripts/generate_images_nanobanana.py --provider gemini --limit 20
 
 ### 2026-11
 
+- **多语言界面（1.1.0）**
+  - 新增日本語 / 한국어 / Tiếng Việt 三套界面文案，加上原有中英文共五种
+  - 语言入口改为菜单，胶囊按钮显示当前语言（中 / EN / 日 / 한 / VI），选择结果本地保存
+  - 笔顺名称增加日文、韩文映射（横 / 縦 / 左払い、가로 / 세로 / 왼삐침）
+  - 阶段名、课名、进度、田字格状态、收藏页、TTS 提示全部按语言本地化
+  - 修复越南语 “Giai đoạn” 阶段标题在 360dp 窄屏下溢出的问题
 - **分类改版（P0 + P1）**
   - “年级”改为“第 1~6 阶段”，避免与真实教材年级混淆
   - 新增 180 门主题课（每课 4 字，每阶段 30 课）
@@ -512,7 +530,7 @@ python3 scripts/generate_images_nanobanana.py --provider gemini --limit 20
   - 学习内容（汉字、拼音、组词、例句）保持中文，朗读仍为中文
 - **应用标识与产物命名**
   - 包名由 `com.example.untitled` 改为 `com.ailexin.HanziRoots`，MainActivity 同步迁移
-  - APK 产物自动命名为 `HanziRoots-v<版本号>.apk`，例如 `HanziRoots-v1.0.0.apk`
+  - APK 产物自动命名为 `HanziRoots-v<版本号>.apk`，例如 `HanziRoots-v1.1.0.apk`
   - iOS Bundle ID 同步为 `com.ailexin.HanziRoots`，显示名改为“入学必备720字”
   - 新增 `ios/Runner/PrivacyInfo.xcprivacy`（UserDefaults 用途声明）
   - README 新增 iOS / iPad 打包与上架说明

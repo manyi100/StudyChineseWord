@@ -108,7 +108,7 @@ void main() {
     await tester.pump(const Duration(seconds: 16));
   });
 
-  testWidgets('language button switches the whole interface to English',
+  testWidgets('language menu switches zh / en / ja / ko / vi',
       (WidgetTester tester) async {
     SharedPreferences.setMockInitialValues({});
     AppLocale.notifier.value = AppLang.zh;
@@ -120,22 +120,24 @@ void main() {
       await HanziRepository.instance.ensureLoaded();
     });
 
+    Future<void> choose(String nativeName) async {
+      await tester.tap(find.byType(PopupMenuButton<AppLang>));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text(nativeName));
+      await tester.pumpAndSettle();
+    }
+
     await tester.pumpWidget(const MyApp());
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 200));
 
     expect(find.text('选择学习阶段'), findsOneWidget);
-    expect(find.text('EN'), findsOneWidget);
 
-    // 切换到英文
-    await tester.tap(find.text('EN'));
-    await tester.pumpAndSettle();
+    // 英文
+    await choose('English');
     expect(find.text('Choose a Stage'), findsOneWidget);
     expect(find.text('By theme'), findsOneWidget);
-    expect(find.text('By radical'), findsOneWidget);
-    expect(find.text('By strokes'), findsOneWidget);
     expect(find.text('Stage 1'), findsOneWidget);
-    expect(find.text('中文'), findsOneWidget);
 
     // 进入阶段/课程，确认深层页面也是英文
     await tester.tap(find.text('Stage 1'));
@@ -143,7 +145,7 @@ void main() {
     expect(find.text('Stage 1 · Lessons'), findsOneWidget);
     expect(find.text('Lesson 1'), findsOneWidget);
 
-    // 进入学习卡片：英文文案 + 360dp 下不溢出
+    // 学习卡片：英文文案 + 360dp 下不溢出
     await tester.tap(find.text('Lesson 1'));
     await tester.pumpAndSettle();
     expect(find.text('Words'), findsOneWidget);
@@ -153,13 +155,29 @@ void main() {
 
     await tester.tap(find.byIcon(Icons.arrow_back_rounded));
     await tester.pumpAndSettle();
-
     await tester.pageBack();
     await tester.pumpAndSettle();
 
+    // 日文
+    await choose('日本語');
+    expect(find.text('ステージを選ぶ'), findsOneWidget);
+    expect(find.text('テーマ別'), findsOneWidget);
+    expect(find.text('ステージ 1'), findsOneWidget);
+
+    // 韩文
+    await choose('한국어');
+    expect(find.text('학습 단계 선택'), findsOneWidget);
+    expect(find.text('주제별'), findsOneWidget);
+    expect(find.text('1단계'), findsOneWidget);
+
+    // 越南文
+    await choose('Tiếng Việt');
+    expect(find.text('Chọn giai đoạn'), findsOneWidget);
+    expect(find.text('Theo chủ đề'), findsOneWidget);
+    expect(find.text('Giai đoạn 1'), findsOneWidget);
+
     // 切回中文
-    await tester.tap(find.text('中文'));
-    await tester.pumpAndSettle();
+    await choose('中文');
     expect(find.text('选择学习阶段'), findsOneWidget);
     expect(find.text('按主题'), findsOneWidget);
 
