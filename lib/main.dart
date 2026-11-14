@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'l10n/app_strings.dart';
 import 'screens/grade_select_screen.dart';
+import 'services/meaning_service.dart';
 import 'services/tts_service.dart';
 
 /// 全局 ScaffoldMessenger，用于在没有 BuildContext 的地方（比如 TTS 服务里）
@@ -11,6 +12,8 @@ final GlobalKey<ScaffoldMessengerState> rootScaffoldMessengerKey =
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await AppLocale.load();
+  // 释义开关默认跟随界面语言：中文界面关，其它语言开（用户可随时在右上角切换）
+  await MeaningService.instance.loadPreference();
   TtsService.onUnavailable = (message) {
     rootScaffoldMessengerKey.currentState?.showSnackBar(
       SnackBar(content: Text(message), duration: const Duration(seconds: 8)),

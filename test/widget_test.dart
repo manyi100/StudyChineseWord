@@ -5,10 +5,21 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:entrance_720_words/l10n/app_strings.dart';
 import 'package:entrance_720_words/main.dart';
 import 'package:entrance_720_words/services/hanzi_repository.dart';
+import 'package:entrance_720_words/services/meaning_service.dart';
 import 'package:entrance_720_words/services/tts_service.dart';
 import 'package:entrance_720_words/widgets/character_card.dart';
 
 void main() {
+  // 资源（字库 / 释义）在真实异步环境里预加载一次。
+  // 若等到某个用例的 fake async 区里才触发，真实文件 I/O 的完成回调
+  // 会排进那个已经结束的 zone，后续用例 await 同一个 Future 会永久挂起。
+  TestWidgetsFlutterBinding.ensureInitialized();
+
+  setUpAll(() async {
+    await HanziRepository.instance.ensureLoaded();
+    await MeaningService.instance.ensureLoaded();
+  });
+
   // 测试环境没有原生音频插件，朗读直接走系统 TTS 分支
   TtsService.disableBundledAudio = true;
 
@@ -103,8 +114,7 @@ void main() {
     expect(find.text('第 1 课 · 一二三四'), findsOneWidget);
 
     // 在最后一页继续左滑，应进入下一课
-    await tester.flingFrom(
-        const Offset(180, 220), const Offset(-300, 0), 1200);
+    await tester.flingFrom(const Offset(180, 220), const Offset(-300, 0), 1200);
     await tester.pumpAndSettle();
     expect(find.text('第 2 课 · 五六七八'), findsOneWidget);
 
@@ -222,6 +232,50 @@ void main() {
     await tester.pumpAndSettle();
     final cardWidth = tester.getSize(find.byType(CharacterCard).first).width;
     expect(cardWidth, lessThanOrEqualTo(720));
+
+    await tester.pump(const Duration(seconds: 16));
+    AppLocale.notifier.value = AppLang.zh;
+  });
+
+  testWidgets('english meaning shows on demand and never blocks tapping',
+      (WidgetTester tester) async {
+    SharedPreferences.setMockInitialValues({});
+    AppLocale.notifier.value = AppLang.zh;
+
+    // 360dp 是最窄的常见手机宽度：释义行最多（单字 + 三词 + 句译）时也不能溢出
+    await tester.binding.setSurfaceSize(const Size(360, 800));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+
+    await tester.runAsync(() async {
+      await HanziRepository.instance.ensureLoaded();
+      await MeaningService.instance.ensureLoaded();
+    });
+
+    await MeaningService.instance.setVisible(false);
+    await tester.pumpWidget(const MyApp());
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 200));
+
+    await tester.tap(find.text('第 1 阶段'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('第 1 课'));
+    await tester.pumpAndSettle();
+
+    // 默认关闭：不显示释义
+    expect(find.text('one'), findsNothing);
+
+    // 打开：单字 / 组词 / 例句释义同时出现
+    await tester.tap(find.text('EN'));
+    await tester.pumpAndSettle();
+    expect(MeaningService.instance.visible.value, isTrue);
+    expect(find.text('one'), findsWidgets);
+
+    // 关闭：释义整体收起
+    await tester.tap(find.text('EN'));
+    await tester.pumpAndSettle();
+    expect(MeaningService.instance.visible.value, isFalse);
+    expect(find.text('one'), findsNothing);
+    expect(tester.takeException(), isNull);
 
     await tester.pump(const Duration(seconds: 16));
     AppLocale.notifier.value = AppLang.zh;

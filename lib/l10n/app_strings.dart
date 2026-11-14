@@ -94,8 +94,7 @@ class AppLocaleScope extends InheritedNotifier<ValueNotifier<AppLang>> {
   });
 
   static AppLang of(BuildContext context) {
-    final scope =
-        context.dependOnInheritedWidgetOfExactType<AppLocaleScope>();
+    final scope = context.dependOnInheritedWidgetOfExactType<AppLocaleScope>();
     return scope?.notifier?.value ?? AppLang.zh;
   }
 }
@@ -153,6 +152,23 @@ class AppStrings {
         '表示言語を切り替え',
         '인터페이스 언어 변경',
         'Đổi ngôn ngữ giao diện',
+      );
+
+  /// 学习页右上角「EN」开关：控制是否显示英文释义
+  String get showMeaning => _t(
+        '显示英文释义',
+        'Show English meaning',
+        '英語の意味を表示',
+        '영어 뜻 보기',
+        'Hiện nghĩa tiếng Anh',
+      );
+
+  String get hideMeaning => _t(
+        '隐藏英文释义',
+        'Hide English meaning',
+        '英語の意味を隠す',
+        '영어 뜻 숨기기',
+        'Ẩn nghĩa tiếng Anh',
       );
 
   String get languageChanged => _t(
@@ -322,9 +338,8 @@ class AppStrings {
         '$count chữ',
       );
 
-  String radicalLabel(String raw) => (raw == '其他' && !isZh)
-      ? _t('其他', 'Other', 'その他', '기타', 'Khác')
-      : raw;
+  String radicalLabel(String raw) =>
+      (raw == '其他' && !isZh) ? _t('其他', 'Other', 'その他', '기타', 'Khác') : raw;
 
   String radicalTitle(String radical) => _t(
         '部首 · $radical',
@@ -486,8 +501,7 @@ class AppStrings {
 
   String get sectionWords => _t('组词', 'Words', '単語', '단어', 'Từ ngữ');
 
-  String get sectionSentence =>
-      _t('造句', 'Sentence', '例文', '문장', 'Câu ví dụ');
+  String get sectionSentence => _t('造句', 'Sentence', '例文', '문장', 'Câu ví dụ');
 
   String radicalMeta(String radical, String strokes) => _t(
         '部首：$radical　共$strokes画',
@@ -505,8 +519,8 @@ class AppStrings {
         'Thứ tự nét: $order',
       );
 
-  String get noStrokeData =>
-      _t('暂无笔顺数据', 'No stroke data', '筆順データなし', '필순 자료 없음', 'Chưa có dữ liệu nét');
+  String get noStrokeData => _t(
+      '暂无笔顺数据', 'No stroke data', '筆順データなし', '필순 자료 없음', 'Chưa có dữ liệu nét');
 
   String strokeOrder(List<String> names) =>
       names.isEmpty ? noStrokeData : names.map(strokeName).join(' → ');
@@ -519,11 +533,9 @@ class AppStrings {
         '⚠️ Mục này cần kiểm tra lại với bản gốc',
       );
 
-  String get semanticsRead =>
-      _t('朗读', 'Read aloud', '読み上げ', '읽기', 'Đọc to');
+  String get semanticsRead => _t('朗读', 'Read aloud', '読み上げ', '읽기', 'Đọc to');
 
-  String get readingLabel =>
-      _t('朗读中', 'Reading', '読み上げ中', '읽는 중', 'Đang đọc');
+  String get readingLabel => _t('朗读中', 'Reading', '読み上げ中', '읽는 중', 'Đang đọc');
 
   // ---------- 收藏 ----------
   String get favoritesEmpty => _t(
@@ -538,8 +550,7 @@ class AppStrings {
   String get strokeDemo =>
       _t('笔顺演示', 'Stroke demo', '筆順アニメ', '필순 보기', 'Xem thứ tự nét');
 
-  String get traceWrite =>
-      _t('手写描红', 'Trace', 'なぞり書き', '따라 쓰기', 'Tập viết');
+  String get traceWrite => _t('手写描红', 'Trace', 'なぞり書き', '따라 쓰기', 'Tập viết');
 
   String get traceAgain =>
       _t('再写一遍', 'Trace again', 'もう一度書く', '다시 쓰기', 'Viết lại');

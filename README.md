@@ -161,6 +161,47 @@ python scripts/generate_audio.py              # 全量生成，已存在会自�
 - 生成完成后会重写 `assets/audio/manifest.json`（文本 → 资源路径）
 - 商用前请确认音源授权：Edge TTS 是微软在线服务的免费接口，正式发行建议换成 Azure 付费语音或真人录音
 
+### 10. 英文释义（可关闭、不参与朗读）
+
+单字、组词、例句都可以带一行英文释义，给非中文母语的学习者和家长做理解辅助：
+
+| 位置 | 示例 | 字号 / 颜色 |
+| --- | --- | --- |
+| 单字（田字格下方） | 长 → `long; length` | 13sp，黑 55% |
+| 组词（chips 下方一行） | `right hand  /  left hand  /  right side` | 11sp，黑 45% |
+| 例句（句框内第二行） | 今天下雨了。→ `It rained today.` | 13sp，左对齐 |
+
+交互约定：
+
+- 学习页右上角有 **EN** 胶囊开关，点一下显示 / 再点收起；状态存在 `show_meanings`
+- 默认值跟随界面语言：中文界面默认**关**，英 / 日 / 韩 / 越界面默认**开**（可随时手动改）
+- 释义固定英文，不随界面语言变化——界面语言只切换界面文案
+- 释义行用 `IgnorePointer` 包裹：点它不会朗读、不会误触，也不影响田字格、词块、例句的既有点读
+- 关闭时返回 0 尺寸，完全不占高度；查不到释义时同样不显示（不留空行）
+
+数据：
+
+| 内容 | 条数 | 来源 |
+| --- | --- | --- |
+| 单字 | 720 / 720 | CC-CEDICT（按数据标注的读音精确匹配，多音字不会串义） |
+| 组词 | 1926 / 1954 | CC-CEDICT + 172 条手工补充 |
+| 例句 | 706 / 706 | 人工翻译 |
+
+- 数据文件是 `assets/data/meanings_en.json`，按「文本」为 key（`chars` / `words` / `sentences` 三张表），不混进 `hanzi_data.json`；新增内容缺释义会自动跳过
+- 英文在 `lib/services/meaning_service.dart` 里查表，界面组件在 `lib/widgets/meaning_text.dart`
+- 释义在后台加载（`_revision` + `Listenable.merge`），不阻塞首帧；加载完成后只重建释义行
+
+重新生成：
+
+```bash
+# build/cedict.txt 是 CC-CEDICT 解压后的词典（已 gitignore）
+python scripts/build_meanings_en.py
+```
+
+- 覆盖表在脚本里：`CHAR_OVERRIDES`（单字冷僻义项修正）、`WORD_OVERRIDES`（量词与常用词）
+- 补充词义 `scripts/data/word_en_extra.tsv`，例句译文 `scripts/data/sent_en.tsv`（序号 = `hanzi_data.json` 里例句出现顺序，脚本按出现顺序编号）
+- **授权提醒**：CC-CEDICT 采用 CC BY-SA 4.0，商用需评估署名与传染性条款，或替换为自建 / 付费词库（结构保持一致即可）
+
 ---
 
 ## 二、目录结构
@@ -183,10 +224,12 @@ lib/
 │   ├── hanzi_repository.dart     # 字库、课程、部首、笔画分组
 │   ├── stroke_repository.dart    # 笔顺矢量数据解析
 │   ├── tts_service.dart          # 朗读 + 朗读状态通知
+│   ├── meaning_service.dart      # 英文释义查表 + 显隐开关（show_meanings）
 │   ├── storage_service.dart      # 本地进度 / 收藏 / 提示标记
 │   └── progress_service.dart     # 阶段解锁逻辑
 └── widgets/
     ├── character_card.dart       # 学习卡片
+    ├── meaning_text.dart         # 单字 / 组词 / 例句释义行（IgnorePointer）
     ├── tian_zi_ge_box.dart       # 田字格 + 笔顺演示 + 手写描红
     ├── pinyin_grid_text.dart     # 拼音四线三格
     ├── language_button.dart      # 开屏右上角中英文切换按钮
@@ -203,6 +246,10 @@ assets/
 scripts/
 ├── generate_images_nanobanana.py # 批量生成配图
 ├── generate_audio.py             # 批量生成离线朗读音频
+├── build_meanings_en.py          # 由 CC-CEDICT + 人工译文生成 meanings_en.json
+├── data/
+│   ├── sent_en.tsv               # 706 条例句英文译文
+│   └── word_en_extra.tsv         # 172 条补充组词词义
 ├── make_brand_assets.py          # 由 1024 源图生成图标 / 启动图素材
 ├── fetch_stroke_data.py          # 生成笔顺矢量数据
 ├── crop_hanzi_grid.py            # 四宫格切图（旧版）
@@ -221,6 +268,7 @@ scripts/
 6. 一课 4 个字都看过后，在最后一页继续左滑会自动进入下一课
 7. 点“笔顺演示”看动画；直接在田字格里写即可进入手写描红
 8. 点卡片右上角星标收藏；回首页底部进入“收藏复习”
+9. 学习页右上角的 **EN** 胶囊开关控制英文释义：中文界面默认关，其它语言默认开；释义不可点读
 
 ---
 
@@ -229,13 +277,13 @@ scripts/
 ```bash
 flutter pub get
 flutter test                          # 含 360dp 宽度布局检查
-flutter build apk --release           # 产物：build/app/outputs/flutter-apk/HanziRoots-v1.2.0.apk
+flutter build apk --release           # 产物：build/app/outputs/flutter-apk/HanziRoots-v1.3.0.apk
 ```
 
 安装到设备：
 
 ```bash
-adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.2.0.apk
+adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.3.0.apk
 ```
 
 ### 在 Android TV / 投影仪上安装
@@ -244,7 +292,7 @@ adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.2.0.apk
 
 ```bash
 adb connect 192.168.0.16:5555          # 投影仪需开启「网络调试 / ADB 调试」
-adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.2.0.apk
+adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.3.0.apk
 adb shell am start -n com.ailexin.HanziRoots/com.ailexin.HanziRoots.MainActivity
 ```
 
@@ -274,7 +322,7 @@ adb shell am start -n com.ailexin.HanziRoots/com.ailexin.HanziRoots.MainActivity
 | 应用包名（applicationId / namespace） | `com.ailexin.HanziRoots` |
 | 启动 Activity | `com.ailexin.HanziRoots.MainActivity` |
 | APK 文件名 | `HanziRoots-v<版本号>.apk`，版本号取自 `pubspec.yaml` 的 `version` |
-| 当前产物 | `build/app/outputs/flutter-apk/HanziRoots-v1.2.0.apk` |
+| 当前产物 | `build/app/outputs/flutter-apk/HanziRoots-v1.3.0.apk` |
 | iOS Bundle ID | `com.ailexin.HanziRoots`（RunnerTests 为 `.RunnerTests`） |
 | iOS 产物 | `build/ios/ipa/Runner.ipa`（`flutter build ipa`） |
 
@@ -334,7 +382,7 @@ flutter build ipa --release
 想和 APK 一样带版本号，导出后重命名即可：
 
 ```bash
-cp build/ios/ipa/Runner.ipa build/ios/ipa/HanziRoots-v1.2.0.ipa
+cp build/ios/ipa/Runner.ipa build/ios/ipa/HanziRoots-v1.3.0.ipa
 ```
 
 #### 三、用 GitHub Actions 生成 ipa（无需 Mac、无需付费账号）
@@ -538,6 +586,7 @@ python3 scripts/generate_images_nanobanana.py --provider gemini --limit 20
 13. 首页右上角语言菜单能否在中 / 英 / 日 / 韩 / 越之间切换，退出重进后是否保持
 14. 英文界面下阶段 / 课程 / 部首 / 笔画 / 学习卡片 / 收藏页文案是否完整，360dp 窄屏是否不溢出
 15. 在**没有中文 TTS 引擎**的设备（坚果投影仪）上，点读是否仍有声音（走内置音频）
+16. 学习页 **EN** 开关是否可显示 / 收起释义，切换后退出重进是否保持；点释义行是否不发声
 
 ---
 
@@ -545,6 +594,13 @@ python3 scripts/generate_images_nanobanana.py --provider gemini --limit 20
 
 ### 2026-11
 
+- **英文释义（1.3.0）**
+  - 单字 / 组词 / 例句各加一行英文释义，学习页右上角 **EN** 开关整体控制
+  - 中文界面默认关、其它语言默认开；释义不可点读，不影响田字格、词块、例句的既有点读
+  - 数据独立成 `assets/data/meanings_en.json`（720 字 / 1926 词 / 706 句），缺条目自动不显示
+  - 单字与组词按「数据标注的读音」精确匹配 CC-CEDICT，多音字不会串义；另加约 60 处人工覆盖
+  - 新增 `scripts/build_meanings_en.py`、`scripts/data/sent_en.tsv`、`scripts/data/word_en_extra.tsv`
+  - 释义后台加载并监听刷新，不阻塞首帧
 - **内置朗读音频（1.2.0）**
   - 720 单字 + 1954 组词 + 706 例句（去重后 3380 条，28.5 MB）全部离线打包，彻底不依赖系统 TTS
   - 播放优先级：内置音频 → 系统 TTS → 提示（缺文件也不会哑）
@@ -588,7 +644,7 @@ python3 scripts/generate_images_nanobanana.py --provider gemini --limit 20
   - 学习内容（汉字、拼音、组词、例句）保持中文，朗读仍为中文
 - **应用标识与产物命名**
   - 包名由 `com.example.untitled` 改为 `com.ailexin.HanziRoots`，MainActivity 同步迁移
-  - APK 产物自动命名为 `HanziRoots-v<版本号>.apk`，例如 `HanziRoots-v1.2.0.apk`
+  - APK 产物自动命名为 `HanziRoots-v<版本号>.apk`，例如 `HanziRoots-v1.3.0.apk`
   - iOS Bundle ID 同步为 `com.ailexin.HanziRoots`，显示名改为“入学必备720字”
   - 新增 `ios/Runner/PrivacyInfo.xcprivacy`（UserDefaults 用途声明）
   - README 新增 iOS / iPad 打包与上架说明

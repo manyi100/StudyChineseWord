@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../l10n/app_strings.dart';
 import '../models/hanzi_model.dart';
 import '../services/hanzi_repository.dart';
+import '../services/meaning_service.dart';
 import '../services/progress_service.dart';
 import '../services/storage_service.dart';
 import '../services/tts_service.dart';
@@ -63,6 +64,8 @@ class _HomeScreenState extends State<HomeScreen> {
   String get _progressKey => widget.progressKey ?? 'grade_${widget.gradeId}';
 
   Future<void> _restoreState() async {
+    // 释义不阻塞首帧：后台加载，加载完成后释义行自己会刷新
+    MeaningService.instance.ensureLoaded();
     await HanziRepository.instance.ensureLoaded();
 
     final explicitChars = widget.chars;
@@ -84,8 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final viewedIds = await StorageService.instance.getViewedIds();
     final safeIndex = _hanziList.isEmpty
         ? 0
-        : (widget.initialIndex ?? lastIndex)
-            .clamp(0, _hanziList.length - 1);
+        : (widget.initialIndex ?? lastIndex).clamp(0, _hanziList.length - 1);
 
     setState(() {
       _favoriteIds = favorites;
@@ -126,7 +128,8 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   bool get _allViewed =>
-      _hanziList.isNotEmpty && _hanziList.every((h) => _viewedIds.contains(h.id));
+      _hanziList.isNotEmpty &&
+      _hanziList.every((h) => _viewedIds.contains(h.id));
 
   /// 在最后一页继续向左滑时：四个字都学完则进入下一课，否则轻提示
   void _handleScrollNotification(ScrollNotification notification) {
@@ -249,6 +252,43 @@ class _HomeScreenState extends State<HomeScreen> {
           tooltip: s.backToStages,
           onPressed: _goToGradeSelect,
         ),
+        actions: [
+          // 英文释义开关：中文界面默认关，其它语言界面默认开
+          ValueListenableBuilder<bool>(
+            valueListenable: MeaningService.instance.visible,
+            builder: (context, on, _) => Padding(
+              padding: const EdgeInsets.only(right: 12),
+              child: Tooltip(
+                message: on ? s.hideMeaning : s.showMeaning,
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(9),
+                  onTap: MeaningService.instance.toggle,
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 180),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    decoration: BoxDecoration(
+                      color: on ? const Color(0xFFE8F5E9) : Colors.transparent,
+                      borderRadius: BorderRadius.circular(9),
+                      border: Border.all(
+                        color: on ? const Color(0xFF7CB342) : Colors.black26,
+                      ),
+                    ),
+                    child: Text(
+                      'EN',
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: 0.5,
+                        color: on ? const Color(0xFF33691E) : Colors.black45,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
       body: Column(
         children: [

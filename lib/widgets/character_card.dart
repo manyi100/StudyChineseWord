@@ -3,6 +3,7 @@ import '../l10n/app_strings.dart';
 import '../models/hanzi_model.dart';
 import '../services/tts_service.dart';
 import 'audio_feedback.dart';
+import 'meaning_text.dart';
 import 'pinyin_grid_text.dart';
 import 'tian_zi_ge_box.dart';
 
@@ -88,8 +89,8 @@ class CharacterCard extends StatelessWidget {
             // 裁掉一点，所以这里先按 1.81 占位，取到真实尺寸后自动校正。
             // 点击图片会朗读例句（插图本来就是按例句生成的），并浮出句子气泡。
             GestureDetector(
-              onTap: () => TtsService.instance
-                  .speak(_imageAudioText, tag: _imageTag),
+              onTap: () =>
+                  TtsService.instance.speak(_imageAudioText, tag: _imageTag),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(18),
                 child: Stack(
@@ -163,8 +164,8 @@ class CharacterCard extends StatelessWidget {
             Column(
               children: [
                 GestureDetector(
-                  onTap: () => TtsService.instance
-                      .speak(hanzi.char, tag: _charTag),
+                  onTap: () =>
+                      TtsService.instance.speak(hanzi.char, tag: _charTag),
                   child: PinyinGridText(
                     pinyin: hanzi.pinyin,
                     width: 140,
@@ -176,9 +177,11 @@ class CharacterCard extends StatelessWidget {
                   char: hanzi.char,
                   size: 152,
                   strokeOrderNames: hanzi.strokeOrderNames,
-                  onSpeak: () => TtsService.instance
-                      .speak(hanzi.char, tag: _charTag),
+                  onSpeak: () =>
+                      TtsService.instance.speak(hanzi.char, tag: _charTag),
                 ),
+                // 英文释义：可关闭、不可点读，只作为理解辅助
+                CharMeaning(char: hanzi.char),
               ],
             ),
             const SizedBox(height: 16),
@@ -210,6 +213,8 @@ class CharacterCard extends StatelessWidget {
                   ],
                 ),
               ),
+              // 与上方三个词块顺序一一对应的英文释义，一行读完
+              WordMeanings(words: [for (final w in hanzi.words) w.text]),
               const SizedBox(height: 16),
             ],
 
@@ -237,9 +242,17 @@ class CharacterCard extends StatelessWidget {
                       ),
                       const SizedBox(width: 8),
                       Expanded(
-                        child: Text(
-                          hanzi.sentence!.text,
-                          style: const TextStyle(fontSize: 18, height: 1.4),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              hanzi.sentence!.text,
+                              style: const TextStyle(fontSize: 18, height: 1.4),
+                            ),
+                            // 句译放在同一个框里，读作「一句中文 + 一句英文」
+                            SentenceMeaning(sentence: hanzi.sentence!.text),
+                          ],
                         ),
                       ),
                       SpeakingLabel(tag: _sentenceTag),
@@ -335,8 +348,7 @@ class _WordChip extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 9.5,
                     height: 1.05,
-                    color:
-                        active ? const Color(0xFF558B2F) : Colors.black45,
+                    color: active ? const Color(0xFF558B2F) : Colors.black45,
                   ),
                 ),
                 const SizedBox(height: 1),
@@ -347,9 +359,7 @@ class _WordChip extends StatelessWidget {
                       tag: tag,
                       size: 11,
                       gap: 0,
-                      color: active
-                          ? const Color(0xFF558B2F)
-                          : Colors.black45,
+                      color: active ? const Color(0xFF558B2F) : Colors.black45,
                     ),
                     const SizedBox(width: 2),
                     Flexible(
@@ -446,8 +456,8 @@ class _HanziImageState extends State<_HanziImage> {
         errorBuilder: (context, error, stack) => Container(
           color: Colors.white.withOpacity(0.6),
           alignment: Alignment.center,
-          child: const Icon(Icons.image_outlined,
-              size: 52, color: Colors.black26),
+          child:
+              const Icon(Icons.image_outlined, size: 52, color: Colors.black26),
         ),
       ),
     );
