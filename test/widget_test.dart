@@ -131,6 +131,17 @@ void main() {
     expect(find.text('第 1 课 · 一二三四'), findsOneWidget);
     expect(currentChar(), '四');
 
+    // 第 1 课已经是最前一课：退到它的第一页再右滑，不应有任何跳转
+    for (var i = 0; i < 3; i++) {
+      await tester.dragFrom(const Offset(180, 220), const Offset(300, 0));
+      await tester.pumpAndSettle();
+    }
+    expect(currentChar(), '一');
+    await tester.flingFrom(const Offset(180, 220), const Offset(300, 0), 1200);
+    await tester.pumpAndSettle();
+    expect(find.text('第 1 课 · 一二三四'), findsOneWidget);
+    expect(currentChar(), '一');
+
     // 让首次提示条 / 朗读兜底定时器走完，避免测试结束时报 pending timer
     await tester.pump(const Duration(seconds: 16));
   });
