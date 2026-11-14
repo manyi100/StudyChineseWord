@@ -255,7 +255,6 @@ class CharacterCard extends StatelessWidget {
                           ],
                         ),
                       ),
-                      SpeakingLabel(tag: _sentenceTag),
                     ],
                   ),
                 ),

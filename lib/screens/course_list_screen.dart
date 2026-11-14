@@ -39,15 +39,21 @@ class _CourseListScreenState extends State<CourseListScreen> {
     });
   }
 
-  Widget _courseStudy(int index) {
+  Widget _courseStudy(int index, {bool startAtLast = false}) {
     final course = _courses[index];
     return HomeScreen(
       chars: course.chars,
       lessonNumber: course.indexInStage,
       progressKey: 'course_${course.groupId}',
+      // 回上一课时停在它的最后一个字，和「左滑进下一课」落在第一个字对称
+      initialIndex: startAtLast ? course.chars.length - 1 : null,
       // 一课学完后继续左滑，直接替换为下一课
       onFinished: index + 1 < _courses.length
           ? () => _replaceWithCourse(index + 1)
+          : null,
+      // 在本课第一页继续右滑，回到上一课的最后一个字
+      onRewind: index > 0
+          ? () => _replaceWithCourse(index - 1, startAtLast: true)
           : null,
     );
   }
@@ -59,9 +65,11 @@ class _CourseListScreenState extends State<CourseListScreen> {
     _load();
   }
 
-  void _replaceWithCourse(int index) {
+  void _replaceWithCourse(int index, {bool startAtLast = false}) {
     Navigator.of(context).pushReplacement(
-      MaterialPageRoute(builder: (_) => _courseStudy(index)),
+      MaterialPageRoute(
+        builder: (_) => _courseStudy(index, startAtLast: startAtLast),
+      ),
     );
   }
 

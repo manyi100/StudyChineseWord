@@ -118,6 +118,19 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('第 2 课 · 五六七八'), findsOneWidget);
 
+    // 在第一页继续右滑，应直接回到上一课（停在最后一个字）
+    expect(find.text('第 2 课 · 五六七八'), findsOneWidget);
+    String currentChar() => tester
+        .widget<CharacterCard>(find.byType(CharacterCard).first)
+        .hanzi
+        .char;
+    expect(currentChar(), '五');
+
+    await tester.flingFrom(const Offset(180, 220), const Offset(300, 0), 1200);
+    await tester.pumpAndSettle();
+    expect(find.text('第 1 课 · 一二三四'), findsOneWidget);
+    expect(currentChar(), '四');
+
     // 让首次提示条 / 朗读兜底定时器走完，避免测试结束时报 pending timer
     await tester.pump(const Duration(seconds: 16));
   });

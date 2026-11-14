@@ -20,6 +20,10 @@ class MeaningText extends StatelessWidget {
   final Color color;
   final EdgeInsets padding;
 
+  /// 组词释义固定一行（与 chips 一样不换行），超长时省略；
+  /// 单字与例句允许两行。
+  final int maxLines;
+
   const MeaningText(
     this.resolve, {
     super.key,
@@ -27,6 +31,7 @@ class MeaningText extends StatelessWidget {
     this.textAlign = TextAlign.center,
     this.color = const Color(0x8A000000),
     this.padding = const EdgeInsets.only(top: 8),
+    this.maxLines = 2,
   });
 
   @override
@@ -46,7 +51,7 @@ class MeaningText extends StatelessWidget {
             child: Text(
               value,
               textAlign: textAlign,
-              maxLines: 2,
+              maxLines: maxLines,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
                 fontSize: fontSize,
@@ -95,6 +100,7 @@ class WordMeanings extends StatelessWidget {
       fontSize: 11,
       color: const Color(0x73000000),
       padding: const EdgeInsets.only(top: 6),
+      maxLines: 1,
     );
   }
 }

@@ -229,6 +229,25 @@ CHAR_OVERRIDES = {
     "霜": "frost",
     "露": "dew",
     "团": "group; round",
+    # 第三批（真机逐字校对）：取「教学常用义」而不是词典第一个义项
+    "士": "soldier",
+    "当": "to be; to serve as",
+    "业": "studies; business",
+    "群": "group; herd",
+    "食": "food; to eat",
+    "减": "to subtract; to reduce",
+    "满": "full; to fill",
+    "站": "to stand; station",
+    "园": "garden",
+    "行": "to go; to walk",
+    "快": "fast; quick",
+    "面": "face; noodles",
+    "户": "household; door",
+    "末": "end; tip",
+    "兵": "soldier",
+    "农": "farming",
+    "客": "guest",
+    "主": "owner; main",
 }
 
 WORD_OVERRIDES = {
@@ -434,7 +453,7 @@ def main():
         if char not in char_order:
             char_order.append(char)
             chars[char] = CHAR_OVERRIDES.get(char) or lookup(
-                table, char, item["pinyin"], limit=2
+                table, char, item["pinyin"], limit=1
             )
 
         for w in item.get("words") or []:
@@ -444,7 +463,7 @@ def main():
             words[text] = (
                 WORD_OVERRIDES.get(text)
                 or extra_words.get(text)
-                or lookup(table, text, w["pinyin"], limit=2)
+                or lookup(table, text, w["pinyin"], limit=1)
             )
 
         s = item.get("sentence")

@@ -27,6 +27,9 @@ class HomeScreen extends StatefulWidget {
   /// 本课 4 个字都学完后，继续左滑时触发（用于切到下一课）
   final VoidCallback? onFinished;
 
+  /// 在本课第一页继续右滑时触发（用于回到上一课）
+  final VoidCallback? onRewind;
+
   const HomeScreen({
     super.key,
     this.gradeId = 0,
@@ -36,6 +39,7 @@ class HomeScreen extends StatefulWidget {
     this.progressKey,
     this.initialIndex,
     this.onFinished,
+    this.onRewind,
   });
 
   @override
@@ -48,7 +52,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Set<String> _viewedIds = {};
   bool _isLoading = true;
   bool _nextTriggered = false;
+  bool _rewindTriggered = false;
   bool _dragStartedAtEnd = false;
+  bool _dragStartedAtStart = false;
   DateTime? _lastFinishHintAt;
 
   List<HanziModel> _hanziList = [];
@@ -131,30 +137,50 @@ class _HomeScreenState extends State<HomeScreen> {
       _hanziList.isNotEmpty &&
       _hanziList.every((h) => _viewedIds.contains(h.id));
 
-  /// 在最后一页继续向左滑时：四个字都学完则进入下一课，否则轻提示
+  /// 在最后一页继续向左滑时：四个字都学完则进入下一课，否则轻提示；
+  /// 在第一页继续向右滑时：直接回到上一课（与「下一课」对称，不用点返回箭头）。
   void _handleScrollNotification(ScrollNotification notification) {
-    if (widget.onFinished == null || _nextTriggered) return;
     if (notification.depth != 0) return;
     if (notification.metrics.axis != Axis.horizontal) return;
 
     final metrics = notification.metrics;
+    final atStart = metrics.pixels <= 1;
     final atEnd = metrics.pixels >= metrics.maxScrollExtent - 1;
 
     if (notification is ScrollStartNotification) {
-      _dragStartedAtEnd = notification.dragDetails != null && atEnd;
+      final dragging = notification.dragDetails != null;
+      _dragStartedAtStart = dragging && atStart;
+      _dragStartedAtEnd = dragging && atEnd;
     } else if (notification is OverscrollNotification) {
+      // 只处理「左滑到底继续滑」：回到上一课放到松手后处理，
+      // 否则导航发生时手指还按着，新页会接着被同一段滑动带跑。
       if (atEnd && notification.overscroll.abs() > 24) {
         _tryFinishCourse();
       }
     } else if (notification is ScrollEndNotification) {
+      final startedAtStart = _dragStartedAtStart;
       final startedAtEnd = _dragStartedAtEnd;
+      _dragStartedAtStart = false;
       _dragStartedAtEnd = false;
       final velocityX =
           notification.dragDetails?.velocity.pixelsPerSecond.dx ?? 0;
       if (startedAtEnd && atEnd && velocityX < -80) {
         _tryFinishCourse();
+      } else if (startedAtStart && atStart && velocityX > 80) {
+        _tryRewindCourse();
       }
     }
+  }
+
+  /// 回到上一课：在课的第一页继续右划触发
+  void _tryRewindCourse() {
+    if (widget.onRewind == null || _rewindTriggered) return;
+
+    final page = _pageController?.page;
+    if (page == null || page.round() > 0) return;
+
+    _rewindTriggered = true;
+    widget.onRewind!();
   }
 
   void _tryFinishCourse() {

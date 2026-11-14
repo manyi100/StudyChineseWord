@@ -2,7 +2,7 @@
 
 一个面向学龄前 / 低年级儿童和中文学习者的离线识字 App（Flutter + Android）。内置 720 个常用汉字，每字配拼音、部首、笔顺、组词、例句和插画，并支持笔顺描红、点读发音、阶段化学习与中英文界面。
 
-当前版本：`1.2.0`（构建号 3）
+当前版本：`1.3.1`（构建号 5）
 
 ---
 
@@ -40,6 +40,7 @@
 - **例句**：点击整句朗读
 - **收藏**：星标位于卡片右上角（配图右上角），空心/实心切换
 - **学完自动进入下一课**：一课的 4 个字都看过后，在最后一页继续左滑会直接切换到下一课；没看完时会提示先看完本课
+- **右滑回上一课**：在本课第一页继续右滑，直接回到上一课的最后一个字（不用点左上角返回），与「左滑进下一课」对称
 
 ### 3. 点读与音频提示
 
@@ -49,7 +50,7 @@
 |---|---|---|
 | 田字格汉字 | 点田字格即可 | 朗读单字 |
 | 词语 | 词语行内小喇叭 | 词块变绿、喇叭跳动 |
-| 句子 | 句首喇叭 + “朗读中” | 整句朗读，读完自动恢复 |
+| 句子 | 句首喇叭 | 整句朗读，读完自动恢复 |
 | 配图 | 左上角喇叭角标 | 朗读例句，图片底部浮出句子气泡，读完淡出 |
 
 > 笔顺操作栏不再放喇叭按钮，避免和“笔顺演示 / 手写描红”抢注意力；点田字格仍然可以朗读单字。
@@ -265,7 +266,7 @@ scripts/
 3. 默认“按主题”：点某个阶段的卡片 → 查看 30 课 → 点某一课开始学习
 4. 也可以切换“按部首”“按笔画”，点分组进入汉字网格，再点任意字学习
 5. 学习页左右滑动切换汉字；点汉字 / 词语 / 句子 / 图片都可以朗读
-6. 一课 4 个字都看过后，在最后一页继续左滑会自动进入下一课
+6. 一课 4 个字都看过后，在最后一页继续左滑会自动进入下一课；在本课第一页继续右滑则回到上一课（停在它的最后一个字）
 7. 点“笔顺演示”看动画；直接在田字格里写即可进入手写描红
 8. 点卡片右上角星标收藏；回首页底部进入“收藏复习”
 9. 学习页右上角的 **EN** 胶囊开关控制英文释义：中文界面默认关，其它语言默认开；释义不可点读
@@ -277,13 +278,13 @@ scripts/
 ```bash
 flutter pub get
 flutter test                          # 含 360dp 宽度布局检查
-flutter build apk --release           # 产物：build/app/outputs/flutter-apk/HanziRoots-v1.3.0.apk
+flutter build apk --release           # 产物：build/app/outputs/flutter-apk/HanziRoots-v1.3.1.apk
 ```
 
 安装到设备：
 
 ```bash
-adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.3.0.apk
+adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.3.1.apk
 ```
 
 ### 在 Android TV / 投影仪上安装
@@ -292,7 +293,7 @@ adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.3.0.apk
 
 ```bash
 adb connect 192.168.0.16:5555          # 投影仪需开启「网络调试 / ADB 调试」
-adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.3.0.apk
+adb install -r build/app/outputs/flutter-apk/HanziRoots-v1.3.1.apk
 adb shell am start -n com.ailexin.HanziRoots/com.ailexin.HanziRoots.MainActivity
 ```
 
@@ -322,7 +323,7 @@ adb shell am start -n com.ailexin.HanziRoots/com.ailexin.HanziRoots.MainActivity
 | 应用包名（applicationId / namespace） | `com.ailexin.HanziRoots` |
 | 启动 Activity | `com.ailexin.HanziRoots.MainActivity` |
 | APK 文件名 | `HanziRoots-v<版本号>.apk`，版本号取自 `pubspec.yaml` 的 `version` |
-| 当前产物 | `build/app/outputs/flutter-apk/HanziRoots-v1.3.0.apk` |
+| 当前产物 | `build/app/outputs/flutter-apk/HanziRoots-v1.3.1.apk` |
 | iOS Bundle ID | `com.ailexin.HanziRoots`（RunnerTests 为 `.RunnerTests`） |
 | iOS 产物 | `build/ios/ipa/Runner.ipa`（`flutter build ipa`） |
 
@@ -382,7 +383,7 @@ flutter build ipa --release
 想和 APK 一样带版本号，导出后重命名即可：
 
 ```bash
-cp build/ios/ipa/Runner.ipa build/ios/ipa/HanziRoots-v1.3.0.ipa
+cp build/ios/ipa/Runner.ipa build/ios/ipa/HanziRoots-v1.3.1.ipa
 ```
 
 #### 三、用 GitHub Actions 生成 ipa（无需 Mac、无需付费账号）
@@ -431,7 +432,7 @@ artifact 默认保留 30 天，需要长期保存请自己转存。
 
 **4. 注意事项**
 
-- 每次发新版本前先把 `pubspec.yaml` 的 `version: 1.2.0+3` 里的 build 号 `+1` 递增
+- 每次发新版本前先把 `pubspec.yaml` 的 `version: 1.3.1+5` 里的 build 号 `+1` 递增
 - 免费签名和 Bundle Identifier 绑定；如果 `com.ailexin.HanziRoots` 在你的账号下
   已被占用，改成自己的（见上一节），并同步 `android/app/build.gradle.kts`
 - GitHub Actions 的 macOS 分钟数：公开仓库免费；私有仓库按 10 倍计费
@@ -587,6 +588,8 @@ python3 scripts/generate_images_nanobanana.py --provider gemini --limit 20
 14. 英文界面下阶段 / 课程 / 部首 / 笔画 / 学习卡片 / 收藏页文案是否完整，360dp 窄屏是否不溢出
 15. 在**没有中文 TTS 引擎**的设备（坚果投影仪）上，点读是否仍有声音（走内置音频）
 16. 学习页 **EN** 开关是否可显示 / 收起释义，切换后退出重进是否保持；点释义行是否不发声
+17. 第 2 课第一页右滑是否直接回到第 1 课「四」；第 1 课第一页右滑是否不再变化；最后一页左滑是否仍进下一课
+18. 句子区是否已没有「朗读中」三个字，朗读时只有喇叭动效
 
 ---
 
@@ -594,6 +597,10 @@ python3 scripts/generate_images_nanobanana.py --provider gemini --limit 20
 
 ### 2026-11
 
+- **手势与文案打磨（1.3.1）**
+  - 新增「第一页右滑回上一课」：在第 2 课第一页右滑直接回到第 1 课，并停在它的最后一个字；第 1 课再右滑无反应
+  - 右滑导航改为手指离开屏幕后再触发，避免新页被同一段滑动继续带跑
+  - 删除句子区的「朗读中」标签，朗读时只保留喇叭声波动效
 - **英文释义（1.3.0）**
   - 单字 / 组词 / 例句各加一行英文释义，学习页右上角 **EN** 开关整体控制
   - 中文界面默认关、其它语言默认开；释义不可点读，不影响田字格、词块、例句的既有点读
@@ -644,7 +651,7 @@ python3 scripts/generate_images_nanobanana.py --provider gemini --limit 20
   - 学习内容（汉字、拼音、组词、例句）保持中文，朗读仍为中文
 - **应用标识与产物命名**
   - 包名由 `com.example.untitled` 改为 `com.ailexin.HanziRoots`，MainActivity 同步迁移
-  - APK 产物自动命名为 `HanziRoots-v<版本号>.apk`，例如 `HanziRoots-v1.3.0.apk`
+  - APK 产物自动命名为 `HanziRoots-v<版本号>.apk`，例如 `HanziRoots-v1.3.1.apk`
   - iOS Bundle ID 同步为 `com.ailexin.HanziRoots`，显示名改为“入学必备720字”
   - 新增 `ios/Runner/PrivacyInfo.xcprivacy`（UserDefaults 用途声明）
   - README 新增 iOS / iPad 打包与上架说明
