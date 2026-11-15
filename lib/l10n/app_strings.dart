@@ -59,11 +59,31 @@ class AppLocale {
 
   static bool get isEn => notifier.value == AppLang.en;
 
-  /// 启动时读取上次选择的语言，默认中文。
+  /// 本 App 支持的界面语言代码（其余系统语言一律回落中文）
+  static const Set<String> _supportedCodes = {'zh', 'en', 'ja', 'ko', 'vi'};
+
+  /// 按手机系统语言挑界面语言：从系统语言列表里取第一个我们支持的语言。
+  ///
+  /// 例如系统是 `ja_JP` / `ko-KR` / `vi-VN` / `en-US` 就分别进日/韩/越/英界面；
+  /// 系统是 `fr-FR`、`de-DE` 这类没支持的语言时回落中文。
+  static AppLang matchSystemLang(Iterable<Locale> locales) {
+    for (final locale in locales) {
+      final code = locale.languageCode.toLowerCase();
+      if (_supportedCodes.contains(code)) return AppLang.fromCode(code);
+    }
+    return AppLang.zh;
+  }
+
+  /// 当前手机系统语言对应的界面语言
+  static AppLang get systemLang =>
+      matchSystemLang(WidgetsBinding.instance.platformDispatcher.locales);
+
+  /// 启动时读取上次选择的语言；从没选过就跟随手机系统语言。
   static Future<void> load() async {
     try {
       final prefs = await SharedPreferences.getInstance();
-      notifier.value = AppLang.fromCode(prefs.getString(_storageKey));
+      final saved = prefs.getString(_storageKey);
+      notifier.value = saved == null ? systemLang : AppLang.fromCode(saved);
     } catch (e) {
       debugPrint('[Locale] 读取界面语言失败：$e');
     }

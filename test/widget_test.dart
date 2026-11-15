@@ -356,4 +356,36 @@ void main() {
     await tester.pump(const Duration(seconds: 16));
     AppLocale.notifier.value = AppLang.zh;
   });
+
+  testWidgets('first launch follows the phone system language',
+      (WidgetTester tester) async {
+    SharedPreferences.setMockInitialValues({'has_seen_onboarding_v131': true});
+    AppLocale.notifier.value = AppLang.zh;
+
+    // 系统语言是日语 → 首次启动直接进日文界面
+    tester.binding.platformDispatcher.localesTestValue = const [
+      Locale('ja', 'JP'),
+    ];
+    addTearDown(tester.binding.platformDispatcher.clearLocalesTestValue);
+    await AppLocale.load();
+    expect(AppLocale.lang, AppLang.ja);
+
+    // 没支持的系统语言回落中文；支持的语言排在后面也能命中
+    expect(AppLocale.matchSystemLang(const [Locale('fr', 'FR')]), AppLang.zh);
+    expect(
+      AppLocale.matchSystemLang(const [Locale('fr'), Locale('ko')]),
+      AppLang.ko,
+    );
+    expect(AppLocale.matchSystemLang(const [Locale('zh', 'TW')]), AppLang.zh);
+
+    // 用户自己选过语言后，就以保存的为准，不再跟系统
+    SharedPreferences.setMockInitialValues({
+      'app_language': 'vi',
+      'has_seen_onboarding_v131': true,
+    });
+    await AppLocale.load();
+    expect(AppLocale.lang, AppLang.vi);
+
+    AppLocale.notifier.value = AppLang.zh;
+  });
 }
