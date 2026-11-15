@@ -611,6 +611,188 @@ class AppStrings {
             '${name != null ? ' ($name)' : ''}',
       );
 
+  // ---------- 新手引导 ----------
+  String get onboardingBtnHelp => _t(
+        '使用说明',
+        'Guide',
+        '使い方',
+        '사용법',
+        'Hướng dẫn',
+      );
+
+  String get onboardingSkip => _t(
+        '跳过',
+        'Skip',
+        'スキップ',
+        '건너뛰기',
+        'Bỏ qua',
+      );
+
+  String get onboardingPrev => _t(
+        '上一步',
+        'Back',
+        '戻る',
+        '이전',
+        'Trước',
+      );
+
+  String get onboardingNext => _t(
+        '下一步',
+        'Next',
+        '次へ',
+        '다음',
+        'Tiếp',
+      );
+
+  String get onboardingStart => _t(
+        '开始学习',
+        'Start Learning',
+        '学習を始める',
+        '학습 시작',
+        'Bắt đầu học',
+      );
+
+  String get onboardingTitle1 => _t(
+        '720 字阶段闯关 · 三维检索',
+        '720 Characters · 3 Ways to Browse',
+        '720字ステージ制 · 3つの検索モード',
+        '720자 단계별 학습 · 3가지 탐색 모드',
+        '720 Chữ Hán · 3 Chế độ tra cứu',
+      );
+
+  String get onboardingDesc1 => _t(
+        '全书分为第 1~6 阶段（每阶段 30 课、每课 4 字，共 180 课）。'
+            '学完上一阶段全部 120 字自动解锁下一阶段；'
+            '首页顶部可自由切换「按主题」「按部首（174 个）」「按笔画（6 档）」。',
+        'Stages 1–6, 30 lessons each, 4 characters per lesson (180 lessons). '
+            'Finish all 120 characters in a stage to unlock the next one; '
+            'switch freely between Topic, 174 Radicals and 6 Stroke tiers.',
+        '第1〜第6ステージ（各30課・1課4字、計180課）。'
+            '前のステージの120字を終えると次が解放されます。'
+            '上部タブで「テーマ別」「部首別（174部首）」「画数別（6段階）」を切り替えられます。',
+        '1~6단계(단계별 30과, 과별 4자, 총 180과)로 구성됩니다. '
+            '이전 단계 120자를 모두 익히면 다음 단계가 열립니다. '
+            '상단 탭에서 주제별·부수별(174개)·획수별(6구간)을 자유롭게 오갈 수 있습니다.',
+        'Gồm 6 giai đoạn (mỗi giai đoạn 30 bài, mỗi bài 4 chữ, tổng 180 bài). '
+            'Học hết 120 chữ của giai đoạn trước để mở giai đoạn kế tiếp; '
+            'chuyển linh hoạt giữa Theo chủ đề, 174 Bộ thủ và 6 nhóm Số nét.',
+      );
+
+  List<String> get onboardingTags1 => [
+        _t('6 阶段 × 30 课', '6 Stages × 30 Lessons', '6ステージ × 30課', '6단계 × 30과',
+            '6 giai đoạn × 30 bài'),
+        _t('174 个部首检索', '174 Radicals', '174部首リスト', '174개 부수 탐색', '174 bộ thủ'),
+        _t('6 档笔画分组', '6 Stroke Tiers', '6段階の画数検索', '6구간 획수 분류',
+            '6 nhóm số nét'),
+      ];
+
+  String get onboardingTitle2 => _t(
+        '四区即点即读 · 全离线语音',
+        'Tap Anywhere to Hear · 100% Offline Audio',
+        '4箇所タップ音声 · 完全オフライン再生',
+        '4곳 터치 발음 듣기 · 100% 오프라인 음성',
+        'Chạm 4 vùng nghe phát âm · Âm thanh Offline',
+      );
+
+  String get onboardingDesc2 => _t(
+        '随包内置 3,380 条校准音频，不依赖网络与系统 TTS。'
+            '点击「田字格汉字」「组词词块」「例句喇叭」即刻朗读；'
+            '点击「顶部插画」会按「例句 → 第一个组词 → 单字」顺序连读并浮出句子气泡。',
+        '3,380 built-in audio clips play offline without system TTS. '
+            'Tap the Character Grid, Word Chips or Sentence Speaker to listen; '
+            'tap the Illustration to play Sentence → 1st Word → Character with a bubble.',
+        '3,380件の内蔵音声をオフラインで再生できます。'
+            '「田字格の漢字」「単語チップ」「例文スピーカー」をタップすると発音が聞け、'
+            '「イラスト」をタップすると「例文 → 最初の単語 → 単字」の順に連続再生されます。',
+        '3,380개의 내장 음성으로 인터넷이나 시스템 TTS 없이 재생됩니다. '
+            '한자 칸·단어 칩·예문 스피커를 터치해 발음을 듣고, '
+            '일러스트를 터치하면 예문 → 첫 단어 → 단자 순으로 이어서 재생됩니다.',
+        'Tích hợp sẵn 3.380 tệp âm thanh, không cần mạng hay TTS hệ thống. '
+            'Chạm Ô chữ Hán, Thẻ từ ghép hoặc Loa câu ví dụ để nghe; '
+            'chạm Tranh minh họa để nghe lần lượt Câu ví dụ → Từ đầu tiên → Chữ đơn.',
+      );
+
+  List<String> get onboardingTags2 => [
+        _t('点汉字 / 词语 / 例句', 'Tap Char / Word / Sentence', '漢字・単語・例文タップ',
+            '한자·단어·예문 터치', 'Chạm chữ / từ / câu'),
+        _t('点插画三连读 + 气泡', 'Tap Picture for 3-Part Audio', 'イラストで3連続読み上げ',
+            '일러스트 3연속 발음+말풍선', 'Chạm tranh đọc 3 phần'),
+        _t('3,380 条离线语音', '3,380 Offline Clips', '3,380件のオフライン音声',
+            '3,380개 오프라인 음성', '3.380 âm thanh offline'),
+      ];
+
+  String get onboardingTitle3 => _t(
+        '自动笔顺演示 · 手指跟写描红',
+        'Stroke Order Animation · Guided Finger Tracing',
+        '書き順アニメーション · 指なぞり練習',
+        '필순 애니메이션 · 손가락 따라 쓰기',
+        'Hoạt ảnh nét viết · Luyện tô chữ bằng tay',
+      );
+
+  String get onboardingDesc3 => _t(
+        '打开卡片自动逐笔演示，可随时重播。直接用手指在田字格内书写即可进入描红：'
+            '从红点起笔，沿虚线写向收笔箭头；写错或轻点田字格会自动演示当前笔画。'
+            '田字格独立手势识别，写「横」不会误翻页。',
+        'Cards animate the stroke order automatically and can replay any stroke. '
+            'Draw inside the grid to trace: start at the red dot and follow the dashed '
+            'line to the arrow. Tapping the grid replays the stroke. '
+            'Horizontal strokes never flip pages.',
+        'カードを開くと書き順が自動再生され、いつでも再生し直せます。'
+            '田字格の中を指でなぞると練習モードに入り、赤い始点から破線に沿って矢印まで書けます。'
+            'マス内は独立判定のため「横画」でページがめくれることはありません。',
+        '카드를 열면 필순이 자동 재생되고 언제든 다시 볼 수 있습니다. '
+            '한자 칸 안을 손가락으로 따라 쓰면 빨간 시작점에서 점선을 따라 화살표까지 이어집니다. '
+            '한자 칸은 독립 제스처라 가로획을 그어도 페이지가 넘어가지 않습니다.',
+        'Mở thẻ là tự động chiếu thứ tự nét và có thể xem lại bất cứ lúc nào. '
+            'Viết trực tiếp trong ô chữ từ chấm đỏ theo đường nét đứt đến mũi tên; '
+            'viết nét ngang không lo bị lật trang nhầm.',
+      );
+
+  List<String> get onboardingTags3 => [
+        _t('起笔红点 → 箭头校验', 'Red Dot → Arrow Check', '始点・方向・終点を判定',
+            '시작점·방향·끝점 체크', 'Chấm đỏ → mũi tên chuẩn'),
+        _t('轻点格子重播当前笔', 'Tap Grid to Replay Stroke', 'マスタップでお手本再生',
+            '칸 탭하여 현재 획 다시보기', 'Chạm ô xem lại nét mẫu'),
+        _t('写「横」防误触翻页', 'No Accidental Page Flip', '横画でも誤スワイプ防止',
+            '가로획 페이지 넘김 방지', 'Chống lật trang nhầm'),
+      ];
+
+  String get onboardingTitle4 => _t(
+        '五语切换 · EN 释义 · 跨课滑动',
+        '5 UI Languages · EN Meanings · Cross-Lesson Swipes',
+        '5言語UI · EN英語訳スイッチ · 課の連続スワイプ',
+        '5개국어 UI · EN 영어 뜻풀이 · 단원 간 스와이프',
+        'Giao diện 5 ngôn ngữ · Nghĩa EN · Vuốt chuyển bài',
+      );
+
+  String get onboardingDesc4 => _t(
+        '右上角可切换中/英/日/韩/越五语界面，学习页右上角「EN」按钮可一键显隐英文释义'
+            '（防误触不发声）。学完一课 4 字继续左滑直达下一课；在第 1 页右滑松手返回上一课末尾；'
+            '点右上角星标可收入首页底部「收藏复习」。',
+        'Switch between 5 UI languages (中/EN/日/한/VI) and tap "EN" on study cards to '
+            'toggle English meanings. Swipe left after finishing 4 characters to enter the '
+            'next lesson, swipe right on page 1 to return to the previous lesson, or star '
+            'cards for review.',
+        '右上から5言語（中/EN/日/한/VI）を切り替えられ、学習画面の「EN」で英語訳を表示・非表示にできます。'
+            '4字学習後に左スワイプで次の課へ、1ページ目で右スワイプして離すと前の課へ戻ります。'
+            '右上の星マークでお気に入り復習に登録できます。',
+        '우측 상단에서 5개 언어(中/EN/日/한/VI)를 전환하고 학습 화면의 "EN" 버튼으로 영어 뜻풀이를 '
+            '켜고 끌 수 있습니다. 4자를 모두 본 뒤 왼쪽 스와이프로 다음 과로, '
+            '첫 페이지에서 오른쪽 스와이프로 이전 과로 이동하며 별표로 즐겨찾기 복습이 가능합니다.',
+        'Chuyển đổi 5 ngôn ngữ (中/EN/日/한/VI) ở góc trên, nhấn nút "EN" để bật/tắt nghĩa tiếng Anh. '
+            'Xem đủ 4 chữ vuốt trái sang bài tiếp theo, ở trang đầu vuốt phải thả tay để về bài trước; '
+            'nhấn Ngôi sao để lưu vào Ôn tập yêu thích.',
+      );
+
+  List<String> get onboardingTags4 => [
+        _t('中 / EN / 日 / 한 / VI', '5 Interface Languages', '5言語UI＆日本語筆順名',
+            '5개국어 UI & 한국어 필순명', '5 ngôn ngữ giao diện'),
+        _t('EN 英文释义开关', 'EN Meaning Toggle', 'EN 英語訳ON/OFF', 'EN 영어 뜻풀이 스위치',
+            'Nút bật/tắt nghĩa EN'),
+        _t('左滑下一课 · 右滑上一课', 'Swipe Across Lessons', '左右スワイプで課を移動',
+            '좌우 스와이프 단원 이동', 'Vuốt chuyển bài'),
+      ];
+
   // ---------- 系统提示 ----------
   String get ttsUnavailable => _t(
         '没有可用的中文语音。请到 设置 - 更多设置 - 无障碍 - 文字转语音(TTS)输出 '

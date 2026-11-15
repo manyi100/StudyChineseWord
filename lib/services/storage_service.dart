@@ -17,6 +17,18 @@ class StorageService {
   static const _kFavoritesKey = 'favorite_ids';
   static const _kViewedIdsKey = 'viewed_char_ids';
   static const _kAudioHintShownKey = 'audio_hint_shown';
+  static const _kOnboardingSeenKey = 'has_seen_onboarding_v131';
+
+  /// 首次引导（四页使用说明）是否已经展示过
+  Future<bool> hasSeenOnboarding() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(_kOnboardingSeenKey) ?? false;
+  }
+
+  Future<void> markOnboardingSeen() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(_kOnboardingSeenKey, true);
+  }
 
   /// 首次进入学习页的“哪里可以点读”提示是否已经展示过
   Future<bool> getAudioHintShown() async {

@@ -7,6 +7,7 @@ import '../services/progress_service.dart';
 import '../services/storage_service.dart';
 import '../widgets/content_frame.dart';
 import '../widgets/language_button.dart';
+import '../widgets/onboarding_dialog.dart';
 import 'course_list_screen.dart';
 import 'favorites_screen.dart';
 import 'hanzi_grid_screen.dart';
@@ -62,6 +63,10 @@ class _GradeSelectScreenState extends State<GradeSelectScreen> {
   void initState() {
     super.initState();
     _load();
+    // 首次启动自动展示四页使用说明；看过一次后不再打扰，可随时点右上角「?」重看
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      OnboardingDialog.showIfNeeded(context);
+    });
   }
 
   Future<void> _load() async {
@@ -92,9 +97,8 @@ class _GradeSelectScreenState extends State<GradeSelectScreen> {
       _totalAll = HanziRepository.instance.all.length;
       _learnedAll = viewedIds.length;
       _favoriteCount = favorites.length;
-      _unlockedTotal = list
-          .where((p) => p.isUnlocked)
-          .fold(0, (sum, p) => sum + p.total);
+      _unlockedTotal =
+          list.where((p) => p.isUnlocked).fold(0, (sum, p) => sum + p.total);
       _isLoading = false;
     });
   }
@@ -165,7 +169,14 @@ class _GradeSelectScreenState extends State<GradeSelectScreen> {
         elevation: 0,
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.black87,
-        actions: const [LanguageButton()],
+        actions: [
+          IconButton(
+            tooltip: s.onboardingBtnHelp,
+            icon: const Icon(Icons.help_outline_rounded),
+            onPressed: () => OnboardingDialog.showModal(context),
+          ),
+          const LanguageButton(),
+        ],
       ),
       // 平板 / 横屏时内容居中，避免卡片被拉得过宽
       body: ContentFrame(
@@ -441,8 +452,8 @@ class _AllGradesCard extends StatelessWidget {
                     const SizedBox(height: 2),
                     Text(
                       s.allStagesSubtitle(count),
-                      style: const TextStyle(
-                          fontSize: 13, color: Colors.white70),
+                      style:
+                          const TextStyle(fontSize: 13, color: Colors.white70),
                     ),
                   ],
                 ),

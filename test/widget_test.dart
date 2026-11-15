@@ -25,7 +25,7 @@ void main() {
 
   testWidgets('home shows stage/radical/stroke navigation and course list',
       (WidgetTester tester) async {
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({'has_seen_onboarding_v131': true});
     AppLocale.notifier.value = AppLang.zh;
 
     // 按手机常见宽度验证布局，避免词语 chip 等组件在窄屏溢出
@@ -87,7 +87,7 @@ void main() {
 
   testWidgets('swiping past the last character opens the next course',
       (WidgetTester tester) async {
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({'has_seen_onboarding_v131': true});
     AppLocale.notifier.value = AppLang.zh;
     await tester.binding.setSurfaceSize(const Size(360, 800));
     addTearDown(() => tester.binding.setSurfaceSize(null));
@@ -148,7 +148,7 @@ void main() {
 
   testWidgets('language menu switches zh / en / ja / ko / vi',
       (WidgetTester tester) async {
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({'has_seen_onboarding_v131': true});
     AppLocale.notifier.value = AppLang.zh;
 
     await tester.binding.setSurfaceSize(const Size(360, 800));
@@ -228,7 +228,7 @@ void main() {
 
   testWidgets('iPad sized screen keeps content within max width',
       (WidgetTester tester) async {
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({'has_seen_onboarding_v131': true});
     AppLocale.notifier.value = AppLang.zh;
 
     // iPad Pro 12.9" 竖屏逻辑尺寸
@@ -263,7 +263,7 @@ void main() {
 
   testWidgets('english meaning shows on demand and never blocks tapping',
       (WidgetTester tester) async {
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({'has_seen_onboarding_v131': true});
     AppLocale.notifier.value = AppLang.zh;
 
     // 360dp 是最窄的常见手机宽度：释义行最多（单字 + 三词 + 句译）时也不能溢出
@@ -300,6 +300,58 @@ void main() {
     expect(MeaningService.instance.visible.value, isFalse);
     expect(find.text('one'), findsNothing);
     expect(tester.takeException(), isNull);
+
+    await tester.pump(const Duration(seconds: 16));
+    AppLocale.notifier.value = AppLang.zh;
+  });
+
+  testWidgets(
+      'first launch shows the onboarding guide and the help button reopens it',
+      (WidgetTester tester) async {
+    SharedPreferences.setMockInitialValues({});
+    AppLocale.notifier.value = AppLang.zh;
+
+    await tester.binding.setSurfaceSize(const Size(360, 800));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+
+    await tester.runAsync(() async {
+      await HanziRepository.instance.ensureLoaded();
+    });
+
+    await tester.pumpWidget(const MyApp());
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 400));
+    await tester.pumpAndSettle();
+
+    // 首次启动自动弹出，默认中文，停在第一页
+    expect(find.text('720 字阶段闯关 · 三维检索'), findsOneWidget);
+    expect(find.text('开始学习'), findsNothing);
+
+    // 翻到第 4 页，按钮变成「开始学习」
+    for (var i = 0; i < 3; i++) {
+      await tester.tap(find.text('下一步'));
+      await tester.pumpAndSettle();
+    }
+    expect(find.text('五语切换 · EN 释义 · 跨课滑动'), findsOneWidget);
+    expect(find.text('开始学习'), findsOneWidget);
+
+    await tester.tap(find.text('开始学习'));
+    await tester.pumpAndSettle();
+    expect(find.text('选择学习阶段'), findsOneWidget);
+    expect(find.text('720 字阶段闯关 · 三维检索'), findsNothing);
+
+    // 看过一次后不再自动弹出，但「?」仍可重看，且弹窗内切语言会同步整个界面
+    await tester.tap(find.byIcon(Icons.help_outline_rounded));
+    await tester.pumpAndSettle();
+    expect(find.text('720 字阶段闯关 · 三维检索'), findsOneWidget);
+
+    await tester.tap(find.text('EN'));
+    await tester.pumpAndSettle();
+    expect(find.text('720 Characters · 3 Ways to Browse'), findsOneWidget);
+
+    await tester.tap(find.byIcon(Icons.close_rounded));
+    await tester.pumpAndSettle();
+    expect(find.text('Choose a Stage'), findsOneWidget);
 
     await tester.pump(const Duration(seconds: 16));
     AppLocale.notifier.value = AppLang.zh;
