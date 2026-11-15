@@ -305,8 +305,7 @@ void main() {
     AppLocale.notifier.value = AppLang.zh;
   });
 
-  testWidgets(
-      'first launch shows the onboarding guide and the help button reopens it',
+  testWidgets('first launch shows the image guide and swipes through it',
       (WidgetTester tester) async {
     SharedPreferences.setMockInitialValues({});
     AppLocale.notifier.value = AppLang.zh;
@@ -323,35 +322,37 @@ void main() {
     await tester.pump(const Duration(milliseconds: 400));
     await tester.pumpAndSettle();
 
-    // 首次启动自动弹出，默认中文，停在第一页
-    expect(find.text('720 字阶段闯关 · 三维检索'), findsOneWidget);
+    // 首次启动自动弹出第 1 张图，此时按钮还是「下一步」
+    expect(find.byKey(const ValueKey('onboarding_image_0')), findsOneWidget);
     expect(find.text('开始学习'), findsNothing);
 
-    // 翻到第 4 页，按钮变成「开始学习」
-    for (var i = 0; i < 3; i++) {
+    // 左滑进入下一步（直接拖 PageView，和手指在图上滑一样）
+    await tester.drag(find.byType(PageView), const Offset(-280, 0));
+    await tester.pumpAndSettle();
+    expect(find.byKey(const ValueKey('onboarding_image_1')), findsOneWidget);
+    expect(find.byKey(const ValueKey('onboarding_image_0')), findsNothing);
+
+    // 点「下一步」也能翻页，最后一页按钮变「开始学习」
+    for (var i = 0; i < 2; i++) {
       await tester.tap(find.text('下一步'));
       await tester.pumpAndSettle();
     }
-    expect(find.text('五语切换 · EN 释义 · 跨课滑动'), findsOneWidget);
+    expect(find.byKey(const ValueKey('onboarding_image_3')), findsOneWidget);
     expect(find.text('开始学习'), findsOneWidget);
 
     await tester.tap(find.text('开始学习'));
     await tester.pumpAndSettle();
     expect(find.text('选择学习阶段'), findsOneWidget);
-    expect(find.text('720 字阶段闯关 · 三维检索'), findsNothing);
+    expect(find.byKey(const ValueKey('onboarding_image_0')), findsNothing);
 
-    // 看过一次后不再自动弹出，但「?」仍可重看，且弹窗内切语言会同步整个界面
+    // 看过一次后不再自动弹出，但「?」仍可重看，且可随时跳过
     await tester.tap(find.byIcon(Icons.help_outline_rounded));
     await tester.pumpAndSettle();
-    expect(find.text('720 字阶段闯关 · 三维检索'), findsOneWidget);
+    expect(find.byKey(const ValueKey('onboarding_image_0')), findsOneWidget);
 
-    await tester.tap(find.text('EN'));
+    await tester.tap(find.text('跳过'));
     await tester.pumpAndSettle();
-    expect(find.text('720 Characters · 3 Ways to Browse'), findsOneWidget);
-
-    await tester.tap(find.byIcon(Icons.close_rounded));
-    await tester.pumpAndSettle();
-    expect(find.text('Choose a Stage'), findsOneWidget);
+    expect(find.text('选择学习阶段'), findsOneWidget);
 
     await tester.pump(const Duration(seconds: 16));
     AppLocale.notifier.value = AppLang.zh;

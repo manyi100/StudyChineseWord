@@ -26,6 +26,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+    - assets/onboarding/
     - assets/data/
     - assets/audio/manifest.json
     - assets/audio/chars/
