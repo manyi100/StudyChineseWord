@@ -1,5 +1,7 @@
 # 入学必备 720 字
 
+**使用说明 / User Guides**：[简体中文](README_zh.md) | [English](README_en.md) | [日本語](README_ja.md) | [한국어](README_ko.md) | [Tiếng Việt](README_vi.md) · [五语合集](hanziroots.md)
+
 一个面向学龄前 / 低年级儿童和中文学习者的离线识字 App（Flutter + Android）。内置 720 个常用汉字，每字配拼音、部首、笔顺、组词、例句和插画，并支持笔顺描红、点读发音、阶段化学习与中英文界面。
 
 当前版本：`1.3.1`（构建号 5）

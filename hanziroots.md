@@ -1,5 +1,7 @@
 # HanziRoots（入学必备 720 字）核心卖点与五语使用说明
 
+**单语独立版 / Standalone Guides**：[简体中文](README_zh.md) | [English](README_en.md) | [日本語](README_ja.md) | [한국어](README_ko.md) | [Tiếng Việt](README_vi.md) · [开发与构建文档](README.md)
+
 > **版本信息**：`v1.3.1`（Build 5） | **应用包名**：`com.ailexin.HanziRoots` | **支持平台**：Android 手机/平板、iPhone/iPad、Android TV/智能投影仪  
 > **开源资源鸣谢**：笔顺矢量数据基于 [Make Me a Hanzi](https://github.com/skishore/makemeahanzi)，楷体字形采用 [LXGW WenKai（霞鹜文楷）](https://github.com/lxgw/LxgwWenKai)。
 
