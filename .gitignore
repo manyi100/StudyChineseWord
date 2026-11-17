@@ -50,3 +50,15 @@ app.*.map.json
 
 # Local helper scripts
 gemini-code-*.sh
+
+# ---------------------------------------------------------------------------
+# Android 正式签名（Google Play 上传密钥）
+# 这两个文件必须离线备份，绝对不能提交到 Git：
+#   1. android/key.properties        —— 密码
+#   2. android/app/upload-keystore.jks —— 密钥本体
+# 丢失后只能通过 Play Console 申请重置上传密钥。
+# ---------------------------------------------------------------------------
+/android/key.properties
+/android/app/upload-keystore.jks
+*.jks
+*.keystore

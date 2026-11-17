@@ -1,7 +1,31 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
+}
+
+// ---------------------------------------------------------------------------
+// 正式签名（Google Play 上传用）
+//
+// android/key.properties 保存密码与密钥路径，已加入 .gitignore，禁止提交。
+// 文件格式（由 keytool 生成后手写）：
+//   storePassword=***
+//   keyPassword=***
+//   keyAlias=upload
+//   storeFile=upload-keystore.jks   ← 相对 android/app/ 目录
+//
+// 首次在新机器上构建前，需从安全备份恢复以下两个文件：
+//   android/key.properties
+//   android/app/upload-keystore.jks
+// ---------------------------------------------------------------------------
+val keystorePropertiesFile = rootProject.file("key.properties")
+val keystoreProperties = Properties().apply {
+    if (keystorePropertiesFile.exists()) {
+        FileInputStream(keystorePropertiesFile).use { load(it) }
+    }
 }
 
 android {
@@ -24,11 +48,34 @@ android {
         versionName = flutter.versionName
     }
 
+    signingConfigs {
+        if (keystorePropertiesFile.exists()) {
+            create("release") {
+                keyAlias = keystoreProperties.getProperty("keyAlias")
+                keyPassword = keystoreProperties.getProperty("keyPassword")
+                storeFile = file(keystoreProperties.getProperty("storeFile"))
+                storePassword = keystoreProperties.getProperty("storePassword")
+            }
+        }
+    }
+
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
-            // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            if (keystorePropertiesFile.exists()) {
+                signingConfig = signingConfigs.getByName("release")
+            } else {
+                // 缺少 key.properties 时不能让 release 静默使用 debug 签名，
+                // 否则打出来的包无法正常上架，也容易在不知情的情况下分发出去。
+                logger.warn(
+                    "[签名] 未找到 android/key.properties，release 将回退到 debug 签名，仅限本地调试，禁止上传 Google Play。"
+                )
+                signingConfig = signingConfigs.getByName("debug")
+            }
+            // 关闭依赖元数据写入，避免 Play 从 AAB 中读取额外依赖信息
+            dependenciesInfo {
+                includeInApk = false
+                includeInBundle = false
+            }
         }
     }
 }
