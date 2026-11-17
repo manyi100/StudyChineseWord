@@ -8,6 +8,7 @@
 | --- | --- |
 | `index.html` | 落地页（可选） |
 | `privacy-policy.html` | **隐私政策**（中英双语，Play Console 必填 URL） |
+| `terms-of-service.html` | **服务条款**（中英双语，交易者身份需填；非交易者也建议保留） |
 | `app-icon-512.png` | 商店图标 512×512（由脚本生成） |
 
 ## 部署到 GitHub Pages

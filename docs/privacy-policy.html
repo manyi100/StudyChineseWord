@@ -30,6 +30,9 @@
   .app-name { font-size: 15px; letter-spacing: .04em; color: var(--ink-soft); }
   h1 { font-size: 28px; line-height: 1.3; margin: 6px 0 10px; }
   .meta { font-size: 14px; color: var(--ink-soft); }
+  .nav { margin-top: 14px; font-size: 14px; }
+  .nav a { color: var(--accent); text-decoration: none; margin-right: 16px; }
+  .nav a:hover { text-decoration: underline; }
   .switch {
     display: inline-flex; margin-top: 18px; border: 1px solid var(--line);
     border-radius: 999px; overflow: hidden; background: var(--paper);
@@ -72,6 +75,12 @@
     <div class="meta">
       <span id="meta-zh">生效日期：2026 年 11 月 17 日 · 最后更新：2026 年 11 月 17 日</span>
       <span id="meta-en" hidden>Effective date: November 17, 2026 · Last updated: November 17, 2026</span>
+    </div>
+    <div class="nav">
+      <a href="terms-of-service.html" id="nav-terms-zh">服务条款</a>
+      <a href="terms-of-service.html?lang=en" id="nav-terms-en" hidden>Terms of Service</a>
+      <a href="index.html" id="nav-home-zh">返回首页</a>
+      <a href="index.html" id="nav-home-en" hidden>Home</a>
     </div>
     <div class="switch" role="group" aria-label="Language / 语言">
       <button type="button" id="btn-zh" aria-pressed="true">简体中文</button>
@@ -217,6 +226,10 @@
       document.getElementById(id + '-zh').hidden = en;
       document.getElementById(id + '-en').hidden = !en;
     });
+    document.getElementById('nav-terms-zh').hidden = en;
+    document.getElementById('nav-home-zh').hidden = en;
+    document.getElementById('nav-terms-en').hidden = !en;
+    document.getElementById('nav-home-en').hidden = !en;
     btnZh.setAttribute('aria-pressed', String(!en));
     btnEn.setAttribute('aria-pressed', String(en));
     document.documentElement.lang = en ? 'en' : 'zh-CN';

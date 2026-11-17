@@ -32,6 +32,7 @@ store/
    - 手机截图 → `screenshots/zh/01..06.png`（按顺序上传，最多 8 张）
 4. **应用内容**（逐项完成后才能发布）：
    - 隐私政策 → `https://manyi100.github.io/StudyChineseWord/privacy-policy.html`
+   - 服务条款（选交易者时必填）→ `https://manyi100.github.io/StudyChineseWord/terms-of-service.html`
    - 广告 → 否
    - 应用访问权限 → 所有功能无需登录
    - 内容分级 → 填写 IARC 问卷（教育类，无暴力/无用户交互）

@@ -1,4 +1,4 @@
-"""把隐私政策整页渲染成图片，便于直接查看/校对。"""
+"""把隐私政策 / 服务条款整页渲染成图片，并校验中英切换与站内链接。"""
 
 from pathlib import Path
 
@@ -7,21 +7,31 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "store" / "raw"
 OUT.mkdir(parents=True, exist_ok=True)
-URL = (ROOT / "docs" / "privacy-policy.html").as_uri()
+
+PAGES = [
+    ("privacy-policy.html", "legal-privacy"),
+    ("terms-of-service.html", "legal-terms"),
+]
 
 
 def main() -> None:
     with sync_playwright() as p:
         browser = p.chromium.launch(channel="chrome", headless=True)
-        page = browser.new_page(viewport={"width": 820, "height": 1200}, device_scale_factor=2)
-        page.goto(URL, wait_until="load")
-        page.wait_for_timeout(600)
-        page.screenshot(path=str(OUT / "privacy-full-zh.png"), full_page=True)
-        page.click("#btn-en")
-        page.wait_for_timeout(400)
-        page.screenshot(path=str(OUT / "privacy-full-en.png"), full_page=True)
-        h = page.evaluate("document.body.scrollHeight")
-        print("full page height:", h)
+        for name, slug in PAGES:
+            page = browser.new_page(viewport={"width": 820, "height": 1200}, device_scale_factor=2)
+            errors = []
+            page.on("pageerror", lambda e: errors.append(str(e)))
+            page.goto((ROOT / "docs" / name).as_uri(), wait_until="load")
+            page.wait_for_timeout(600)
+            page.screenshot(path=str(OUT / f"{slug}-zh.png"), full_page=True)
+
+            page.click("#btn-en")
+            page.wait_for_timeout(400)
+            page.screenshot(path=str(OUT / f"{slug}-en.png"), full_page=True)
+
+            nav_visible = page.locator("#nav-terms-en, #nav-home-en").count()
+            print(f"{name}: lang={page.get_attribute('html', 'lang')} title={page.title()} errors={errors} nav={nav_visible}")
+            page.close()
         browser.close()
 
 
