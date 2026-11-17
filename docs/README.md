@@ -12,13 +12,13 @@
 
 ## 部署到 GitHub Pages
 
-1. 确认仓库已推到 GitHub（例如 `https://github.com/<user>/StudyChineseWord`）。
+1. 仓库已推送到 GitHub：`https://github.com/manyi100/StudyChineseWord`。
 2. 仓库 **Settings → Pages**：
    - Source 选 `Deploy from a branch`
-   - Branch 选 `main`（或你的默认分支），目录选 **`/docs`**
+   - Branch 选 `main`，目录选 **`/docs`**
 3. 保存后等待 1–2 分钟，访问：
-   - 隐私政策：`https://<user>.github.io/StudyChineseWord/privacy-policy.html`
-   - 英文版：`https://<user>.github.io/StudyChineseWord/privacy-policy.html?lang=en`
+   - 隐私政策：`https://manyi100.github.io/StudyChineseWord/privacy-policy.html`
+   - 英文版：`https://manyi100.github.io/StudyChineseWord/privacy-policy.html?lang=en`
 4. 把该 URL 填到 **Play Console → 应用内容 → 隐私政策**。
 
 ## 上架前必须替换

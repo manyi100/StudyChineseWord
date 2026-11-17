@@ -3,7 +3,7 @@
 > 对应版本：`1.3.1 (versionCode 5)` ｜ 包名：`com.ailexin.HanziRoots`
 > 类别建议：**教育 (Education)** ｜ 标签：识字、中文、儿童、离线学习
 > 联系邮箱：`manyi100@gmail.com`（与隐私政策保持一致）
-> 隐私政策 URL：`https://<你的GitHub用户名>.github.io/StudyChineseWord/privacy-policy.html`
+> 隐私政策 URL：`https://manyi100.github.io/StudyChineseWord/privacy-policy.html`
 
 ## Play 元数据限制速查
 
