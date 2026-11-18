@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../app_route_observer.dart';
 import '../l10n/app_strings.dart';
 import '../models/hanzi_course.dart';
 import '../services/hanzi_repository.dart';
@@ -17,7 +18,7 @@ class CourseListScreen extends StatefulWidget {
   State<CourseListScreen> createState() => _CourseListScreenState();
 }
 
-class _CourseListScreenState extends State<CourseListScreen> {
+class _CourseListScreenState extends State<CourseListScreen> with RouteAware {
   bool _isLoading = true;
   List<HanziCourse> _courses = [];
   Set<String> _viewedIds = {};
@@ -25,6 +26,29 @@ class _CourseListScreenState extends State<CourseListScreen> {
   @override
   void initState() {
     super.initState();
+    _load();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final route = ModalRoute.of(context);
+    if (route is PageRoute) appRouteObserver.subscribe(this, route);
+  }
+
+  @override
+  void dispose() {
+    appRouteObserver.unsubscribe(this);
+    super.dispose();
+  }
+
+  /// 从学习页回到列表时刷新进度。
+  ///
+  /// 只靠 `_openCourseAt` 里 `await push` 之后的 `_load()` 不够：学完一课继续
+  /// 左滑进下一课用的是 `pushReplacement`，会让那个 await 提前完成；之后按
+  /// 返回时列表不会再刷新，刚学的那一课仍显示「0 / 4 字」，要再进一次才更新。
+  @override
+  void didPopNext() {
     _load();
   }
 

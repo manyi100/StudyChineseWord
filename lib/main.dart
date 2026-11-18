@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'app_route_observer.dart';
 import 'l10n/app_strings.dart';
 import 'screens/grade_select_screen.dart';
 import 'services/meaning_service.dart';
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
           title: context.s.appTitle,
           debugShowCheckedModeBanner: false,
           scaffoldMessengerKey: rootScaffoldMessengerKey,
+          navigatorObservers: [appRouteObserver],
           theme: ThemeData(
             useMaterial3: true,
             colorSchemeSeed: const Color(0xFF4CAF50),

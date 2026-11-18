@@ -354,6 +354,45 @@ void main() {
     AppLocale.notifier.value = AppLang.zh;
   });
 
+  testWidgets('course list refreshes after leaving a lesson reached by swiping',
+      (WidgetTester tester) async {
+    SharedPreferences.setMockInitialValues({'has_seen_onboarding_v131': true});
+    AppLocale.notifier.value = AppLang.zh;
+    await tester.binding.setSurfaceSize(const Size(360, 800));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+
+    await tester.runAsync(() async {
+      await HanziRepository.instance.ensureLoaded();
+    });
+
+    await tester.pumpWidget(const MyApp());
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 200));
+
+    await tester.tap(find.text('第 1 阶段'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('第 1 课'));
+    await tester.pumpAndSettle();
+
+    // 看完本课 4 个字后左滑进第 2 课（内部是 pushReplacement）
+    for (var i = 0; i < 3; i++) {
+      await tester.dragFrom(const Offset(180, 220), const Offset(-300, 0));
+      await tester.pumpAndSettle();
+    }
+    await tester.flingFrom(const Offset(180, 220), const Offset(-300, 0), 1200);
+    await tester.pumpAndSettle();
+    expect(find.text('第 2 课 · 五六七八'), findsOneWidget);
+
+    // 返回列表：第 2 课应立刻显示 1 / 4 字，而不是等下次再进才更新
+    await tester.tap(find.byIcon(Icons.arrow_back_rounded));
+    await tester.pumpAndSettle();
+    expect(find.text('第 1 阶段 · 课程'), findsOneWidget);
+    expect(find.text('1 / 4 字'), findsOneWidget);
+
+    await tester.pump(const Duration(seconds: 16));
+    AppLocale.notifier.value = AppLang.zh;
+  });
+
   testWidgets('first launch shows the image guide and swipes through it',
       (WidgetTester tester) async {
     SharedPreferences.setMockInitialValues({});
