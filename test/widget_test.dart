@@ -146,6 +146,55 @@ void main() {
     await tester.pump(const Duration(seconds: 16));
   });
 
+  testWidgets('next lesson always opens on its first character',
+      (WidgetTester tester) async {
+    // 第 1 课上次停在最后一个字「四」，且四个字都已学完
+    SharedPreferences.setMockInitialValues({
+      'has_seen_onboarding_v131': true,
+      'last_index_grade_course_g1_line1': 3,
+      'viewed_char_ids': '["0001","0002","0003","0004"]',
+    });
+    AppLocale.notifier.value = AppLang.zh;
+    await tester.binding.setSurfaceSize(const Size(360, 800));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+
+    await tester.runAsync(() async {
+      await HanziRepository.instance.ensureLoaded();
+    });
+
+    await tester.pumpWidget(const MyApp());
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 200));
+
+    await tester.tap(find.text('第 1 阶段'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('第 1 课'));
+    await tester.pumpAndSettle();
+
+    // 从课程列表进入：沿用该课上次的位置「四」
+    expect(find.text('第 1 课 · 一二三四'), findsOneWidget);
+    String currentChar() => tester
+        .widget<CharacterCard>(find.byType(CharacterCard).first)
+        .hanzi
+        .char;
+    expect(currentChar(), '四');
+
+    // 在最后一页继续左滑：下一课必须从「五」开始，而不是它上次停下的「八」
+    await tester.flingFrom(const Offset(180, 220), const Offset(-300, 0), 1200);
+    await tester.pumpAndSettle();
+    expect(find.text('第 2 课 · 五六七八'), findsOneWidget);
+    expect(currentChar(), '五');
+
+    // 再左滑一次应只是翻到「六」，不会又跳到第 3 课
+    await tester.flingFrom(const Offset(180, 220), const Offset(-300, 0), 1200);
+    await tester.pumpAndSettle();
+    expect(find.text('第 2 课 · 五六七八'), findsOneWidget);
+    expect(currentChar(), '六');
+
+    await tester.pump(const Duration(seconds: 16));
+    AppLocale.notifier.value = AppLang.zh;
+  });
+
   testWidgets('language menu switches zh / en / ja / ko / vi',
       (WidgetTester tester) async {
     SharedPreferences.setMockInitialValues({'has_seen_onboarding_v131': true});

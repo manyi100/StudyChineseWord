@@ -39,17 +39,25 @@ class _CourseListScreenState extends State<CourseListScreen> {
     });
   }
 
-  Widget _courseStudy(int index, {bool startAtLast = false}) {
+  Widget _courseStudy(
+    int index, {
+    bool startAtLast = false,
+    bool startAtFirst = false,
+  }) {
     final course = _courses[index];
     return HomeScreen(
       chars: course.chars,
       lessonNumber: course.indexInStage,
       progressKey: 'course_${course.groupId}',
-      // 回上一课时停在它的最后一个字，和「左滑进下一课」落在第一个字对称
-      initialIndex: startAtLast ? course.chars.length - 1 : null,
+      // 跨课滑动要落在边界字上：
+      // 左滑进下一课 → 它的第一个字（不沿用该课上次停下的位置，
+      // 否则常停在最后一个字，再划一下又会直接跳到下一课）；
+      // 右滑回上一课 → 它的最后一个字，和「左滑进下一课」对称。
+      initialIndex:
+          startAtLast ? course.chars.length - 1 : (startAtFirst ? 0 : null),
       // 一课学完后继续左滑，直接替换为下一课
       onFinished: index + 1 < _courses.length
-          ? () => _replaceWithCourse(index + 1)
+          ? () => _replaceWithCourse(index + 1, startAtFirst: true)
           : null,
       // 在本课第一页继续右滑，回到上一课的最后一个字
       onRewind: index > 0
@@ -65,10 +73,18 @@ class _CourseListScreenState extends State<CourseListScreen> {
     _load();
   }
 
-  void _replaceWithCourse(int index, {bool startAtLast = false}) {
+  void _replaceWithCourse(
+    int index, {
+    bool startAtLast = false,
+    bool startAtFirst = false,
+  }) {
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (_) => _courseStudy(index, startAtLast: startAtLast),
+        builder: (_) => _courseStudy(
+          index,
+          startAtLast: startAtLast,
+          startAtFirst: startAtFirst,
+        ),
       ),
     );
   }

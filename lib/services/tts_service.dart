@@ -173,20 +173,19 @@ class TtsService {
     return _audioIndexFuture ??= rootBundle
         .loadString('assets/audio/manifest.json')
         .then<Map<String, String>?>((raw) {
-          final decoded = jsonDecode(raw) as Map<String, dynamic>;
-          final map = <String, String>{};
-          decoded.forEach((key, value) {
-            if (value is String) map[key] = value;
-          });
-          _audioIndex = map;
-          debugPrint('[Audio] 内置音频 ${map.length} 条');
-          return map;
-        })
-        .catchError((Object error) {
-          debugPrint('[Audio] 读取内置音频索引失败：$error');
-          _audioIndexFuture = null;
-          return null;
-        });
+      final decoded = jsonDecode(raw) as Map<String, dynamic>;
+      final map = <String, String>{};
+      decoded.forEach((key, value) {
+        if (value is String) map[key] = value;
+      });
+      _audioIndex = map;
+      debugPrint('[Audio] 内置音频 ${map.length} 条');
+      return map;
+    }).catchError((Object error) {
+      debugPrint('[Audio] 读取内置音频索引失败：$error');
+      _audioIndexFuture = null;
+      return null;
+    });
   }
 
   /// 尝试播放内置音频；没有对应文件或播放失败时返回 false，交给系统 TTS。

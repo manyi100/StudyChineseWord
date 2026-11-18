@@ -232,8 +232,23 @@ class _HomeScreenState extends State<HomeScreen> {
   void dispose() {
     _audioHintTimer?.cancel();
     _pageController?.dispose();
-    TtsService.instance.stop(notify: false);
+    // 只停止「本课」的朗读。跨课 pushReplacement 时新页已经开口朗读，
+    // 旧页要等转场动画结束才 dispose：若无条件 stop，会把新页的声音掐断，
+    // 表现为划到下一课（或下一字）时读音很短促。
+    if (_ownsAudioTag(TtsService.instance.speakingTag.value)) {
+      TtsService.instance.stop(notify: false);
+    }
     super.dispose();
+  }
+
+  /// 本页的朗读 tag 形如 `char_0001` / `word_0001_中国` / `sentence_0001`，
+  /// 第二段就是汉字 id；只有属于本课四个字的音频才归本页管。
+  bool _ownsAudioTag(String? tag) {
+    if (tag == null) return false;
+    final parts = tag.split('_');
+    if (parts.length < 2) return false;
+    final id = parts[1];
+    return _hanziList.any((h) => h.id == id);
   }
 
   String _resolvedTitle(AppStrings s) {
