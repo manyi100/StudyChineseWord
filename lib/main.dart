@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'app_route_observer.dart';
 import 'l10n/app_strings.dart';
@@ -23,6 +24,24 @@ Future<void> main() async {
   runApp(const MyApp());
 }
 
+/// 允许「鼠标 / 飞鼠 / 触控板」按住拖动来滚动与翻页。
+///
+/// Flutter 默认的 `dragDevices` 只有触摸和触控笔，电视盒子、投影仪用飞鼠时
+/// 按住拖动不会产生滚动，表现为“在投影仪上划不动”。
+class AppScrollBehavior extends MaterialScrollBehavior {
+  const AppScrollBehavior();
+
+  @override
+  Set<PointerDeviceKind> get dragDevices => const {
+        PointerDeviceKind.touch,
+        PointerDeviceKind.mouse,
+        PointerDeviceKind.stylus,
+        PointerDeviceKind.invertedStylus,
+        PointerDeviceKind.trackpad,
+        PointerDeviceKind.unknown,
+      };
+}
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -38,6 +57,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           scaffoldMessengerKey: rootScaffoldMessengerKey,
           navigatorObservers: [appRouteObserver],
+          scrollBehavior: const AppScrollBehavior(),
           theme: ThemeData(
             useMaterial3: true,
             colorSchemeSeed: const Color(0xFF4CAF50),

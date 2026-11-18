@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import '../l10n/app_strings.dart';
 import '../models/hanzi_model.dart';
 import '../services/hanzi_repository.dart';
@@ -11,6 +12,21 @@ import '../services/tts_service.dart';
 import '../widgets/audio_feedback.dart';
 import '../widgets/character_card.dart';
 import '../widgets/content_frame.dart';
+
+/// 遥控器「下一个字 / 下一课」
+class _NextCharIntent extends Intent {
+  const _NextCharIntent();
+}
+
+/// 遥控器「上一个字 / 上一课」
+class _PrevCharIntent extends Intent {
+  const _PrevCharIntent();
+}
+
+/// 遥控器 OK / 确认键：重播当前字
+class _SpeakCharIntent extends Intent {
+  const _SpeakCharIntent();
+}
 
 class HomeScreen extends StatefulWidget {
   /// gradeId = 0 表示"已解锁阶段连续学"，1~6 表示具体阶段。
@@ -251,6 +267,90 @@ class _HomeScreenState extends State<HomeScreen> {
     return _hanziList.any((h) => h.id == id);
   }
 
+  /// 遥控器「下一字」：课内翻页，已在最后一页则进下一课（与左滑一致）
+  void _goToNextChar() {
+    final last = _hanziList.length - 1;
+    if (last < 0) return;
+    final page = (_pageController?.page?.round() ?? 0).clamp(0, last);
+    if (page < last) {
+      _animateToPage(page + 1);
+    } else {
+      _tryFinishCourse();
+    }
+  }
+
+  /// 遥控器「上一字」：课内后退，已在第一页则回上一课（与右滑一致）
+  void _goToPrevChar() {
+    final last = _hanziList.length - 1;
+    if (last < 0) return;
+    final page = (_pageController?.page?.round() ?? 0).clamp(0, last);
+    if (page > 0) {
+      _animateToPage(page - 1);
+    } else {
+      _tryRewindCourse();
+    }
+  }
+
+  void _animateToPage(int index) {
+    final controller = _pageController;
+    if (controller == null || !controller.hasClients) return;
+    controller.animateToPage(
+      index,
+      duration: const Duration(milliseconds: 240),
+      curve: Curves.easeOutCubic,
+    );
+  }
+
+  /// 遥控器 OK / 确认键：重播当前字的读音
+  void _speakCurrentChar() {
+    if (_hanziList.isEmpty) return;
+    final last = _hanziList.length - 1;
+    final index = (_pageController?.page?.round() ?? 0).clamp(0, last);
+    final hanzi = _hanziList[index];
+    TtsService.instance.speak(hanzi.char, tag: 'char_${hanzi.id}');
+  }
+
+  /// 电视 / 投影仪遥控器的按键映射。
+  ///
+  /// 这类设备没有触摸屏，只能靠方向键 + OK 键：
+  /// - 左右键 = 课内上一个字 / 下一个字，到边界时跨课；
+  /// - OK / 确认 = 重播当前字读音。
+  Widget _withRemoteKeys(Widget child) {
+    return Shortcuts(
+      shortcuts: const <ShortcutActivator, Intent>{
+        SingleActivator(LogicalKeyboardKey.arrowLeft): _NextCharIntent(),
+        SingleActivator(LogicalKeyboardKey.arrowRight): _PrevCharIntent(),
+        SingleActivator(LogicalKeyboardKey.select): _SpeakCharIntent(),
+        SingleActivator(LogicalKeyboardKey.enter): _SpeakCharIntent(),
+        SingleActivator(LogicalKeyboardKey.numpadEnter): _SpeakCharIntent(),
+        SingleActivator(LogicalKeyboardKey.gameButtonA): _SpeakCharIntent(),
+      },
+      child: Actions(
+        actions: <Type, Action<Intent>>{
+          _NextCharIntent: CallbackAction<_NextCharIntent>(
+            onInvoke: (_) {
+              _goToNextChar();
+              return null;
+            },
+          ),
+          _PrevCharIntent: CallbackAction<_PrevCharIntent>(
+            onInvoke: (_) {
+              _goToPrevChar();
+              return null;
+            },
+          ),
+          _SpeakCharIntent: CallbackAction<_SpeakCharIntent>(
+            onInvoke: (_) {
+              _speakCurrentChar();
+              return null;
+            },
+          ),
+        },
+        child: Focus(autofocus: true, child: child),
+      ),
+    );
+  }
+
   String _resolvedTitle(AppStrings s) {
     final lesson = widget.lessonNumber;
     final chars = widget.chars;
@@ -281,7 +381,7 @@ class _HomeScreenState extends State<HomeScreen> {
       );
     }
 
-    return Scaffold(
+    return _withRemoteKeys(Scaffold(
       appBar: AppBar(
         title: Text(_resolvedTitle(s)),
         centerTitle: true,
@@ -362,6 +462,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-    );
+    ));
   }
 }

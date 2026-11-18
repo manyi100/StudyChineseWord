@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -388,6 +390,103 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('第 1 阶段 · 课程'), findsOneWidget);
     expect(find.text('1 / 4 字'), findsOneWidget);
+
+    await tester.pump(const Duration(seconds: 16));
+    AppLocale.notifier.value = AppLang.zh;
+  });
+
+  testWidgets('TV remote arrow keys walk through characters and lessons',
+      (WidgetTester tester) async {
+    SharedPreferences.setMockInitialValues({'has_seen_onboarding_v131': true});
+    AppLocale.notifier.value = AppLang.zh;
+    await tester.binding.setSurfaceSize(const Size(360, 800));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+
+    await tester.runAsync(() async {
+      await HanziRepository.instance.ensureLoaded();
+    });
+
+    await tester.pumpWidget(const MyApp());
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 200));
+
+    await tester.tap(find.text('第 1 阶段'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('第 1 课'));
+    await tester.pumpAndSettle();
+
+    String currentChar() => tester
+        .widget<CharacterCard>(find.byType(CharacterCard).first)
+        .hanzi
+        .char;
+    expect(currentChar(), '一');
+
+    // 方向键右键 = 下一个字；到最后一页再按一次 = 进下一课
+    for (var i = 0; i < 3; i++) {
+      await tester.sendKeyEvent(LogicalKeyboardKey.arrowLeft);
+      await tester.pumpAndSettle();
+    }
+    expect(currentChar(), '四');
+
+    await tester.sendKeyEvent(LogicalKeyboardKey.arrowLeft);
+    await tester.pumpAndSettle();
+    expect(find.text('第 2 课 · 五六七八'), findsOneWidget);
+    expect(currentChar(), '五');
+
+    // 方向键左键 = 上一个字；在第一页再按一次 = 回上一课最后一个字
+    await tester.sendKeyEvent(LogicalKeyboardKey.arrowRight);
+    await tester.pumpAndSettle();
+    expect(find.text('第 1 课 · 一二三四'), findsOneWidget);
+    expect(currentChar(), '四');
+
+    await tester.pump(const Duration(seconds: 16));
+    AppLocale.notifier.value = AppLang.zh;
+  });
+
+  testWidgets('mouse drag flips pages for projectors with air mouse',
+      (WidgetTester tester) async {
+    SharedPreferences.setMockInitialValues({'has_seen_onboarding_v131': true});
+    AppLocale.notifier.value = AppLang.zh;
+    await tester.binding.setSurfaceSize(const Size(360, 800));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+
+    await tester.runAsync(() async {
+      await HanziRepository.instance.ensureLoaded();
+    });
+
+    await tester.pumpWidget(const MyApp());
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 200));
+
+    await tester.tap(find.text('第 1 阶段'));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('第 1 课'));
+    await tester.pumpAndSettle();
+
+    String currentChar() => tester
+        .widget<CharacterCard>(find.byType(CharacterCard).first)
+        .hanzi
+        .char;
+    expect(currentChar(), '一');
+
+    // 投影仪飞鼠走的是 mouse 指针，滚动行为里必须允许它拖拽
+    expect(
+      ScrollConfiguration.of(tester.element(find.byType(PageView)))
+          .dragDevices
+          .contains(PointerDeviceKind.mouse),
+      isTrue,
+    );
+
+    // 默认的 ScrollBehavior 不接收鼠标拖拽，这里必须能翻页
+    // （从配图区起手，避开田字格自己的手势）
+    await tester.dragFrom(
+      const Offset(300, 220),
+      const Offset(-260, 0),
+      kind: PointerDeviceKind.mouse,
+    );
+    await tester.pumpAndSettle();
+
+    expect(currentChar(), '二');
 
     await tester.pump(const Duration(seconds: 16));
     AppLocale.notifier.value = AppLang.zh;
